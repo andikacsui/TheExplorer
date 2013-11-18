@@ -70,12 +70,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery("SELECT * FROM PENJELAJAH", null);
 
-		if (cursor.getCount() != 0) {
-			db.close();
-			return true;
-		} else {
+		if (cursor.getCount() == 0) {
 			db.close();
 			return false;
+		} else {
+			db.close();
+			return true;
 		}
 	}
 

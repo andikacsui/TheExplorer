@@ -3,8 +3,9 @@ package project.TheExplorer.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.R;
-
+import project.TheExplorer.Model.Misi;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -21,8 +22,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DaftarMisi extends Activity {
-	ListView ListMisi;
-	String DaftarNamaMisi;
+	TextView NamaMisi1, Lokasi1, Deskripsi1, Details1, Join1;
+	ArrayList<Misi> DaftarMisi;
+	Misi misi1;
 	Context context;
 
 	@Override
@@ -30,52 +32,15 @@ public class DaftarMisi extends Activity {
 		super.onCreate(savedInstanceState);
 		context = this;
 		setContentView(R.layout.activity_daftar_misi);
-		// Get ListView object from xml
-		ListMisi = (ListView) findViewById(R.id.ListViewMisi);
+		NamaMisi1 = (TextView) findViewById(R.id.TextViewNamaMisi1);
+		Lokasi1 = (TextView) findViewById(R.id.TextViewLokasi1);
+		Deskripsi1 = (TextView) findViewById(R.id.TextViewDeskripsi1);
+		Details1 = (TextView) findViewById(R.id.TextViewDetailsMisi1);
+		Join1 = (TextView) findViewById(R.id.TextViewJoinMisi1);
 
-		// Defined Array values to show in ListView
-		String[] values = new String[] { "Android List View",
-				"Adapter implementation", "Simple List View In Android",
-				"Create List View Android", "Android Example",
-				"List View Source Code", "List View Array Adapter",
-				"Android Example List View" };
-
-		// Define a new Adapter
-		// First parameter - Context
-		// Second parameter - Layout for the row
-		// Third parameter - ID of the TextView to which the data is
-		// written
-		// Forth - the Array of data
-
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.activity_list_item, android.R.id.text1, values);
-
-		// Assign adapter to ListView
-		ListMisi.setAdapter(adapter);
-
-		// ListView Item Click Listener
-		ListMisi.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-
-				// ListView Clicked item index
-				int itemPosition = position;
-
-				// ListView Clicked item value
-				String itemValue = (String) ListMisi
-						.getItemAtPosition(position);
-
-				// Show Alert
-				Toast.makeText(
-						getApplicationContext(),
-						"Position :" + itemPosition + "  ListItem : "
-								+ itemValue, Toast.LENGTH_LONG).show();
-
-			}
-
-		});
+		misi1 = DaftarMisi.get(0);
+		NamaMisi1.setText(misi1.getNama());
+		Lokasi1.setText(misi1.getLokasi());
+		Deskripsi1.setText(misi1.getDeskripsi());
 	}
-
 }

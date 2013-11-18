@@ -13,19 +13,10 @@ public class MisiHelper {
 	public static Misi temp;
 	public static String temp1;
 
-	public static String GetListMisiName(Context context) {
+	public static ArrayList<Misi> GetListMisi(Context context) {
 		db = new DatabaseHelper(context);
 		DaftarMisi = db.getListMisi();
-		for (int i = 0; i < DaftarMisi.size(); i++) {
-			temp = DaftarMisi.get(i);
-			if (temp != null) {
-				temp1 = temp.getNama();
-				if (temp1 != null) {
-					DaftarNamaMisi[i] = temp1;
-				}
-			}
-		}
-		return "aku";
+		return DaftarMisi;
 	}
 
 	public static void AddMisi(Context context) {

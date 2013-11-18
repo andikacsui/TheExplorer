@@ -71,15 +71,6 @@
                 android:onClick="ButtonShare_OnClick"
                 android:text="Share" />
 
-            <Button
-                android:id="@+id/Button04"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignLeft="@+id/Button02"
-                android:layout_below="@+id/Button02"
-                android:layout_marginTop="10dp"
-                android:background="@layout/template"
-                android:text="Share" />
         </LinearLayout>
     </ScrollView>
 

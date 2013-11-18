@@ -1,6 +1,7 @@
 package project.TheExplorer.View;
 
 import project.TheExplorer.Controller.MisiHelper;
+import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Controller.R;
 
 import android.os.Bundle;
@@ -50,9 +51,9 @@ public class SignIn extends Activity {
 	public void ButtonSimpan_onClick(View view) {
 		Intent nextScreen = new Intent(getApplicationContext(), DaftarMenu.class);
 		startActivity(nextScreen);
-		//Username = EditTextUsername.getText().toString();
-		//Password = EditTextPassword.getText().toString();
-		//PenjelajahHelper.AddPenjelajah(context, Username, Password);
+		Username = EditTextUsername.getText().toString();
+		Password = EditTextPassword.getText().toString();
+		PenjelajahHelper.AddPenjelajah(context, Username, Password);
 		//temp = PenjelajahHelper.GetPenjelajahName(context);
 		//TextViewCoba.setText("Hallo " + temp);
 	}
