@@ -178,6 +178,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("badge", "Jakarta");
 			value2.put("penjelajahID", "1");
 			db.insertOrThrow("MISI", null, value2);
+			
+			ContentValues value3 = new ContentValues();
+			value3.put("nama", "Menjelajah Bali");
+			value3.put("deskripsi", "Bali ibukota negara");
+			value3.put("lokasi", "Bali");
+			value3.put("foto", "xxxx");
+			value3.put("status", "0");
+			value3.put("badge", "Bali");
+			value3.put("penjelajahID", "1");
+			db.insertOrThrow("MISI", null, value3);
+			
+			ContentValues value4 = new ContentValues();
+			value4.put("nama", "Menjelajah Bukittinggi");
+			value4.put("deskripsi", "Bukittinggi ibukota negara");
+			value4.put("lokasi", "Bukittinggi");
+			value4.put("foto", "xxxx");
+			value4.put("status", "0");
+			value4.put("badge", "Bukittinggi");
+			value4.put("penjelajahID", "1");
+			db.insertOrThrow("MISI", null, value4);
+			
+			ContentValues value5 = new ContentValues();
+			value5.put("nama", "Menjelajah Bandung");
+			value5.put("deskripsi", "Bandung ibukota negara");
+			value5.put("lokasi", "Bandung");
+			value5.put("foto", "xxxx");
+			value5.put("status", "0");
+			value5.put("badge", "Bandung");
+			value5.put("penjelajahID", "1");
+			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
 	}

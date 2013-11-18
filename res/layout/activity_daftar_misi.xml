@@ -326,13 +326,13 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow9"
+                android:id="@+id/tableRow13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#A45E4D" >
 
                 <ImageView
-                    android:id="@+id/ImageViewGambarMisi3"
+                    android:id="@+id/ImageViewGambarMisi4"
                     style="@style/tebalkan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -342,7 +342,7 @@
                     android:src="@drawable/ic_launcher" />
 
                 <TextView
-                    android:id="@+id/TextViewNamaMisi3"
+                    android:id="@+id/TextViewNamaMisi4"
                     style="@style/tebalkan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -352,7 +352,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/TextViewLokasi3"
+                    android:id="@+id/TextViewLokasi4"
                     style="@style/normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -365,12 +365,12 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow10"
+                android:id="@+id/tableRow14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextViewDeskripsi3"
+                    android:id="@+id/TextViewDeskripsi4"
                     style="@style/normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -381,44 +381,147 @@
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow11"
+                android:id="@+id/tableRow15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/TextViewDetailsMisi3"
+                    android:id="@+id/TextViewDetailsMisi4"
                     style="@style/tombol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginRight="200dp"
                     android:clickable="true"
-                    android:onClick="TextViewDetailsMisi3_OnClick"
+                    android:onClick="TextViewDetailsMisi4_OnClick"
                     android:text="@string/details"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/TextViewJoinMisi3"
+                    android:id="@+id/TextViewJoinMisi4"
                     style="@style/tombol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-220dp"
                     android:layout_marginRight="120dp"
                     android:clickable="true"
-                    android:onClick="TextViewJoinMisi3_OnClick"
+                    android:onClick="TextViewJoinMisi4_OnClick"
                     android:text="@string/join"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow12"
+                android:id="@+id/tableRow16"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:layout_gravity="top"
                 android:background="#FFFFFF" >
 
                 <TextView
-                    android:id="@+id/TextViewEnter3"
+                    android:id="@+id/TextViewEnter4"
+                    style="@style/normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="-10dp"
+                    android:text="@string/teks"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#A45E4D" >
+
+                <ImageView
+                    android:id="@+id/ImageViewGambarMisi5"
+                    style="@style/tebalkan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="300dp"
+                    android:contentDescription="@string/Petualangan"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/TextViewNamaMisi5"
+                    style="@style/tebalkan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-270dp"
+                    android:layout_marginRight="270dp"
+                    android:text="@string/MissionImpossible"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/TextViewLokasi5"
+                    style="@style/normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-450dp"
+                    android:layout_marginRight="270dp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/koordinat"
+                    android:textAppearance="?android:attr/textAppearanceMedium" >
+                </TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/TextViewDeskripsi5"
+                    style="@style/normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="-10dp"
+                    android:text="@string/teks"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/TextViewDetailsMisi5"
+                    style="@style/tombol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="200dp"
+                    android:clickable="true"
+                    android:onClick="TextViewDetailsMisi5_OnClick"
+                    android:text="@string/details"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/TextViewJoinMisi5"
+                    style="@style/tombol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-220dp"
+                    android:layout_marginRight="120dp"
+                    android:clickable="true"
+                    android:onClick="TextViewJoinMisi5_OnClick"
+                    android:text="@string/join"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow20"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:background="#FFFFFF" >
+
+                <TextView
+                    android:id="@+id/TextViewEnter5"
                     style="@style/normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

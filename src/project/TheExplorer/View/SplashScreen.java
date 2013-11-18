@@ -1,5 +1,6 @@
 package project.TheExplorer.View;
 
+import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Controller.R;
 
@@ -20,6 +21,7 @@ public class SplashScreen extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Context = this;
+		MisiHelper.AddMisi(Context);
 		setContentView(R.layout.activity_splah_screen);
 		new Handler().postDelayed(new Runnable() {
 			@Override

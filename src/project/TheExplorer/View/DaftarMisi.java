@@ -22,10 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DaftarMisi extends Activity {
-	TextView NamaMisi1, Lokasi1, Deskripsi1, Details1, Join1;
+	TextView NamaMisi1, Lokasi1, Deskripsi1, Details1, Join1, NamaMisi2,
+			Lokasi2, Deskripsi2, Details2, Join2, NamaMisi3, Lokasi3,
+			Deskripsi3, Details3, Join3, NamaMisi4, Lokasi4, Deskripsi4,
+			Details4, Join4, NamaMisi5, Lokasi5, Deskripsi5, Details5, Join5;
 	ArrayList<Misi> DaftarMisi;
-	Misi misi1;
+	Misi misi1, misi2, misi3, misi4, misi5;
 	Context context;
+	int apa;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +41,92 @@ public class DaftarMisi extends Activity {
 		Deskripsi1 = (TextView) findViewById(R.id.TextViewDeskripsi1);
 		Details1 = (TextView) findViewById(R.id.TextViewDetailsMisi1);
 		Join1 = (TextView) findViewById(R.id.TextViewJoinMisi1);
+		NamaMisi2 = (TextView) findViewById(R.id.TextViewNamaMisi2);
+		Lokasi2 = (TextView) findViewById(R.id.TextViewLokasi2);
+		Deskripsi2 = (TextView) findViewById(R.id.TextViewDeskripsi2);
+		Details2 = (TextView) findViewById(R.id.TextViewDetailsMisi2);
+		Join2 = (TextView) findViewById(R.id.TextViewJoinMisi2);
+		NamaMisi3 = (TextView) findViewById(R.id.TextViewNamaMisi3);
+		Lokasi3 = (TextView) findViewById(R.id.TextViewLokasi3);
+		Deskripsi3 = (TextView) findViewById(R.id.TextViewDeskripsi3);
+		Details3 = (TextView) findViewById(R.id.TextViewDetailsMisi3);
+		Join3 = (TextView) findViewById(R.id.TextViewJoinMisi3);
+		NamaMisi4 = (TextView) findViewById(R.id.TextViewNamaMisi4);
+		Lokasi4 = (TextView) findViewById(R.id.TextViewLokasi4);
+		Deskripsi4 = (TextView) findViewById(R.id.TextViewDeskripsi4);
+		Details4 = (TextView) findViewById(R.id.TextViewDetailsMisi4);
+		Join4 = (TextView) findViewById(R.id.TextViewJoinMisi4);
+		NamaMisi5 = (TextView) findViewById(R.id.TextViewNamaMisi5);
+		Lokasi5 = (TextView) findViewById(R.id.TextViewLokasi5);
+		Deskripsi5 = (TextView) findViewById(R.id.TextViewDeskripsi5);
+		Details5 = (TextView) findViewById(R.id.TextViewDetailsMisi5);
+		Join5 = (TextView) findViewById(R.id.TextViewJoinMisi5);
+
+		// apa = MisiHelper.GetListMisi(context);
+		// misi1 = DaftarMisi.get(1);
+		// NamaMisi1.setText("Halooo" + misi1.getNama());
+		// Lokasi1.setText(apa);
+		// Deskripsi1.setText(misi1.getDeskripsi());
+		DaftarMisi = MisiHelper.GetListMisi(context);
 
 		misi1 = DaftarMisi.get(0);
 		NamaMisi1.setText(misi1.getNama());
 		Lokasi1.setText(misi1.getLokasi());
 		Deskripsi1.setText(misi1.getDeskripsi());
+
+		misi2 = DaftarMisi.get(1);
+		NamaMisi2.setText(misi2.getNama());
+		Lokasi2.setText(misi2.getLokasi());
+		Deskripsi2.setText(misi2.getDeskripsi());
+
+		misi3 = DaftarMisi.get(2);
+		NamaMisi3.setText(misi3.getNama());
+		Lokasi3.setText(misi3.getLokasi());
+		Deskripsi3.setText(misi3.getDeskripsi());
+
+		misi4 = DaftarMisi.get(3);
+		NamaMisi4.setText(misi4.getNama());
+		Lokasi4.setText(misi4.getLokasi());
+		Deskripsi4.setText(misi4.getDeskripsi());
+
+		misi5 = DaftarMisi.get(4);
+		NamaMisi5.setText(misi5.getNama());
+		Lokasi5.setText(misi5.getLokasi());
+		Deskripsi5.setText(misi5.getDeskripsi());
+	}
+
+	public void TextViewDetailsMisi1_OnClick(View view) {
+
+	}
+
+	public void TextViewJoinMisi1_OnClick(View view) {
+	}
+
+	public void TextViewDetailsMisi2_OnClick(View view) {
+
+	}
+
+	public void TextViewJoinMisi2_OnClick(View view) {
+	}
+
+	public void TextViewDetailsMisi3_OnClick(View view) {
+
+	}
+
+	public void TextViewJoinMisi3_OnClick(View view) {
+	}
+
+	public void TextViewDetailsMisi4_OnClick(View view) {
+
+	}
+
+	public void TextViewJoinMisi4_OnClick(View view) {
+	}
+
+	public void TextViewDetailsMisi5_OnClick(View view) {
+
+	}
+
+	public void TextViewJoinMisi5_OnClick(View view) {
 	}
 }
