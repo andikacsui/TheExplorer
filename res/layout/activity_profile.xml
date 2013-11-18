@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/Summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ScrollView
+                        android:id="@+id/scrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/greetings"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/your_score"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="10dp"
+                                style="@style/besar"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/score"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/your_badge"
+                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="10dp"
+                                style="@style/besar"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/badges"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+							<TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/summary_info"
+                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Achievement"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/EditProfile"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent" >
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
