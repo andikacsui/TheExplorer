@@ -32,6 +32,11 @@
         </activity>
         <activity android:name="project.TheExplorer.View.DaftarTempat" >
         </activity>
+        
+        <activity android:name="project.TheExplorer.View.TabAchievement"></activity>
+        <activity android:name="project.TheExplorer.View.TabEditProfile"></activity>
+        <activity android:name="project.TheExplorer.View.TabProfile"></activity>
+        <activity android:name="project.TheExplorer.View.TabSummary"></activity>
     </application>
 
 </manifest>
