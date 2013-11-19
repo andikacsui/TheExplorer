@@ -14,7 +14,6 @@ public class DaftarMenu extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_menu);
 		
-		
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {
