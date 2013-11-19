@@ -229,6 +229,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT", null);
+		cursor.moveToFirst();
 		ID = cursor.getInt(0);
 		nama = cursor.getString(1);
 		alamat = cursor.getString(2);
@@ -273,7 +274,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 
 	public ArrayList<Tempat> getListTempat() {
-		SQLiteDatabase db = this.getReadableDatabase();
 		ArrayList<Tempat> ListTempat = new ArrayList<Tempat>();
 		int ID = 0;
 		String nama = "";
@@ -284,10 +284,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int MisiID = 0;
 		Tempat tempat;
 
+		SQLiteDatabase db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT", null);
 		cursor.moveToFirst();
 		for (int i = 0; i < cursor.getCount(); i++) {
-			cursor.moveToPosition(i);
+			cursor.moveToPosition(0);
 			ID = cursor.getInt(0);
 			nama = cursor.getString(1);
 			alamat = cursor.getString(2);

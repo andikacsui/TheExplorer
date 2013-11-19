@@ -111,63 +111,63 @@ public class DaftarMisi extends Activity {
 	public void TextViewJoinMisi1_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-				NextScreen.putExtra("MISI", MisiID1);
+		NextScreen.putExtra("MISI_ID", MisiID1);
 		startActivity(NextScreen);
 	}
 
 	public void TextViewDetailsMisi2_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID2);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewJoinMisi2_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID2);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewDetailsMisi3_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID3);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewJoinMisi3_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID3);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewDetailsMisi4_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID4);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewJoinMisi4_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID4);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewDetailsMisi5_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID5);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewJoinMisi5_OnClick(View view) {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarTempat.class);
-		startActivity(NextScreen);
 		NextScreen.putExtra("MISI_ID", MisiID5);
+		startActivity(NextScreen);
 	}
 }
