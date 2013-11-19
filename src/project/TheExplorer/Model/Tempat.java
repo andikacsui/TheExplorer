@@ -4,17 +4,17 @@ public class Tempat {
 
 	private int ID;
 	private String nama;
-	private String deskripsi;
+	private String alamat;
 	private String titikPoint;
 	private String foto;
-	private String status;
+	private int status;
 	private int MisiID;
 
-	public Tempat(int ID, String nama, String deskripsi, String titikPoint,
-			String foto, String status, int misiID) {
+	public Tempat(int ID, String nama, String alamat, String titikPoint,
+			String foto, int status, int misiID) {
 		this.ID = ID;
 		this.nama = nama;
-		this.deskripsi = deskripsi;
+		this.alamat = alamat;
 		this.titikPoint = titikPoint;
 		this.foto = foto;
 		this.status = status;
@@ -38,12 +38,12 @@ public class Tempat {
 		return nama;
 	}
 
-	public String getDeskripsi() {
-		return deskripsi;
+	public String getAlamat() {
+		return alamat;
 	}
 
-	public void setDeskripsi(String Deskripsi) {
-		this.deskripsi = Deskripsi;
+	public void setAlamat(String alamat) {
+		this.alamat = alamat;
 	}
 
 	public String getTitikPoint() {
@@ -62,11 +62,11 @@ public class Tempat {
 		this.foto = Foto;
 	}
 
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(String Status) {
+	public void setStatus(int Status) {
 		this.status = Status;
 	}
 

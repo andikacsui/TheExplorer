@@ -10,6 +10,7 @@ import project.TheExplorer.Model.Misi;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -29,7 +30,7 @@ public class DaftarMisi extends Activity {
 	ArrayList<Misi> DaftarMisi;
 	Misi misi1, misi2, misi3, misi4, misi5;
 	Context context;
-	int apa;
+	public String MisiID1, MisiID2, MisiID3, MisiID4, MisiID5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -73,60 +74,100 @@ public class DaftarMisi extends Activity {
 		NamaMisi1.setText(misi1.getNama());
 		Lokasi1.setText(misi1.getLokasi());
 		Deskripsi1.setText(misi1.getDeskripsi());
+		MisiID1 = "1";
 
 		misi2 = DaftarMisi.get(1);
 		NamaMisi2.setText(misi2.getNama());
 		Lokasi2.setText(misi2.getLokasi());
 		Deskripsi2.setText(misi2.getDeskripsi());
+		MisiID2 = "2";
 
 		misi3 = DaftarMisi.get(2);
 		NamaMisi3.setText(misi3.getNama());
 		Lokasi3.setText(misi3.getLokasi());
 		Deskripsi3.setText(misi3.getDeskripsi());
+		MisiID3 = "3";
 
 		misi4 = DaftarMisi.get(3);
 		NamaMisi4.setText(misi4.getNama());
 		Lokasi4.setText(misi4.getLokasi());
 		Deskripsi4.setText(misi4.getDeskripsi());
+		MisiID4 = "4";
 
 		misi5 = DaftarMisi.get(4);
 		NamaMisi5.setText(misi5.getNama());
 		Lokasi5.setText(misi5.getLokasi());
 		Deskripsi5.setText(misi5.getDeskripsi());
+		MisiID5 = "5";
 	}
 
 	public void TextViewDetailsMisi1_OnClick(View view) {
-
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		NextScreen.putExtra("MISI_ID", MisiID1);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewJoinMisi1_OnClick(View view) {
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+				NextScreen.putExtra("MISI", MisiID1);
+		startActivity(NextScreen);
 	}
 
 	public void TextViewDetailsMisi2_OnClick(View view) {
-
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID2);
 	}
 
 	public void TextViewJoinMisi2_OnClick(View view) {
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID2);
 	}
 
 	public void TextViewDetailsMisi3_OnClick(View view) {
-
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID3);
 	}
 
 	public void TextViewJoinMisi3_OnClick(View view) {
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID3);
 	}
 
 	public void TextViewDetailsMisi4_OnClick(View view) {
-
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID4);
 	}
 
 	public void TextViewJoinMisi4_OnClick(View view) {
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID4);
 	}
 
 	public void TextViewDetailsMisi5_OnClick(View view) {
-
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID5);
 	}
 
 	public void TextViewJoinMisi5_OnClick(View view) {
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarTempat.class);
+		startActivity(NextScreen);
+		NextScreen.putExtra("MISI_ID", MisiID5);
 	}
 }

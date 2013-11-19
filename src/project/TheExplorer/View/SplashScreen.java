@@ -3,6 +3,7 @@ package project.TheExplorer.View;
 import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Controller.R;
+import project.TheExplorer.Controller.TempatHelper;
 
 import android.app.Activity;
 import android.content.Context;
@@ -22,6 +23,7 @@ public class SplashScreen extends Activity {
 		super.onCreate(savedInstanceState);
 		Context = this;
 		MisiHelper.AddMisi(Context);
+		TempatHelper.AddTempat(Context);
 		setContentView(R.layout.activity_splah_screen);
 		new Handler().postDelayed(new Runnable() {
 			@Override

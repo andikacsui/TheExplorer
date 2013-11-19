@@ -16,15 +16,6 @@ public class MisiHelper {
 	public static ArrayList<Misi> GetListMisi(Context context) {
 		db = new DatabaseHelper(context);
 		DaftarMisi = db.getListMisi();
-		//for (int i = 0; i < DaftarMisi.size(); i++) {
-			//temp = DaftarMisi.get(i);
-			//if (temp != null) {
-				//temp1 = temp.getNama();
-				//if (temp1 != null) {
-					//DaftarNamaMisi[i] = temp1;
-				//}
-			//}
-		//}
 		return DaftarMisi;
 	}
 

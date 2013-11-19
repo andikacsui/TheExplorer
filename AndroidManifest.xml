@@ -22,10 +22,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="project.TheExplorer.View.DaftarMisi" ></activity>
-        <activity android:name="project.TheExplorer.View.DaftarMenu" ></activity>
-        <activity android:name="project.TheExplorer.View.SignIn" ></activity>
-        <activity android:name="project.TheExplorer.View.Profile" ></activity>
+        <activity android:name="project.TheExplorer.View.DaftarMisi" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.DaftarMenu" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.SignIn" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.Profile" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.DaftarTempat" >
+        </activity>
     </application>
 
 </manifest>
