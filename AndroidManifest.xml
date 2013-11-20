@@ -37,6 +37,10 @@
         <activity android:name="project.TheExplorer.View.TabEditProfile"></activity>
         <activity android:name="project.TheExplorer.View.TabProfile"></activity>
         <activity android:name="project.TheExplorer.View.TabSummary"></activity>
+        <activity android:name="project.TheExplorer.View.CustomizedDaftarMisi"></activity>
+        <activity android:name="project.TheExplorer.View.ListMisiAdapter"></activity>
+        <activity android:name="org.holoeverywhere.app.Application"></activity>
+        
     </application>
 
 </manifest>

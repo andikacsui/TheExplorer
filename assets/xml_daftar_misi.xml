@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<daftar_misi>
+    <misi>
+        <id>1</id>    
+        <judul>Jelajah Jakarta</judul>
+        <lokasi>Indonesia</lokasi>
+        <keterangan>Ibukota negara</keterangan>
+		<gambar>@drawable/mission1_img</gambar>
+    </misi>
+	<misi>
+        <id>2</id>    
+        <judul>Jelajah Jakarta</judul>
+        <lokasi>Indonesia</lokasi>
+        <keterangan>Ibukota negara</keterangan>
+		<gambar>@drawable/mission1_img</gambar>
+    </misi>
+	<misi>
+        <id>3</id>    
+        <judul>Jelajah Jakarta</judul>
+        <lokasi>Indonesia</lokasi>
+        <keterangan>Ibukota negara</keterangan>
+		<gambar>@drawable/mission1_img</gambar>
+    </misi>
+</daftar_misi>

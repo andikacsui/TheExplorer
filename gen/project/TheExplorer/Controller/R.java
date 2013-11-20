@@ -24,25 +24,39 @@ public final class R {
         public static final int bgimage=0x7f020000;
         public static final int ic_launcher=0x7f020001;
         public static final int logo=0x7f020002;
-        public static final int splash=0x7f020003;
+        public static final int mission1_img=0x7f020003;
+        public static final int splash=0x7f020004;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int Achievement=0x7f080062;
+=======
+        public static final int Achievement=0x7f08004f;
+        public static final int Button02=0x7f08005e;
+>>>>>>> commit
         public static final int Button03=0x7f080006;
         public static final int ButtonAchievement=0x7f080005;
         public static final int ButtonChooseNewMission=0x7f080002;
         public static final int ButtonSavedMission=0x7f080004;
         public static final int ButtonShare=0x7f080007;
+<<<<<<< HEAD
         public static final int ButtonSimpan=0x7f080068;
         public static final int EditProfile=0x7f080063;
         public static final int EditTextPassword=0x7f080067;
         public static final int EditTextUsername=0x7f080065;
+=======
+        public static final int ButtonSimpan=0x7f080055;
+        public static final int EditProfile=0x7f080050;
+        public static final int EditTextPassword=0x7f080054;
+        public static final int EditTextUsername=0x7f080052;
+>>>>>>> commit
         public static final int ImageViewGambarMisi1=0x7f08000a;
         public static final int ImageViewGambarMisi2=0x7f080015;
         public static final int ImageViewGambarMisi3=0x7f080020;
         public static final int ImageViewGambarMisi4=0x7f08002b;
         public static final int ImageViewGambarMisi5=0x7f080036;
         public static final int ImageViewGambarTempat1=0x7f080042;
+<<<<<<< HEAD
         public static final int ImageViewGambarTempat2=0x7f080047;
         public static final int ImageViewGambarTempat3=0x7f08004c;
         public static final int ImageViewGambarTempat4=0x7f080051;
@@ -57,6 +71,13 @@ public final class R {
         public static final int TextViewAlamat4=0x7f080053;
         public static final int TextViewAlamat5=0x7f080058;
         public static final int TextViewDescription=0x7f080070;
+=======
+        public static final int Summary=0x7f080048;
+        public static final int TableLayoutMisi1=0x7f080008;
+        public static final int TableLayoutTempat1=0x7f080041;
+        public static final int TextViewAlamat1=0x7f080044;
+        public static final int TextViewCoba=0x7f080056;
+>>>>>>> commit
         public static final int TextViewDeskripsi1=0x7f08000e;
         public static final int TextViewDeskripsi2=0x7f080019;
         public static final int TextViewDeskripsi3=0x7f080024;
@@ -91,6 +112,7 @@ public final class R {
         public static final int TextViewNamaMisi4=0x7f08002c;
         public static final int TextViewNamaMisi5=0x7f080037;
         public static final int TextViewNamaTempat1=0x7f080043;
+<<<<<<< HEAD
         public static final int TextViewNamaTempat2=0x7f080048;
         public static final int TextViewNamaTempat3=0x7f08004d;
         public static final int TextViewNamaTempat4=0x7f080052;
@@ -113,6 +135,23 @@ public final class R {
         public static final int editText1=0x7f080069;
         public static final int editText2=0x7f08006a;
         public static final int imageView1=0x7f080000;
+=======
+        public static final int TextViewPassword=0x7f080053;
+        public static final int TextViewTitikPoint1=0x7f080045;
+        public static final int TextViewUsername=0x7f080051;
+        public static final int TextViewVisitedTempat1=0x7f080046;
+        public static final int action_settings=0x7f08005f;
+        public static final int button1=0x7f080003;
+        public static final int editText1=0x7f080057;
+        public static final int editText2=0x7f080058;
+        public static final int gambar=0x7f08005a;
+        public static final int imageView1=0x7f080000;
+        public static final int judul=0x7f08005b;
+        public static final int keterangan=0x7f08005d;
+        public static final int list=0x7f080047;
+        public static final int list_misi_layout=0x7f080040;
+        public static final int lokasi=0x7f08005c;
+>>>>>>> commit
         public static final int scrollView1=0x7f080001;
         public static final int scrollView2=0x7f080040;
         public static final int tableRow1=0x7f080009;
@@ -135,26 +174,40 @@ public final class R {
         public static final int tableRow7=0x7f08001a;
         public static final int tableRow8=0x7f08001d;
         public static final int tableRow9=0x7f08001f;
+<<<<<<< HEAD
         public static final int textView1=0x7f08005c;
         public static final int textView2=0x7f08005d;
         public static final int textView3=0x7f08005e;
         public static final int textView4=0x7f08005f;
         public static final int textView5=0x7f080060;
         public static final int textView6=0x7f080061;
+=======
+        public static final int textView1=0x7f080049;
+        public static final int textView2=0x7f08004a;
+        public static final int textView3=0x7f08004b;
+        public static final int textView4=0x7f08004c;
+        public static final int textView5=0x7f08004d;
+        public static final int textView6=0x7f08004e;
+        public static final int thumbnail=0x7f080059;
+>>>>>>> commit
     }
     public static final class layout {
         public static final int activity_daftar_menu=0x7f030000;
         public static final int activity_daftar_misi=0x7f030001;
-        public static final int activity_daftar_tempat=0x7f030002;
-        public static final int activity_launcher=0x7f030003;
-        public static final int activity_profile=0x7f030004;
-        public static final int activity_profile_tab=0x7f030005;
-        public static final int activity_sign_in=0x7f030006;
-        public static final int activity_splah_screen=0x7f030007;
-        public static final int activity_tab_achievement=0x7f030008;
-        public static final int activity_tab_editprofile=0x7f030009;
-        public static final int activity_tab_summary=0x7f03000a;
-        public static final int template=0x7f03000b;
+        public static final int activity_daftar_misi2=0x7f030002;
+        public static final int activity_daftar_tempat=0x7f030003;
+        public static final int activity_launcher=0x7f030004;
+        public static final int activity_main_mission=0x7f030005;
+        public static final int activity_profile=0x7f030006;
+        public static final int activity_profile_tab=0x7f030007;
+        public static final int activity_sign_in=0x7f030008;
+        public static final int activity_splah_screen=0x7f030009;
+        public static final int activity_tab_achievement=0x7f03000a;
+        public static final int activity_tab_editprofile=0x7f03000b;
+        public static final int activity_tab_summary=0x7f03000c;
+        public static final int daftar_misi=0x7f03000d;
+        public static final int list_mission=0x7f03000e;
+        public static final int template=0x7f03000f;
     }
     public static final class menu {
         public static final int launcher=0x7f070000;
