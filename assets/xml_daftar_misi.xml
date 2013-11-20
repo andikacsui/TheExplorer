@@ -21,4 +21,18 @@
         <keterangan>Ibukota negara</keterangan>
 		<gambar>@drawable/mission1_img</gambar>
     </misi>
+    <misi>
+        <id>3</id>    
+        <judul>Jelajah Jakarta</judul>
+        <lokasi>Indonesia</lokasi>
+        <keterangan>Ibukota negara</keterangan>
+		<gambar>@drawable/mission1_img</gambar>
+    </misi>
+    <misi>
+        <id>3</id>    
+        <judul>Jelajah Jakarta</judul>
+        <lokasi>Indonesia</lokasi>
+        <keterangan>Ibukota negara</keterangan>
+		<gambar>@drawable/mission1_img</gambar>
+    </misi>
 </daftar_misi>
