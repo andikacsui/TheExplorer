@@ -66,6 +66,7 @@
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_below="@+id/keterangan"
+        
         android:layout_toRightOf="@+id/thumbnail"
         android:text="@string/details" />
 

@@ -31,10 +31,10 @@ public class CustomizedDaftarMisi extends Activity {
 	// XML node keys
 	static final String KEY_SONG = "song"; // parent node
 	static final String KEY_ID = "id";
-	static final String KEY_TITLE = "title";
-	static final String KEY_ARTIST = "artist";
-	static final String KEY_DURATION = "duration";
-	static final String KEY_THUMB_URL = "thumb_url";
+	static final String KEY_NAMA = "nama";
+	static final String KEY_LOKASI = "lokasi";
+	static final String KEY_DESKRIPSI = "deskripsi";
+	static final String KEY_FOTO = "foto";
 	ArrayList<Misi> daftarMisi;
 
 	ListView list;
@@ -70,10 +70,10 @@ public class CustomizedDaftarMisi extends Activity {
 				HashMap<String, String> map = new HashMap<String, String>();
 				// adding each child node to HashMap key => value
 
-				map.put(KEY_TITLE, daftarMisi.get(i).getNama());
-				map.put(KEY_ARTIST, daftarMisi.get(i).getLokasi());
-				map.put(KEY_DURATION, daftarMisi.get(i).getDeskripsi());
-				map.put(KEY_THUMB_URL, daftarMisi.get(i).getFoto());
+				map.put(KEY_NAMA, daftarMisi.get(i).getNama());
+				map.put(KEY_LOKASI, daftarMisi.get(i).getLokasi());
+				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
+				map.put(KEY_FOTO, daftarMisi.get(i).getFoto());
 
 				// adding HashList to ArrayList
 				missionList.add(map);
