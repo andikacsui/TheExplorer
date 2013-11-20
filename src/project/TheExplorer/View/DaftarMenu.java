@@ -26,7 +26,7 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonProfile_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(), Profile.class);
+		Intent nextScreen = new Intent(getApplicationContext(), TabProfile.class);
 		startActivity(nextScreen);
 	}
 

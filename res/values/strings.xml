@@ -18,4 +18,7 @@
 	<string name="your_badge">You have achieved</string>
 	<string name="badges">12 badge(s)</string>
 	<string name="summary_info">Your score indicated the distance that you have been traveled since the first time you use The Explorer Mission. While the badges you achieved indicated the number of mission you have been accomplished</string>
+	<string name="username">Username</string>
+	<string name="password">Password</string>
+	<string name="ChangeProfile">Change Profile</string>
 </resources>
