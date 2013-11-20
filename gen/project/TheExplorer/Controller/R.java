@@ -50,12 +50,13 @@ public final class R {
         public static final int Summary=0x7f08005b;
         public static final int TableLayoutMisi1=0x7f080008;
         public static final int TableLayoutTempat1=0x7f080041;
+        public static final int TextViewAchievement=0x7f08006f;
         public static final int TextViewAlamat1=0x7f080044;
         public static final int TextViewAlamat2=0x7f080049;
         public static final int TextViewAlamat3=0x7f08004e;
         public static final int TextViewAlamat4=0x7f080053;
         public static final int TextViewAlamat5=0x7f080058;
-        public static final int TextViewCoba=0x7f080069;
+        public static final int TextViewDescription=0x7f080070;
         public static final int TextViewDeskripsi1=0x7f08000e;
         public static final int TextViewDeskripsi2=0x7f080019;
         public static final int TextViewDeskripsi3=0x7f080024;
@@ -71,11 +72,14 @@ public final class R {
         public static final int TextViewEnter3=0x7f080029;
         public static final int TextViewEnter4=0x7f080034;
         public static final int TextViewEnter5=0x7f08003f;
+        public static final int TextViewGreetings=0x7f08006b;
         public static final int TextViewJoinMisi1=0x7f080011;
         public static final int TextViewJoinMisi2=0x7f08001c;
         public static final int TextViewJoinMisi3=0x7f080027;
         public static final int TextViewJoinMisi4=0x7f080032;
         public static final int TextViewJoinMisi5=0x7f08003d;
+        public static final int TextViewLabelAchievement=0x7f08006e;
+        public static final int TextViewLabelScore=0x7f08006c;
         public static final int TextViewLokasi1=0x7f08000c;
         public static final int TextViewLokasi2=0x7f080017;
         public static final int TextViewLokasi3=0x7f080022;
@@ -86,13 +90,13 @@ public final class R {
         public static final int TextViewNamaMisi3=0x7f080021;
         public static final int TextViewNamaMisi4=0x7f08002c;
         public static final int TextViewNamaMisi5=0x7f080037;
-<<<<<<< HEAD
         public static final int TextViewNamaTempat1=0x7f080043;
         public static final int TextViewNamaTempat2=0x7f080048;
         public static final int TextViewNamaTempat3=0x7f08004d;
         public static final int TextViewNamaTempat4=0x7f080052;
         public static final int TextViewNamaTempat5=0x7f080057;
         public static final int TextViewPassword=0x7f080066;
+        public static final int TextViewScore=0x7f08006d;
         public static final int TextViewTitikPoint1=0x7f080045;
         public static final int TextViewTitikPoint2=0x7f08004a;
         public static final int TextViewTitikPoint3=0x7f08004f;
@@ -104,20 +108,11 @@ public final class R {
         public static final int TextViewVisitedTempat3=0x7f080050;
         public static final int TextViewVisitedTempat4=0x7f080055;
         public static final int TextViewVisitedTempat5=0x7f08005a;
-        public static final int action_settings=0x7f08006b;
-=======
-        public static final int TextViewNamaTempat1=0x7f080042;
-        public static final int TextViewPassword=0x7f080051;
-        public static final int TextViewTitikPoint1=0x7f080044;
-        public static final int TextViewUsername=0x7f08004f;
-        public static final int TextViewVisitedTempat1=0x7f080045;
-        public static final int action_settings=0x7f080058;
->>>>>>> ef2e6d0f9c87c564679521886556e6d554571a8a
+        public static final int action_settings=0x7f080071;
         public static final int button1=0x7f080003;
-        public static final int editText1=0x7f080056;
-        public static final int editText2=0x7f080057;
+        public static final int editText1=0x7f080069;
+        public static final int editText2=0x7f08006a;
         public static final int imageView1=0x7f080000;
-        public static final int list=0x7f08006a;
         public static final int scrollView1=0x7f080001;
         public static final int scrollView2=0x7f080040;
         public static final int tableRow1=0x7f080009;

@@ -36,7 +36,6 @@ public class SignIn extends Activity {
 		EditTextUsername = (EditText) findViewById(R.id.EditTextUsername);
 		TextViewPassword = (TextView) findViewById(R.id.TextViewPassword);
 		EditTextPassword = (EditText) findViewById(R.id.EditTextPassword);
-		TextViewCoba = (TextView) findViewById(R.id.TextViewCoba);
 		context = this;
 		
 	}

@@ -161,57 +161,66 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value1 = new ContentValues();
 			value1.put("id", "1");
 			value1.put("nama", "Menjelajah Jogja");
-			value1.put("deskripsi",
-					"Jogja kaya akan keindahan alam dan budayanya");
-			value1.put("lokasi", "Jogjakarta");
-			value1.put("foto", "xxxx");
+			value1.put(
+					"deskripsi",
+					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga berwisata kuliner. Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
+			value1.put("lokasi", "DI Jogjakarta, Indonesia");
+			value1.put("foto", "@drawable/splash");
 			value1.put("status", "0");
 			value1.put("badge", "Jogja");
-			value1.put("penjelajahID", "1");
+			value1.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value1);
 
 			ContentValues value2 = new ContentValues();
 			value2.put("id", "2");
 			value2.put("nama", "Menjelajah Jakarta");
-			value2.put("deskripsi", "Jakarta ibukota negara");
-			value2.put("lokasi", "Jakarta");
+			value2.put(
+					"deskripsi",
+					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan, bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. Jakarta telah memikat orang dari segala aspek kehidupan.. Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
+			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "xxxx");
 			value2.put("status", "0");
 			value2.put("badge", "Jakarta");
-			value2.put("penjelajahID", "1");
+			value2.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value2);
 
 			ContentValues value3 = new ContentValues();
 			value3.put("id", "3");
 			value3.put("nama", "Menjelajah Bali");
-			value3.put("deskripsi", "Bali ibukota negara");
-			value3.put("lokasi", "Bali");
+			value3.put(
+					"deskripsi",
+					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan, souvenir yang menarik, serta adat dan kebudayaan yang menawan");
+			value3.put("lokasi", "Bali, Indonesia");
 			value3.put("foto", "xxxx");
 			value3.put("status", "0");
 			value3.put("badge", "Bali");
-			value3.put("penjelajahID", "1");
+			value3.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value3);
 
 			ContentValues value4 = new ContentValues();
 			value4.put("id", "4");
-			value4.put("nama", "Menjelajah Bukittinggi");
-			value4.put("deskripsi", "Bukittinggi ibukota negara");
-			value4.put("lokasi", "Bukittinggi");
+			value4.put("nama", "Menjelajah Sumatra Barat");
+			value4.put(
+					"deskripsi",
+					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
+			value4.put("lokasi", "Sumatra Barat,Indonesia");
 			value4.put("foto", "xxxx");
 			value4.put("status", "0");
-			value4.put("badge", "Bukittinggi");
-			value4.put("penjelajahID", "1");
+			value4.put("badge", "Sumatra Barat");
+			value4.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
 			value5.put("id", "5");
-			value5.put("nama", "Menjelajah Bandung");
-			value5.put("deskripsi", "Bandung ibukota negara");
-			value5.put("lokasi", "Bandung");
+			value5.put("nama", "Menjelajah ceh");
+			value5.put(
+					"deskripsi",
+					"Aceh merupakan salah satu daerah di Nusantara yang masyarakatnya bersifat multietnis bercirikan Islam. Penduduk Aceh sering disebutkan merupakan keturunan berbagai kaum dan bangsa. Seperti halnya kata ACEH sering diidentikkan dengan kepanjangan dari Arab, China, Eropa, Hindia dimana memang secara fisik menunjukkan ciri-ciri orang Arab, India, Eropa dan Cina. Aceh merupakan daerah istimewa di Indonesia yang terletak paling ujung utara Pulau Sumatra.");
+			value5.put("lokasi", "Aceh, Indonesia");
 			value5.put("foto", "xxxx");
 			value5.put("status", "0");
-			value5.put("badge", "Bandung");
-			value5.put("penjelajahID", "1");
+			value5.put("badge", "Aceh");
+			value5.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
