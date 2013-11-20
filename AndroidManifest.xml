@@ -8,6 +8,12 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
+    <!-- Accessing camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -32,15 +38,24 @@
         </activity>
         <activity android:name="project.TheExplorer.View.DaftarTempat" >
         </activity>
-        
-        <activity android:name="project.TheExplorer.View.TabAchievement"></activity>
-        <activity android:name="project.TheExplorer.View.TabEditProfile"></activity>
-        <activity android:name="project.TheExplorer.View.TabProfile"></activity>
-        <activity android:name="project.TheExplorer.View.TabSummary"></activity>
-        <activity android:name="project.TheExplorer.View.CustomizedDaftarMisi"></activity>
-        <activity android:name="project.TheExplorer.View.ListMisiAdapter"></activity>
-        <activity android:name="org.holoeverywhere.app.Application"></activity>
-        
+        <activity android:name="project.TheExplorer.View.TabAchievement" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.TabEditProfile" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.TabProfile" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.TabSummary" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.CustomizedDaftarMisi" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.ListMisiAdapter" >
+        </activity>
+        <activity android:name="org.holoeverywhere.app.Application" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.Share" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.AmbilFoto" >
+        </activity>
     </application>
 
 </manifest>

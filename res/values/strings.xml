@@ -21,4 +21,6 @@
 	<string name="username">Username</string>
 	<string name="password">Password</string>
 	<string name="ChangeProfile">Change Profile</string>
+	<string name="share">Share</string>
+	<string name="take_picture">Take Picture</string>
 </resources>
