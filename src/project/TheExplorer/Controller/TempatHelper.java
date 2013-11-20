@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class TempatHelper {
 	public static DatabaseHelper db;
-	public static ArrayList<Tempat> temp;
-	public static ArrayList<Tempat> DaftarTempat;
+	public static ArrayList<Tempat> temp = new ArrayList<Tempat>();
+	public static ArrayList<Tempat> DaftarTempat = new ArrayList<Tempat>();
 	public static Tempat tempat;
 
 	public static void AddTempat(Context context) {
