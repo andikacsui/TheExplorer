@@ -16,7 +16,7 @@ public class TabSummary extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tab_summary);
-
+/*
 		Greetings = (TextView) findViewById(R.id.TextViewGreetings);
 		Score = (TextView) findViewById(R.id.TextViewScore);
 		Achievement = (TextView) findViewById(R.id.TextViewAchievement);
@@ -24,6 +24,6 @@ public class TabSummary extends Activity {
 
 		penjelajah = PenjelajahHelper.GetPenjelajah(context);
 		Greetings.setText("Hi, " + penjelajah.getUsername());
-		Score.setText(penjelajah.getSkor());
+		Score.setText(penjelajah.getSkor()); */
 	}
 }
