@@ -17,7 +17,7 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(), DaftarMisi.class);
+		Intent nextScreen = new Intent(getApplicationContext(), CustomizedDaftarMisi.class);
 		startActivity(nextScreen);
 	}
 
