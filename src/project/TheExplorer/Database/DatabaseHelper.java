@@ -212,7 +212,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value5 = new ContentValues();
 			value5.put("id", "5");
-			value5.put("nama", "Menjelajah ceh");
+			value5.put("nama", "Menjelajah Aceh");
 			value5.put(
 					"deskripsi",
 					"Aceh merupakan salah satu daerah di Nusantara yang masyarakatnya bersifat multietnis bercirikan Islam. Penduduk Aceh sering disebutkan merupakan keturunan berbagai kaum dan bangsa. Seperti halnya kata ACEH sering diidentikkan dengan kepanjangan dari Arab, China, Eropa, Hindia dimana memang secara fisik menunjukkan ciri-ciri orang Arab, India, Eropa dan Cina. Aceh merupakan daerah istimewa di Indonesia yang terletak paling ujung utara Pulau Sumatra.");
@@ -278,6 +278,52 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("Status", "0");
 			value1.put("MisiID", "1");
 			db.insertOrThrow("TEMPAT", null, value1);
+			
+			ContentValues value2 = new ContentValues();
+			value2.put("id", "2");
+			value2.put("nama", "Candi Borobudur");
+			value2.put("alamat",
+					"Borobudur kaya akan keindahan alam dan budayanya");
+			value2.put("TitikPoint", "aaaaca");
+			value2.put("Foto", "xxxx");
+			value2.put("Status", "0");
+			value2.put("MisiID", "1");
+			db.insertOrThrow("TEMPAT", null, value2);
+			db.close();
+			
+			ContentValues value3 = new ContentValues();
+			value3.put("id", "3");
+			value3.put("nama", "Candi Prambanan");
+			value3.put("alamat",
+					"Prambanan kaya akan keindahan alam dan budayanya");
+			value3.put("TitikPoint", "aaasssaaca");
+			value3.put("Foto", "xxxx");
+			value3.put("Status", "0");
+			value3.put("MisiID", "1");
+			db.insertOrThrow("TEMPAT", null, value3);
+			
+			ContentValues value4 = new ContentValues();
+			value4.put("id", "3");
+			value4.put("nama", "Keraton Jogja");
+			value4.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value4.put("TitikPoint", "sdd");
+			value4.put("Foto", "xxxx");
+			value4.put("Status", "0");
+			value4.put("MisiID", "1");
+			db.insertOrThrow("TEMPAT", null, value4);
+			db.close();
+			
+			ContentValues value5 = new ContentValues();
+			value5.put("id", "5");
+			value5.put("nama", "Pantai Parangtritis");
+			value5.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value5.put("TitikPoint", "aaaassca");
+			value5.put("Foto", "xxxx");
+			value5.put("Status", "0");
+			value5.put("MisiID", "1");
+			db.insertOrThrow("TEMPAT", null, value5);
 			db.close();
 		}
 	}
