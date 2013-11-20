@@ -8,6 +8,12 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
+    <!-- Accessing camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -46,6 +52,13 @@
         </activity>
         <activity android:name="org.holoeverywhere.app.Application" >
         </activity>
+<<<<<<< HEAD
+=======
+        <activity android:name="project.TheExplorer.View.Share" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.AmbilFoto" >
+        </activity>
+>>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
     </application>
 
 </manifest>

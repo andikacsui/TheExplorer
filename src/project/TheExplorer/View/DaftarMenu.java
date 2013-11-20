@@ -31,6 +31,7 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonShare_OnClick(View view) {
-
+		Intent nextScreen = new Intent(getApplicationContext(), Share.class);
+		startActivity(nextScreen);
 	}
 }

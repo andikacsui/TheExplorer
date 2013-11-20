@@ -51,9 +51,9 @@ public class ListMisiAdapter extends BaseAdapter{
         mission = data.get(position);
  
         // Setting all values in listview
-        judul.setText(mission.get(CustomizedDaftarMisi.KEY_TITLE));
-        lokasi.setText(mission.get(CustomizedDaftarMisi.KEY_ARTIST));
-        keterangan.setText(mission.get(CustomizedDaftarMisi.KEY_DURATION));
+        judul.setText(mission.get(CustomizedDaftarMisi.KEY_NAMA));
+        lokasi.setText(mission.get(CustomizedDaftarMisi.KEY_LOKASI));
+        keterangan.setText(mission.get(CustomizedDaftarMisi.KEY_DESKRIPSI));
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;
     }
