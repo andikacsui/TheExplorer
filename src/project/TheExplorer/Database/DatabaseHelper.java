@@ -1,8 +1,6 @@
 package project.TheExplorer.Database;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.StringTokenizer;
 
 import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Penjelajah;
@@ -11,7 +9,6 @@ import project.TheExplorer.Model.Tempat;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
