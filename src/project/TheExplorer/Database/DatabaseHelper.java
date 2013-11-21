@@ -265,61 +265,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public void AddTempat() {
 		if (IsTempatExist() == false) {
 			SQLiteDatabase db = this.getWritableDatabase();
+			
 			ContentValues value1 = new ContentValues();
-			value1.put("id", "1");
+			value1.put("id", 1);
 			value1.put("nama", "Malioboro");
 			value1.put("alamat",
 					"Malioboro kaya akan keindahan alam dan budayanya");
 			value1.put("TitikPoint", "aaaaa");
 			value1.put("Foto", "xxxx");
-			value1.put("Status", "0");
-			value1.put("MisiID", "1");
+			value1.put("Status", 0);
+			value1.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value1);
-			
+
 			ContentValues value2 = new ContentValues();
-			value2.put("id", "2");
+			value2.put("id", 2);
 			value2.put("nama", "Candi Borobudur");
 			value2.put("alamat",
 					"Borobudur kaya akan keindahan alam dan budayanya");
 			value2.put("TitikPoint", "aaaaca");
 			value2.put("Foto", "xxxx");
-			value2.put("Status", "0");
-			value2.put("MisiID", "1");
+			value2.put("Status", 0);
+			value2.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value2);
-			db.close();
-			
+
 			ContentValues value3 = new ContentValues();
-			value3.put("id", "3");
+			value3.put("id", 3);
 			value3.put("nama", "Candi Prambanan");
 			value3.put("alamat",
 					"Prambanan kaya akan keindahan alam dan budayanya");
 			value3.put("TitikPoint", "aaasssaaca");
 			value3.put("Foto", "xxxx");
-			value3.put("Status", "0");
-			value3.put("MisiID", "1");
+			value3.put("Status", 0);
+			value3.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value3);
-			
+
 			ContentValues value4 = new ContentValues();
-			value4.put("id", "3");
+			value4.put("id", 4);
 			value4.put("nama", "Keraton Jogja");
 			value4.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
 			value4.put("TitikPoint", "sdd");
 			value4.put("Foto", "xxxx");
 			value4.put("Status", "0");
-			value4.put("MisiID", "1");
+			value4.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value4);
-			db.close();
-			
+
 			ContentValues value5 = new ContentValues();
-			value5.put("id", "5");
+			value5.put("id", 5);
 			value5.put("nama", "Pantai Parangtritis");
 			value5.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
 			value5.put("TitikPoint", "aaaassca");
 			value5.put("Foto", "xxxx");
-			value5.put("Status", "0");
-			value5.put("MisiID", "1");
+			value5.put("Status", 0);
+			value5.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value5);
 			db.close();
 		}
@@ -340,7 +339,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT", null);
 		cursor.moveToFirst();
 		for (int i = 0; i < cursor.getCount(); i++) {
-			cursor.moveToPosition(0);
+			cursor.moveToPosition(i);
 			ID = cursor.getInt(0);
 			nama = cursor.getString(1);
 			alamat = cursor.getString(2);

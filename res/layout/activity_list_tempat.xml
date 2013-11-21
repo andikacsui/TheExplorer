@@ -60,14 +60,16 @@
         android:textSize="10sp" />
 
     <TextView
-        android:id="@+id/TextViewVisited"
-        android:layout_width="fill_parent"
+        android:id="@+id/TextViewStatus"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lokasi"
+        android:layout_below="@+id/TextViewTitikPoint"
         android:layout_marginTop="1dip"
+        android:layout_marginLeft="130dp"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="Visited"
+        android:text="Unvisited"
         android:textColor="#343434"
-        android:textSize="10sp" />
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

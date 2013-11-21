@@ -59,6 +59,18 @@
         android:textColor="#343434"
         android:textSize="10sp"
         android:text="Jakarta ibukota negara letaknya sangat stragis di pertengahan indonesia" />
+<TextView
+        android:id="@+id/TextViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewTitikPoint"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="130dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Unvisited"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button1"
@@ -66,7 +78,6 @@
         android:layout_width="70dp"
         android:layout_height="30dp"
         android:layout_below="@+id/keterangan"
-        
         android:layout_toRightOf="@+id/thumbnail"
         android:text="@string/details" />
 
@@ -79,4 +90,5 @@
         android:layout_alignBottom="@+id/button1"
         android:layout_toRightOf="@+id/button1"
         android:text="@string/join" />
+
 </RelativeLayout>

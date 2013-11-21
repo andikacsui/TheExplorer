@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<daftar_tempat>
+    <tempat>
+        <id>1</id>    
+        <nama>Jelajah Jakarta</nama>
+        <alamat>Indonesia</alamat>
+        <titikpoint>Ibukota negara</titikpoint>
+        <status>Unvisited</status>
+		<gambar>@drawable/mission1_img</gambar>
+    </tempat>
+</daftar_tempat>
