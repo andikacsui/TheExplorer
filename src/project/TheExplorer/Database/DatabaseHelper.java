@@ -307,7 +307,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("TitikPoint", "sdd");
 			value4.put("Foto", "xxxx");
 			value4.put("Status", "0");
-			value4.put("MisiID", 1);
+			value4.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value4);
 
 			ContentValues value5 = new ContentValues();
