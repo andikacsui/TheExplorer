@@ -52,19 +52,10 @@
         </activity>
         <activity android:name="org.holoeverywhere.app.Application" >
         </activity>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
         <activity android:name="project.TheExplorer.View.Share" >
         </activity>
         <activity android:name="project.TheExplorer.View.AmbilFoto" >
         </activity>
-<<<<<<< HEAD
->>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
-=======
->>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
     </application>
 
 </manifest>

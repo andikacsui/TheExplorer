@@ -4,27 +4,8 @@
     <string name="app_name">The Explorer</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-<<<<<<< HEAD
-    <string name="Petualangan">Petualangan</string>
-    <string name="MissionImpossible">Mission Impossible</string>
-    <string name="koordinat">0.2123421, 4.321422</string>
-    <string name="teks">tes alala lalaalal ldsldl sadasdk jsadas dsaj dsadas ds</string>
-    <string name="details">Details</string>
-    <string name="alamat">Jalan H.Koja 2 Depok</string>
-    <string name="join">Join Mission</string>
-    <string name="visited">Unvisited</string>
-    <string name="greetings">Hi, Andika</string>
-    <string name="your_score">Your score is</string>
-    <string name="score">1242</string>
-    <string name="your_badge">You have achieved</string>
-    <string name="badges">12 badge(s)</string>
-    <string name="summary_info">Your score indicated the distance that you have been traveled since the first time you use The Explorer Mission. While the badges you achieved indicated the number of mission you have been accomplished</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="ChangeProfile">Change Profile</string>
     <string name="Visited">Visited</string>
 
-=======
 	<string name="Petualangan">Petualangan</string>
 	<string name="MissionImpossible">Mission Impossible</string>
 	<string name="koordinat">0.2123421, 4.321422</string>
@@ -44,8 +25,4 @@
 	<string name="ChangeProfile">Change Profile</string>
 	<string name="share">Share</string>
 	<string name="take_picture">Take Picture</string>
-<<<<<<< HEAD
->>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
-=======
->>>>>>> 60218239818dff3e8ab1130d2f0ca6e908b53fc4
 </resources>
