@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -16,24 +17,22 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.R;
 import project.TheExplorer.Controller.TempatHelper;
+import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Tempat;
 
 public class CustomizedDaftarTempat extends Activity {
 	// All static variables
 	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
-	static final String KEY_SONG = "song"; // parent node
 	static final String KEY_ID = "id";
 	static final String KEY_NAMA = "nama";
-	static final String KEY_ALAMAT = "lokasi";
-	static final String KEY_TITIKPOINT = "deskripsi";
-	static final String KEY_STATUS = "status";
+	static final String KEY_DESKRIPSI = "deskripsi";
 	static final String KEY_FOTO = "foto";
-	int status;
+	static final String KEY_STATUS = "status";
 	ArrayList<Tempat> daftarTempat;
 
 	ListView list;
@@ -43,50 +42,45 @@ public class CustomizedDaftarTempat extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_daftar_tempat2);
+		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
 
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		try {
 
-			daftarTempat = TempatHelper.GetListTempatByMisi(context, 1);
+			daftarTempat = TempatHelper.GetListTempat(context);
 
 			// looping through all song nodes &lt;song&gt;
-			for (int j = 0; j < daftarTempat.size(); j++) {
+			for (int i = 0; i < daftarTempat.size(); i++) {
 
 				// creating new HashMap
 				HashMap<String, String> map = new HashMap<String, String>();
-				status = daftarTempat.get(j).getStatus();
-				if (status == 1) {
-					map.put(KEY_STATUS, "Visited");
-				} else if (status == 0) {
-					map.put(KEY_STATUS, "Unvisited");
+				// adding each child node to HashMap key => value
+				if (daftarTempat.get(i).getStatus() == 1) {
+					map.put(KEY_STATUS, "VISITED");
+				} else {
+					map.put(KEY_STATUS, "UNVISITED");
 				}
-				map.put(KEY_NAMA, daftarTempat.get(j).getNama());
-				map.put(KEY_ALAMAT, daftarTempat.get(j).getAlamat());
-				map.put(KEY_TITIKPOINT, daftarTempat.get(j).getTitikPoint());
-				map.put(KEY_FOTO, daftarTempat.get(j).getFoto());
+				map.put(KEY_NAMA, daftarTempat.get(i).getNama());
+				map.put(KEY_DESKRIPSI, daftarTempat.get(i).getDeskripsi());
+				map.put(KEY_FOTO, daftarTempat.get(i).getFoto());
+
+				// adding HashList to ArrayList
 				missionList.add(map);
 			}
 
 			list = (ListView) findViewById(R.id.list_tempat_layout);
+
+			// Getting adapter by passing xml data ArrayList
 			adapter = new ListTempatAdapter(this, missionList);
 			list.setAdapter(adapter);
+
+			// Click event for single list row
 			list.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
-					// ListView Clicked item index
-					int itemPosition = position;
-
-					// ListView Clicked item value
-					String itemValue = list
-							.getItemAtPosition(position).toString();
-					Toast.makeText(
-							getApplicationContext(),
-							"Position :" + itemPosition + "  ListItem : "
-									+ itemValue, Toast.LENGTH_LONG).show();
 
 				}
 			});

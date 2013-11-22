@@ -23,7 +23,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/TextViewNamaTempat"
+        android:id="@+id/TextViewNamaMisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/thumbnail"
@@ -35,31 +35,57 @@
         android:typeface="sans" />
 
     <TextView
-        android:id="@+id/TextViewDeskripsiTempat"
+        android:id="@+id/TextViewLokasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextViewNamaTempat"
+        android:layout_below="@+id/TextViewNamaMisi"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Jakarta"
-        android:textColor="#343434"
+        android:textColor="#040404"
         android:textSize="12sp"
+        android:textStyle="bold"
         android:typeface="sans" />
 
     <TextView
-        android:id="@+id/TextViewStatusTempat"
-        android:layout_width="wrap_content"
+        android:id="@+id/TextViewDeskripsiMisi"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextViewDeskripsiTempat"
-        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/TextViewLokasi"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
         android:clickable="true"
-        android:onClick="TextViewStatus_OnClick"
-        android:text="Unvisited"
+        android:onClick="TextViewDeskripsiMisi_OnClick"
+        android:text="Jakarta ibukota negara letaknya sangat stragis di pertengahan indonesia"
+        android:textColor="#343434"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/TextViewJoinMisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewDeskripsiMisi"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:clickable="true"
+        android:onClick="TextViewJoinMisi_OnClick"
+        android:text="@string/join"
         android:textColor="#040404"
-        android:textSize="10sp"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TextViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextViewJoinMisi"
+        android:layout_alignBottom="@+id/TextViewJoinMisi"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/TextViewJoinMisi"
+        android:text="@string/details"
+        android:textColor="#040404"
+        android:textSize="12sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -41,11 +41,11 @@ public class ListMisiAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         View vi=convertView;
         if(convertView==null)
-            vi = inflater.inflate(R.layout.list_mission, null);
+            vi = inflater.inflate(R.layout.activity_list_misi, null);
  
-        TextView judul = (TextView)vi.findViewById(R.id.judul); // title
-        TextView lokasi = (TextView)vi.findViewById(R.id.lokasi); // artist name
-        TextView keterangan = (TextView)vi.findViewById(R.id.keterangan); // duration
+        TextView judul = (TextView)vi.findViewById(R.id.TextViewNamaMisi); // title
+        TextView lokasi = (TextView)vi.findViewById(R.id.TextViewLokasi); // artist name
+        TextView keterangan = (TextView)vi.findViewById(R.id.TextViewDeskripsiMisi); // duration
         //ImageView gambar=(ImageView)vi.findViewById(R.id.gambar); // thumb image
         
         HashMap<String, String> mission = new HashMap<String, String>();
