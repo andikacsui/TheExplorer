@@ -29,17 +29,30 @@ public final class R {
         public static final int twitter=0x7f020005;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int Achievement=0x7f08006b;
         public static final int Button02=0x7f080086;
+=======
+        public static final int Achievement=0x7f08006c;
+        public static final int Button02=0x7f080081;
+>>>>>>> udah ditambahin update lokasi
         public static final int Button03=0x7f080006;
         public static final int ButtonAchievement=0x7f080005;
         public static final int ButtonChooseNewMission=0x7f080002;
+        public static final int ButtonGPS=0x7f08005d;
         public static final int ButtonSavedMission=0x7f080004;
         public static final int ButtonShare=0x7f080007;
+<<<<<<< HEAD
         public static final int ButtonSimpan=0x7f08007b;
         public static final int EditProfile=0x7f08006c;
         public static final int EditTextPassword=0x7f08007a;
         public static final int EditTextUsername=0x7f080078;
+=======
+        public static final int ButtonSimpan=0x7f080076;
+        public static final int EditProfile=0x7f08006d;
+        public static final int EditTextPassword=0x7f080075;
+        public static final int EditTextUsername=0x7f080073;
+>>>>>>> udah ditambahin update lokasi
         public static final int ImageViewGambarMisi1=0x7f08000a;
         public static final int ImageViewGambarMisi2=0x7f080015;
         public static final int ImageViewGambarMisi3=0x7f080020;
@@ -50,17 +63,26 @@ public final class R {
         public static final int ImageViewGambarTempat3=0x7f08004d;
         public static final int ImageViewGambarTempat4=0x7f080052;
         public static final int ImageViewGambarTempat5=0x7f080057;
-        public static final int Summary=0x7f080064;
+        public static final int Summary=0x7f080065;
         public static final int TableLayoutMisi1=0x7f080008;
         public static final int TableLayoutTempat1=0x7f080042;
+<<<<<<< HEAD
         public static final int TextViewAchievement=0x7f080081;
         public static final int TextViewAlamat=0x7f080060;
+=======
+        public static final int TextViewAchievement=0x7f08007c;
+        public static final int TextViewAlamat=0x7f080061;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewAlamat1=0x7f080045;
         public static final int TextViewAlamat2=0x7f08004a;
         public static final int TextViewAlamat3=0x7f08004f;
         public static final int TextViewAlamat4=0x7f080054;
         public static final int TextViewAlamat5=0x7f080059;
+<<<<<<< HEAD
         public static final int TextViewDescription=0x7f080082;
+=======
+        public static final int TextViewDescription=0x7f08007d;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewDeskripsi1=0x7f08000e;
         public static final int TextViewDeskripsi2=0x7f080019;
         public static final int TextViewDeskripsi3=0x7f080024;
@@ -76,14 +98,23 @@ public final class R {
         public static final int TextViewEnter3=0x7f080029;
         public static final int TextViewEnter4=0x7f080034;
         public static final int TextViewEnter5=0x7f08003f;
+<<<<<<< HEAD
         public static final int TextViewGreetings=0x7f08007d;
+=======
+        public static final int TextViewGreetings=0x7f080078;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewJoinMisi1=0x7f080011;
         public static final int TextViewJoinMisi2=0x7f08001c;
         public static final int TextViewJoinMisi3=0x7f080027;
         public static final int TextViewJoinMisi4=0x7f080032;
         public static final int TextViewJoinMisi5=0x7f08003d;
+<<<<<<< HEAD
         public static final int TextViewLabelAchievement=0x7f080080;
         public static final int TextViewLabelScore=0x7f08007e;
+=======
+        public static final int TextViewLabelAchievement=0x7f08007b;
+        public static final int TextViewLabelScore=0x7f080079;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewLokasi1=0x7f08000c;
         public static final int TextViewLokasi2=0x7f080017;
         public static final int TextViewLokasi3=0x7f080022;
@@ -94,27 +125,39 @@ public final class R {
         public static final int TextViewNamaMisi3=0x7f080021;
         public static final int TextViewNamaMisi4=0x7f08002c;
         public static final int TextViewNamaMisi5=0x7f080037;
-        public static final int TextViewNamaTempat=0x7f08005f;
+        public static final int TextViewNamaTempat=0x7f080060;
         public static final int TextViewNamaTempat1=0x7f080044;
         public static final int TextViewNamaTempat2=0x7f080049;
         public static final int TextViewNamaTempat3=0x7f08004e;
         public static final int TextViewNamaTempat4=0x7f080053;
         public static final int TextViewNamaTempat5=0x7f080058;
+<<<<<<< HEAD
         public static final int TextViewPassword=0x7f080079;
         public static final int TextViewScore=0x7f08007f;
         public static final int TextViewStatus=0x7f080062;
         public static final int TextViewTitikPoint=0x7f080061;
+=======
+        public static final int TextViewPassword=0x7f080074;
+        public static final int TextViewScore=0x7f08007a;
+        public static final int TextViewStatus=0x7f080063;
+        public static final int TextViewTitikPoint=0x7f080062;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewTitikPoint1=0x7f080046;
         public static final int TextViewTitikPoint2=0x7f08004b;
         public static final int TextViewTitikPoint3=0x7f080050;
         public static final int TextViewTitikPoint4=0x7f080055;
         public static final int TextViewTitikPoint5=0x7f08005a;
+<<<<<<< HEAD
         public static final int TextViewUsername=0x7f080077;
+=======
+        public static final int TextViewUsername=0x7f080072;
+>>>>>>> udah ditambahin update lokasi
         public static final int TextViewVisitedTempat1=0x7f080047;
         public static final int TextViewVisitedTempat2=0x7f08004c;
         public static final int TextViewVisitedTempat3=0x7f080051;
         public static final int TextViewVisitedTempat4=0x7f080056;
         public static final int TextViewVisitedTempat5=0x7f08005b;
+<<<<<<< HEAD
         public static final int action_settings=0x7f080087;
         public static final int btnLoginTwitter=0x7f080071;
         public static final int btnLogoutTwitter=0x7f080076;
@@ -134,6 +177,22 @@ public final class R {
         public static final int list_misi_layout=0x7f080040;
         public static final int list_misi_layout1=0x7f08005c;
         public static final int lokasi=0x7f080084;
+=======
+        public static final int action_settings=0x7f080082;
+        public static final int button1=0x7f080003;
+        public static final int button2=0x7f08006f;
+        public static final int editText1=0x7f08006e;
+        public static final int editText2=0x7f080077;
+        public static final int gambar=0x7f08005f;
+        public static final int imageView1=0x7f080000;
+        public static final int imagepreview=0x7f080071;
+        public static final int judul=0x7f08007e;
+        public static final int keterangan=0x7f080080;
+        public static final int list=0x7f080064;
+        public static final int list_misi_layout=0x7f080040;
+        public static final int list_misi_layout1=0x7f08005c;
+        public static final int lokasi=0x7f08007f;
+>>>>>>> udah ditambahin update lokasi
         public static final int scrollView1=0x7f080001;
         public static final int scrollView2=0x7f080041;
         public static final int tableRow1=0x7f080009;
@@ -156,6 +215,7 @@ public final class R {
         public static final int tableRow7=0x7f08001a;
         public static final int tableRow8=0x7f08001d;
         public static final int tableRow9=0x7f08001f;
+<<<<<<< HEAD
         public static final int takepicture=0x7f08006f;
         public static final int textView1=0x7f080065;
         public static final int textView2=0x7f080066;
@@ -165,6 +225,16 @@ public final class R {
         public static final int textView6=0x7f08006a;
         public static final int thumbnail=0x7f08005d;
         public static final int txtUpdateStatus=0x7f080074;
+=======
+        public static final int takepicture=0x7f080070;
+        public static final int textView1=0x7f080066;
+        public static final int textView2=0x7f080067;
+        public static final int textView3=0x7f080068;
+        public static final int textView4=0x7f080069;
+        public static final int textView5=0x7f08006a;
+        public static final int textView6=0x7f08006b;
+        public static final int thumbnail=0x7f08005e;
+>>>>>>> udah ditambahin update lokasi
     }
     public static final class layout {
         public static final int activity_daftar_layout=0x7f030000;
@@ -173,6 +243,7 @@ public final class R {
         public static final int activity_daftar_misi2=0x7f030003;
         public static final int activity_daftar_tempat=0x7f030004;
         public static final int activity_daftar_tempat2=0x7f030005;
+<<<<<<< HEAD
         public static final int activity_launcher=0x7f030006;
         public static final int activity_list_tempat=0x7f030007;
         public static final int activity_main_mission=0x7f030008;
@@ -180,6 +251,15 @@ public final class R {
         public static final int activity_profile_tab=0x7f03000a;
         public static final int activity_share=0x7f03000b;
         public static final int activity_share_twitter=0x7f03000c;
+=======
+        public static final int activity_gps=0x7f030006;
+        public static final int activity_launcher=0x7f030007;
+        public static final int activity_list_tempat=0x7f030008;
+        public static final int activity_main_mission=0x7f030009;
+        public static final int activity_profile=0x7f03000a;
+        public static final int activity_profile_tab=0x7f03000b;
+        public static final int activity_share=0x7f03000c;
+>>>>>>> udah ditambahin update lokasi
         public static final int activity_sign_in=0x7f03000d;
         public static final int activity_splah_screen=0x7f03000e;
         public static final int activity_tab_achievement=0x7f03000f;

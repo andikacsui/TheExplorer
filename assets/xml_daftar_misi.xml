@@ -6,5 +6,6 @@
         <lokasi>Indonesia</lokasi>
         <keterangan>Ibukota negara</keterangan>
 		<gambar>@drawable/mission1_img</gambar>
+        <status>Ibukota negara</status>
     </misi>
 </daftar_misi>
