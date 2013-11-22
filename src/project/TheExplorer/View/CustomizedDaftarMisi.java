@@ -41,7 +41,7 @@ public class CustomizedDaftarMisi extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_daftar_misi2);
+		setContentView(R.layout.activity_daftar_misi);
 		context = this;
 
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();

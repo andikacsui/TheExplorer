@@ -22,7 +22,7 @@ public class DaftarMenu extends Activity {
 
 	public void ButtonChooseNewMission_OnClick(View view) {
 		Intent nextScreen = new Intent(getApplicationContext(),
-				CustomizedDaftarTempat.class);
+				CustomizedDaftarMisi.class);
 		startActivity(nextScreen);
 	}
 
