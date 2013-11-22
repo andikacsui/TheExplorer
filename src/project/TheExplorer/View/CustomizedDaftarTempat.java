@@ -37,7 +37,7 @@ public class CustomizedDaftarTempat extends Activity {
 	ArrayList<Tempat> daftarTempat;
 
 	ListView list;
-	ListMisiAdapter adapter;
+	ListTempatAdapter adapter;
 	Context context;
 
 	@Override
@@ -48,14 +48,6 @@ public class CustomizedDaftarTempat extends Activity {
 
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		try {
-			final Context mContext = this;
-			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-			DocumentBuilder db = dbf.newDocumentBuilder();
-			AssetManager assetManager = mContext.getAssets();
-			InputStream inputStream = assetManager
-					.open("xml_daftar_tempat.xml");
-			Document doc = db.parse(inputStream);
-			doc.getDocumentElement().normalize();
 
 			daftarTempat = TempatHelper.GetListTempatByMisi(context, 1);
 
@@ -77,8 +69,8 @@ public class CustomizedDaftarTempat extends Activity {
 				missionList.add(map);
 			}
 
-			list = (ListView) findViewById(R.id.list_misi_layout1);
-			adapter = new ListMisiAdapter(this, missionList);
+			list = (ListView) findViewById(R.id.list_tempat_layout);
+			adapter = new ListTempatAdapter(this, missionList);
 			list.setAdapter(adapter);
 			list.setOnItemClickListener(new OnItemClickListener() {
 

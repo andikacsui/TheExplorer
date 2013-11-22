@@ -3,10 +3,8 @@ package project.TheExplorer.Controller;
 import java.util.ArrayList;
 
 import project.TheExplorer.Database.DatabaseHelper;
-import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Tempat;
 import android.content.Context;
-import android.widget.TextView;
 
 public class TempatHelper {
 	public static DatabaseHelper db;

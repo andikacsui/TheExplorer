@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ListTempatAdapter extends BaseAdapter {
@@ -48,9 +49,8 @@ public class ListTempatAdapter extends BaseAdapter {
 		TextView status = (TextView) view.findViewById(R.id.TextViewStatus);
 		// ImageView gambar=(ImageView)vi.findViewById(R.id.gambar);
 		
-
 		HashMap<String, String> tempat = new HashMap<String, String>();
-		tempat = data.get(position);
+		//tempat = data.get(position);
 		nama.setText(tempat.get(CustomizedDaftarTempat.KEY_NAMA));
 		alamat.setText(tempat.get(CustomizedDaftarTempat.KEY_ALAMAT));
 		titikpoint.setText(tempat.get(CustomizedDaftarTempat.KEY_TITIKPOINT));
