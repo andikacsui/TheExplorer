@@ -26,6 +26,8 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="oauth" android:host="t4jsample"/>
             </intent-filter>
         </activity>
         <activity android:name="project.TheExplorer.View.DaftarMisi" >
@@ -60,9 +62,12 @@
         </activity>
         <activity android:name="project.TheExplorer.View.AmbilFoto" >
         </activity>
+        <activity android:name="project.TheExplorer.View.ShareTwitter" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
 </manifest>
