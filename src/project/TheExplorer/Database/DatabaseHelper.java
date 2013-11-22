@@ -320,7 +320,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("Status", 0);
 			value5.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value5);
-			db.close();
 			
 			ContentValues value6 = new ContentValues();
 			value6.put("id",6);
@@ -333,7 +332,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("Foto", 1); 
 			value6.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value6);
-			db.close();
 			
 			ContentValues value7 = new ContentValues();
 			value7.put("id",7);
@@ -346,7 +344,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("Foto", 1); 
 			value7.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value7);
-			db.close();
 			
 			ContentValues value8 = new ContentValues();
 			value8.put("id",8);
@@ -359,7 +356,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("Foto", 1); 
 			value8.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value8);
-			db.close();
 			
 			ContentValues value9 = new ContentValues();
 			value9.put("id",9);
@@ -372,7 +368,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("Foto", 1); 
 			value9.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value9);
-			db.close();
 			
 			ContentValues value10 = new ContentValues();
 			value10.put("id",10);
@@ -385,7 +380,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("Foto", 1); 
 			value10.put("MisiID", 1); 
 			db.insertOrThrow("TEMPAT", null, value10);
-			db.close();
 			
 			ContentValues value11 = new ContentValues();
 			value11.put("id",11);
@@ -398,7 +392,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("Foto", 1); 
 			value11.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value11);
-			db.close();
 			
 			ContentValues value12 = new ContentValues();
 			value12.put("id",12);
@@ -411,7 +404,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value12.put("Foto", 1); 
 			value12.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value12);
-			db.close();
 			
 			ContentValues value13 = new ContentValues();
 			value13.put("id",13);
@@ -424,7 +416,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value13.put("Foto", 1); 
 			value13.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value13);
-			db.close(); 
 			
 			ContentValues value14 = new ContentValues();
 			value14.put("id",14);
@@ -437,7 +428,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value14.put("Foto", 1); 
 			value14.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value14);
-			db.close(); 
 			
 			ContentValues value15 = new ContentValues();
 			value15.put("id",15);
@@ -450,7 +440,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value15.put("Foto", 1); 
 			value15.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value15);
-			db.close(); 
 			
 			ContentValues value16 = new ContentValues();
 			value16.put("id",16);
@@ -463,7 +452,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value16.put("Foto", 1); 
 			value16.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value16);
-			db.close(); 
 			
 			ContentValues value17 = new ContentValues();
 			value17.put("id",17);
@@ -476,7 +464,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value17.put("Foto", 1); 
 			value17.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value17);
-			db.close(); 
 			
 			ContentValues value18 = new ContentValues();
 			value18.put("id",18);
@@ -489,7 +476,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value18.put("Foto", 1); 
 			value18.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value18);
-			db.close(); 
 			
 			ContentValues value19 = new ContentValues();
 			value19.put("id",19);
@@ -502,7 +488,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value19.put("Foto", 1); 
 			value19.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value19);
-			db.close();
 			
 			ContentValues value20 = new ContentValues();
 			value20.put("id",20);
@@ -515,7 +500,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("Foto", 1); 
 			value20.put("MisiID", 2); 
 			db.insertOrThrow("TEMPAT", null, value20);
-			db.close();
 			
 			ContentValues value21 = new ContentValues();
 			value21.put("id",21);
@@ -528,7 +512,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value21.put("Foto", 1); 
 			value21.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value21);
-			db.close();
 			
 			ContentValues value22 = new ContentValues();
 			value22.put("id",22);
@@ -541,7 +524,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value22.put("Foto", 1); 
 			value22.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value22);
-			db.close();
 			
 			ContentValues value23 = new ContentValues();
 			value23.put("id",23);
@@ -554,7 +536,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value23.put("Foto", 1); 
 			value23.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value23);
-			db.close();
 			
 			ContentValues value24 = new ContentValues();
 			value24.put("id",24);
@@ -567,7 +548,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value24.put("Foto", 1); 
 			value24.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value24);
-			db.close();
 			
 			ContentValues value25 = new ContentValues();
 			value25.put("id",25);
@@ -580,7 +560,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value25.put("Foto", 1); 
 			value25.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value25);
-			db.close();
 			
 			ContentValues value26 = new ContentValues();
 			value26.put("id",26);
@@ -593,7 +572,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value26.put("Foto", 1); 
 			value26.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value26);
-			db.close();
 			
 			ContentValues value27 = new ContentValues();
 			value27.put("id",27);
@@ -606,7 +584,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value27.put("Foto", 1); 
 			value27.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value27);
-			db.close();
 			
 			ContentValues value28 = new ContentValues();
 			value28.put("id",28);
@@ -619,7 +596,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value28.put("Foto", 1); 
 			value28.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value28);
-			db.close();
 			
 			ContentValues value29 = new ContentValues();
 			value29.put("id",29);
@@ -632,7 +608,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value29.put("Foto", 1); 
 			value29.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value29);
-			db.close();
 			
 			ContentValues value30 = new ContentValues();
 			value30.put("id",30);
@@ -645,7 +620,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value30.put("Foto", 1); 
 			value30.put("MisiID", 3); 
 			db.insertOrThrow("TEMPAT", null, value30);
-			db.close();
 			
 			ContentValues value31 = new ContentValues();
 			value31.put("id",31);
@@ -658,7 +632,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value31.put("Foto", 1); 
 			value31.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value31);
-			db.close();
 			
 			ContentValues value32 = new ContentValues();
 			value32.put("id",32);
@@ -671,7 +644,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value32.put("Foto", 1); 
 			value32.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value32);
-			db.close();
 			
 			ContentValues value33 = new ContentValues();
 			value33.put("id",33);
@@ -684,7 +656,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value33.put("Foto", 1); 
 			value33.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value33);
-			db.close();
 			
 			ContentValues value34 = new ContentValues();
 			value34.put("id",34);
@@ -697,7 +668,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value34.put("Foto", 1); 
 			value34.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value34);
-			db.close();
 			
 			ContentValues value35 = new ContentValues();
 			value35.put("id",35);
@@ -710,7 +680,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value35.put("Foto", 1); 
 			value35.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value35);
-			db.close();
 			
 			ContentValues value36 = new ContentValues();
 			value36.put("id",36);
@@ -723,7 +692,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value36.put("Foto", 1); 
 			value36.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value36);
-			db.close();
 			
 			ContentValues value37 = new ContentValues();
 			value37.put("id",37);
@@ -736,7 +704,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value37.put("Foto", 1); 
 			value37.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value37);
-			db.close();
 			
 			ContentValues value38 = new ContentValues();
 			value38.put("id",38);
@@ -749,7 +716,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value38.put("Foto", 1); 
 			value38.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value38);
-			db.close();
 			
 			ContentValues value39 = new ContentValues();
 			value39.put("id",39);
@@ -762,7 +728,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value39.put("Foto", 1); 
 			value39.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value39);
-			db.close();
 			
 			ContentValues value40 = new ContentValues();
 			value40.put("id",40);
@@ -775,7 +740,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value40.put("Foto", 1); 
 			value40.put("MisiID", 4); 
 			db.insertOrThrow("TEMPAT", null, value40);
-			db.close();
 					
 			ContentValues value41 = new ContentValues();
 			value41.put("id",41);
@@ -788,7 +752,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value41.put("Foto", 1); 
 			value41.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value41);
-			db.close();
 			
 			ContentValues value42 = new ContentValues();
 			value42.put("id",42);
@@ -801,7 +764,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value42.put("Foto", 1); 
 			value42.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value42);
-			db.close();
 			
 			ContentValues value43 = new ContentValues();
 			value43.put("id",43);
@@ -814,7 +776,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value43.put("Foto", 1); 
 			value43.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value43);
-			db.close();
 			
 			ContentValues value44 = new ContentValues();
 			value44.put("id",44);
@@ -827,7 +788,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value44.put("Foto", 1); 
 			value44.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value44);
-			db.close();
 			
 			ContentValues value45 = new ContentValues();
 			value45.put("id",45);
@@ -840,7 +800,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value45.put("Foto", 1); 
 			value45.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value45);
-			db.close();
 			
 			ContentValues value46 = new ContentValues();
 			value46.put("id",46);
@@ -853,7 +812,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value46.put("Foto", 1); 
 			value46.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value46);
-			db.close();
 			
 			ContentValues value47 = new ContentValues();
 			value47.put("id",47);
@@ -866,7 +824,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value47.put("Foto", 1); 
 			value47.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value47);
-			db.close();
 			
 			ContentValues value48 = new ContentValues();
 			value48.put("id",48);
@@ -879,7 +836,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value48.put("Foto", 1); 
 			value48.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value48);
-			db.close();
 			
 			ContentValues value49 = new ContentValues();
 			value49.put("id",49);
@@ -892,7 +848,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value49.put("Foto", 1); 
 			value49.put("MisiID", 5); 
 			db.insertOrThrow("TEMPAT", null, value49);
-			db.close();
 			
 			ContentValues value50 = new ContentValues();
 			value50.put("id",50);
