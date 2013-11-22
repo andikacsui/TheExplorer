@@ -70,6 +70,7 @@
                 android:background="@layout/template"
                 android:onClick="ButtonShare_OnClick"
                 android:text="Share" />
+<<<<<<< HEAD
             <Button
                 android:id="@+id/ButtonShare"
                 android:layout_width="match_parent"
@@ -80,6 +81,19 @@
                 android:background="@layout/template"
                 android:onClick="ButtonGetLocation_OnClick"
                 android:text="GetLocation" />
+=======
+            
+             <Button
+                android:id="@+id/ButtonSensor"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/ButtonSavedMission"
+                android:layout_below="@+id/ButtonSavedMission"
+                android:layout_marginTop="10dp"
+                android:background="@layout/template"
+                android:onClick="ButtonSensor_OnClick"
+                android:text="Sensor" />
+>>>>>>> ffc9f3d101627426b11fddefa12be7c2c6fe0f1b
 
         </LinearLayout>
     </ScrollView>

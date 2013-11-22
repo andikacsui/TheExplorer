@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
  
 
@@ -46,7 +47,7 @@ public class ListMisiAdapter extends BaseAdapter{
         TextView lokasi = (TextView)vi.findViewById(R.id.lokasi); // artist name
         TextView keterangan = (TextView)vi.findViewById(R.id.keterangan); // duration
         //ImageView gambar=(ImageView)vi.findViewById(R.id.gambar); // thumb image
- 
+        
         HashMap<String, String> mission = new HashMap<String, String>();
         mission = data.get(position);
  
@@ -54,6 +55,7 @@ public class ListMisiAdapter extends BaseAdapter{
         judul.setText(mission.get(CustomizedDaftarMisi.KEY_NAMA));
         lokasi.setText(mission.get(CustomizedDaftarMisi.KEY_LOKASI));
         keterangan.setText(mission.get(CustomizedDaftarMisi.KEY_DESKRIPSI));
+        
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;
     }
