@@ -34,4 +34,9 @@ public class DaftarMenu extends Activity {
 		Intent nextScreen = new Intent(getApplicationContext(), ShareTwitter.class);
 		startActivity(nextScreen);
 	}
+	
+	public void ButtonSensor_OnClick(View view) {
+		Intent nextScreen = new Intent(getApplicationContext(), SensorTestActivity.class);
+		startActivity(nextScreen);
+	}
 }
