@@ -196,27 +196,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value4 = new ContentValues();
 			value4.put("id", "4");
-			value4.put("nama", "Menjelajah Sumatra Barat");
+			value4.put("nama", "Menjelajah Sumatera Barat");
 			value4.put(
 					"deskripsi",
 					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
-			value4.put("lokasi", "Sumatra Barat,Indonesia");
+			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "xxxx");
 			value4.put("status", "0");
-			value4.put("badge", "Sumatra Barat");
+			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
 			value5.put("id", "5");
-			value5.put("nama", "Menjelajah Aceh");
+			value5.put("nama", "Menjelajah Nusa Tenggara Barat");
 			value5.put(
 					"deskripsi",
 					"Aceh merupakan salah satu daerah di Nusantara yang masyarakatnya bersifat multietnis bercirikan Islam. Penduduk Aceh sering disebutkan merupakan keturunan berbagai kaum dan bangsa. Seperti halnya kata ACEH sering diidentikkan dengan kepanjangan dari Arab, China, Eropa, Hindia dimana memang secara fisik menunjukkan ciri-ciri orang Arab, India, Eropa dan Cina. Aceh merupakan daerah istimewa di Indonesia yang terletak paling ujung utara Pulau Sumatra.");
-			value5.put("lokasi", "Aceh, Indonesia");
+			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "xxxx");
 			value5.put("status", "0");
-			value5.put("badge", "Aceh");
+			value5.put("badge", "NTB");
 			value5.put("penjelajahID", "0");
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
@@ -470,7 +470,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value17.put("nama", "Pulau Tidung Kep. Seribu");
 			value17.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value17.put("TitikPoint", "poics");
+			value17.put("TitikPoint", "uyycs");
 			value17.put("Foto","xxxx");
 			value17.put("Status",0);
 			value17.put("Foto", 1); 
@@ -483,7 +483,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value18.put("nama", "Pelabuhan Sunda Kelapa");
 			value18.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value18.put("TitikPoint", "poics");
+			value18.put("TitikPoint", "ytfgs");
 			value18.put("Foto","xxxx");
 			value18.put("Status",0);
 			value18.put("Foto", 1); 
@@ -496,7 +496,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value19.put("nama", "Museum Fatahillah");
 			value19.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value19.put("TitikPoint", "poics");
+			value19.put("TitikPoint", "ywefj");
 			value19.put("Foto","xxxx");
 			value19.put("Status",0);
 			value19.put("Foto", 1); 
@@ -509,7 +509,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("nama", "Museum Bank Indonesia");
 			value20.put("alamat",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value20.put("TitikPoint", "poics");
+			value20.put("TitikPoint", "wofj");
 			value20.put("Foto","xxxx");
 			value20.put("Status",0);
 			value20.put("Foto", 1); 
@@ -517,6 +517,395 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.insertOrThrow("TEMPAT", null, value20);
 			db.close();
 			
+			ContentValues value21 = new ContentValues();
+			value21.put("id",21);
+			value21.put("nama", "Pantai Kuta");
+			value21.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value21.put("TitikPoint", "wrerf");
+			value21.put("Foto","xxxx");
+			value21.put("Status",0);
+			value21.put("Foto", 1); 
+			value21.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value21);
+			db.close();
+			
+			ContentValues value22 = new ContentValues();
+			value22.put("id",22);
+			value22.put("nama", "Ubud Monkey Forest");
+			value22.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value22.put("TitikPoint", "ytyh");
+			value22.put("Foto","xxxx");
+			value22.put("Status",0);
+			value22.put("Foto", 1); 
+			value22.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value22);
+			db.close();
+			
+			ContentValues value23 = new ContentValues();
+			value23.put("id",23);
+			value23.put("nama", "Bali Bird Park");
+			value23.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value23.put("TitikPoint", "lklsd");
+			value23.put("Foto","xxxx");
+			value23.put("Status",0);
+			value23.put("Foto", 1); 
+			value23.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value23);
+			db.close();
+			
+			ContentValues value24 = new ContentValues();
+			value24.put("id",24);
+			value24.put("nama", "Pantai Lovina");
+			value24.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value24.put("TitikPoint", "lsoerd");
+			value24.put("Foto","xxxx");
+			value24.put("Status",0);
+			value24.put("Foto", 1); 
+			value24.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value24);
+			db.close();
+			
+			ContentValues value25 = new ContentValues();
+			value25.put("id",25);
+			value25.put("nama", "Danau Batur-Kintamani");
+			value25.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value25.put("TitikPoint", "lklsd");
+			value25.put("Foto","xxxx");
+			value25.put("Status",0);
+			value25.put("Foto", 1); 
+			value25.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value25);
+			db.close();
+			
+			ContentValues value26 = new ContentValues();
+			value26.put("id",26);
+			value26.put("nama", "Pantai Sanur");
+			value26.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value26.put("TitikPoint", "iwkld");
+			value26.put("Foto","xxxx");
+			value26.put("Status",0);
+			value26.put("Foto", 1); 
+			value26.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value26);
+			db.close();
+			
+			ContentValues value27 = new ContentValues();
+			value27.put("id",27);
+			value27.put("nama", "Nusa Dua");
+			value27.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value27.put("TitikPoint", "olvhdf");
+			value27.put("Foto","xxxx");
+			value27.put("Status",0);
+			value27.put("Foto", 1); 
+			value27.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value27);
+			db.close();
+			
+			ContentValues value28 = new ContentValues();
+			value28.put("id",28);
+			value28.put("nama", "Tanah Lot");
+			value28.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value28.put("TitikPoint", "iwkld");
+			value28.put("Foto","xxxx");
+			value28.put("Status",0);
+			value28.put("Foto", 1); 
+			value28.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value28);
+			db.close();
+			
+			ContentValues value29 = new ContentValues();
+			value29.put("id",29);
+			value29.put("nama", "Pantai Dreamland");
+			value29.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value29.put("TitikPoint", "iaowi");
+			value29.put("Foto","xxxx");
+			value29.put("Status",0);
+			value29.put("Foto", 1); 
+			value29.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value29);
+			db.close();
+			
+			ContentValues value30 = new ContentValues();
+			value30.put("id",30);
+			value30.put("nama", "Jimbaran");
+			value30.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value30.put("TitikPoint", "evhus");
+			value30.put("Foto","xxxx");
+			value30.put("Status",0);
+			value30.put("Foto", 1); 
+			value30.put("MisiID", 3); 
+			db.insertOrThrow("TEMPAT", null, value30);
+			db.close();
+			
+			ContentValues value31 = new ContentValues();
+			value31.put("id",31);
+			value31.put("nama", "Jam Gadang");
+			value31.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value31.put("TitikPoint", "aiwo");
+			value31.put("Foto","xxxx");
+			value31.put("Status",0);
+			value31.put("Foto", 1); 
+			value31.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value31);
+			db.close();
+			
+			ContentValues value32 = new ContentValues();
+			value32.put("id",32);
+			value32.put("nama", "Ngarai Sianok");
+			value32.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value32.put("TitikPoint", "aoowo");
+			value32.put("Foto","xxxx");
+			value32.put("Status",0);
+			value32.put("Foto", 1); 
+			value32.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value32);
+			db.close();
+			
+			ContentValues value33 = new ContentValues();
+			value33.put("id",33);
+			value33.put("nama", "Lobang Jepang");
+			value33.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value33.put("TitikPoint", "apol");
+			value33.put("Foto","xxxx");
+			value33.put("Status",0);
+			value33.put("Foto", 1); 
+			value33.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value33);
+			db.close();
+			
+			ContentValues value34 = new ContentValues();
+			value34.put("id",34);
+			value34.put("nama", "Air Terjun Lembah Anai");
+			value34.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value34.put("TitikPoint", "awovn");
+			value34.put("Foto","xxxx");
+			value34.put("Status",0);
+			value34.put("Foto", 1); 
+			value34.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value34);
+			db.close();
+			
+			ContentValues value35 = new ContentValues();
+			value35.put("id",35);
+			value35.put("nama", "Pantai Air Manis");
+			value35.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value35.put("TitikPoint", "wpoek");
+			value35.put("Foto","xxxx");
+			value35.put("Status",0);
+			value35.put("Foto", 1); 
+			value35.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value35);
+			db.close();
+			
+			ContentValues value36 = new ContentValues();
+			value36.put("id",36);
+			value36.put("nama", "Danau Singkarak");
+			value36.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value36.put("TitikPoint", "wieok");
+			value36.put("Foto","xxxx");
+			value36.put("Status",0);
+			value36.put("Foto", 1); 
+			value36.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value36);
+			db.close();
+			
+			ContentValues value37 = new ContentValues();
+			value37.put("id",37);
+			value37.put("nama", "Istana Pagaruyung");
+			value37.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value37.put("TitikPoint", "epvmk");
+			value37.put("Foto","xxxx");
+			value37.put("Status",0);
+			value37.put("Foto", 1); 
+			value37.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value37);
+			db.close();
+			
+			ContentValues value38 = new ContentValues();
+			value38.put("id",38);
+			value38.put("nama", "Danau Maninjau");
+			value38.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value38.put("TitikPoint", "eprv");
+			value38.put("Foto","xxxx");
+			value38.put("Status",0);
+			value38.put("Foto", 1); 
+			value38.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value38);
+			db.close();
+			
+			ContentValues value39 = new ContentValues();
+			value39.put("id",39);
+			value39.put("nama", "Lembah Harau");
+			value39.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value39.put("TitikPoint", "eignvm");
+			value39.put("Foto","xxxx");
+			value39.put("Status",0);
+			value39.put("Foto", 1); 
+			value39.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value39);
+			db.close();
+			
+			ContentValues value40 = new ContentValues();
+			value40.put("id",40);
+			value40.put("nama", "Pantai Carocok");
+			value40.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value40.put("TitikPoint", "awei");
+			value40.put("Foto","xxxx");
+			value40.put("Status",0);
+			value40.put("Foto", 1); 
+			value40.put("MisiID", 4); 
+			db.insertOrThrow("TEMPAT", null, value40);
+			db.close();
+					
+			ContentValues value41 = new ContentValues();
+			value41.put("id",41);
+			value41.put("nama", "Gili Terawangan");
+			value41.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value41.put("TitikPoint", "woem");
+			value41.put("Foto","xxxx");
+			value41.put("Status",0);
+			value41.put("Foto", 1); 
+			value41.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value41);
+			db.close();
+			
+			ContentValues value42 = new ContentValues();
+			value42.put("id",42);
+			value42.put("nama", "Gili Meno");
+			value42.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value42.put("TitikPoint", "aeoem");
+			value42.put("Foto","xxxx");
+			value42.put("Status",0);
+			value42.put("Foto", 1); 
+			value42.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value42);
+			db.close();
+			
+			ContentValues value43 = new ContentValues();
+			value43.put("id",43);
+			value43.put("nama", "Gili Air");
+			value43.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value43.put("TitikPoint", "awie");
+			value43.put("Foto","xxxx");
+			value43.put("Status",0);
+			value43.put("Foto", 1); 
+			value43.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value43);
+			db.close();
+			
+			ContentValues value44 = new ContentValues();
+			value44.put("id",44);
+			value44.put("nama", "Pulau Moyo");
+			value44.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value44.put("TitikPoint", "vmeki");
+			value44.put("Foto","xxxx");
+			value44.put("Status",0);
+			value44.put("Foto", 1); 
+			value44.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value44);
+			db.close();
+			
+			ContentValues value45 = new ContentValues();
+			value45.put("id",45);
+			value45.put("nama", "Gunung Rinjani");
+			value45.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value45.put("TitikPoint", "afem");
+			value45.put("Foto","xxxx");
+			value45.put("Status",0);
+			value45.put("Foto", 1); 
+			value45.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value45);
+			db.close();
+			
+			ContentValues value46 = new ContentValues();
+			value46.put("id",46);
+			value46.put("nama", "Pantai Senggigi");
+			value46.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value46.put("TitikPoint", "wvsn");
+			value46.put("Foto","xxxx");
+			value46.put("Status",0);
+			value46.put("Foto", 1); 
+			value46.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value46);
+			db.close();
+			
+			ContentValues value47 = new ContentValues();
+			value47.put("id",47);
+			value47.put("nama", "Sumbawa");
+			value47.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value47.put("TitikPoint", "aiwm");
+			value47.put("Foto","xxxx");
+			value47.put("Status",0);
+			value47.put("Foto", 1); 
+			value47.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value47);
+			db.close();
+			
+			ContentValues value48 = new ContentValues();
+			value48.put("id",48);
+			value48.put("nama", "Mataram");
+			value48.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value48.put("TitikPoint", "poev");
+			value48.put("Foto","xxxx");
+			value48.put("Status",0);
+			value48.put("Foto", 1); 
+			value48.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value48);
+			db.close();
+			
+			ContentValues value49 = new ContentValues();
+			value49.put("id",49);
+			value49.put("nama", "Pantai Lakey");
+			value49.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value49.put("TitikPoint", "eoif");
+			value49.put("Foto","xxxx");
+			value49.put("Status",0);
+			value49.put("Foto", 1); 
+			value49.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value49);
+			db.close();
+			
+			ContentValues value50 = new ContentValues();
+			value50.put("id",50);
+			value50.put("nama", "Pulau Lombok");
+			value50.put("alamat",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value50.put("TitikPoint", "efmo");
+			value50.put("Foto","xxxx");
+			value50.put("Status",0);
+			value50.put("Foto", 1); 
+			value50.put("MisiID", 5); 
+			db.insertOrThrow("TEMPAT", null, value50);
+			db.close();
 		}
 	}
 
