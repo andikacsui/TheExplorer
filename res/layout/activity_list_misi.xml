@@ -35,8 +35,7 @@
         android:typeface="sans" />
 
     <TextView
-        android:id="@+id/TextVIewIDMisi"
-        android:text="ID misi disimpen disini"
+        android:id="@+id/TextViewIDMisi"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:visibility="invisible"/>
@@ -66,13 +65,13 @@
         android:textColor="#343434"
         android:textSize="10sp" />
 
-    <TextView
+    <Button
         android:id="@+id/TextViewJoinMisi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TextViewDeskripsiMisi"
-        android:layout_marginLeft="80dp"
-        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_alignBaseline="@+id/TextViewDetails"
+        android:layout_alignBottom="@+id/TextViewDetails"
+        android:layout_toLeftOf="@+id/TextViewDetails"
         android:clickable="true"
         android:onClick="TextViewJoinMisi_OnClick"
         android:text="@string/join"
@@ -80,17 +79,15 @@
         android:textSize="12sp"
         android:textStyle="bold" />
 
-    <TextView
+    <Button
         android:id="@+id/TextViewDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextViewJoinMisi"
-        android:layout_alignBottom="@+id/TextViewJoinMisi"
-        android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@+id/TextViewJoinMisi"
-        android:text="@string/details"
+        android:layout_alignRight="@+id/TextViewIDMisi"
+        android:layout_below="@+id/TextViewDeskripsiMisi"
         android:clickable="true"
         android:onClick="TextViewDetailMisi_OnClick"
+        android:text="@string/details"
         android:textColor="#040404"
         android:textSize="12sp"
         android:textStyle="bold" />

@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -29,13 +30,13 @@ public class CustomizedDaftarTempat extends Activity {
 	// All static variables
 	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
-	static final String KEY_ID = "id";
-	static final String KEY_NAMA = "nama";
-	static final String KEY_DESKRIPSI = "deskripsi";
-	static final String KEY_FOTO = "foto";
-	static final String KEY_STATUS = "status";
-	static int NomorMisi;
+	static final String KEY_IDX = "id";
+	static final String KEY_NAMAX = "nama";
+	static final String KEY_DESKRIPSIX = "deskripsi";
+	static final String KEY_FOTOX = "foto";
+	static final String KEY_STATUSX = "status";
 	ArrayList<Tempat> daftarTempat;
+	HashMap<String, String> map;
 
 	ListView list;
 	ListTempatAdapter adapter;
@@ -47,38 +48,33 @@ public class CustomizedDaftarTempat extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
-		Intent prev = getIntent();
-		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		daftarMisi = new CustomizedDaftarMisi();
-		
-		if(daftarTempat != null){
-			daftarTempat.clear();
-		}
+
 		try {
 
 			//daftarMisi = new CustomizedDaftarMisi();
 			//IDMisi = Integer.parseInt(daftarMisi.KEY_ID_MISI);
 			
-			Intent intent = getIntent();
+			Intent inten = getIntent();
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, 0);
+			daftarTempat.clear();
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, inten.getIntExtra("mission_id", 0));
 			
-			daftarTempat = TempatHelper.GetListTempatByMisi(context, intent.getIntExtra("IDMisi", 0));
-			
-
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {
 
 				// creating new HashMap
-				HashMap<String, String> map = new HashMap<String, String>();
+				map = new HashMap<String, String>();
 				// adding each child node to HashMap key => value
 				if (daftarTempat.get(i).getStatus() == 1) {
-					map.put(KEY_STATUS, "VISITED");
+					map.put(KEY_STATUSX, "VISITED");
 				} else {
-					map.put(KEY_STATUS, "UNVISITED");
+					map.put(KEY_STATUSX, "UNVISITED");
 				}
-				map.put(KEY_NAMA, daftarTempat.get(i).getNama());
-				map.put(KEY_DESKRIPSI, daftarTempat.get(i).getDeskripsi());
-				map.put(KEY_FOTO, daftarTempat.get(i).getFoto());
+				map.put(KEY_NAMAX, daftarTempat.get(i).getNama());
+				map.put(KEY_DESKRIPSIX, daftarTempat.get(i).getDeskripsi());
+				map.put(KEY_FOTOX, daftarTempat.get(i).getFoto());
 
 				// adding HashList to ArrayList
 				missionList.add(map);

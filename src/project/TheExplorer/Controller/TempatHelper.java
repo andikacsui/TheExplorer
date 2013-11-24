@@ -23,7 +23,7 @@ public class TempatHelper {
 		temp = db.getListTempat();
 		for (int i = 0; i < temp.size(); i++) {
 			tempat = temp.get(i);
-			if (tempat.getMisiID() == 1) {
+			if (tempat.getMisiID() == misiID) {
 				DaftarTempat.add(tempat);
 			}
 		}

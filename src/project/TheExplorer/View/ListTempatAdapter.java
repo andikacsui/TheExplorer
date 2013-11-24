@@ -52,9 +52,9 @@ public class ListTempatAdapter extends BaseAdapter{
         mission = data.get(position);
  
         // Setting all values in listview
-        nama.setText(mission.get(CustomizedDaftarTempat.KEY_NAMA));
-        deskripsi.setText(mission.get(CustomizedDaftarTempat.KEY_DESKRIPSI));
-        status.setText(mission.get(CustomizedDaftarTempat.KEY_STATUS));
+        nama.setText(mission.get(CustomizedDaftarTempat.KEY_NAMAX));
+        deskripsi.setText(mission.get(CustomizedDaftarTempat.KEY_DESKRIPSIX));
+        status.setText(mission.get(CustomizedDaftarTempat.KEY_STATUSX));
         
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;
