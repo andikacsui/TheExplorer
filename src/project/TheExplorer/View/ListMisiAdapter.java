@@ -47,6 +47,7 @@ public class ListMisiAdapter extends BaseAdapter{
         TextView lokasi = (TextView)vi.findViewById(R.id.TextViewLokasi); // artist name
         TextView keterangan = (TextView)vi.findViewById(R.id.TextViewDeskripsiMisi); // duration
         //ImageView gambar=(ImageView)vi.findViewById(R.id.gambar); // thumb image
+        TextView idMisi = (TextView)vi.findViewById(R.id.TextVIewIDMisi);
         
         HashMap<String, String> mission = new HashMap<String, String>();
         mission = data.get(position);
@@ -55,6 +56,7 @@ public class ListMisiAdapter extends BaseAdapter{
         judul.setText(mission.get(CustomizedDaftarMisi.KEY_NAMA));
         lokasi.setText(mission.get(CustomizedDaftarMisi.KEY_LOKASI));
         keterangan.setText(mission.get(CustomizedDaftarMisi.KEY_DESKRIPSI));
+        idMisi.setText(mission.get(CustomizedDaftarMisi.KEY_ID_MISI));
         
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;

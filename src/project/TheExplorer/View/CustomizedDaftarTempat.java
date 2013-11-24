@@ -11,6 +11,7 @@ import org.w3c.dom.Document;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
@@ -33,22 +34,41 @@ public class CustomizedDaftarTempat extends Activity {
 	static final String KEY_DESKRIPSI = "deskripsi";
 	static final String KEY_FOTO = "foto";
 	static final String KEY_STATUS = "status";
+	static int NomorMisi;
 	ArrayList<Tempat> daftarTempat;
 
 	ListView list;
 	ListTempatAdapter adapter;
 	Context context;
-
+	CustomizedDaftarMisi daftarMisi;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
+<<<<<<< HEAD
 
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
+=======
+		Intent prev = getIntent();
+		NomorMisi = prev.getIntExtra("IDMisi", 0);
+		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
+		daftarMisi = new CustomizedDaftarMisi();
+		
+		if(daftarTempat != null){
+			daftarTempat.clear();
+		}
+>>>>>>> 37e680227bc495f84402bc61f9366c380c02bc68
 		try {
 
-			daftarTempat = TempatHelper.GetListTempat(context);
+			//daftarMisi = new CustomizedDaftarMisi();
+			//IDMisi = Integer.parseInt(daftarMisi.KEY_ID_MISI);
+			
+			Intent intent = getIntent();
+			
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, intent.getIntExtra("IDMisi", 0));
+			
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {
