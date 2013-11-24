@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE PENJELAJAH (id integer primary key, Username text, Password text, skor integer, LastCheckIn text)");
-		db.execSQL("CREATE TABLE MISI (id integer primary key, nama text, deskripsi text, lokasi text, foto text, status text, badge text, penjelajahID integer)");
+		db.execSQL("CREATE TABLE MISI (id integer primary key, nama text, deskripsi text, lokasi text, foto text, status integer, badge text, penjelajahID integer)");
 		db.execSQL("CREATE TABLE TEMPAT (id integer primary key, nama text, deskripsi text, latitude double,longitude double, Foto text, Status integer, MisiID integer)");
 	}
 
@@ -82,7 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String deskripsi = "";
 		String lokasi = "";
 		String foto = "";
-		String status = "";
+		int status = 0;
 		String badge = "";
 		int penjelajahID = 0;
 		Misi misi;
@@ -95,7 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		deskripsi = cursor.getString(2);
 		lokasi = cursor.getString(3);
 		foto = cursor.getString(4);
-		status = cursor.getString(5);
+		status = cursor.getInt(5);
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
 		cursor.close();
@@ -113,7 +113,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String deskripsi = "";
 		String lokasi = "";
 		String foto = "";
-		String status = "";
+		int status = 0;
 		String badge = "";
 		int penjelajahID = 0;
 		Misi misi;
@@ -127,7 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			deskripsi = cursor.getString(2);
 			lokasi = cursor.getString(3);
 			foto = cursor.getString(4);
-			status = cursor.getString(5);
+			status = cursor.getInt(5);
 			badge = cursor.getString(6);
 			penjelajahID = cursor.getInt(7);
 			misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
@@ -191,7 +191,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("foto", "xxxx");
 			value3.put("status", 0);
 			value3.put("badge", "Bali");
+<<<<<<< HEAD
 			value3.put("penjelajahID", 0);
+=======
+			value3.put("penjelajahID", 1);
+>>>>>>> ee18b83187bd854fa4a9ca823bae157dafa91be3
 			db.insertOrThrow("MISI", null, value3);
 
 			ContentValues value4 = new ContentValues();
@@ -202,9 +206,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "xxxx");
+<<<<<<< HEAD
 			value4.put("status", 0);
 			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", 0);
+=======
+			value4.put("status", 1);
+			value4.put("badge", "Sumatera Barat");
+			value4.put("penjelajahID", 1);
+>>>>>>> ee18b83187bd854fa4a9ca823bae157dafa91be3
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
@@ -217,10 +227,61 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("foto", "xxxx");
 			value5.put("status", 0);
 			value5.put("badge", "NTB");
+<<<<<<< HEAD
 			value5.put("penjelajahID", 0);
+=======
+			value5.put("penjelajahID", 1);
+>>>>>>> ee18b83187bd854fa4a9ca823bae157dafa91be3
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
+	}
+
+	public Misi GetMisiByID(int MisiID) {
+		int ID = 0;
+		String nama = "";
+		String deskripsi = "";
+		String lokasi = "";
+		String foto = "";
+		int status = 0;
+		String badge = "";
+		int penjelajahID = 0;
+		Misi misi;
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
+				+ MisiID + "\" ", null);
+		cursor.moveToFirst();
+		ID = MisiID;
+		nama = cursor.getString(1);
+		deskripsi = cursor.getString(2);
+		lokasi = cursor.getString(3);
+		foto = cursor.getString(4);
+		status = cursor.getInt(5);
+		badge = cursor.getString(6);
+		penjelajahID = cursor.getInt(7);
+		cursor.close();
+		db.close();
+		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
+				penjelajahID);
+		return misi;
+
+	}
+
+	public void UpdateStatusMisi(int ID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues value1 = new ContentValues();
+		Misi misi = GetMisiByID(ID);
+		value1.put("id", ID);
+		value1.put("nama", misi.getNama());
+		value1.put(
+				"deskripsi", misi.getDeskripsi());
+		value1.put("lokasi", misi.getLokasi());
+		value1.put("foto", "@drawable/splash");
+		value1.put("status", 1);
+		value1.put("badge", misi.getBadge());
+		value1.put("penjelajahID", misi.getPenjelajahID());
+		db.update("MISI", value1, "ID = " + "\"" + ID + "\"", null);
+		db.close();
 	}
 
 	public Tempat GetTempat() {

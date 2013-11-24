@@ -48,9 +48,29 @@ public class CustomizedDaftarTempat extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
+<<<<<<< HEAD
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		daftarMisi = new CustomizedDaftarMisi();
 
+=======
+<<<<<<< HEAD
+=======
+
+		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
+>>>>>>> 41c0243d420a09475b6711aa01e9dd530a4f1fa8
+		Intent prev = getIntent();
+		NomorMisi = prev.getIntExtra("IDMisi", 0);
+		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
+		daftarMisi = new CustomizedDaftarMisi();
+		
+		if(daftarTempat != null){
+			daftarTempat.clear();
+		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41c0243d420a09475b6711aa01e9dd530a4f1fa8
+>>>>>>> ee18b83187bd854fa4a9ca823bae157dafa91be3
 		try {
 
 			//daftarMisi = new CustomizedDaftarMisi();
@@ -77,13 +97,13 @@ public class CustomizedDaftarTempat extends Activity {
 				map.put(KEY_FOTOX, daftarTempat.get(i).getFoto());
 
 				// adding HashList to ArrayList
-				missionList.add(map);
+				tempatList.add(map);
 			}
 
 			list = (ListView) findViewById(R.id.list_tempat_layout);
 
 			// Getting adapter by passing xml data ArrayList
-			adapter = new ListTempatAdapter(this, missionList);
+			adapter = new ListTempatAdapter(this, tempatList);
 			list.setAdapter(adapter);
 
 			// Click event for single list row

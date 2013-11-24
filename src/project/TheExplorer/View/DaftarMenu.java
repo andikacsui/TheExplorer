@@ -27,7 +27,9 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonSavedMission_OnClick(View view) {
-
+		Intent nextScreen = new Intent(getApplicationContext(),
+				CustomizedSavedMission.class);
+		startActivity(nextScreen);
 	}
 
 	public void ButtonProfile_OnClick(View view) {
@@ -37,12 +39,14 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonShare_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(), ShareTwitter.class);
+		Intent nextScreen = new Intent(getApplicationContext(),
+				ShareTwitter.class);
 		startActivity(nextScreen);
 	}
-	
+
 	public void ButtonSensor_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(), SensorTestActivity.class);
+		Intent nextScreen = new Intent(getApplicationContext(),
+				SensorTestActivity.class);
 		startActivity(nextScreen);
 	}
 
