@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	public void onCreate(SQLiteDatabase db) {
 		db.execSQL("CREATE TABLE PENJELAJAH (id integer primary key, Username text, Password text, skor integer, LastCheckIn text)");
-		db.execSQL("CREATE TABLE MISI (id integer primary key, nama text, deskripsi text, lokasi text, foto text, status text, badge text, penjelajahID integer)");
+		db.execSQL("CREATE TABLE MISI (id integer primary key, nama text, deskripsi text, lokasi text, foto text, status integer, badge text, penjelajahID integer)");
 		db.execSQL("CREATE TABLE TEMPAT (id integer primary key, nama text, deskripsi text, latitude double,longitude double, Foto text, Status integer, MisiID integer)");
 	}
 
@@ -82,7 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String deskripsi = "";
 		String lokasi = "";
 		String foto = "";
-		String status = "";
+		int status = 0;
 		String badge = "";
 		int penjelajahID = 0;
 		Misi misi;
@@ -95,7 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		deskripsi = cursor.getString(2);
 		lokasi = cursor.getString(3);
 		foto = cursor.getString(4);
-		status = cursor.getString(5);
+		status = cursor.getInt(5);
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
 		cursor.close();
@@ -113,7 +113,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		String deskripsi = "";
 		String lokasi = "";
 		String foto = "";
-		String status = "";
+		int status = 0;
 		String badge = "";
 		int penjelajahID = 0;
 		Misi misi;
@@ -127,7 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			deskripsi = cursor.getString(2);
 			lokasi = cursor.getString(3);
 			foto = cursor.getString(4);
-			status = cursor.getString(5);
+			status = cursor.getInt(5);
 			badge = cursor.getString(6);
 			penjelajahID = cursor.getInt(7);
 			misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
@@ -156,71 +156,118 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		if (IsMisiExist() == false) {
 			SQLiteDatabase db = this.getWritableDatabase();
 			ContentValues value1 = new ContentValues();
-			value1.put("id", "1");
+			value1.put("id", 1);
 			value1.put("nama", "Menjelajah Jogja");
 			value1.put(
 					"deskripsi",
 					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga berwisata kuliner. Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
 			value1.put("foto", "@drawable/splash");
-			value1.put("status", "0");
+			value1.put("status", 0);
 			value1.put("badge", "Jogja");
-			value1.put("penjelajahID", "0");
+			value1.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value1);
 
 			ContentValues value2 = new ContentValues();
-			value2.put("id", "2");
+			value2.put("id", 2);
 			value2.put("nama", "Menjelajah Jakarta");
 			value2.put(
 					"deskripsi",
 					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan, bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. Jakarta telah memikat orang dari segala aspek kehidupan.. Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "xxxx");
-			value2.put("status", "0");
+			value2.put("status", 0);
 			value2.put("badge", "Jakarta");
-			value2.put("penjelajahID", "0");
+			value2.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value2);
 
 			ContentValues value3 = new ContentValues();
-			value3.put("id", "3");
+			value3.put("id", 3);
 			value3.put("nama", "Menjelajah Bali");
 			value3.put(
 					"deskripsi",
 					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan, souvenir yang menarik, serta adat dan kebudayaan yang menawan");
 			value3.put("lokasi", "Bali, Indonesia");
 			value3.put("foto", "xxxx");
-			value3.put("status", "0");
+			value3.put("status", 0);
 			value3.put("badge", "Bali");
-			value3.put("penjelajahID", "0");
+			value3.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value3);
 
 			ContentValues value4 = new ContentValues();
-			value4.put("id", "4");
+			value4.put("id", 4);
 			value4.put("nama", "Menjelajah Sumatera Barat");
 			value4.put(
 					"deskripsi",
 					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "xxxx");
-			value4.put("status", "0");
+			value4.put("status", 1);
 			value4.put("badge", "Sumatera Barat");
-			value4.put("penjelajahID", "0");
+			value4.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
-			value5.put("id", "5");
+			value5.put("id", 5);
 			value5.put("nama", "Menjelajah Nusa Tenggara Barat");
 			value5.put(
 					"deskripsi",
 					"Aceh merupakan salah satu daerah di Nusantara yang masyarakatnya bersifat multietnis bercirikan Islam. Penduduk Aceh sering disebutkan merupakan keturunan berbagai kaum dan bangsa. Seperti halnya kata ACEH sering diidentikkan dengan kepanjangan dari Arab, China, Eropa, Hindia dimana memang secara fisik menunjukkan ciri-ciri orang Arab, India, Eropa dan Cina. Aceh merupakan daerah istimewa di Indonesia yang terletak paling ujung utara Pulau Sumatra.");
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "xxxx");
-			value5.put("status", "0");
+			value5.put("status", 0);
 			value5.put("badge", "NTB");
-			value5.put("penjelajahID", "0");
+			value5.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
+	}
+
+	public Misi GetMisiByID(int MisiID) {
+		int ID = 0;
+		String nama = "";
+		String deskripsi = "";
+		String lokasi = "";
+		String foto = "";
+		int status = 0;
+		String badge = "";
+		int penjelajahID = 0;
+		Misi misi;
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
+				+ MisiID + "\" ", null);
+		cursor.moveToFirst();
+		ID = MisiID;
+		nama = cursor.getString(1);
+		deskripsi = cursor.getString(2);
+		lokasi = cursor.getString(3);
+		foto = cursor.getString(4);
+		status = cursor.getInt(5);
+		badge = cursor.getString(6);
+		penjelajahID = cursor.getInt(7);
+		cursor.close();
+		db.close();
+		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
+				penjelajahID);
+		return misi;
+
+	}
+
+	public void UpdateStatusMisi(int ID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues value1 = new ContentValues();
+		Misi misi = GetMisiByID(ID);
+		value1.put("id", ID);
+		value1.put("nama", misi.getNama());
+		value1.put(
+				"deskripsi", misi.getDeskripsi());
+		value1.put("lokasi", misi.getLokasi());
+		value1.put("foto", "@drawable/splash");
+		value1.put("status", 1);
+		value1.put("badge", misi.getBadge());
+		value1.put("penjelajahID", misi.getPenjelajahID());
+		db.update("MISI", value1, "ID = " + "\"" + ID + "\"", null);
+		db.close();
 	}
 
 	public Tempat GetTempat() {

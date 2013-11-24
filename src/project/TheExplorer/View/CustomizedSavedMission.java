@@ -22,7 +22,7 @@ import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.R;
 import project.TheExplorer.Model.Misi;
 
-public class CustomizedDaftarMisi extends Activity {
+public class CustomizedSavedMission extends Activity {
 	// All static variables
 	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
@@ -31,11 +31,13 @@ public class CustomizedDaftarMisi extends Activity {
 	static final String KEY_NAMA = "nama";
 	static final String KEY_LOKASI = "lokasi";
 	static final String KEY_DESKRIPSI = "deskripsi";
+	static final String KEY_STATUS = "status";
 	static final String KEY_FOTO = "foto";
 	ArrayList<Misi> daftarMisi;
+	int misi;
 
 	ListView list;
-	ListMisiAdapter adapter;
+	ListSavedMissionAdapter adapter;
 	Context context;
 
 	@Override
@@ -47,7 +49,7 @@ public class CustomizedDaftarMisi extends Activity {
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		try {
 
-			daftarMisi = MisiHelper.GetListMisi(context);
+			daftarMisi = MisiHelper.GetSavedMission(context, 1);
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarMisi.size(); i++) {
@@ -55,7 +57,12 @@ public class CustomizedDaftarMisi extends Activity {
 				// creating new HashMap
 				HashMap<String, String> map = new HashMap<String, String>();
 				// adding each child node to HashMap key => value
-
+				misi = daftarMisi.get(i).getStatus();
+				if (misi == 0) {
+					map.put(KEY_STATUS, "UNCOMPLETED");
+				} else {
+					map.put(KEY_STATUS, "COMPLETED");
+				}
 				map.put(KEY_NAMA, daftarMisi.get(i).getNama());
 				map.put(KEY_LOKASI, daftarMisi.get(i).getLokasi());
 				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
@@ -68,7 +75,7 @@ public class CustomizedDaftarMisi extends Activity {
 			list = (ListView) findViewById(R.id.list_misi_layout);
 
 			// Getting adapter by passing xml data ArrayList
-			adapter = new ListMisiAdapter(this, missionList);
+			adapter = new ListSavedMissionAdapter(this, missionList);
 			list.setAdapter(adapter);
 
 			// Click event for single list row

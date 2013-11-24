@@ -6,12 +6,12 @@ public class Misi {
 	private String deskripsi;
 	private String lokasi;
 	private String foto;
-	private String status;
+	private int status;
 	private String badge;
 	private int penjelajahID;
 
 	public Misi(int ID, String nama, String deskripsi, String lokasi,
-			String foto, String status, String Badge, int penjelajahID) {
+			String foto, int status, String Badge, int penjelajahID) {
 		this.ID = ID;
 		this.nama = nama;
 		this.deskripsi = deskripsi;
@@ -63,11 +63,11 @@ public class Misi {
 		this.foto = Foto;
 	}
 
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 
@@ -79,7 +79,7 @@ public class Misi {
 		this.badge = Badge;
 	}
 
-	public int penjelajahID() {
+	public int getPenjelajahID() {
 		return penjelajahID;
 	}
 
