@@ -49,7 +49,7 @@ public class CustomizedSavedMission extends Activity {
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		try {
 
-			daftarMisi = MisiHelper.GetSavedMission(context, 1);
+			daftarMisi = MisiHelper.GetSavedMission(context);
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarMisi.size(); i++) {

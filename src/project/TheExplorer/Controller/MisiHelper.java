@@ -11,7 +11,6 @@ import android.util.Log;
 public class MisiHelper {
 	public static DatabaseHelper db;
 	public static ArrayList<Misi> DaftarMisi;
-	public static ArrayList<Misi> Saved;
 	public static ArrayList<Tempat> DaftarTempat;
 	public static String[] DaftarNamaMisi;
 	public static Misi temp;
@@ -35,19 +34,18 @@ public class MisiHelper {
 		return temp1;
 	}
 
-	public static ArrayList<Misi> GetSavedMission(Context context,
-			int PenjelajahID) {
+	public static ArrayList<Misi> GetSavedMission(Context context) {
 		db = new DatabaseHelper(context);
+
+		ArrayList<Misi> Saved = new ArrayList<Misi>();
 		DaftarMisi = db.getListMisi();
 		for (int j = 0; j < DaftarMisi.size(); j++) {
 			temp = DaftarMisi.get(j);
-			Log.e("hssssa", "mssssg");
-			if (temp.getPenjelajahID() == PenjelajahID) {
+			if (temp.getPenjelajahID() == 1) {
 				Saved.add(temp);
-				Log.e("ha", "msg");
 			}
 		}
-		return DaftarMisi;
+		return Saved;
 	}
 
 	public static boolean UpdateStatusMisi(Context context, int MisiID) {
