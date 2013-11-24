@@ -47,10 +47,8 @@ public class CustomizedDaftarTempat extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
-<<<<<<< HEAD
 
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
-=======
 		Intent prev = getIntent();
 		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
@@ -59,7 +57,7 @@ public class CustomizedDaftarTempat extends Activity {
 		if(daftarTempat != null){
 			daftarTempat.clear();
 		}
->>>>>>> 37e680227bc495f84402bc61f9366c380c02bc68
+
 		try {
 
 			//daftarMisi = new CustomizedDaftarMisi();

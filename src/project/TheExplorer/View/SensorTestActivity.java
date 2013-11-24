@@ -1,6 +1,7 @@
 package project.TheExplorer.View;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -11,28 +12,34 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+import project.TheExplorer.Controller.GPSTracker;
 import project.TheExplorer.Controller.R;
 
 public class SensorTestActivity extends Activity implements SensorEventListener {
   private SensorManager sensorManager;
-  private boolean color = false;
+  //private boolean color = false;
   private View view;
   private long lastUpdate;
-
+  GPSTracker gps;
+  Context context;
 
   
 /** Called when the activity is first created. */
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
-    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    /*requestWindowFeature(Window.FEATURE_NO_TITLE);
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_sensor);
     view = findViewById(R.id.textView);
-    view.setBackgroundColor(Color.GREEN);
+    view.setBackgroundColor(Color.GREEN);*/
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_sensor);
+	view = findViewById(R.id.textView);
+	context = this;
 
     sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
     lastUpdate = System.currentTimeMillis();
@@ -62,7 +69,7 @@ public class SensorTestActivity extends Activity implements SensorEventListener 
         return;
       }
       lastUpdate = actualTime;
-      Toast.makeText(this, "Device was shuffed", Toast.LENGTH_SHORT)
+      /*Toast.makeText(this, "Device was shuffed", Toast.LENGTH_SHORT)
           .show();
       if (color) {
         view.setBackgroundColor(Color.GREEN);
@@ -70,7 +77,28 @@ public class SensorTestActivity extends Activity implements SensorEventListener 
       } else {
         view.setBackgroundColor(Color.RED);
       }
-      color = !color;
+      color = !color;*/
+      
+      // create class object
+   		gps = new GPSTracker(context);
+
+   		// check if GPS enabled
+   		if (gps.canGetLocation()) {
+
+   			double latitude = gps.getLatitude();
+   			double longitude = gps.getLongitude();
+
+   			// \n is for new line
+   			Toast.makeText(
+   					getApplicationContext(),
+   					"Your Location is - \nLat: " + latitude + "\nLong: "
+   							+ longitude, Toast.LENGTH_LONG).show();
+   		} else {
+   			// can't get location
+   			// GPS or Network is not enabled
+   			// Ask user to enable GPS/network in settings
+   			gps.showSettingsAlert();
+   		}
     }
   }
 
