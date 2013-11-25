@@ -15,11 +15,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.R;
@@ -48,11 +50,11 @@ public class CustomizedDaftarMisi extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_misi);
 		context = this;
-		
-		if(daftarMisi != null){
+
+		if (daftarMisi != null) {
 			daftarMisi.clear();
 		}
-		
+
 		ArrayList<HashMap<String, String>> missionList = new ArrayList<HashMap<String, String>>();
 		try {
 
@@ -69,7 +71,7 @@ public class CustomizedDaftarMisi extends Activity {
 				map.put(KEY_LOKASI, daftarMisi.get(i).getLokasi());
 				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
 				map.put(KEY_FOTO, daftarMisi.get(i).getFoto());
-				map.put(KEY_ID_MISI, String.valueOf(daftarMisi.get(i).getID()));
+				map.put(KEY_ID_MISI, daftarMisi.get(i).getID() + "");
 				// adding HashList to ArrayList
 				missionList.add(map);
 			}
@@ -79,27 +81,32 @@ public class CustomizedDaftarMisi extends Activity {
 			// Getting adapter by passing xml data ArrayList
 			adapter = new ListMisiAdapter(this, missionList);
 			list.setAdapter(adapter);
-			
+
 			// Click event for single list row
 			list.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
-					AlertDialog.Builder dialog = new AlertDialog.Builder(CustomizedDaftarMisi.this);
-					dialog
-					.setTitle("Pilihan menu");
-					
+					Intent nextScreen = new Intent(getApplicationContext(),
+							CustomizedDaftarTempat.class);
+					Log.d("tag", id + "");
+					nextScreen.putExtra("MISI_ID", id);
+					startActivity(nextScreen);
+
+				}
+
+				public void TextViewDetailMisi_OnClick(AdapterView<?> parent,
+						View view, int position, long id) {
+					Intent nextScreen = new Intent(getApplicationContext(),
+							CustomizedDaftarTempat.class);
+					Log.d("tag", id + "");
+					nextScreen.putExtra("MISI_ID", id);
+					startActivity(nextScreen);
 				}
 			});
 		} catch (Exception e) {
 		}
 	}
-	
-	public void TextViewDetailMisi_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(), CustomizedDaftarTempat.class);
-		id_misi = 5;
-		nextScreen.putExtra("IDMisi", 1);
-		startActivity(nextScreen); 
-	}
+
 }
