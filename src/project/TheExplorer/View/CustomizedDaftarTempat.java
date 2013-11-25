@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -37,6 +38,7 @@ public class CustomizedDaftarTempat extends Activity {
 	static int NomorMisi, MisiID;
 	static String Misi = "";
 	ArrayList<Tempat> daftarTempat;
+	HashMap<String, String> map;
 
 	ListView list;
 	ListTempatAdapter adapter;
@@ -48,9 +50,11 @@ public class CustomizedDaftarTempat extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
+		daftarMisi = new CustomizedDaftarMisi();
 
+		Intent prev = getIntent();
+		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
-		
 		daftarMisi = new CustomizedDaftarMisi();
 
 		if (daftarTempat != null) {
@@ -65,13 +69,14 @@ public class CustomizedDaftarTempat extends Activity {
 			Misi = intent.getStringExtra("MISI_ID");
 			MisiID = Integer.parseInt(Misi);
 
-			daftarTempat = TempatHelper.GetListTempatByMisi(context,MisiID);
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, MisiID);
+			daftarTempat.clear();
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {
 
 				// creating new HashMap
-				HashMap<String, String> map = new HashMap<String, String>();
+				map = new HashMap<String, String>();
 				// adding each child node to HashMap key => value
 				if (daftarTempat.get(i).getStatus() == 1) {
 					map.put(KEY_STATUS, "VISITED");

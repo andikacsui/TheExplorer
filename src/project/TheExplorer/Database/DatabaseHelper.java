@@ -191,7 +191,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("foto", "xxxx");
 			value3.put("status", 0);
 			value3.put("badge", "Bali");
-			value3.put("penjelajahID", 1);
+			value3.put("penjelajahID", 0);
+
 			db.insertOrThrow("MISI", null, value3);
 
 			ContentValues value4 = new ContentValues();
@@ -361,7 +362,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("longitude", "0");
 			value4.put("Foto", "xxxx");
 			value4.put("Status", "0");
-			value4.put("MisiID", 2);
+			value4.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value4);
 
 			ContentValues value5 = new ContentValues();

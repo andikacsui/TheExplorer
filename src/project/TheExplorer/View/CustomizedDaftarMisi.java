@@ -39,7 +39,7 @@ public class CustomizedDaftarMisi extends Activity {
 	static final String KEY_DESKRIPSI = "deskripsi";
 	static final String KEY_FOTO = "foto";
 	ArrayList<Misi> daftarMisi;
-	static int id_misi;
+	static String id_misi;
 	ListView list;
 	ListMisiAdapter adapter;
 	Context context;
@@ -66,12 +66,16 @@ public class CustomizedDaftarMisi extends Activity {
 				// creating new HashMap
 				HashMap<String, String> map = new HashMap<String, String>();
 				// adding each child node to HashMap key => value
-
+				// Log.d("ID atas", String.valueOf(daftarMisi.get(i).getID()));
+				// Log.d("Nama atas",
+				// String.valueOf(daftarMisi.get(i).getNama()));
 				map.put(KEY_NAMA, daftarMisi.get(i).getNama());
 				map.put(KEY_LOKASI, daftarMisi.get(i).getLokasi());
 				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
 				map.put(KEY_FOTO, daftarMisi.get(i).getFoto());
 				map.put(KEY_ID_MISI, daftarMisi.get(i).getID() + "");
+				// Log.d("ID ", String.valueOf(daftarMisi.get(i).getID()));
+				// Log.d("Nama ", String.valueOf(daftarMisi.get(i).getNama()));
 				// adding HashList to ArrayList
 				missionList.add(map);
 			}
@@ -95,18 +99,19 @@ public class CustomizedDaftarMisi extends Activity {
 					startActivity(nextScreen);
 
 				}
-
-				public void TextViewDetailMisi_OnClick(AdapterView<?> parent,
-						View view, int position, long id) {
-					Intent nextScreen = new Intent(getApplicationContext(),
-							CustomizedDaftarTempat.class);
-					Log.d("tag", id + "");
-					nextScreen.putExtra("MISI_ID", id);
-					startActivity(nextScreen);
-				}
 			});
 		} catch (Exception e) {
 		}
 	}
 
+	public void TextViewDetailMisi_OnClick(View view) {
+		Intent nextScreen = new Intent(getApplicationContext(),
+				CustomizedDaftarTempat.class);
+		TextView tvValue = (TextView) findViewById(R.id.TextViewIDMisi);
+		id_misi = tvValue.getText().toString();
+		nextScreen.putExtra("mission_id", id_misi);
+		Log.d("hmmm", "" + id_misi);
+		// nextScreen.putExtra("IDMisi", );
+		startActivity(nextScreen);
+	}
 }

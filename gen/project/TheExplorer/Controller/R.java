@@ -43,13 +43,13 @@ public final class R {
         public static final int EditTextPassword=0x7f080034;
         public static final int EditTextUsername=0x7f080032;
         public static final int Summary=0x7f08001d;
-        public static final int TextVIewIDMisi=0x7f080010;
         public static final int TextViewAchievement=0x7f08003b;
         public static final int TextViewDescription=0x7f08003c;
         public static final int TextViewDeskripsiMisi=0x7f080012;
         public static final int TextViewDeskripsiTempat=0x7f08001a;
         public static final int TextViewDetails=0x7f080014;
         public static final int TextViewGreetings=0x7f080037;
+        public static final int TextViewIDMisi=0x7f080010;
         public static final int TextViewJoinMisi=0x7f080013;
         public static final int TextViewLabelAchievement=0x7f08003a;
         public static final int TextViewLabelScore=0x7f080038;
