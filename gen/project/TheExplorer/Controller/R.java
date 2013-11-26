@@ -21,12 +21,18 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int bgimage=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int logo=0x7f020002;
-        public static final int mission1_img=0x7f020003;
-        public static final int splash=0x7f020004;
-        public static final int twitter=0x7f020005;
+        public static final int activity_tab_achievement_icon=0x7f020000;
+        public static final int activity_tab_editprofile_icon=0x7f020001;
+        public static final int activity_tab_summary_icon=0x7f020002;
+        public static final int bgimage=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int icon_achievement=0x7f020005;
+        public static final int icon_editprofile=0x7f020006;
+        public static final int icon_summary=0x7f020007;
+        public static final int logo=0x7f020008;
+        public static final int mission1_img=0x7f020009;
+        public static final int splash=0x7f02000a;
+        public static final int twitter=0x7f02000b;
     }
     public static final class id {
         public static final int Achievement=0x7f080024;
