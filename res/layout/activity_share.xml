@@ -13,7 +13,6 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:inputType="text" >
-        <requestFocus />
     </EditText>
 
     <RelativeLayout
@@ -44,7 +43,11 @@
         android:id="@+id/imagepreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:visibility="gone"
-        android:src="@drawable/bgimage" />
+        android:src="@drawable/mission1_img" />
 
 </LinearLayout>
