@@ -48,13 +48,16 @@ public class MisiHelper {
 		return Saved;
 	}
 
-	public static boolean UpdateStatusMisi(Context context, int MisiID) {
+	public static void UpdateStatusMisi(Context context, int MisiID) {
 		DaftarTempat = TempatHelper.GetListTempatByMisi(context, MisiID);
 		for (int i = 0; i < DaftarTempat.size(); i++) {
 			if (DaftarTempat.get(i).getStatus() == 0) {
 				status = false;
 			}
 		}
-		return status;
+		if (status = true) {
+			db = new DatabaseHelper(context);
+			db.UpdateStatusMisi(MisiID);
+		}
 	}
 }

@@ -35,9 +35,10 @@ public class CustomizedDaftarTempat extends Activity {
 	static final String KEY_DESKRIPSI = "deskripsi";
 	static final String KEY_FOTO = "foto";
 	static final String KEY_STATUS = "status";
+	static int NomorMisi, MisiID;
+	static String Misi = "";
 	ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
-	static int NomorMisi = 0;
 
 	ListView list;
 	ListTempatAdapter adapter;
@@ -64,11 +65,12 @@ public class CustomizedDaftarTempat extends Activity {
 			// daftarMisi = new CustomizedDaftarMisi();
 			// IDMisi = Integer.parseInt(daftarMisi.KEY_ID_MISI);
 
-			Intent inten = getIntent();
-			daftarTempat = TempatHelper.GetListTempatByMisi(context, 0);
+			Intent intent = getIntent();
+			Misi = intent.getStringExtra("MISI_ID");
+			MisiID = Integer.parseInt(Misi);
+
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, MisiID);
 			daftarTempat.clear();
-			daftarTempat = TempatHelper.GetListTempatByMisi(context,
-					inten.getIntExtra("mission_id", 0));
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {
