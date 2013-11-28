@@ -110,7 +110,6 @@ public class AmbilFoto extends Activity {
 			// downsizing image as it throws OutOfMemory Exception for larger
 			// images
 			options.inSampleSize = 8;
-
 			final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
 					options);
 
