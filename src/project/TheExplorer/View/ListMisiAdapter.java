@@ -44,20 +44,22 @@ public class ListMisiAdapter extends BaseAdapter{
         if(convertView==null)
             vi = inflater.inflate(R.layout.activity_list_misi, null);
  
+        HashMap<String, String> mission = new HashMap<String, String>();
+        mission = data.get(position);
+        
         TextView judul = (TextView)vi.findViewById(R.id.TextViewNamaMisi); // title
         TextView lokasi = (TextView)vi.findViewById(R.id.TextViewLokasi); // artist name
         TextView keterangan = (TextView)vi.findViewById(R.id.TextViewDeskripsiMisi); // duration
         //ImageView gambar=(ImageView)vi.findViewById(R.id.gambar); // thumb image
         TextView idMisi = (TextView)vi.findViewById(R.id.TextViewIDMisi);
+        Button tombol = (Button)vi.findViewById(R.id.TextViewDetails);
         
-        HashMap<String, String> mission = new HashMap<String, String>();
-        mission = data.get(position);
- 
         // Setting all values in listview
         judul.setText(mission.get(CustomizedDaftarMisi.KEY_NAMA));
         lokasi.setText(mission.get(CustomizedDaftarMisi.KEY_LOKASI));
         keterangan.setText(mission.get(CustomizedDaftarMisi.KEY_DESKRIPSI));
         idMisi.setText(mission.get(CustomizedDaftarMisi.KEY_ID_MISI));
+        tombol.setTag(Integer.parseInt(mission.get(CustomizedDaftarMisi.KEY_ID_MISI)));
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;
     }

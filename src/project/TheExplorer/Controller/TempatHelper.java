@@ -11,6 +11,7 @@ public class TempatHelper {
 	public static ArrayList<Tempat> temp = new ArrayList<Tempat>();
 	public static ArrayList<Tempat> DaftarTempat = new ArrayList<Tempat>();
 	public static Tempat tempat;
+	public static double distance;
 
 	public static void AddTempat(Context context) {
 		db = new DatabaseHelper(context);
@@ -40,7 +41,16 @@ public class TempatHelper {
 		db = new DatabaseHelper(context);
 		tempat = db.GetTempat();
 		return tempat;
-
+	}
+	public static void UpdateStatus( Context context, int ID){
+		db = new DatabaseHelper(context);
+		db.UpdateStatusTempat(ID);
+	}
+	public static void CheckInTempat(Context context, int ID, long lat1, long long1, long lat2, long long2){
+		distance = GPSTracker.getDistance(lat1,long1,lat2,long2);
+		if(distance<=500){
+			TempatHelper.UpdateStatus(context, ID);
+		}
 	}
 
 }
