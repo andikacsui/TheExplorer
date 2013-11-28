@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="daftar_misi">
+        <item>Menjelajah Jogja</item>
+        <item>Menjelajah Jakarta</item>
+        <item>Menjelajah Bali</item>
+        <item>Menjelajah Sumatera Barat</item>
+        <item>Menjelajah Nusa Tenggara Barat</item>
+    </string-array>
+</resources>
