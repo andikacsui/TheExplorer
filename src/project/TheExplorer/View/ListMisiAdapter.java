@@ -19,6 +19,7 @@ import android.widget.TextView;
 public class ListMisiAdapter extends BaseAdapter {
 	private Activity activity;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ArrayList<HashMap<String, String>> data;
     private static LayoutInflater inflater=null; 
  
@@ -65,6 +66,8 @@ public class ListMisiAdapter extends BaseAdapter {
         return vi;
     }
 =======
+=======
+>>>>>>> 4e67cbc94332977733f64f1cf0f9c8efbd7f0d37
 	private ArrayList<HashMap<String, String>> data;
 	private static LayoutInflater inflater = null;
 
@@ -114,5 +117,8 @@ public class ListMisiAdapter extends BaseAdapter {
 		//gambar.setImageResource(resId);
 		return vi;
 	}
+<<<<<<< HEAD
+>>>>>>> 4e67cbc94332977733f64f1cf0f9c8efbd7f0d37
+=======
 >>>>>>> 4e67cbc94332977733f64f1cf0f9c8efbd7f0d37
 }
