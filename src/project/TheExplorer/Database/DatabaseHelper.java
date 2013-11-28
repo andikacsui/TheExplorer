@@ -324,7 +324,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"Malioboro kaya akan keindahan alam dan budayanya");
 			value1.put("latitude", "0");
 			value1.put("longitude", "0");
-			value1.put("Foto", "xxxx");
+			value1.put("Foto", "@drawable/logo");
 			value1.put("Status", 0);
 			value1.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value1);
