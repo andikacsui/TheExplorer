@@ -75,11 +75,15 @@
         </activity>
         <activity android:name="project.TheExplorer.View.MissionOverview" >
         </activity>
+<<<<<<< HEAD
         <activity android:name="project.TheExplorer.View.ListViewSavedMission" >
         </activity>
         <activity android:name="project.TheExplorer.View.DetailSavedMission" >
         </activity>
         <activity android:name="project.TheExplorer.View.CustomizedDaftarTempatSavedMission" >
+=======
+        <activity android:name="project.TheExplorer.View.JoinMissionDialogBox" >
+>>>>>>> 9a722ea08fb41a0dea150a94ea7817577b9d57cd
         </activity>
     </application>
 

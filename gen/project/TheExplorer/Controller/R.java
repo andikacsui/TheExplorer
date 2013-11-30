@@ -33,17 +33,52 @@ public final class R {
         public static final int badge_ntb=0x7f020006;
         public static final int badge_sumbar=0x7f020007;
         public static final int bgimage=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int icon_achievement=0x7f02000a;
-        public static final int icon_editprofile=0x7f02000b;
-        public static final int icon_summary=0x7f02000c;
-        public static final int logo=0x7f02000d;
-        public static final int mission1_img=0x7f02000e;
-        public static final int splash=0x7f02000f;
-        public static final int twitter=0x7f020010;
+        public static final int g1_boko=0x7f020009;
+        public static final int g1_borobudur=0x7f02000a;
+        public static final int g1_guapindul=0x7f02000b;
+        public static final int g1_keratonjogja=0x7f02000c;
+        public static final int g1_kotagede=0x7f02000d;
+        public static final int g1_malioboro=0x7f02000e;
+        public static final int g1_merapi=0x7f02000f;
+        public static final int g1_parangtritis=0x7f020010;
+        public static final int g1_prambanan=0x7f020011;
+        public static final int g1_tamansari=0x7f020012;
+        public static final int g2_ancol=0x7f020013;
+        public static final int g2_bi=0x7f020014;
+        public static final int g2_fatahillah=0x7f020015;
+        public static final int g2_gbk=0x7f020016;
+        public static final int g2_kemang=0x7f020017;
+        public static final int g2_kotatua=0x7f020018;
+        public static final int g2_monas=0x7f020019;
+        public static final int g2_sundakelapa=0x7f02001a;
+        public static final int g2_tidung=0x7f02001b;
+        public static final int g2_tmii=0x7f02001c;
+        public static final int g2_ui=0x7f02001d;
+        public static final int g3_batur=0x7f02001e;
+        public static final int g3_birdpark=0x7f02001f;
+        public static final int g3_dreamland=0x7f020020;
+        public static final int g3_jimbaran=0x7f020021;
+        public static final int g3_kuta=0x7f020022;
+        public static final int g3_lovina=0x7f020023;
+        public static final int g3_nusadua=0x7f020024;
+        public static final int g3_sanur=0x7f020025;
+        public static final int g3_tanahlot=0x7f020026;
+        public static final int g3_ubudmonkey=0x7f020027;
+        public static final int ic_launcher=0x7f020028;
+        public static final int icon_achievement=0x7f020029;
+        public static final int icon_editprofile=0x7f02002a;
+        public static final int icon_summary=0x7f02002b;
+        public static final int logo=0x7f02002c;
+        public static final int mission1_img=0x7f02002d;
+        public static final int splash=0x7f02002e;
+        public static final int twitter=0x7f02002f;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int Achievement=0x7f090028;
+=======
+        public static final int Achievement=0x7f09002b;
+>>>>>>> 9a722ea08fb41a0dea150a94ea7817577b9d57cd
         public static final int Button03=0x7f090006;
         public static final int ButtonAchievement=0x7f090005;
         public static final int ButtonChooseNewMission=0x7f090002;
@@ -52,6 +87,7 @@ public final class R {
         public static final int ButtonSavedMission=0x7f090004;
         public static final int ButtonSensor=0x7f090009;
         public static final int ButtonShare=0x7f090007;
+<<<<<<< HEAD
         public static final int ButtonSimpan=0x7f090037;
         public static final int EditProfile=0x7f090029;
         public static final int EditTextPassword=0x7f090039;
@@ -86,8 +122,48 @@ public final class R {
         public static final int deskripsiMisi=0x7f090018;
         public static final int editText1=0x7f09002b;
         public static final int editText2=0x7f090038;
+=======
+        public static final int ButtonSimpan=0x7f09003a;
+        public static final int EditProfile=0x7f09002c;
+        public static final int EditTextPassword=0x7f09003c;
+        public static final int EditTextUsername=0x7f090039;
+        public static final int Summary=0x7f090024;
+        public static final int TextViewAchievement=0x7f090041;
+        public static final int TextViewDescription=0x7f090042;
+        public static final int TextViewDeskripsiMisi=0x7f090012;
+        public static final int TextViewDeskripsiTempat=0x7f09001b;
+        public static final int TextViewDetails=0x7f090014;
+        public static final int TextViewGreetings=0x7f09003d;
+        public static final int TextViewIDMisi=0x7f090010;
+        public static final int TextViewJoinMisi=0x7f090013;
+        public static final int TextViewLabelAchievement=0x7f090040;
+        public static final int TextViewLabelScore=0x7f09003e;
+        public static final int TextViewLokasi=0x7f090011;
+        public static final int TextViewNamaMisi=0x7f09000f;
+        public static final int TextViewNamaSavedMisi=0x7f090015;
+        public static final int TextViewNamaTempat=0x7f09001a;
+        public static final int TextViewSavedDeskripsiMisi=0x7f090017;
+        public static final int TextViewSavedLokasi=0x7f090016;
+        public static final int TextViewSavedStatusMisi=0x7f090018;
+        public static final int TextViewScore=0x7f09003f;
+        public static final int TextViewStatusTempat=0x7f09001c;
+        public static final int TextViewUsername=0x7f090038;
+        public static final int action_settings=0x7f090044;
+        public static final int btnLoginTwitter=0x7f090032;
+        public static final int btnLogoutTwitter=0x7f090037;
+        public static final int btnUpdateStatus=0x7f090036;
+        public static final int button1=0x7f090003;
+        public static final int button2=0x7f09002f;
+        public static final int buttonDetails=0x7f090022;
+        public static final int buttonJoin=0x7f090023;
+        public static final int deskripsiMisi=0x7f090021;
+        public static final int editText1=0x7f09002e;
+        public static final int editText2=0x7f09003b;
+>>>>>>> 9a722ea08fb41a0dea150a94ea7817577b9d57cd
         public static final int gambar=0x7f09000e;
+        public static final int gambar_tempat=0x7f090019;
         public static final int imageView1=0x7f090000;
+<<<<<<< HEAD
         public static final int imagepreview=0x7f09002e;
         public static final int label=0x7f090040;
         public static final int lblUpdate=0x7f090031;
@@ -109,6 +185,29 @@ public final class R {
         public static final int textView6=0x7f090027;
         public static final int thumbnail=0x7f09000d;
         public static final int txtUpdateStatus=0x7f090032;
+=======
+        public static final int imagepreview=0x7f090031;
+        public static final int label=0x7f090043;
+        public static final int lblUpdate=0x7f090034;
+        public static final int lblUserName=0x7f090033;
+        public static final int list=0x7f09001d;
+        public static final int list_misi_layout=0x7f09000a;
+        public static final int list_tempat_layout=0x7f09000b;
+        public static final int lokasiMisi=0x7f090020;
+        public static final int misi_img=0x7f09001e;
+        public static final int namaMisi=0x7f09001f;
+        public static final int scrollView1=0x7f090001;
+        public static final int takepicture=0x7f090030;
+        public static final int textView=0x7f09002d;
+        public static final int textView1=0x7f090025;
+        public static final int textView2=0x7f090026;
+        public static final int textView3=0x7f090027;
+        public static final int textView4=0x7f090028;
+        public static final int textView5=0x7f090029;
+        public static final int textView6=0x7f09002a;
+        public static final int thumbnail=0x7f09000d;
+        public static final int txtUpdateStatus=0x7f090035;
+>>>>>>> 9a722ea08fb41a0dea150a94ea7817577b9d57cd
     }
     public static final class layout {
         public static final int activity_daftar_layout=0x7f030000;
