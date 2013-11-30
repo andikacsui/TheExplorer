@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,9 +35,11 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 	static final String KEY_NAMA = "nama";
 	static final String KEY_DESKRIPSI = "deskripsi";
 	static final String KEY_FOTO = "foto";
+	static final String KEY_FOTO_PATH = "fotopath";
 	static final String KEY_STATUS = "status";
 	static int NomorMisi, MisiID;
 	static String Misi = "";
+	static int[] imgArr = new int[100];
 	ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
 
@@ -50,7 +53,12 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_tempat);
 		context = this;
+		daftarMisi = new CustomizedDaftarMisi();
+
+		Intent prev = getIntent();
+		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
+		daftarMisi = new CustomizedDaftarMisi();
 
 		if (daftarTempat != null) {
 			daftarTempat.clear();
@@ -70,6 +78,7 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 
 				// creating new HashMap
 				map = new HashMap<String, String>();
+
 				// adding each child node to HashMap key => value
 				if (daftarTempat.get(i).getStatus() == 1) {
 					map.put(KEY_STATUS, "VISITED");
@@ -79,7 +88,13 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 				map.put(KEY_NAMA, daftarTempat.get(i).getNama());
 				map.put(KEY_DESKRIPSI, daftarTempat.get(i).getDeskripsi());
 				map.put(KEY_FOTO, daftarTempat.get(i).getFoto());
-
+				// map.put(KEY_ID, ""+daftarTempat.get(i).getID());
+				// add foto
+				String namaGambar = daftarTempat.get(i).getFoto();
+				Resources res = getResources();
+				int resId = res.getIdentifier(namaGambar, "drawable",
+						getPackageName());
+				map.put(KEY_FOTO_PATH, "" + resId);
 				// adding HashList to ArrayList
 				tempatList.add(map);
 			}
