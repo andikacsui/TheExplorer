@@ -172,7 +172,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"deskripsi",
 					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga berwisata kuliner. Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
-			value1.put("foto", "@drawable/splash");
+			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
 			value1.put("badge", "Jogja");
 			value1.put("penjelajahID", 0);
@@ -185,7 +185,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"deskripsi",
 					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan, bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. Jakarta telah memikat orang dari segala aspek kehidupan.. Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
-			value2.put("foto", "xxxx");
+			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
 			value2.put("badge", "Jakarta");
 			value2.put("penjelajahID", 0);
@@ -198,7 +198,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"deskripsi",
 					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan, souvenir yang menarik, serta adat dan kebudayaan yang menawan");
 			value3.put("lokasi", "Bali, Indonesia");
-			value3.put("foto", "xxxx");
+			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
 			value3.put("badge", "Bali");
 			value3.put("penjelajahID", 0);
@@ -288,7 +288,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		value1.put("nama", misi.getNama());
 		value1.put("deskripsi", misi.getDeskripsi());
 		value1.put("lokasi", misi.getLokasi());
-		value1.put("foto", "@drawable/splash");
+		value1.put("foto", misi.getFoto());
 		value1.put("status", 1);
 		value1.put("badge", misi.getBadge());
 		value1.put("penjelajahID", misi.getPenjelajahID());
@@ -400,7 +400,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("point", 50);
 			value1.put("latitude", "-7.791892");
 			value1.put("longitude", "110.365731");
-			value1.put("Foto", "xxxx");
+			value1.put("Foto", "g1_malioboro");
 			value1.put("Status", 0);
 			value1.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value1);
@@ -413,7 +413,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("point", 50);
 			value2.put("latitude", "-7.607212");
 			value2.put("longitude", "110.203314");
-			value2.put("Foto", "xxxx");
+			value2.put("Foto", "g1_borobudur");
 			value2.put("Status", 0);
 			value2.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value2);
@@ -426,7 +426,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("point", 50);
 			value3.put("latitude", "-7.751901");
 			value3.put("longitude", "110.492011");
-			value3.put("Foto", "xxxx");
+			value3.put("Foto", "g1_prambanan");
 			value3.put("Status", 0);
 			value3.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value3);
@@ -439,7 +439,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("point", 50);
 			value4.put("latitude", "-7.805269");
 			value4.put("longitude", "110.364183");
-			value4.put("Foto", "xxxx");
+			value4.put("Foto", "g1_keratonjogja");
 			value4.put("Status", "0");
 			value4.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value4);
@@ -452,7 +452,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("point", 50);
 			value5.put("latitude", "-8.021017");
 			value5.put("longitude", "110.31815");
-			value5.put("Foto", "xxxx");
+			value5.put("Foto", "g1_parangtritis");
 			value5.put("Status", 0);
 			value5.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value5);
@@ -465,9 +465,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("point", 100);
 			value6.put("latitude", "-7.750795");
 			value6.put("longitude", "110.49222");
-			value6.put("Foto", "xxxx");
+			value6.put("Foto", "g1_boko");
 			value6.put("Status", 0);
-			value6.put("Foto", 1);
 			value6.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value6);
 
@@ -479,9 +478,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("point", 50);
 			value7.put("latitude", "-7.780749");
 			value7.put("longitude", "110.409945");
-			value7.put("Foto", "xxxx");
+			value7.put("Foto", "g1_tamansari");
 			value7.put("Status", 0);
-			value7.put("Foto", 1);
 			value7.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value7);
 
@@ -493,9 +491,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("point", 100);
 			value8.put("latitude", "-7.539828");
 			value8.put("longitude", "110.445371");
-			value8.put("Foto", "xxxx");
+			value8.put("Foto", "g1_merapi");
 			value8.put("Status", 0);
-			value8.put("Foto", 1);
 			value8.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value8);
 
@@ -507,9 +504,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("point", 50);
 			value9.put("latitude", "-7.953157");
 			value9.put("longitude", "110.597191");
-			value9.put("Foto", "xxxx");
+			value9.put("Foto", "g1_guapindul");
 			value9.put("Status", 0);
-			value9.put("Foto", 1);
 			value9.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value9);
 
@@ -521,9 +517,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("point", 100);
 			value10.put("latitude", "-7.824439");
 			value10.put("longitude", "110.39609");
-			value10.put("Foto", "xxxx");
+			value10.put("Foto", "g1_kotagede");
 			value10.put("Status", 0);
-			value10.put("Foto", 1);
 			value10.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value10);
 
@@ -535,9 +530,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("point", 50);
 			value11.put("latitude", "-6.174774");
 			value11.put("longitude", "106.827185");
-			value11.put("Foto", "xxxx");
+			value11.put("Foto", "g2_monas");
 			value11.put("Status", 0);
-			value11.put("Foto", 1);
 			value11.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value11);
 
@@ -549,9 +543,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value12.put("point", 50);
 			value12.put("latitude", "-6.302438");
 			value12.put("longitude", "106.895147");
-			value12.put("Foto", "xxxx");
+			value12.put("Foto", "g2_tmii");
 			value12.put("Status", 0);
-			value12.put("Foto", 1);
 			value12.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value12);
 
@@ -563,9 +556,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value13.put("point", 50);
 			value13.put("latitude", "-6.133216");
 			value13.put("longitude", "106.813173");
-			value13.put("Foto", "xxxx");
+			value13.put("Foto", "g2_kotatua");
 			value13.put("Status", 0);
-			value13.put("Foto", 1);
 			value13.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value13);
 
@@ -577,9 +569,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
 			value14.put("latitude", "-6.127242");
 			value14.put("longitude", "106.845596");
-			value14.put("Foto", "xxxx");
+			value14.put("Foto", "g2_ancol");
 			value14.put("Status", 0);
-			value14.put("Foto", 1);
 			value14.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value14);
 
@@ -591,9 +582,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value15.put("point", 50);
 			value15.put("latitude", "-6.368188");
 			value15.put("longitude", "106.829442");
-			value15.put("Foto", "xxxx");
+			value15.put("Foto", "g2_ui");
 			value15.put("Status", 0);
-			value15.put("Foto", 1);
 			value15.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value15);
 
@@ -605,9 +595,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value16.put("point", 50);
 			value16.put("latitude", "-6.218591");
 			value16.put("longitude", "106.801693");
-			value16.put("Foto", "xxxx");
+			value16.put("Foto", "g2_gbk");
 			value16.put("Status", 0);
-			value16.put("Foto", 1);
 			value16.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value16);
 
@@ -619,9 +608,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value17.put("point", 100);
 			value17.put("latitude", "-5.803193");
 			value17.put("longitude", "106.523066");
-			value17.put("Foto", "xxxx");
+			value17.put("Foto", "g2_tidung");
 			value17.put("Status", 0);
-			value17.put("Foto", 1);
 			value17.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value17);
 
@@ -633,9 +621,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value18.put("point", 100);
 			value18.put("latitude", "-6.122633");
 			value18.put("longitude", "106.80886");
-			value18.put("Foto", "xxxx");
+			value18.put("Foto", "g2_sundakelapa");
 			value18.put("Status", 0);
-			value18.put("Foto", 1);
 			value18.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value18);
 
@@ -647,9 +634,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value19.put("point", 50);
 			value19.put("latitude", "-6.133045");
 			value19.put("longitude", "106.813488");
-			value19.put("Foto", "xxxx");
+			value19.put("Foto", "g2_fatahillah");
 			value19.put("Status", 0);
-			value19.put("Foto", 1);
 			value19.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value19);
 
@@ -661,9 +647,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("point", 50);
 			value20.put("latitude", "-6.137824");
 			value20.put("longitude", "106.813145");
-			value20.put("Foto", "xxxx");
-			value20.put("Status", 0);
-			value20.put("Foto", 1);
+			value20.put("Foto", "g2_bi");
 			value20.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value20);
 
@@ -675,9 +659,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value21.put("point", 50);
 			value21.put("latitude", "-8.723236");
 			value21.put("longitude", "115.169992");
-			value21.put("Foto", "xxxx");
+			value21.put("Foto", "g3_kuta");
 			value21.put("Status", 0);
-			value21.put("Foto", 1);
 			value21.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value21);
 
@@ -689,9 +672,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value22.put("point", 100);
 			value22.put("latitude", "-8.518743");
 			value22.put("longitude", "115.258552");
-			value22.put("Foto", "xxxx");
+			value22.put("Foto", "g3_ubudmonkey");
 			value22.put("Status", 0);
-			value22.put("Foto", 1);
 			value22.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value22);
 
@@ -703,9 +685,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value23.put("point", 100);
 			value23.put("latitude", "-8.596637");
 			value23.put("longitude", "115.251675");
-			value23.put("Foto", "xxxx");
+			value23.put("Foto", "g3_birdpark");
 			value23.put("Status", 0);
-			value23.put("Foto", 1);
 			value23.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value23);
 
@@ -717,9 +698,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value24.put("point", 100);
 			value24.put("latitude", "-8.160347");
 			value24.put("longitude", "115.029981");
-			value24.put("Foto", "xxxx");
+			value24.put("Foto", "g3_lovina");
 			value24.put("Status", 0);
-			value24.put("Foto", 1);
 			value24.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value24);
 
@@ -731,9 +711,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value25.put("point", 50);
 			value25.put("latitude", "-8.256682");
 			value25.put("longitude", "115.408087");
-			value25.put("Foto", "xxxx");
+			value25.put("Foto", "g3_batur");
 			value25.put("Status", 0);
-			value25.put("Foto", 1);
 			value25.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value25);
 
@@ -745,9 +724,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value26.put("point", 50);
 			value26.put("latitude", "-8.674748");
 			value26.put("longitude", "115.263827");
-			value26.put("Foto", "xxxx");
+			value26.put("Foto", "g3_sanur");
 			value26.put("Status", 0);
-			value26.put("Foto", 1);
 			value26.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value26);
 
@@ -759,9 +737,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value27.put("point", 50);
 			value27.put("latitude", "-8.794578");
 			value27.put("longitude", "115.216577");
-			value27.put("Foto", "xxxx");
+			value27.put("Foto", "g3_nusadua");
 			value27.put("Status", 0);
-			value27.put("Foto", 1);
 			value27.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value27);
 
@@ -773,9 +750,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value28.put("point", 50);
 			value28.put("latitude", "-8.681494");
 			value28.put("longitude", "115.205247");
-			value28.put("Foto", "xxxx");
+			value28.put("Foto", "g3_tanahlot");
 			value28.put("Status", 0);
-			value28.put("Foto", 1);
 			value28.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value28);
 
@@ -787,9 +763,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value29.put("point", 50);
 			value29.put("latitude", "-8.779225");
 			value29.put("longitude", "115.166702");
-			value29.put("Foto", "xxxx");
+			value29.put("Foto", "g3_dreamland");
 			value29.put("Status", 0);
-			value29.put("Foto", 1);
 			value29.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value29);
 
@@ -801,9 +776,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value30.put("point", 50);
 			value30.put("latitude", "-8.789998");
 			value30.put("longitude", "115.159278");
-			value30.put("Foto", "xxxx");
+			value30.put("Foto", "g3_jimbaran");
 			value30.put("Status", 0);
-			value30.put("Foto", 1);
 			value30.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value30);
 

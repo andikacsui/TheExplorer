@@ -16,7 +16,7 @@
         android:padding="3dip" >
 
         <ImageView
-            android:id="@+id/gambar"
+            android:id="@+id/gambar_tempat"
             android:layout_width="100dip"
             android:layout_height="100dip"
             android:src="@drawable/mission1_img" />
