@@ -365,15 +365,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("nama", "Malioboro");
 			value1.put("deskripsi",
 					"Malioboro kaya akan keindahan alam dan budayanya");
-<<<<<<< HEAD
 			value1.put("latitude", "-7.791892");
 			value1.put("longitude", "110.365731");
 			value1.put("Foto", "xxxx");
-=======
-			value1.put("latitude", "0");
-			value1.put("longitude", "0");
-			value1.put("Foto", "@drawable/logo");
->>>>>>> 1cf7a55be8738ef7da181d36ec5658081d300cb8
 			value1.put("Status", 0);
 			value1.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value1);
@@ -711,10 +705,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value27.put("Foto", 1);
 			value27.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value27);
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 			ContentValues value28 = new ContentValues();
 			value28.put("id", 28);
 			value28.put("nama", "Tanah Lot");
@@ -754,9 +744,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value30.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value30);
 
-=======
->>>>>>> 1cf7a55be8738ef7da181d36ec5658081d300cb8
->>>>>>> 3ffb008e9a2c9d7eb4e68d5135d74d1f7437d423
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");
@@ -770,7 +757,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value31.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value31);
 
-			
 			ContentValues value35 = new ContentValues();
 			value35.put("id", 35);
 			value35.put("nama", "Pantai Air Manis");
@@ -822,7 +808,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value38.put("Foto", 1);
 			value38.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value38);
-			
+
 			ContentValues value40 = new ContentValues();
 			value40.put("id", 40);
 			value40.put("nama", "Gili Terawangan");
