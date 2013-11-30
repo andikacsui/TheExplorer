@@ -86,7 +86,7 @@ public final class R {
         public static final int button2=0x7f09002e;
         public static final int buttonDetails=0x7f090021;
         public static final int buttonJoin=0x7f090022;
-        public static final int deskripsiMisi=0x7f09001d;
+        public static final int deskripsiMisi=0x7f090020;
         public static final int editText1=0x7f09002d;
         public static final int editText2=0x7f09003c;
         public static final int gambar=0x7f09000e;
@@ -98,9 +98,9 @@ public final class R {
         public static final int list=0x7f09001c;
         public static final int list_misi_layout=0x7f09000a;
         public static final int list_tempat_layout=0x7f09000b;
-        public static final int lokasiMisi=0x7f090020;
-        public static final int misi_img=0x7f09001e;
-        public static final int namaMisi=0x7f09001f;
+        public static final int lokasiMisi=0x7f09001f;
+        public static final int misi_img=0x7f09001d;
+        public static final int namaMisi=0x7f09001e;
         public static final int scrollView1=0x7f090001;
         public static final int takepicture=0x7f09002f;
         public static final int textView=0x7f09002c;
