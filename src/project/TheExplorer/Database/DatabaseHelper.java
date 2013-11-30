@@ -30,9 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public Penjelajah GetPenjelajah() {
 		int ID = 0;
 		String username = "";
-		String twitter = "";
 		int skor = 0;
-		String LastCheckIn = "";
 		Penjelajah penjelajah;
 
 		SQLiteDatabase db = this.getReadableDatabase();
@@ -40,12 +38,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		cursor.moveToFirst();
 		ID = cursor.getInt(0);
 		username = cursor.getString(1);
-		twitter = cursor.getString(2);
-		skor = cursor.getInt(3);
-		LastCheckIn = cursor.getString(4);
+		skor = cursor.getInt(2);
 		cursor.close();
 		db.close();
-		penjelajah = new Penjelajah(ID, username, twitter, skor, LastCheckIn);
+		penjelajah = new Penjelajah(ID, username, skor);
 		return penjelajah;
 	}
 
@@ -55,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			SQLiteDatabase db = this.getWritableDatabase();
 			value.put("id", 1);
 			value.put("Username", Username);
-			value.put("Skor", 0);
+			value.put("skor", 0);
 			db.insertOrThrow("PENJELAJAH", null, value);
 			db.close();
 		}

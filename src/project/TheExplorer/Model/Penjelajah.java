@@ -7,8 +7,7 @@ public class Penjelajah {
 
 	int asd;
 
-	public Penjelajah(int iD2, String username2, String password2, int skor2,
-			String lastCheckIn2) {
+	public Penjelajah(int iD2, String username2, int skor2) {
 		this.ID = iD2;
 		this.username = username2;
 		this.skor = skor2;

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,7 +23,7 @@ import android.widget.AdapterView.OnItemClickListener;
 public class SignIn extends Activity {
 
 	TextView TextViewUsername, TextViewPassword, TextViewCoba;
-	EditText EditTextUsername, EditTextPassword;
+	EditText User, EditTextPassword;
 	Context context;
 	String Username;
 	String Password;
@@ -33,7 +34,8 @@ public class SignIn extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sign_in);
 		TextViewUsername = (TextView) findViewById(R.id.TextViewUsername);
-		EditTextUsername = (EditText) findViewById(R.id.EditTextUsername);
+		User = (EditText) findViewById(R.id.EditTextUsername);
+		TextViewCoba = (TextView) findViewById(R.id.Coba);
 		context = this;
 
 	}
@@ -49,10 +51,8 @@ public class SignIn extends Activity {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarMenu.class);
 		startActivity(NextScreen);
-		//Username = EditTextUsername.getText().toString();
-		//PenjelajahHelper.AddPenjelajah(context, Username);
-		// temp = PenjelajahHelper.GetPenjelajahName(context);
-		// TextViewCoba.setText("Hallo " + temp);
+		Username = User.getText().toString();
+		PenjelajahHelper.AddPenjelajah(context, Username);
 	}
 
 }
