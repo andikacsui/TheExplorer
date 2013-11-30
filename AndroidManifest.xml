@@ -75,6 +75,12 @@
         </activity>
         <activity android:name="project.TheExplorer.View.MissionOverview" >
         </activity>
+        <activity android:name="project.TheExplorer.View.ListViewSavedMission" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.DetailSavedMission" >
+        </activity>
+        <activity android:name="project.TheExplorer.View.CustomizedDaftarTempatSavedMission" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />

@@ -34,15 +34,21 @@ public class MisiHelper {
 		return temp1;
 	}
 
-	public static ArrayList<Misi> GetSavedMission(Context context) {
+	public static Misi GetMisiByName(Context context, String nama) {
+		db = new DatabaseHelper(context);
+		temp = db.GetMisiByName(nama);
+		return temp;
+	}
+
+	public static ArrayList<String> GetSavedMission(Context context) {
 		db = new DatabaseHelper(context);
 
-		ArrayList<Misi> Saved = new ArrayList<Misi>();
+		ArrayList<String> Saved = new ArrayList<String>();
 		DaftarMisi = db.getListMisi();
 		for (int j = 0; j < DaftarMisi.size(); j++) {
 			temp = DaftarMisi.get(j);
 			if (temp.getPenjelajahID() == 1) {
-				Saved.add(temp);
+				Saved.add(temp.getNama());
 			}
 		}
 		return Saved;
@@ -60,8 +66,15 @@ public class MisiHelper {
 			db.UpdateStatusMisi(MisiID);
 		}
 	}
-	public static void JoinMission(Context context, int MisiID){
+
+	public static void JoinMission(Context context, int MisiID) {
 		db = new DatabaseHelper(context);
 		db.UpdatePenjelajahMisi(MisiID);
+	}
+
+	public static Misi GetMisiByID(Context context, int misiID) {
+		db = new DatabaseHelper(context);
+		temp = db.GetMisiByID(misiID);
+		return temp;
 	}
 }

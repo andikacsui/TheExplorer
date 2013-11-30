@@ -234,6 +234,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 	}
 
+	public Misi GetMisiByName(String nama) {
+		int ID = 0;
+		String deskripsi = "";
+		String lokasi = "";
+		String foto = "";
+		int status = 0;
+		String badge = "";
+		int penjelajahID = 0;
+		Misi misi;
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where nama = " + "\" "
+				+ nama + "\" ", null);
+		cursor.moveToFirst();
+		ID = cursor.getInt(0);
+		nama = cursor.getString(1);
+		deskripsi = cursor.getString(2);
+		lokasi = cursor.getString(3);
+		foto = cursor.getString(4);
+		status = cursor.getInt(5);
+		badge = cursor.getString(6);
+		penjelajahID = cursor.getInt(7);
+		cursor.close();
+		db.close();
+		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
+				penjelajahID);
+		return misi;
+	}
+
 	public void UpdatePenjelajahMisi(int MisiID) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues value1 = new ContentValues();

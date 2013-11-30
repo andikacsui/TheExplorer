@@ -28,7 +28,7 @@ public class DaftarMenu extends Activity {
 
 	public void ButtonSavedMission_OnClick(View view) {
 		Intent nextScreen = new Intent(getApplicationContext(),
-				CustomizedSavedMission.class);
+				ListViewSavedMission.class);
 		startActivity(nextScreen);
 	}
 
