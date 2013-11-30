@@ -7,7 +7,10 @@ import project.TheExplorer.Controller.R;
 import project.TheExplorer.Model.Misi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MissionOverview extends Activity {
@@ -28,6 +31,7 @@ public class MissionOverview extends Activity {
 		TextView judul = (TextView) findViewById(R.id.namaMisi);
 		TextView deskripsi = (TextView) findViewById(R.id.deskripsiMisi);
 		TextView lokasi = (TextView) findViewById(R.id.lokasiMisi);
+		Button detail = (Button) findViewById(R.id.buttonDetails);
 		//TextView judul = (TextView) findViewById(R.id.namaMisi);
 		
 		
@@ -35,7 +39,13 @@ public class MissionOverview extends Activity {
 		judul.setText(daftarMisi.get(ListViewActivity.idMisi - 1).getNama());
 		deskripsi.setText(daftarMisi.get(ListViewActivity.idMisi - 1).getDeskripsi());
 		lokasi.setText(daftarMisi.get(ListViewActivity.idMisi - 1).getLokasi());
+		detail.setId(daftarMisi.get(ListViewActivity.idMisi - 1).getID());
 	}
 	
+	public void buttonDetails_onClick(View view){
+		Intent nextScreen = new Intent(getApplicationContext(),
+				CustomizedDaftarTempat.class);
+		startActivity(nextScreen);
+	}
 	
 }
