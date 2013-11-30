@@ -49,8 +49,8 @@ public class SignIn extends Activity {
 		Intent NextScreen = new Intent(getApplicationContext(),
 				DaftarMenu.class);
 		startActivity(NextScreen);
-		Username = EditTextUsername.getText().toString();
-		PenjelajahHelper.AddPenjelajah(context, Username);
+		//Username = EditTextUsername.getText().toString();
+		//PenjelajahHelper.AddPenjelajah(context, Username);
 		// temp = PenjelajahHelper.GetPenjelajahName(context);
 		// TextViewCoba.setText("Hallo " + temp);
 	}
