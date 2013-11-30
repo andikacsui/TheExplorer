@@ -2,58 +2,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    tools:context=".ShareTwitter" >
   
-    <!-- Twitter Login Button -->
-    <Button android:id="@+id/btnLoginTwitter"
-        android:layout_width="fill_parent"
-        android:layout_height="30dip"
-        android:text="Login with Twitter"
-        android:layout_marginLeft="20dip"
-        android:layout_marginRight="20dip"
-        android:layout_marginTop="30dip"
-        android:background="@layout/template"/>
-    
-    <!-- user name label -->
-    <TextView android:id="@+id/lblUserName"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dip"
-        android:layout_marginTop="30dip"/>
+   <ImageView
+      android:id="@+id/imageView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginLeft="98dp"
+      android:layout_marginTop="139dp"
+      android:onClick="open"
+      android:src="@drawable/ic_launcher" />
 
-    <!-- label update status -->
-    <TextView android:id="@+id/lblUpdate" 
-        android:text="Update Status"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:visibility="gone"/>
-    
-    <!-- Tweet EditText -->
-    <EditText android:id="@+id/txtUpdateStatus"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dip"
-        android:visibility="gone"/>
-    
-    <!-- Tweet Button -->
-    <Button android:id="@+id/btnUpdateStatus"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Tweet"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:visibility="gone"/>
-    
-    <!-- Twitter Logout button -->
-    <Button android:id="@+id/btnLogoutTwitter"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout from Twitter"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="50dip"
-        android:visibility="gone"/>
+   <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="48dp"
+      android:text="@string/tap"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>
