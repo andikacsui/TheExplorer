@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 public class ListMisiAdapter extends BaseAdapter {
 	private Activity activity;
+<<<<<<< HEAD
     private ArrayList<HashMap<String, String>> data;
     private static LayoutInflater inflater=null; 
  
@@ -63,6 +64,8 @@ public class ListMisiAdapter extends BaseAdapter {
         //gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
         return vi;
     }
+=======
+>>>>>>> cf5513272c4da3e0ace5a146fb4f473625ab828e
 
 	private ArrayList<HashMap<String, String>> data;
 	private static LayoutInflater inflater = null;
@@ -113,5 +116,8 @@ public class ListMisiAdapter extends BaseAdapter {
 		//gambar.setImageResource(resId);
 		return vi;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> cf5513272c4da3e0ace5a146fb4f473625ab828e
 }

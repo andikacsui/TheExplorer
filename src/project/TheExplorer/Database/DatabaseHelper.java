@@ -713,6 +713,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.insertOrThrow("TEMPAT", null, value27);
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 			ContentValues value28 = new ContentValues();
 			value28.put("id", 28);
 			value28.put("nama", "Tanah Lot");
@@ -754,6 +756,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 =======
 >>>>>>> 1cf7a55be8738ef7da181d36ec5658081d300cb8
+>>>>>>> 3ffb008e9a2c9d7eb4e68d5135d74d1f7437d423
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");

@@ -43,7 +43,7 @@ public class ListViewActivity extends ListActivity {
               else if(namaMisi.equals("Menjelajah Nusa Tenggara Barat")) idMisi = 5;
               
               // Launching new Activity on selecting single List Item
-              Intent i = new Intent(getApplicationContext(), CustomizedDaftarTempat.class);
+              Intent i = new Intent(getApplicationContext(), MissionOverview.class);
               // sending data to new activity
               i.putExtra("namaMisi", idMisi);
               startActivity(i);
