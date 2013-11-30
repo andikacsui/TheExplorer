@@ -365,9 +365,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("nama", "Malioboro");
 			value1.put("deskripsi",
 					"Malioboro kaya akan keindahan alam dan budayanya");
+<<<<<<< HEAD
+			value1.put("latitude", "-7.791892");
+			value1.put("longitude", "110.365731");
+			value1.put("Foto", "xxxx");
+=======
 			value1.put("latitude", "0");
 			value1.put("longitude", "0");
 			value1.put("Foto", "@drawable/logo");
+>>>>>>> 1cf7a55be8738ef7da181d36ec5658081d300cb8
 			value1.put("Status", 0);
 			value1.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value1);
@@ -377,8 +383,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("nama", "Candi Borobudur");
 			value2.put("deskripsi",
 					"Borobudur kaya akan keindahan alam dan budayanya");
-			value2.put("latitude", "0");
-			value2.put("longitude", "0");
+			value2.put("latitude", "-7.607212");
+			value2.put("longitude", "110.203314");
 			value2.put("Foto", "xxxx");
 			value2.put("Status", 0);
 			value2.put("MisiID", 1);
@@ -389,8 +395,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("nama", "Candi Prambanan");
 			value3.put("deskripsi",
 					"Prambanan kaya akan keindahan alam dan budayanya");
-			value3.put("latitude", "0");
-			value3.put("longitude", "0");
+			value3.put("latitude", "-7.751901");
+			value3.put("longitude", "110.492011");
 			value3.put("Foto", "xxxx");
 			value3.put("Status", 0);
 			value3.put("MisiID", 1);
@@ -401,8 +407,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("nama", "Keraton Jogja");
 			value4.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value4.put("latitude", "0");
-			value4.put("longitude", "0");
+			value4.put("latitude", "-7.805269");
+			value4.put("longitude", "110.364183");
 			value4.put("Foto", "xxxx");
 			value4.put("Status", "0");
 			value4.put("MisiID", 1);
@@ -413,8 +419,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("nama", "Pantai Parangtritis");
 			value5.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value5.put("latitude", "0");
-			value5.put("longitude", "0");
+			value5.put("latitude", "-8.021017");
+			value5.put("longitude", "110.31815");
 			value5.put("Foto", "xxxx");
 			value5.put("Status", 0);
 			value5.put("MisiID", 1);
@@ -425,8 +431,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("nama", "Candi Ratu Boko");
 			value6.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value6.put("latitude", "0");
-			value6.put("longitude", "0");
+			value6.put("latitude", "-7.750795");
+			value6.put("longitude", "110.49222");
 			value6.put("Foto", "xxxx");
 			value6.put("Status", 0);
 			value6.put("Foto", 1);
@@ -438,8 +444,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("nama", "Taman Sari");
 			value7.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value7.put("latitude", "0");
-			value7.put("longitude", "0");
+			value7.put("latitude", "-7.780749");
+			value7.put("longitude", "110.409945");
 			value7.put("Foto", "xxxx");
 			value7.put("Status", 0);
 			value7.put("Foto", 1);
@@ -451,8 +457,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("nama", "Gunung Merapi");
 			value8.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value8.put("latitude", "0");
-			value8.put("longitude", "0");
+			value8.put("latitude", "-7.539828");
+			value8.put("longitude", "110.445371");
 			value8.put("Foto", "xxxx");
 			value8.put("Status", 0);
 			value8.put("Foto", 1);
@@ -464,8 +470,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("nama", "Goa Pindul");
 			value9.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value9.put("latitude", "0");
-			value9.put("longitude", "0");
+			value9.put("latitude", "-7.953157");
+			value9.put("longitude", "110.597191");
 			value9.put("Foto", "xxxx");
 			value9.put("Status", 0);
 			value9.put("Foto", 1);
@@ -477,8 +483,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("nama", "Kota Gede");
 			value10.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value10.put("latitude", "0");
-			value10.put("longitude", "0");
+			value10.put("latitude", "-7.824439");
+			value10.put("longitude", "110.39609");
 			value10.put("Foto", "xxxx");
 			value10.put("Status", 0);
 			value10.put("Foto", 1);
@@ -490,8 +496,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("nama", "Monumen Nasional");
 			value11.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value11.put("latitude", "0");
-			value11.put("longitude", "0");
+			value11.put("latitude", "-6.174774");
+			value11.put("longitude", "106.827185");
 			value11.put("Foto", "xxxx");
 			value11.put("Status", 0);
 			value11.put("Foto", 1);
@@ -503,8 +509,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value12.put("nama", "Taman Mini Indonesia Indah");
 			value12.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value12.put("latitude", "0");
-			value12.put("longitude", "0");
+			value12.put("latitude", "-6.302438");
+			value12.put("longitude", "106.895147");
 			value12.put("Foto", "xxxx");
 			value12.put("Status", 0);
 			value12.put("Foto", 1);
@@ -516,8 +522,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value13.put("nama", "Kota Tua Batavia");
 			value13.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value13.put("latitude", "0");
-			value13.put("longitude", "0");
+			value13.put("latitude", "-6.133216");
+			value13.put("longitude", "106.813173");
 			value13.put("Foto", "xxxx");
 			value13.put("Status", 0);
 			value13.put("Foto", 1);
@@ -529,8 +535,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value14.put("nama", "Ancol");
 			value14.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value14.put("latitude", "0");
-			value14.put("longitude", "0");
+			value14.put("latitude", "-6.127242");
+			value14.put("longitude", "106.845596");
 			value14.put("Foto", "xxxx");
 			value14.put("Status", 0);
 			value14.put("Foto", 1);
@@ -539,11 +545,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value15 = new ContentValues();
 			value15.put("id", 15);
-			value15.put("nama", "Kemang");
+			value15.put("nama", "Universitas Indonesia");
 			value15.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value15.put("latitude", "0");
-			value15.put("longitude", "0");
+			value15.put("latitude", "-6.368188");
+			value15.put("longitude", "106.829442");
 			value15.put("Foto", "xxxx");
 			value15.put("Status", 0);
 			value15.put("Foto", 1);
@@ -555,8 +561,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value16.put("nama", "Komplek Gelora Bung Karno");
 			value16.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value16.put("latitude", "0");
-			value16.put("longitude", "0");
+			value16.put("latitude", "-6.218591");
+			value16.put("longitude", "106.801693");
 			value16.put("Foto", "xxxx");
 			value16.put("Status", 0);
 			value16.put("Foto", 1);
@@ -568,8 +574,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value17.put("nama", "Pulau Tidung Kep. Seribu");
 			value17.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value17.put("latitude", "0");
-			value17.put("longitude", "0");
+			value17.put("latitude", "-5.803193");
+			value17.put("longitude", "106.523066");
 			value17.put("Foto", "xxxx");
 			value17.put("Status", 0);
 			value17.put("Foto", 1);
@@ -581,8 +587,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value18.put("nama", "Pelabuhan Sunda Kelapa");
 			value18.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value18.put("latitude", "0");
-			value18.put("longitude", "0");
+			value18.put("latitude", "-6.122633");
+			value18.put("longitude", "106.80886");
 			value18.put("Foto", "xxxx");
 			value18.put("Status", 0);
 			value18.put("Foto", 1);
@@ -594,8 +600,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value19.put("nama", "Museum Fatahillah");
 			value19.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value19.put("latitude", "0");
-			value19.put("longitude", "0");
+			value19.put("latitude", "-6.133045");
+			value19.put("longitude", "106.813488");
 			value19.put("Foto", "xxxx");
 			value19.put("Status", 0);
 			value19.put("Foto", 1);
@@ -607,8 +613,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("nama", "Museum Bank Indonesia");
 			value20.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value20.put("latitude", "0");
-			value20.put("longitude", "0");
+			value20.put("latitude", "-6.137824");
+			value20.put("longitude", "106.813145");
 			value20.put("Foto", "xxxx");
 			value20.put("Status", 0);
 			value20.put("Foto", 1);
@@ -620,8 +626,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value21.put("nama", "Pantai Kuta");
 			value21.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value21.put("latitude", "0");
-			value21.put("longitude", "0");
+			value21.put("latitude", "-8.723236");
+			value21.put("longitude", "115.169992");
 			value21.put("Foto", "xxxx");
 			value21.put("Status", 0);
 			value21.put("Foto", 1);
@@ -633,8 +639,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value22.put("nama", "Ubud Monkey Forest");
 			value22.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value22.put("latitude", "0");
-			value22.put("longitude", "0");
+			value22.put("latitude", "-8.518743");
+			value22.put("longitude", "115.258552");
 			value22.put("Foto", "xxxx");
 			value22.put("Status", 0);
 			value22.put("Foto", 1);
@@ -646,8 +652,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value23.put("nama", "Bali Bird Park");
 			value23.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value23.put("latitude", "0");
-			value23.put("longitude", "0");
+			value23.put("latitude", "-8.596637");
+			value23.put("longitude", "115.251675");
 			value23.put("Foto", "xxxx");
 			value23.put("Status", 0);
 			value23.put("Foto", 1);
@@ -659,8 +665,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value24.put("nama", "Pantai Lovina");
 			value24.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value24.put("latitude", "0");
-			value24.put("longitude", "0");
+			value24.put("latitude", "-8.160347");
+			value24.put("longitude", "115.029981");
 			value24.put("Foto", "xxxx");
 			value24.put("Status", 0);
 			value24.put("Foto", 1);
@@ -672,8 +678,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value25.put("nama", "Danau Batur-Kintamani");
 			value25.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value25.put("latitude", "0");
-			value25.put("longitude", "0");
+			value25.put("latitude", "-8.256682");
+			value25.put("longitude", "115.408087");
 			value25.put("Foto", "xxxx");
 			value25.put("Status", 0);
 			value25.put("Foto", 1);
@@ -685,8 +691,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value26.put("nama", "Pantai Sanur");
 			value26.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value26.put("latitude", "0");
-			value26.put("longitude", "0");
+			value26.put("latitude", "-8.674748");
+			value26.put("longitude", "115.263827");
 			value26.put("Foto", "xxxx");
 			value26.put("Status", 0);
 			value26.put("Foto", 1);
@@ -698,14 +704,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value27.put("nama", "Nusa Dua");
 			value27.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value27.put("latitude", "0");
-			value27.put("longitude", "0");
+			value27.put("latitude", "-8.794578");
+			value27.put("longitude", "115.216577");
 			value27.put("Foto", "xxxx");
 			value27.put("Status", 0);
 			value27.put("Foto", 1);
 			value27.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value27);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+			ContentValues value28 = new ContentValues();
+			value28.put("id", 28);
+			value28.put("nama", "Tanah Lot");
+			value28.put("deskripsi",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value28.put("latitude", "-8.681494");
+			value28.put("longitude", "115.205247");
+			value28.put("Foto", "xxxx");
+			value28.put("Status", 0);
+			value28.put("Foto", 1);
+			value28.put("MisiID", 3);
+			db.insertOrThrow("TEMPAT", null, value28);
+
+			ContentValues value29 = new ContentValues();
+			value29.put("id", 29);
+			value29.put("nama", "Pantai Dreamland");
+			value29.put("deskripsi",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value29.put("latitude", "-8.779225");
+			value29.put("longitude", "115.166702");
+			value29.put("Foto", "xxxx");
+			value29.put("Status", 0);
+			value29.put("Foto", 1);
+			value29.put("MisiID", 3);
+			db.insertOrThrow("TEMPAT", null, value29);
+
+			ContentValues value30 = new ContentValues();
+			value30.put("id", 30);
+			value30.put("nama", "Jimbaran");
+			value30.put("deskripsi",
+					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+			value30.put("latitude", "-8.789998");
+			value30.put("longitude", "115.159278");
+			value30.put("Foto", "xxxx");
+			value30.put("Status", 0);
+			value30.put("Foto", 1);
+			value30.put("MisiID", 3);
+			db.insertOrThrow("TEMPAT", null, value30);
+
+=======
+>>>>>>> 1cf7a55be8738ef7da181d36ec5658081d300cb8
+>>>>>>> 3ffb008e9a2c9d7eb4e68d5135d74d1f7437d423
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");

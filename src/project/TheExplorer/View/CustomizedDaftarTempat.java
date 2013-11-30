@@ -60,17 +60,16 @@ public class CustomizedDaftarTempat extends Activity {
 		if (daftarTempat != null) {
 			daftarTempat.clear();
 		}
+		
+		
 		try {
 
 			// daftarMisi = new CustomizedDaftarMisi();
 			// IDMisi = Integer.parseInt(daftarMisi.KEY_ID_MISI);
-
-			Intent intent = getIntent();
-			Misi = intent.getStringExtra("MISI_ID");
-			MisiID = Integer.parseInt(Misi);
-
-			daftarTempat = TempatHelper.GetListTempatByMisi(context, MisiID);
-			daftarTempat.clear();
+			
+			//log.d("hmmm", "haaah lala" + misiid);
+			daftarTempat = TempatHelper.GetListTempatByMisi(context, ListViewActivity.idMisi);
+			
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {
@@ -90,7 +89,7 @@ public class CustomizedDaftarTempat extends Activity {
 				// adding HashList to ArrayList
 				tempatList.add(map);
 			}
-
+			daftarTempat.clear();
 			list = (ListView) findViewById(R.id.list_tempat_layout);
 
 			// Getting adapter by passing xml data ArrayList

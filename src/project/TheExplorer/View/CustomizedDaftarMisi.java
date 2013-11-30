@@ -28,10 +28,7 @@ import project.TheExplorer.Controller.R;
 import project.TheExplorer.Model.Misi;
 
 public class CustomizedDaftarMisi extends Activity {
-	// All static variables
-	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
-	static final String KEY_SONG = "song"; // parent node
 	static final String KEY_ID = "id";
 	static final String KEY_ID_MISI = "idmisi";
 	static final String KEY_NAMA = "nama";
@@ -74,6 +71,7 @@ public class CustomizedDaftarMisi extends Activity {
 				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
 				map.put(KEY_FOTO, daftarMisi.get(i).getFoto());
 				map.put(KEY_ID_MISI, daftarMisi.get(i).getID() + "");
+				Log.d("hmm", "ohmen " + daftarMisi.get(i).getID());
 				// Log.d("ID ", String.valueOf(daftarMisi.get(i).getID()));
 				// Log.d("Nama ", String.valueOf(daftarMisi.get(i).getNama()));
 				// adding HashList to ArrayList
@@ -92,11 +90,7 @@ public class CustomizedDaftarMisi extends Activity {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View view,
 						int position, long id) {
-					Intent nextScreen = new Intent(getApplicationContext(),
-							CustomizedDaftarTempat.class);
-					Log.d("tag", id + "");
-					nextScreen.putExtra("MISI_ID", id);
-					startActivity(nextScreen);
+					
 
 				}
 			});
@@ -107,11 +101,9 @@ public class CustomizedDaftarMisi extends Activity {
 	public void TextViewDetailMisi_OnClick(View view) {
 		Intent nextScreen = new Intent(getApplicationContext(),
 				CustomizedDaftarTempat.class);
-		TextView tvValue = (TextView) findViewById(R.id.TextViewIDMisi);
-		id_misi = tvValue.getText().toString();
+		TextView tvValue = (TextView) findViewById(R.id.TextViewDetails);
+		id_misi = ""+tvValue.getTag();
 		nextScreen.putExtra("mission_id", id_misi);
-		Log.d("hmmm", "" + id_misi);
-		// nextScreen.putExtra("IDMisi", );
 		startActivity(nextScreen);
 	}
 }
