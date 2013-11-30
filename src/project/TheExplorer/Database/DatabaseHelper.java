@@ -260,15 +260,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		Misi misi = GetMisiByID(ID);
 		value1.put("id", ID);
 		value1.put("nama", misi.getNama());
-		value1.put(
-				"deskripsi", misi.getDeskripsi());
+		value1.put("deskripsi", misi.getDeskripsi());
 		value1.put("lokasi", misi.getLokasi());
 		value1.put("foto", "@drawable/splash");
 		value1.put("status", 1);
 		value1.put("badge", misi.getBadge());
 		value1.put("penjelajahID", misi.getPenjelajahID());
-		db.update("MISI", value1, "ID = " + "\"" + ID + "\"", null);
-		db.close();
+
 	}
 
 	public Tempat GetTempat() {
@@ -298,6 +296,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		tempat = new Tempat(ID, nama, deskripsi, latitude, longitude, foto,
 				status, misiID);
 		return tempat;
+	}
+
+	public Tempat GetTempatByID(int ID) {
+		String nama = "";
+		String deskripsi = "";
+		double latitude = 0;
+		double longitude = 0;
+		String foto = "";
+		int status = 0;
+		int misiID = 0;
+		Tempat tempat;
+
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
+				+ ID + "\" ", null);
+		cursor.moveToFirst();
+		ID = cursor.getInt(0);
+		nama = cursor.getString(1);
+		deskripsi = cursor.getString(2);
+		latitude = cursor.getFloat(3);
+		longitude = cursor.getFloat(4);
+		foto = cursor.getString(5);
+		status = cursor.getInt(6);
+		misiID = cursor.getInt(7);
+		cursor.close();
+		db.close();
+		tempat = new Tempat(ID, nama, deskripsi, latitude, longitude, foto,
+				status, misiID);
+		return tempat;
+	}
+
+	public void UpdateStatusTempat(int ID) {
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues value1 = new ContentValues();
+		Tempat tempat = GetTempatByID(ID);
+		value1.put("id", ID);
+		value1.put("nama", tempat.getNama());
+		value1.put("deskripsi", tempat.getDeskripsi());
+		value1.put("latitude", tempat.getLatitude());
+		value1.put("longitude", tempat.getLongitude());
+		value1.put("Foto", tempat.getFoto());
+		value1.put("Status", 1);
+		value1.put("MisiID", tempat.getMisiID());
+		db.update("TEMPAT", value1, "ID = " + "\"" + ID + "\"", null);
+		db.close();
 	}
 
 	public boolean IsTempatExist() {
@@ -663,104 +706,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value27.put("MisiID", 3);
 			db.insertOrThrow("TEMPAT", null, value27);
 
-			ContentValues value28 = new ContentValues();
-			value28.put("id", 28);
-			value28.put("nama", "Tanah Lot");
-			value28.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value28.put("latitude", "0");
-			value28.put("longitude", "0");
-			value28.put("Foto", "xxxx");
-			value28.put("Status", 0);
-			value28.put("Foto", 1);
-			value28.put("MisiID", 3);
-			db.insertOrThrow("TEMPAT", null, value28);
-
-			ContentValues value29 = new ContentValues();
-			value29.put("id", 29);
-			value29.put("nama", "Pantai Dreamland");
-			value29.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value29.put("latitude", "0");
-			value29.put("longitude", "0");
-			value29.put("Foto", "xxxx");
-			value29.put("Status", 0);
-			value29.put("Foto", 1);
-			value29.put("MisiID", 3);
-			db.insertOrThrow("TEMPAT", null, value29);
-
-			ContentValues value30 = new ContentValues();
-			value30.put("id", 30);
-			value30.put("nama", "Jimbaran");
-			value30.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value30.put("latitude", "0");
-			value30.put("longitude", "0");
-			value30.put("Foto", "xxxx");
-			value30.put("Status", 0);
-			value30.put("Foto", 1);
-			value30.put("MisiID", 3);
-			db.insertOrThrow("TEMPAT", null, value30);
-
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");
 			value31.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value31.put("latitude", "0");
-			value31.put("longitude", "0");
+			value31.put("latitude", "-0.301393");
+			value31.put("longitude", "100.365361");
 			value31.put("Foto", "xxxx");
 			value31.put("Status", 0);
 			value31.put("Foto", 1);
 			value31.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value31);
 
-			ContentValues value32 = new ContentValues();
-			value32.put("id", 32);
-			value32.put("nama", "Ngarai Sianok");
-			value32.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value32.put("latitude", "0");
-			value32.put("longitude", "0");
-			value32.put("Foto", "xxxx");
-			value32.put("Status", 0);
-			value32.put("Foto", 1);
-			value32.put("MisiID", 4);
-			db.insertOrThrow("TEMPAT", null, value32);
-
-			ContentValues value33 = new ContentValues();
-			value33.put("id", 33);
-			value33.put("nama", "Lobang Jepang");
-			value33.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value33.put("latitude", "0");
-			value33.put("longitude", "0");
-			value33.put("Foto", "xxxx");
-			value33.put("Status", 0);
-			value33.put("Foto", 1);
-			value33.put("MisiID", 4);
-			db.insertOrThrow("TEMPAT", null, value33);
-
-			ContentValues value34 = new ContentValues();
-			value34.put("id", 34);
-			value34.put("nama", "Air Terjun Lembah Anai");
-			value34.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value34.put("latitude", "0");
-			value34.put("longitude", "0");
-			value34.put("Foto", "xxxx");
-			value34.put("Status", 0);
-			value34.put("Foto", 1);
-			value34.put("MisiID", 4);
-			db.insertOrThrow("TEMPAT", null, value34);
-
+			
 			ContentValues value35 = new ContentValues();
 			value35.put("id", 35);
 			value35.put("nama", "Pantai Air Manis");
 			value35.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value35.put("latitude", "0");
-			value35.put("longitude", "0");
+			value35.put("latitude", "-0.60149");
+			value35.put("longitude", "100.539901");
 			value35.put("Foto", "xxxx");
 			value35.put("Status", 0);
 			value35.put("Foto", 1);
@@ -772,8 +738,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value36.put("nama", "Danau Singkarak");
 			value36.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value36.put("latitude", "0");
-			value36.put("longitude", "0");
+			value36.put("latitude", "-0.60149");
+			value36.put("longitude", "100.539901");
 			value36.put("Foto", "xxxx");
 			value36.put("Status", 0);
 			value36.put("Foto", 1);
@@ -785,8 +751,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value37.put("nama", "Istana Pagaruyung");
 			value37.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value37.put("latitude", "0");
-			value37.put("longitude", "0");
+			value37.put("latitude", "-0.307272");
+			value37.put("longitude", "100.200752");
 			value37.put("Foto", "xxxx");
 			value37.put("Status", 0);
 			value37.put("Foto", 1);
@@ -798,47 +764,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value38.put("nama", "Danau Maninjau");
 			value38.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value38.put("latitude", "0");
-			value38.put("longitude", "0");
+			value38.put("latitude", "-0.307272");
+			value38.put("longitude", "100.200752");
 			value38.put("Foto", "xxxx");
 			value38.put("Status", 0);
 			value38.put("Foto", 1);
 			value38.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value38);
-
-			ContentValues value39 = new ContentValues();
-			value39.put("id", 39);
-			value39.put("nama", "Lembah Harau");
-			value39.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value39.put("latitude", "0");
-			value39.put("longitude", "0");
-			value39.put("Foto", "xxxx");
-			value39.put("Status", 0);
-			value39.put("Foto", 1);
-			value39.put("MisiID", 4);
-			db.insertOrThrow("TEMPAT", null, value39);
-
+			
 			ContentValues value40 = new ContentValues();
 			value40.put("id", 40);
-			value40.put("nama", "Pantai Carocok");
+			value40.put("nama", "Gili Terawangan");
 			value40.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value40.put("latitude", "0");
-			value40.put("longitude", "0");
+			value40.put("latitude", "-8.346199");
+			value40.put("longitude", "116.038099");
 			value40.put("Foto", "xxxx");
 			value40.put("Status", 0);
 			value40.put("Foto", 1);
-			value40.put("MisiID", 4);
+			value40.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value40);
 
 			ContentValues value41 = new ContentValues();
-			value41.put("id", 41);
-			value41.put("nama", "Gili Terawangan");
+			value41.put("id", 42);
+			value41.put("nama", "Gili Meno Island");
 			value41.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value41.put("latitude", "0");
-			value41.put("longitude", "0");
+			value41.put("latitude", "-8.34501");
+			value41.put("longitude", "116.055609");
 			value41.put("Foto", "xxxx");
 			value41.put("Status", 0);
 			value41.put("Foto", 1);
@@ -847,37 +800,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value42 = new ContentValues();
 			value42.put("id", 42);
-			value42.put("nama", "Gili Meno");
+			value42.put("nama", "Gili Air Island");
 			value42.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value42.put("latitude", "0");
-			value42.put("longitude", "0");
+			value42.put("latitude", "-8.356814");
+			value42.put("longitude", "116.081444");
 			value42.put("Foto", "xxxx");
 			value42.put("Status", 0);
 			value42.put("Foto", 1);
 			value42.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value42);
 
-			ContentValues value43 = new ContentValues();
-			value43.put("id", 43);
-			value43.put("nama", "Gili Air");
-			value43.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value43.put("latitude", "0");
-			value43.put("longitude", "0");
-			value43.put("Foto", "xxxx");
-			value43.put("Status", 0);
-			value43.put("Foto", 1);
-			value43.put("MisiID", 5);
-			db.insertOrThrow("TEMPAT", null, value43);
-
 			ContentValues value44 = new ContentValues();
 			value44.put("id", 44);
 			value44.put("nama", "Pulau Moyo");
 			value44.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value44.put("latitude", "0");
-			value44.put("longitude", "0");
+			value44.put("latitude", "-8.197898");
+			value44.put("longitude", "117.578216");
 			value44.put("Foto", "xxxx");
 			value44.put("Status", 0);
 			value44.put("Foto", 1);
@@ -886,11 +826,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value45 = new ContentValues();
 			value45.put("id", 45);
-			value45.put("nama", "Gunung Rinjani");
+			value45.put("nama", "Taman Nasional Gunung Rinjani");
 			value45.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value45.put("latitude", "0");
-			value45.put("longitude", "0");
+			value45.put("latitude", "-8.396979");
+			value45.put("longitude", "116.457031");
 			value45.put("Foto", "xxxx");
 			value45.put("Status", 0);
 			value45.put("Foto", 1);
@@ -902,8 +842,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value46.put("nama", "Pantai Senggigi");
 			value46.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value46.put("latitude", "0");
-			value46.put("longitude", "0");
+			value46.put("latitude", "-8.482559");
+			value46.put("longitude", "116.047356");
 			value46.put("Foto", "xxxx");
 			value46.put("Status", 0);
 			value46.put("Foto", 1);
@@ -912,11 +852,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value47 = new ContentValues();
 			value47.put("id", 47);
-			value47.put("nama", "Sumbawa");
+			value47.put("nama", "Pantai Lakey");
 			value47.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value47.put("latitude", "0");
-			value47.put("longitude", "0");
+			value47.put("latitude", "-8.578305");
+			value47.put("longitude", "116.328306");
 			value47.put("Foto", "xxxx");
 			value47.put("Status", 0);
 			value47.put("Foto", 1);
@@ -925,42 +865,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value48 = new ContentValues();
 			value48.put("id", 48);
-			value48.put("nama", "Mataram");
+			value48.put("nama", "Pulau Lombok");
 			value48.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value48.put("latitude", "0");
-			value48.put("longitude", "0");
+			value48.put("latitude", "-8.578305");
+			value48.put("longitude", "116.328306");
 			value48.put("Foto", "xxxx");
 			value48.put("Status", 0);
 			value48.put("Foto", 1);
 			value48.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value48);
-
-			ContentValues value49 = new ContentValues();
-			value49.put("id", 49);
-			value49.put("nama", "Pantai Lakey");
-			value49.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value49.put("latitude", "0");
-			value49.put("longitude", "0");
-			value49.put("Foto", "xxxx");
-			value49.put("Status", 0);
-			value49.put("Foto", 1);
-			value49.put("MisiID", 5);
-			db.insertOrThrow("TEMPAT", null, value49);
-
-			ContentValues value50 = new ContentValues();
-			value50.put("id", 50);
-			value50.put("nama", "Pulau Lombok");
-			value50.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
-			value50.put("latitude", "0");
-			value50.put("longitude", "0");
-			value50.put("Foto", "xxxx");
-			value50.put("Status", 0);
-			value50.put("Foto", 1);
-			value50.put("MisiID", 5);
-			db.insertOrThrow("TEMPAT", null, value50);
 			db.close();
 		}
 	}
