@@ -71,7 +71,6 @@ public class CustomizedDaftarMisi extends Activity {
 				map.put(KEY_DESKRIPSI, daftarMisi.get(i).getDeskripsi());
 				map.put(KEY_FOTO, daftarMisi.get(i).getFoto());
 				map.put(KEY_ID_MISI, daftarMisi.get(i).getID() + "");
-				Log.d("hmm", "ohmen " + daftarMisi.get(i).getID());
 				// Log.d("ID ", String.valueOf(daftarMisi.get(i).getID()));
 				// Log.d("Nama ", String.valueOf(daftarMisi.get(i).getNama()));
 				// adding HashList to ArrayList
