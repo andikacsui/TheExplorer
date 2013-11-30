@@ -25,4 +25,6 @@
 	<string name="ChangeProfile">Change Profile</string>
 	<string name="share">Share</string>
 	<string name="take_picture">Take Picture</string>
+	<string name="tap">Tap the button to share something</string>
+	
 </resources>
