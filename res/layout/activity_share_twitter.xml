@@ -7,7 +7,7 @@
     <!-- Twitter Login Button -->
     <Button android:id="@+id/btnLoginTwitter"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dip"
         android:text="Login with Twitter"
         android:layout_marginLeft="20dip"
         android:layout_marginRight="20dip"
