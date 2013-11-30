@@ -34,10 +34,8 @@ public class SignIn extends Activity {
 		setContentView(R.layout.activity_sign_in);
 		TextViewUsername = (TextView) findViewById(R.id.TextViewUsername);
 		EditTextUsername = (EditText) findViewById(R.id.EditTextUsername);
-		TextViewPassword = (TextView) findViewById(R.id.TextViewPassword);
-		EditTextPassword = (EditText) findViewById(R.id.EditTextPassword);
 		context = this;
-		
+
 	}
 
 	@Override
@@ -46,15 +44,15 @@ public class SignIn extends Activity {
 		getMenuInflater().inflate(R.menu.sign_in, menu);
 		return true;
 	}
-	
+
 	public void ButtonSimpan_onClick(View view) {
-		Intent NextScreen = new Intent(getApplicationContext(), DaftarMenu.class);
+		Intent NextScreen = new Intent(getApplicationContext(),
+				DaftarMenu.class);
 		startActivity(NextScreen);
 		Username = EditTextUsername.getText().toString();
-		Password = EditTextPassword.getText().toString();
-		PenjelajahHelper.AddPenjelajah(context, Username, Password);
-		//temp = PenjelajahHelper.GetPenjelajahName(context);
-		//TextViewCoba.setText("Hallo " + temp);
+		PenjelajahHelper.AddPenjelajah(context, Username);
+		// temp = PenjelajahHelper.GetPenjelajahName(context);
+		// TextViewCoba.setText("Hallo " + temp);
 	}
 
 }

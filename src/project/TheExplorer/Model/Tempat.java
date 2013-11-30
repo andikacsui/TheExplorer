@@ -9,14 +9,16 @@ public class Tempat {
 	private double longitude;
 	private String foto;
 	private int status;
+	private int point;
 	private int MisiID;
 
-	public Tempat(int ID, String nama, String deskripsi, double latitude,
-			double longitude, String foto, int status,
+	public Tempat(int ID, String nama, String deskripsi, int point,
+			double latitude, double longitude, String foto, int status,
 			int misiID) {
 		this.ID = ID;
 		this.nama = nama;
 		this.deskripsi = deskripsi;
+		this.point = point;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.foto = foto;
@@ -47,6 +49,14 @@ public class Tempat {
 
 	public void setDeskripsi(String deskripsi) {
 		this.deskripsi = deskripsi;
+	}
+
+	public int getPoint() {
+		return point;
+	}
+
+	public void setLatitude(int point) {
+		this.point = point;
 	}
 
 	public double getLatitude() {

@@ -60,4 +60,8 @@ public class MisiHelper {
 			db.UpdateStatusMisi(MisiID);
 		}
 	}
+	public static void JoinMission(Context context, int MisiID){
+		db = new DatabaseHelper(context);
+		db.UpdatePenjelajahMisi(MisiID);
+	}
 }
