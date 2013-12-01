@@ -221,14 +221,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							+ "keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "g4_istanapagaruyung");
-			value4.put("status", 1);
-			value4.put("badge", "Sumatera Barat");
-			value4.put("penjelajahID", 1);
 			value4.put("status", 0);
 			value4.put("badge", "badge_sumbar");
-			value4.put("penjelajahID", 0);
-			value4.put("status", 1);
-			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value4);
 
@@ -483,7 +477,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("latitude", "-7.805269");
 			value4.put("longitude", "110.364183");
 			value4.put("Foto", "g1_keratonjogja");
-			value4.put("Status", "0");
+			value4.put("Status", 0);
 			value4.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value4);
 
@@ -711,6 +705,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("latitude", "-6.137824");
 			value20.put("longitude", "106.813145");
 			value20.put("Foto", "g2_bi");
+			value20.put("Status", 0);
 			value20.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value20);
 
