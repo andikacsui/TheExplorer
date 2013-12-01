@@ -170,7 +170,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("nama", "Menjelajah Jogja");
 			value1.put(
 					"deskripsi",
-					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga berwisata kuliner. Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
+					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. " +
+					"Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga wisata kuliner." +
+					" Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
 			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
@@ -183,7 +185,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("nama", "Menjelajah Jakarta");
 			value2.put(
 					"deskripsi",
-					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan, bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. Jakarta telah memikat orang dari segala aspek kehidupan.. Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
+					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan," +
+					" bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. " +
+					"Jakarta telah memikat orang dari segala aspek kehidupan." +
+					" Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional " +
+					"dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
@@ -196,7 +202,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("nama", "Menjelajah Bali");
 			value3.put(
 					"deskripsi",
-					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan, souvenir yang menarik, serta adat dan kebudayaan yang menawan");
+					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. " +
+					"Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan," +
+					" souvenir yang menarik, serta adat dan kebudayaan yang menawan");
 			value3.put("lokasi", "Bali, Indonesia");
 			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
@@ -210,7 +218,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("nama", "Menjelajah Sumatera Barat");
 			value4.put(
 					"deskripsi",
-					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
+					"Dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang " +
+					"membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang" +
+					" hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. " +
+					"Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan " +
+					"keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "xxxx");
 			value4.put("status", 1);
@@ -223,7 +235,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("nama", "Menjelajah Nusa Tenggara Barat");
 			value5.put(
 					"deskripsi",
-					"Aceh merupakan salah satu daerah di Nusantara yang masyarakatnya bersifat multietnis bercirikan Islam. Penduduk Aceh sering disebutkan merupakan keturunan berbagai kaum dan bangsa. Seperti halnya kata ACEH sering diidentikkan dengan kepanjangan dari Arab, China, Eropa, Hindia dimana memang secara fisik menunjukkan ciri-ciri orang Arab, India, Eropa dan Cina. Aceh merupakan daerah istimewa di Indonesia yang terletak paling ujung utara Pulau Sumatra.");
+					"Nusa Tenggara Barat adalah bagian Indonesia Bagian Tengah yang menandai titik transisi antara flora dan fauna" +
+					" dari Barat dan Timur Indonesia dengan keindahan alam yang luar biasa dan unik. " +
+					"Bagian utara pulau adalah pegunungan dan subur dengan pohon-pohon tinggi dan semak-semak. " +
+					"Selatan, di sisi lain adalah kering dan ditutupi oleh sabana.  ");
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "xxxx");
 			value5.put("status", 0);
@@ -425,7 +440,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("id", 1);
 			value1.put("nama", "Malioboro");
 			value1.put("deskripsi",
-					"Malioboro kaya akan keindahan alam dan budayanya");
+					"Malioboro adalah jalan yang paling terkenal dan terdapat di jantung kota Jogjakarta. " +
+					"Disepanjang jalan ini terdapat toko-toko yang menjual berbagai macam batik, souvenir dan kuliner khas Jogja." +
+					"Jalan ini sangat ramai dikunjungi oleh turis lokal maupun mancanegara.");
 			value1.put("point", 50);
 			value1.put("latitude", "-7.791892");
 			value1.put("longitude", "110.365731");
@@ -438,7 +455,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("id", 2);
 			value2.put("nama", "Candi Borobudur");
 			value2.put("deskripsi",
-					"Borobudur kaya akan keindahan alam dan budayanya");
+					"Candi Borobudur yang megah adalah monumen Budha terbesar di dunia, " +
+					"sebuah situs kuno yang pernah menjadi salah satu dari tujuh keajaiban dunia. " +
+					"Disini dapat dilihat berbagai patung serta ilustrasi kisah-kisah Budha. Dari Borobudur" +
+					"pengunjung dapat menikmati keindahan pemandangan sekitar. ");
 			value2.put("point", 50);
 			value2.put("latitude", "-7.607212");
 			value2.put("longitude", "110.203314");
@@ -451,7 +471,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("id", 3);
 			value3.put("nama", "Candi Prambanan");
 			value3.put("deskripsi",
-					"Prambanan kaya akan keindahan alam dan budayanya");
+					"Candi Prambanan merupakan candi Hindu terbesar di Asia Tenggara, " +
+					"kuil cantik dan anggun ini merupakan tontonan megah dan ikon warisan budaya Indonesia. Disini juga sering" +
+					"ditampilkan drama musikal mengenai cerita klasik Ramayana");
 			value3.put("point", 50);
 			value3.put("latitude", "-7.751901");
 			value3.put("longitude", "110.492011");
@@ -464,7 +486,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("id", 4);
 			value4.put("nama", "Keraton Jogja");
 			value4.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Keraton Jogja merupakan istana Jogjakarta yang mencerminkan kebudayaan dan arsitektur Jawa. Keraton ini berfungsi" +
+					"sebagai rumah Sultan Jogja sekaligus tempat pelaksanaan upacara dan fungsi pengadilan. ");
 			value4.put("point", 50);
 			value4.put("latitude", "-7.805269");
 			value4.put("longitude", "110.364183");
@@ -477,7 +500,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("id", 5);
 			value5.put("nama", "Pantai Parangtritis");
 			value5.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Pantai parangtritis terkenal dengan kaitannya dengan cerita Nyi Roro Kidul, sehingga dihinggapi " +
+					"suasana mistis. Di pantai ini kita dapat melihat bukit yang hijau dengan latar belakang lautan lepas.");
 			value5.put("point", 50);
 			value5.put("latitude", "-8.021017");
 			value5.put("longitude", "110.31815");
@@ -490,7 +514,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("id", 6);
 			value6.put("nama", "Candi Ratu Boko");
 			value6.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Berdiri megah di dataran tinggi lereng bukit dengan latar belakang Gunung Merapi dan Candi Prambanan. " +
+					"Candi Ratu Boko adalah sisa-sisa dari masa kejayaan kerajaan Jawa Kuno. Merupakan situs arkeologi unik" +
+					"perpaduan dari arsitektur Hindu dan Budha");
 			value6.put("point", 100);
 			value6.put("latitude", "-7.750795");
 			value6.put("longitude", "110.49222");
@@ -503,7 +529,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("id", 7);
 			value7.put("nama", "Taman Sari");
 			value7.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Taman Sari merupakan sebuah taman yang dibangun oleh Sri Sultan Hamengkubuwono I sebagai tempat beristirahat" +
+					"sejenak. Di taman ini terdapat kolam renang, bangunan kamar dan tentunya taman bunga yang indah");
 			value7.put("point", 50);
 			value7.put("latitude", "-7.780749");
 			value7.put("longitude", "110.409945");
@@ -516,7 +543,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("id", 8);
 			value8.put("nama", "Gunung Merapi");
 			value8.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Gunung Merapi adalah salah satu gunung aktif di Indonesia. Beberap tahun lalu terjadi letusan vulkano " +
+					"di gunung ini dan menyisakan jejak yang mengerikan dan sekaligus menakjubkan.");
 			value8.put("point", 100);
 			value8.put("latitude", "-7.539828");
 			value8.put("longitude", "110.445371");
@@ -529,7 +557,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("id", 9);
 			value9.put("nama", "Goa Pindul");
 			value9.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Goa pindul merupakan goa yang berada di atas sungai. Wisata yang ditawarkan di Goa pindul ini adalah" +
+					"menulusuri goa melalui sungai bawah tanah yang tenang, rafting, dan off road. Disini kita disuguhi " +
+					"pemandangan goa yang luar biasa dan unik. ");
 			value9.put("point", 50);
 			value9.put("latitude", "-7.953157");
 			value9.put("longitude", "110.597191");
@@ -542,7 +572,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("id", 10);
 			value10.put("nama", "Kota Gede");
 			value10.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Kota Gede adalah salah satu kota di Jogjakarta yang merupakan pusat kerajinan perak, seperti tea sets, kalung," +
+					"gelang, bros dan sebagainya");
 			value10.put("point", 100);
 			value10.put("latitude", "-7.824439");
 			value10.put("longitude", "110.39609");
@@ -553,12 +584,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value11 = new ContentValues();
 			value11.put("id", 11);
-			value11.put("nama", "Monumen Nasional");
+			value11.put("nama", "Universitas Indonesia");
 			value11.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Universitas Indonesia adalah kampus modern, komprehensif, terbuka, " +
+					"multi budaya, dan humanis yang mencakup disiplin ilmu yang luas. UI termasuk salah satu " +
+					"universitas terbaik di Indonesia. ");
 			value11.put("point", 50);
-			value11.put("latitude", "-6.174774");
-			value11.put("longitude", "106.827185");
+			value11.put("latitude", "-6.368188");
+			value11.put("longitude", "106.829442");
 			value11.put("Foto", "g2_monas");
 			value11.put("Status", 0);
 			value11.put("MisiID", 2);
@@ -568,7 +601,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value12.put("id", 12);
 			value12.put("nama", "Taman Mini Indonesia Indah");
 			value12.put("deskripsi",
-					"Keraton Jogja kaya akan keindahan alam dan budayanya");
+					"Taman Mini Indonesia Indah merupakan taman yang berisikan miniatur Indonesia, baik itu budaya " +
+					"maupun bentuk wilayah Indonesia. Di taman ini juga terdapat keanekaragaman flora dan fauna, " +
+					"museum, teater, dan replika rumah adat provinsi di Indonesia. ");
 			value12.put("point", 50);
 			value12.put("latitude", "-6.302438");
 			value12.put("longitude", "106.895147");
@@ -605,12 +640,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value15 = new ContentValues();
 			value15.put("id", 15);
-			value15.put("nama", "Universitas Indonesia");
+			value15.put("nama", "Monumen Nasional");
 			value15.put("deskripsi",
 					"Keraton Jogja kaya akan keindahan alam dan budayanya");
 			value15.put("point", 50);
-			value15.put("latitude", "-6.368188");
-			value15.put("longitude", "106.829442");
+			value15.put("latitude", " -6.174774");
+			value15.put("longitude", "106.827185"); 
 			value15.put("Foto", "g2_ui");
 			value15.put("Status", 0);
 			value15.put("MisiID", 2);
