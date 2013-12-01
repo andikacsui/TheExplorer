@@ -15,7 +15,6 @@ public class MisiHelper {
 	public static String[] DaftarNamaMisi;
 	public static Misi temp;
 	public static String temp1;
-	public static boolean status = true;
 
 	public static ArrayList<Misi> GetListMisi(Context context) {
 		db = new DatabaseHelper(context);
@@ -54,22 +53,43 @@ public class MisiHelper {
 		return Saved;
 	}
 
+	public static ArrayList<String> GetNotSavedMission(Context context) {
+		db = new DatabaseHelper(context);
+
+		ArrayList<String> NotSaved = new ArrayList<String>();
+		DaftarMisi = db.getListMisi();
+		for (int j = 0; j < DaftarMisi.size(); j++) {
+			temp = DaftarMisi.get(j);
+			if (temp.getPenjelajahID() == 0) {
+				NotSaved.add(temp.getNama());
+			}
+		}
+		return NotSaved;
+	}
+
 	public static void UpdateStatusMisi(Context context, int MisiID) {
+		boolean status = true;
 		DaftarTempat = TempatHelper.GetListTempatByMisi(context, MisiID);
 		for (int i = 0; i < DaftarTempat.size(); i++) {
 			if (DaftarTempat.get(i).getStatus() == 0) {
 				status = false;
 			}
 		}
-		if (status = true) {
+		if (status == true) {
 			db = new DatabaseHelper(context);
-			db.UpdateStatusMisi(MisiID);
+			Misi misi = db.GetMisiByID(MisiID);
+			db.UpdateStatusMisi(MisiID, misi.getNama(), misi.getDeskripsi(),
+					misi.getLokasi(), misi.getFoto(), 1, misi.getBadge(),
+					misi.getPenjelajahID());
 		}
 	}
 
 	public static void JoinMission(Context context, int MisiID) {
 		db = new DatabaseHelper(context);
-		db.UpdatePenjelajahMisi(MisiID);
+		Misi misi = db.GetMisiByID(MisiID);
+		db.UpdatePenjelajahMisi(MisiID, misi.getNama(), misi.getDeskripsi(),
+				misi.getLokasi(), misi.getFoto(), misi.getStatus(),
+				misi.getBadge(), 1);
 	}
 
 	public static Misi GetMisiByID(Context context, int misiID) {

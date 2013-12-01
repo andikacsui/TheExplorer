@@ -1,7 +1,12 @@
 package project.TheExplorer.View;
 
+import java.util.ArrayList;
+
 import project.TheExplorer.Controller.GPSTracker;
+import project.TheExplorer.Controller.MisiHelper;
+import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Controller.R;
+import project.TheExplorer.Model.Misi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +23,10 @@ public class DaftarMenu extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_daftar_menu);
 		context = this;
+		ArrayList<Misi> misi = MisiHelper.GetListMisi(context);
+		for (int i = 1; i <= misi.size(); i++) {
+			MisiHelper.UpdateStatusMisi(context, i);
+		}
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {

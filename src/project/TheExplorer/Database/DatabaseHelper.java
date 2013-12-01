@@ -61,15 +61,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	public void UpdatePenjelajahUsername(String Username, int skor) {
 		SQLiteDatabase db = this.getWritableDatabase();
-		Log.d("debag", "atas "+db.isOpen());
-		Log.d("debag", "bawah "+db.isOpen());
 		ContentValues value = new ContentValues();
 		value.put("id", 1);
 		value.put("Username", Username);
 		value.put("skor", skor);
-		
 		db.update("PENJELAJAH", value, "id = " + "\"" + 1 + "\"", null);
-		Log.d("debag", "sampesinilho2");
 		db.close();
 	}
 
@@ -86,15 +82,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 	}
 
-	public void UpdatePenjelajahSkor(int skor) {
+	public void UpdatePenjelajahSkor(String username, int skor) {
 		ContentValues value = new ContentValues();
 		SQLiteDatabase db = this.getWritableDatabase();
-		Penjelajah penjelajah = GetPenjelajah();
 		value.put("id", 1);
-		value.put("Username", penjelajah.getUsername());
-		int SkorSekarang = penjelajah.getSkor() + skor;
+		value.put("Username", username);
+		int SkorSekarang = skor;
 		value.put("Skor", SkorSekarang);
-		db.update("PENJELAJAH", value, "ID = " + "\"" + 1 + "\"", null);
+		db.update("PENJELAJAH", value, "id=" + "\"" + 1 + "\"", null);
 		db.close();
 	}
 
@@ -186,7 +181,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
 			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
-			value1.put("badge", "Jogja");
+			value1.put("badge", "badge_jogja");
 			value1.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value1);
 
@@ -199,7 +194,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
-			value2.put("badge", "Jakarta");
+			value2.put("badge", "badge_jakarta");
 			value2.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value2);
 
@@ -212,7 +207,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("lokasi", "Bali, Indonesia");
 			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
-			value3.put("badge", "Bali");
+			value3.put("badge", "badge_bali");
 			value3.put("penjelajahID", 0);
 
 			db.insertOrThrow("MISI", null, value3);
@@ -224,10 +219,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"deskripsi",
 					"dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
+<<<<<<< HEAD
 			value4.put("foto", "g4_istanapagaruyung");
 			value4.put("status", 1);
 			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", 1);
+=======
+			value4.put("foto", "xxxx");
+			value4.put("status", 0);
+			value4.put("badge", "badge_sumbar");
+			value4.put("penjelajahID", 0);
+>>>>>>> 805da9807fb093738f14d287f2aab3a22a582cbe
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
@@ -239,8 +241,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "g5_rinjani");
 			value5.put("status", 0);
-			value5.put("badge", "NTB");
-			value5.put("penjelajahID", 1);
+			value5.put("badge", "badge_ntb");
+			value5.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
@@ -257,7 +259,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		Misi misi;
 
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where nama = " + "\" "
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where nama=" + "\" "
 				+ nama + "\" ", null);
 		cursor.moveToFirst();
 		ID = cursor.getInt(0);
@@ -275,25 +277,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return misi;
 	}
 
-	public void UpdatePenjelajahMisi(int MisiID) {
-		
+	public void UpdatePenjelajahMisi(int ID, String nama, String deskripsi,
+			String lokasi, String Foto, int status, String badge,
+			int PenjelajahID) {
+
 		SQLiteDatabase db = this.getWritableDatabase();
-		
+
 		ContentValues value1 = new ContentValues();
-		Misi misi = GetMisiByID(MisiID);
-		
-		value1.put("id", MisiID);
-		value1.put("nama", misi.getNama());
-		value1.put("deskripsi", misi.getDeskripsi());
-		value1.put("lokasi", misi.getLokasi());
-		value1.put("foto", misi.getFoto());
-		value1.put("status", misi.getStatus());
-		value1.put("badge", misi.getBadge());
-		value1.put("penjelajahID", 1);
-		Log.d("debag","ha");
-		Log.d("debag", "id = " + MisiID);
-		db.update("MISI", value1, "id = " + "\"" + MisiID + "\"", null);
-		
+		value1.put("id", ID);
+		value1.put("nama", nama);
+		value1.put("deskripsi", deskripsi);
+		value1.put("lokasi", lokasi);
+		value1.put("foto", Foto);
+		value1.put("status", status);
+		value1.put("badge", badge);
+		value1.put("penjelajahID", PenjelajahID);
+		db.update("MISI", value1, "id=" + "\"" + ID + "\"", null);
 		db.close();
 	}
 
@@ -308,41 +307,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int penjelajahID = 0;
 		Misi misi;
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + 
-				+ MisiID, null);
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + +MisiID,
+				null);
 		cursor.moveToFirst();
 		ID = MisiID;
-		
+
 		nama = cursor.getString(1);
-		
+
 		deskripsi = cursor.getString(2);
 		lokasi = cursor.getString(3);
 		foto = cursor.getString(4);
 		status = cursor.getInt(5);
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
-		
+
 		cursor.close();
-		//db.close();
+		// db.close();
 		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
 				penjelajahID);
 		return misi;
 
 	}
 
-	public void UpdateStatusMisi(int ID) {
+	public void UpdateStatusMisi(int ID, String nama, String deskripsi,
+			String lokasi, String Foto, int status, String badge,
+			int PenjelajahID) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues value1 = new ContentValues();
-		Misi misi = GetMisiByID(ID);
 		value1.put("id", ID);
-		value1.put("nama", misi.getNama());
-		value1.put("deskripsi", misi.getDeskripsi());
-		value1.put("lokasi", misi.getLokasi());
-		value1.put("foto", misi.getFoto());
-		value1.put("status", 1);
-		value1.put("badge", misi.getBadge());
-		value1.put("penjelajahID", misi.getPenjelajahID());
-		db.update("MISI", value1, "ID = " + "\"" + ID + "\"", null);
+		value1.put("nama", nama);
+		value1.put("deskripsi", deskripsi);
+		value1.put("lokasi", lokasi);
+		value1.put("foto", Foto);
+		value1.put("status", status);
+		value1.put("badge", badge);
+		value1.put("penjelajahID", PenjelajahID);
+		db.update("MISI", value1, "id=" + "\"" + ID + "\"", null);
 		db.close();
 	}
 
@@ -408,20 +408,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return tempat;
 	}
 
-	public void UpdateStatusTempat(int ID) {
+	public void UpdateStatusTempat(int ID, String nama, String deskripsi,
+			int point, double latitude, double longitude, String foto,
+			int status, int MisiID) {
 		SQLiteDatabase db = this.getWritableDatabase();
 		ContentValues value1 = new ContentValues();
 		Tempat tempat = GetTempatByID(ID);
 		value1.put("id", ID);
-		value1.put("nama", tempat.getNama());
-		value1.put("deskripsi", tempat.getDeskripsi());
-		value1.put("point", tempat.getPoint());
-		value1.put("latitude", tempat.getLatitude());
-		value1.put("longitude", tempat.getLongitude());
-		value1.put("Foto", tempat.getFoto());
-		value1.put("Status", 1);
-		value1.put("MisiID", tempat.getMisiID());
-		db.update("TEMPAT", value1, "ID = " + "\"" + ID + "\"", null);
+		value1.put("nama", nama);
+		value1.put("deskripsi", deskripsi);
+		value1.put("point", point);
+		value1.put("latitude", latitude);
+		value1.put("longitude", longitude);
+		value1.put("Foto", foto);
+		value1.put("Status", status);
+		value1.put("MisiID", MisiID);
+		db.update("TEMPAT", value1, "id=" + "\"" + ID + "\"", null);
 		db.close();
 	}
 
@@ -490,7 +492,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("latitude", "-7.805269");
 			value4.put("longitude", "110.364183");
 			value4.put("Foto", "g1_keratonjogja");
-			value4.put("Status", "0");
+			value4.put("Status", 0);
 			value4.put("MisiID", 1);
 			db.insertOrThrow("TEMPAT", null, value4);
 
@@ -698,6 +700,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value20.put("latitude", "-6.137824");
 			value20.put("longitude", "106.813145");
 			value20.put("Foto", "g2_bi");
+			value20.put("Status", 0);
 			value20.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value20);
 
