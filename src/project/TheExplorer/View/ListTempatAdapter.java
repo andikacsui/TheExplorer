@@ -66,10 +66,7 @@ public class ListTempatAdapter extends BaseAdapter {
 		
 		/* Tambahin foto */
 		gambar.setImageResource(Integer.parseInt(mission.get(CustomizedDaftarTempat.KEY_FOTO_PATH)));
-		
-		
-		
-		// gambar.setImageDrawable(mission.get(CustomizedDaftarMisi.KEY_THUMB_URL));
+
 		return vi;
 	}
 }

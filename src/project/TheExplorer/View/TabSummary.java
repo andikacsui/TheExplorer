@@ -6,6 +6,7 @@ import project.TheExplorer.Model.Penjelajah;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class TabSummary extends Activity {
@@ -23,7 +24,7 @@ public class TabSummary extends Activity {
 		context = this;
 
 		penjelajah = PenjelajahHelper.GetPenjelajah(context);
-
+		Log.d("tag", "hai");
 		Greetings.setText("Hi, " + penjelajah.getUsername());
 		Score.setText("" + penjelajah.getSkor());
 
