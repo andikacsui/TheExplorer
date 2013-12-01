@@ -45,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		LastCheckIn = cursor.getString(4);
 		cursor.close();
 		db.close();
-		penjelajah = new Penjelajah(ID, username, twitter, skor, LastCheckIn);
+		penjelajah = new Penjelajah(ID, username, skor);
 		return penjelajah;
 	}
 
@@ -224,29 +224,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan " +
 					"keindahan alam.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
-<<<<<<< HEAD
 			value4.put("foto", "g4_istanapagaruyung");
 			value4.put("status", 1);
 			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", 1);
-=======
-			value4.put("foto", "xxxx");
-<<<<<<< HEAD
-<<<<<<< HEAD
 			value4.put("status", 0);
 			value4.put("badge", "badge_sumbar");
 			value4.put("penjelajahID", 0);
->>>>>>> 805da9807fb093738f14d287f2aab3a22a582cbe
-=======
 			value4.put("status", 1);
 			value4.put("badge", "Sumatera Barat");
 			value4.put("penjelajahID", 1);
->>>>>>> 69519d14a02ccb2dc224bfd3fcb10d20639e64dd
-=======
-			value4.put("status", 1);
-			value4.put("badge", "Sumatera Barat");
-			value4.put("penjelajahID", 1);
->>>>>>> 69519d14a02ccb2dc224bfd3fcb10d20639e64dd
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
