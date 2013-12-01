@@ -102,7 +102,7 @@ public class CustomizedDaftarTempat extends Activity {
 				tempatList.add(map);
 			}
 			daftarTempat.clear();
-			list = (ListView) findViewById(R.id.list_badge_layout);
+			list = (ListView) findViewById(R.id.list_tempat_layout);
 
 			// Getting adapter by passing xml data ArrayList
 			adapter = new ListTempatAdapter(this, tempatList);
