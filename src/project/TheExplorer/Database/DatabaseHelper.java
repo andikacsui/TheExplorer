@@ -59,14 +59,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 	}
 
-	public void UpdatePenjelajahUsername(String Username) {
-		ContentValues value = new ContentValues();
+	public void UpdatePenjelajahUsername(String Username, int skor) {
 		SQLiteDatabase db = this.getWritableDatabase();
-		Penjelajah penjelajah = GetPenjelajah();
+		Log.d("debag", "atas "+db.isOpen());
+		Log.d("debag", "bawah "+db.isOpen());
+		ContentValues value = new ContentValues();
 		value.put("id", 1);
 		value.put("Username", Username);
-		value.put("skor", penjelajah.getSkor());
-		db.update("PENJELAJAH", value, "id=" + "\"" +1+ "\"", null);
+		value.put("skor", skor);
+		
+		db.update("PENJELAJAH", value, "id = " + "\"" + 1 + "\"", null);
+		Log.d("debag", "sampesinilho2");
 		db.close();
 	}
 
