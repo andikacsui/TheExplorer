@@ -43,6 +43,7 @@ public class PenjelajahHelper {
 
 	public static void UpdatePenjelajahUsername(Context context, String username) {
 		db = new DatabaseHelper(context);
-		db.UpdatePenjelajahUsername(username);
+		Penjelajah p = db.GetPenjelajah();
+		db.UpdatePenjelajahUsername(username, p.getSkor());
 	}
 }
