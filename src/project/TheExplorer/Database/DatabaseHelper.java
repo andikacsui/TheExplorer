@@ -173,7 +173,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
 			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
-			value1.put("badge", "Jogja");
+			value1.put("badge", "badge_jogja");
 			value1.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value1);
 
@@ -190,7 +190,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
-			value2.put("badge", "Jakarta");
+			value2.put("badge", "badge_jakarta");
 			value2.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value2);
 
@@ -205,7 +205,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("lokasi", "Bali, Indonesia");
 			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
-			value3.put("badge", "Bali");
+			value3.put("badge", "badge_bali");
 			value3.put("penjelajahID", 0);
 
 			db.insertOrThrow("MISI", null, value3);
@@ -239,7 +239,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "g5_rinjani");
 			value5.put("status", 0);
-			value5.put("badge", "NTB");
+			value5.put("badge", "badge_ntb");
 			value5.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
@@ -303,7 +303,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int penjelajahID = 0;
 		Misi misi;
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + + MisiID, null);
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + +MisiID,
+				null);
 		cursor.moveToFirst();
 		ID = MisiID;
 		nama = cursor.getString(1);
@@ -314,7 +315,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
 		cursor.close();
-		//db.close();
+		// db.close();
 		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
 				penjelajahID);
 		return misi;

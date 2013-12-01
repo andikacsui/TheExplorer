@@ -6,7 +6,7 @@
     android:orientation="vertical">
  
     <ListView
-        android:id="@+id/list_tempat_layout"
+        android:id="@+id/list_badge_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:divider="#b5b5b5"

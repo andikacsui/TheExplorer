@@ -53,6 +53,20 @@ public class MisiHelper {
 		return Saved;
 	}
 
+	public static ArrayList<Misi> GetSavedMission(Context context) {
+		db = new DatabaseHelper(context);
+
+		ArrayList<Misi> Saved = new ArrayList<Misi>();
+		DaftarMisi = db.getListMisi();
+		for (int j = 0; j < DaftarMisi.size(); j++) {
+			temp = DaftarMisi.get(j);
+			if (temp.getPenjelajahID() == 1) {
+				Saved.add(temp);
+			}
+		}
+		return Saved;
+	}
+
 	public static ArrayList<String> GetNotSavedMissionByName(Context context) {
 		db = new DatabaseHelper(context);
 
@@ -62,6 +76,20 @@ public class MisiHelper {
 			temp = DaftarMisi.get(j);
 			if (temp.getPenjelajahID() == 0) {
 				NotSaved.add(temp.getNama());
+			}
+		}
+		return NotSaved;
+	}
+
+	public static ArrayList<Misi> GetNotSavedMission(Context context) {
+		db = new DatabaseHelper(context);
+
+		ArrayList<Misi> NotSaved = new ArrayList<Misi>();
+		DaftarMisi = db.getListMisi();
+		for (int j = 0; j < DaftarMisi.size(); j++) {
+			temp = DaftarMisi.get(j);
+			if (temp.getPenjelajahID() == 0) {
+				NotSaved.add(temp);
 			}
 		}
 		return NotSaved;
@@ -98,5 +126,19 @@ public class MisiHelper {
 		db = new DatabaseHelper(context);
 		temp = db.GetMisiByID(misiID);
 		return temp;
+	}
+
+	public static ArrayList<Misi> GetBadge(Context context) {
+		db = new DatabaseHelper(context);
+		ArrayList<Misi> DMisi = new ArrayList<Misi>();
+
+		DaftarMisi = MisiHelper.GetSavedMission(context);
+		for (int i = 0; i < DaftarMisi.size(); i++) {
+			temp = DaftarMisi.get(i);
+			if (temp.getStatus() == 1) {
+				DMisi.add(temp);
+			}
+		}
+		return DMisi;
 	}
 }

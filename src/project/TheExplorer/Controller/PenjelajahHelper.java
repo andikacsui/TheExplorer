@@ -1,7 +1,10 @@
 package project.TheExplorer.Controller;
 
+import java.util.ArrayList;
+
 import project.TheExplorer.Database.DatabaseHelper;
 import project.TheExplorer.Model.Penjelajah;
+import project.TheExplorer.Model.Misi;
 import android.content.Context;
 
 public class PenjelajahHelper {
@@ -10,6 +13,7 @@ public class PenjelajahHelper {
 	public static boolean IsExist;
 	public static Penjelajah penjelajah;
 	public static int skor = 0;
+	public static ArrayList<Misi> ListMisi, ListBadge;
 
 	public static String GetPenjelajahName(Context context) {
 		db = new DatabaseHelper(context);
@@ -22,7 +26,6 @@ public class PenjelajahHelper {
 		db.AddPenjelajah(username);
 	}
 
-	
 	public static boolean IsPenjelajahExist(Context context) {
 		db = new DatabaseHelper(context);
 		IsExist = db.IsPenjelajahExist();
@@ -46,5 +49,17 @@ public class PenjelajahHelper {
 		db = new DatabaseHelper(context);
 		Penjelajah p = db.GetPenjelajah();
 		db.UpdatePenjelajahUsername(username, p.getSkor());
+	}
+
+	public static int GetJumlahBadge(Context context) {
+		db = new DatabaseHelper(context);
+		ListMisi = MisiHelper.GetSavedMission(context);
+		int count = 0;
+		for (int i = 0; i < ListMisi.size(); i++) {
+			if (ListMisi.get(i).getStatus() == 1) {
+				count = count + 1;
+			}
+		}
+		return count;
 	}
 }

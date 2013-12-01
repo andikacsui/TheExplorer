@@ -18,55 +18,59 @@
             <TextView
                 android:id="@+id/TextViewGreetings"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/greetings"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
+
             <TextView
                 android:id="@+id/TextViewLabelScore"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/your_score"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+
             <TextView
                 android:id="@+id/TextViewScore"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
                 style="@style/besar"
-                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/score"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
+
             <TextView
                 android:id="@+id/TextViewLabelAchievement"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/your_badge"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+
             <TextView
                 android:id="@+id/TextViewAchievement"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="10dp"
                 style="@style/besar"
-                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/badges"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-			<TextView
+
+            <TextView
                 android:id="@+id/TextViewDescription"
                 android:layout_width="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/summary_info"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
-             </ScrollView>
-
+    </ScrollView>
 
 </LinearLayout>

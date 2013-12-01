@@ -13,15 +13,19 @@
         android:id="@+id/TextViewUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Username" />
+        android:text="Username"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/EditTextUsername"
-        android:layout_width="fill_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextViewUsername"
-        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:ems="10" >
     </EditText>
 
@@ -30,8 +34,9 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/EditTextUsername"
+        android:layout_centerHorizontal="true"
         android:layout_marginLeft="220dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="75dp"
         android:onClick="ButtonSimpan_onClick"
         android:text="Save" />
 

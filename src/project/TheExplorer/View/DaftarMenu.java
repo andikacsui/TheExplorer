@@ -8,7 +8,9 @@ import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Controller.R;
 import project.TheExplorer.Model.Misi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
@@ -35,15 +37,26 @@ public class DaftarMenu extends Activity {
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(),
-				ListViewActivity.class);
-		startActivity(nextScreen);
+		ArrayList<Misi> ListMisi = MisiHelper.GetNotSavedMission(context);
+		if (notEmpty(ListMisi)) {
+			Intent nextScreen = new Intent(getApplicationContext(),
+					ListViewActivity.class);
+			startActivity(nextScreen);
+		} else {
+			showAlertbox("All missions have been saved");
+		}
 	}
 
 	public void ButtonSavedMission_OnClick(View view) {
-		Intent nextScreen = new Intent(getApplicationContext(),
-				ListViewSavedMission.class);
-		startActivity(nextScreen);
+		ArrayList<Misi> ListMisi = MisiHelper.GetSavedMission(context);
+		if (notEmpty(ListMisi)) {
+			Intent nextScreen = new Intent(getApplicationContext(),
+					ListViewSavedMission.class);
+			startActivity(nextScreen);
+		} else {
+			showAlertbox("You don't have saved mission");
+		}
+
 	}
 
 	public void ButtonProfile_OnClick(View view) {
@@ -85,5 +98,31 @@ public class DaftarMenu extends Activity {
 			// Ask user to enable GPS/network in settings
 			gps.showSettingsAlert();
 		}
+	}
+
+	public void showAlertbox(String erroMessage) {
+		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+
+		// Setting Dialog Title
+		alertDialog.setTitle("Error Message");
+
+		// Setting Dialog Message
+		alertDialog.setMessage(erroMessage);
+
+		// Setting OK Button
+		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				// Write your code here to execute after dialog closed
+
+			}
+		});
+
+		// Showing Alert Message
+		alertDialog.show();
+
+	}
+
+	public static boolean notEmpty(ArrayList<Misi> s) {
+		return (s != null && s.size() > 0);
 	}
 }

@@ -27,6 +27,8 @@ public class TabSummary extends Activity {
 		Log.d("tag", "hai");
 		Greetings.setText("Hi, " + penjelajah.getUsername());
 		Score.setText("" + penjelajah.getSkor());
+		Achievement.setText(PenjelajahHelper.GetJumlahBadge(context)
+				+ " Badge(s)");
 
 	}
 }

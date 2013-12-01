@@ -19,18 +19,20 @@
                 android:id="@+id/textViewEditUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Username" />
+                android:text="Username"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/editTextEditUsername"
-                android:layout_width="fill_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TextViewUsername"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:ems="10" >
 
                 <requestFocus />
@@ -41,9 +43,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/EditTextPassword"
-                android:layout_marginLeft="225dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
                 android:onClick="buttonUpdate_OnClick"
                 android:text="Update" />
         </LinearLayout>
