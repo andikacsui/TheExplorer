@@ -45,7 +45,10 @@ public class TempatHelper {
 
 	public static void UpdateStatus(Context context, int ID) {
 		db = new DatabaseHelper(context);
-		db.UpdateStatusTempat(ID);
+		Tempat tempat = db.GetTempatByID(ID);
+		db.UpdateStatusTempat(ID, tempat.getNama(), tempat.getDeskripsi(),
+				tempat.getPoint(), tempat.getLatitude(), tempat.getLongitude(),
+				tempat.getFoto(), 1, tempat.getMisiID());
 	}
 
 	public static void CheckInTempat(Context context, int ID, long lat1,

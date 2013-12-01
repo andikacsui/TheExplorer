@@ -38,7 +38,7 @@ public class PenjelajahHelper {
 		db = new DatabaseHelper(context);
 		penjelajah = db.GetPenjelajah();
 		skor = penjelajah.getSkor() + skor1;
-		db.UpdatePenjelajahSkor(skor);
+		db.UpdatePenjelajahSkor(penjelajah.getUsername(), skor);
 	}
 
 	public static void UpdatePenjelajahUsername(Context context, String username) {
