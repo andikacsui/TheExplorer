@@ -24,7 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class SignIn extends Activity {
 
-	TextView TextViewUsername, TextViewPassword, TextViewCoba;
+	TextView TextViewUsername, TextViewPassword;
 	EditText User, EditTextPassword;
 	Context context;
 	String Username;
