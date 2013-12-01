@@ -14,7 +14,7 @@
       android:layout_marginLeft="98dp"
       android:layout_marginTop="139dp"
       android:onClick="open"
-      android:src="@drawable/ic_launcher" />
+      android:src="@drawable/update_twitter" />
 
    <TextView
       android:id="@+id/textView1"

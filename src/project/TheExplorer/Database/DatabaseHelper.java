@@ -588,8 +588,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							+ "multi budaya, dan humanis yang mencakup disiplin ilmu yang luas. UI termasuk salah satu "
 							+ "universitas terbaik di Indonesia. ");
 			value11.put("point", 50);
-			value11.put("latitude", "-6.368188");
-			value11.put("longitude", "106.829442");
+			value11.put("latitude", "-6.36452955");
+			value11.put("longitude", "106.82902491");
 			value11.put("Foto", "g2_monas");
 			value11.put("Status", 0);
 			value11.put("MisiID", 2);
