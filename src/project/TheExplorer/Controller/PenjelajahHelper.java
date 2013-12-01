@@ -40,4 +40,9 @@ public class PenjelajahHelper {
 		skor = penjelajah.getSkor() + skor1;
 		db.UpdatePenjelajahSkor(skor);
 	}
+
+	public static void UpdatePenjelajahUsername(Context context, String username) {
+		db = new DatabaseHelper(context);
+		db.UpdatePenjelajahUsername(username);
+	}
 }

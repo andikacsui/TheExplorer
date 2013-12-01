@@ -2,6 +2,7 @@ package project.TheExplorer.Database;
 
 import java.util.ArrayList;
 
+import project.TheExplorer.Controller.PenjelajahHelper;
 import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Penjelajah;
 import project.TheExplorer.Model.Tempat;
@@ -55,6 +56,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			db.insertOrThrow("PENJELAJAH", null, value);
 			db.close();
 		}
+	}
+
+	public void UpdatePenjelajahUsername(String Username) {
+		ContentValues value = new ContentValues();
+		SQLiteDatabase db = this.getWritableDatabase();
+		Penjelajah penjelajah = GetPenjelajah();
+		value.put("id", 1);
+		value.put("Username", Username);
+		value.put("skor", penjelajah.getSkor());
+		db.update("PENJELAJAH", value, "id=" + "\"" +1+ "\"", null);
+		db.close();
 	}
 
 	public boolean IsPenjelajahExist() {
