@@ -22,6 +22,7 @@ public class PenjelajahHelper {
 		db.AddPenjelajah(username);
 	}
 
+	
 	public static boolean IsPenjelajahExist(Context context) {
 		db = new DatabaseHelper(context);
 		IsExist = db.IsPenjelajahExist();

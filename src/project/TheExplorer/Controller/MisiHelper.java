@@ -42,6 +42,7 @@ public class MisiHelper {
 	public static ArrayList<String> GetSavedMissionByName(Context context) {
 		db = new DatabaseHelper(context);
 
+		
 		ArrayList<String> Saved = new ArrayList<String>();
 		DaftarMisi = db.getListMisi();
 		for (int j = 0; j < DaftarMisi.size(); j++) {
