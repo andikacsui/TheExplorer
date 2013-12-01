@@ -11,6 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -260,9 +261,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	}
 
 	public void UpdatePenjelajahMisi(int MisiID) {
+		
 		SQLiteDatabase db = this.getWritableDatabase();
+		
 		ContentValues value1 = new ContentValues();
 		Misi misi = GetMisiByID(MisiID);
+		
 		value1.put("id", MisiID);
 		value1.put("nama", misi.getNama());
 		value1.put("deskripsi", misi.getDeskripsi());
@@ -271,7 +275,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		value1.put("status", misi.getStatus());
 		value1.put("badge", misi.getBadge());
 		value1.put("penjelajahID", 1);
-		db.update("MISI", value1, "ID = " + "\"" + MisiID + "\"", null);
+		Log.d("debag","ha");
+		Log.d("debag", "id = " + MisiID);
+		db.update("MISI", value1, "id = " + "\"" + MisiID + "\"", null);
+		
 		db.close();
 	}
 
@@ -286,19 +293,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int penjelajahID = 0;
 		Misi misi;
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
-				+ MisiID + "\" ", null);
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + 
+				+ MisiID, null);
 		cursor.moveToFirst();
 		ID = MisiID;
+		
 		nama = cursor.getString(1);
+		
 		deskripsi = cursor.getString(2);
 		lokasi = cursor.getString(3);
 		foto = cursor.getString(4);
 		status = cursor.getInt(5);
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
+		
 		cursor.close();
-		db.close();
+		//db.close();
 		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
 				penjelajahID);
 		return misi;

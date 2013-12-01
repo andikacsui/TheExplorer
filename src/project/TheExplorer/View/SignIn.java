@@ -22,7 +22,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class SignIn extends Activity {
 
-	TextView TextViewUsername, TextViewPassword, TextViewCoba;
+	TextView TextViewUsername, TextViewPassword;
 	EditText User, EditTextPassword;
 	Context context;
 	String Username;
@@ -35,7 +35,6 @@ public class SignIn extends Activity {
 		setContentView(R.layout.activity_sign_in);
 		TextViewUsername = (TextView) findViewById(R.id.TextViewUsername);
 		User = (EditText) findViewById(R.id.EditTextUsername);
-		TextViewCoba = (TextView) findViewById(R.id.Coba);
 		context = this;
 
 	}

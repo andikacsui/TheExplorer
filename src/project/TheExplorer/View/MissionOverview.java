@@ -77,11 +77,9 @@ public class MissionOverview extends Activity {
 							public void onClick(DialogInterface dialog, int id) {
 								// if this button is clicked, close
 								// current activity
-								MisiHelper.JoinMission(
-										context,
-										daftarMisi.get(
-												ListViewActivity.idMisi - 1)
-												.getID());
+								int misiId = daftarMisi.get(ListViewActivity.idMisi - 1).getID();
+								MisiHelper.JoinMission(context, misiId);
+								
 								Intent nextScreen = new Intent(
 										getApplicationContext(),
 										ListViewSavedMission.class);
