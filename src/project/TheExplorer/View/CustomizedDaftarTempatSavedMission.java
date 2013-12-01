@@ -14,20 +14,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
+import project.TheExplorer.Controller.GPSTracker;
 import project.TheExplorer.Controller.MisiHelper;
 import project.TheExplorer.Controller.R;
 import project.TheExplorer.Controller.TempatHelper;
 import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Tempat;
 
-public class CustomizedDaftarTempatSavedMission extends Activity {
+public class CustomizedDaftarTempatSavedMission extends Activity implements SensorEventListener{
 	// All static variables
 	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
@@ -42,6 +48,13 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 	static int[] imgArr = new int[100];
 	ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
+	
+	// sensor
+	private SensorManager sensorManager;
+	// private boolean color = false;
+	private View view;
+	private long lastUpdate;
+	GPSTracker gps;
 
 	ListView list;
 	ListTempatAdapter adapter;
@@ -116,5 +129,84 @@ public class CustomizedDaftarTempatSavedMission extends Activity {
 			});
 		} catch (Exception e) {
 		}
+		
+		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+		lastUpdate = System.currentTimeMillis();
+	}
+	
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+			getAccelerometer(event);
+		}
+
+	}
+
+	private void getAccelerometer(SensorEvent event) {
+		float[] values = event.values;
+		// Movement
+		float x = values[0];
+		float y = values[1];
+		float z = values[2];
+
+		float accelationSquareRoot = (x * x + y * y + z * z)
+				/ (SensorManager.GRAVITY_EARTH * SensorManager.GRAVITY_EARTH);
+		long actualTime = System.currentTimeMillis();
+		if (accelationSquareRoot >= 2) //
+		{
+			if (actualTime - lastUpdate < 200) {
+				return;
+			}
+			lastUpdate = actualTime;
+			/*
+			 * Toast.makeText(this, "Device was shuffed", Toast.LENGTH_SHORT)
+			 * .show(); if (color) { view.setBackgroundColor(Color.GREEN);
+			 * 
+			 * } else { view.setBackgroundColor(Color.RED); } color = !color;
+			 */
+
+			// create class object
+			gps = new GPSTracker(context);
+
+			// check if GPS enabled
+			if (gps.canGetLocation()) {
+
+				double latitude = gps.getLatitude();
+				double longitude = gps.getLongitude();
+
+				// \n is for new line
+				Toast.makeText(
+						getApplicationContext(),
+						"Your Location is - \nLat: " + latitude + "\nLong: "
+								+ longitude, Toast.LENGTH_LONG).show();
+			} else {
+				// can't get location
+				// GPS or Network is not enabled
+				// Ask user to enable GPS/network in settings
+				gps.showSettingsAlert();
+			}
+		}
+	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		// register this class as a listener for the orientation and
+		// accelerometer sensors
+		sensorManager.registerListener(this,
+				sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+				SensorManager.SENSOR_DELAY_NORMAL);
+	}
+
+	@Override
+	protected void onPause() {
+		// unregister listener
+		super.onPause();
+		sensorManager.unregisterListener(this);
 	}
 }

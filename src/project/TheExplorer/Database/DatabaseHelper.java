@@ -293,7 +293,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		value1.put("status", status);
 		value1.put("badge", Badge);
 		value1.put("penjelajahID", PenjelajahID);
-		db.update("MISI", value1, "id=" + "\"" + ID + "\"", null);
+		db.update("MISI", value1, "id = " + "\"" + ID + "\"", null);
 		db.close();
 	}
 
@@ -308,8 +308,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int penjelajahID = 0;
 		Misi misi;
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
-				+ MisiID + "\" ", null);
+		Cursor cursor = db.rawQuery("SELECT * FROM MISI where id = " + + MisiID, null);
 		cursor.moveToFirst();
 		ID = MisiID;
 		nama = cursor.getString(1);
@@ -320,7 +319,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		badge = cursor.getString(6);
 		penjelajahID = cursor.getInt(7);
 		cursor.close();
-		db.close();
+		//db.close();
 		misi = new Misi(ID, nama, deskripsi, lokasi, foto, status, badge,
 				penjelajahID);
 		return misi;
