@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import project.TheExplorer.Database.DatabaseHelper;
 import project.TheExplorer.Model.Tempat;
 import android.content.Context;
+import android.util.Log;
 
 public class TempatHelper {
 	public static DatabaseHelper db;
@@ -51,17 +52,14 @@ public class TempatHelper {
 				tempat.getFoto(), 1, tempat.getMisiID());
 	}
 
-	public static void CheckInTempat(Context context, int ID, long lat1,
-			long long1, long lat2, long long2) {
+	public static void CheckInTempat(Context context, int ID) {
 		int skor = 0;
-		distance = GPSTracker.getDistance(lat1, long1, lat2, long2);
-		if (distance <= 500) {
+		
 			TempatHelper.UpdateStatus(context, ID);
 			skor = TempatHelper.GetTempatByID(context, ID).getPoint();
 			PenjelajahHelper.UpdateSkor(context, skor);
 			MisiHelper.UpdateStatusMisi(context,
 					TempatHelper.GetTempatByID(context, ID).getMisiID());
-		}
 	}
 
 }

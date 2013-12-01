@@ -10,7 +10,9 @@ import project.TheExplorer.Model.Misi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -27,6 +29,9 @@ public class DaftarMenu extends Activity {
 		for (int i = 1; i <= misi.size(); i++) {
 			MisiHelper.UpdateStatusMisi(context, i);
 		}
+		
+		
+		
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {

@@ -61,7 +61,7 @@ public class ShareTwitter extends Activity {
 		                    info.activityInfo.name.toLowerCase().contains(type) ) {
 		            	
 		                share.putExtra(Intent.EXTRA_SUBJECT,  "subject");
-		                share.putExtra(Intent.EXTRA_TEXT,     "Hai, I am tweeting from The Explorer Mission");
+		                share.putExtra(Intent.EXTRA_TEXT,     "Hi, I am in " + CustomizedDaftarTempatSavedMission.namaTempat + " right now. - Sent from The Explorer Mission");
 		                share.setPackage(info.activityInfo.packageName);
 		                found = true;
 		                break;

@@ -11,6 +11,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -385,11 +386,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int misiID = 0;
 		int point = 0;
 		Tempat tempat;
-
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM MISI where ID = " + "\" "
-				+ ID + "\" ", null);
+		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT where id = " +
+				+ ID, null);
 		cursor.moveToFirst();
+		Log.d("debag", "SELECT * FROM MISI where id = " +
+				+ ID);
 		ID = cursor.getInt(0);
 		nama = cursor.getString(1);
 		deskripsi = cursor.getString(2);
@@ -590,7 +592,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("point", 50);
 			value11.put("latitude", "-6.36452955");
 			value11.put("longitude", "106.82902491");
-			value11.put("Foto", "g2_monas");
+			value11.put("Foto", "g2_ui");
 			value11.put("Status", 0);
 			value11.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value11);
@@ -645,7 +647,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value15.put("point", 50);
 			value15.put("latitude", " -6.174774");
 			value15.put("longitude", "106.827185");
-			value15.put("Foto", "g2_ui");
+			value15.put("Foto", "g2_monas");
 			value15.put("Status", 0);
 			value15.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value15);

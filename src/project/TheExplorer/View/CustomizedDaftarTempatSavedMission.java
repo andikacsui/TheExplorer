@@ -10,7 +10,9 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
@@ -18,6 +20,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,7 +36,8 @@ import project.TheExplorer.Controller.TempatHelper;
 import project.TheExplorer.Model.Misi;
 import project.TheExplorer.Model.Tempat;
 
-public class CustomizedDaftarTempatSavedMission extends Activity implements SensorEventListener{
+public class CustomizedDaftarTempatSavedMission extends Activity implements
+		SensorEventListener {
 	// All static variables
 	static final String URL = "http://api.androidhive.info/music/music.xml";
 	// XML node keys
@@ -45,10 +49,11 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 	static final String KEY_STATUS = "status";
 	static int NomorMisi, MisiID;
 	static String Misi = "";
+	static String namaTempat = "";
 	static int[] imgArr = new int[100];
 	ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
-	
+
 	// sensor
 	private SensorManager sensorManager;
 	// private boolean color = false;
@@ -60,6 +65,8 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 	ListTempatAdapter adapter;
 	Context context;
 	CustomizedDaftarMisi daftarMisi;
+	Location locDb;
+	Location locNow;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +79,8 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
 		daftarMisi = new CustomizedDaftarMisi();
+
+		daftarTempat = TempatHelper.GetListTempatByMisi(context, 1);
 
 		if (daftarTempat != null) {
 			daftarTempat.clear();
@@ -111,12 +120,13 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 				// adding HashList to ArrayList
 				tempatList.add(map);
 			}
-			daftarTempat.clear();
 			list = (ListView) findViewById(R.id.list_tempat_layout);
 
 			// Getting adapter by passing xml data ArrayList
 			adapter = new ListTempatAdapter(this, tempatList);
 			list.setAdapter(adapter);
+
+
 
 			// Click event for single list row
 			list.setOnItemClickListener(new OnItemClickListener() {
@@ -129,11 +139,11 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 			});
 		} catch (Exception e) {
 		}
-		
+
 		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 		lastUpdate = System.currentTimeMillis();
 	}
-	
+
 	@Override
 	public void onSensorChanged(SensorEvent event) {
 		if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -171,14 +181,12 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 			// check if GPS enabled
 			if (gps.canGetLocation()) {
 
-				double latitude = gps.getLatitude();
-				double longitude = gps.getLongitude();
-
 				// \n is for new line
-				Toast.makeText(
-						getApplicationContext(),
-						"Your Location is - \nLat: " + latitude + "\nLong: "
-								+ longitude, Toast.LENGTH_LONG).show();
+				// Toast.makeText(getApplicationContext(),
+				// "" + locationMatching(), Toast.LENGTH_LONG).show();
+
+				locationMatching();
+
 			} else {
 				// can't get location
 				// GPS or Network is not enabled
@@ -208,5 +216,78 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements Sens
 		// unregister listener
 		super.onPause();
 		sensorManager.unregisterListener(this);
+	}
+
+	private void locationMatching() {
+		float distance = -1;
+		boolean match = false;
+		int idTempat = 0;
+
+		locDb = new Location("");
+		locNow = new Location("");
+		locNow.setLatitude(gps.getLatitude());
+		locNow.setLongitude(gps.getLongitude());
+
+		for (int i = 0; i < daftarTempat.size(); i++) {
+			locDb.setLatitude(daftarTempat.get(i).getLatitude());
+			locDb.setLongitude(daftarTempat.get(i).getLongitude());
+			distance = locNow.distanceTo(locDb);
+			if (distance <= 1000f) {
+				match = true;
+				namaTempat = daftarTempat.get(i).getNama();
+				idTempat = daftarTempat.get(i).getID();
+				break;
+			}
+		}
+
+		if (match == true) {
+			
+			TempatHelper.CheckInTempat(context, idTempat);
+			//Toast.makeText(getApplicationContext(),
+			//		"You have arrived in " + namaTempat, Toast.LENGTH_LONG)
+			//		.show();
+			
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+					context);
+
+			// set title
+			alertDialogBuilder.setTitle("Join Mission");
+
+			// set dialog message
+			alertDialogBuilder
+					.setMessage("You have arrived in " + namaTempat + "\nDo you want to" +
+							" share it in twitter?")
+					.setCancelable(false)
+					.setPositiveButton("Yes",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									Intent nextScreen = new Intent(
+											getApplicationContext(),
+											ShareTwitter.class);
+									startActivity(nextScreen);
+									
+								}
+							})
+					.setNegativeButton("No",
+							new DialogInterface.OnClickListener() {
+								public void onClick(DialogInterface dialog,
+										int id) {
+									// if this button is clicked, just close
+									// the dialog box and do nothing
+									dialog.cancel();
+								}
+							});
+
+			// create alert dialog
+			AlertDialog alertDialog = alertDialogBuilder.create();
+
+			// show it
+			alertDialog.show();
+
+		} else {
+			Toast.makeText(getApplicationContext(), "No match location",
+					Toast.LENGTH_LONG).show();
+		}
 	}
 }
