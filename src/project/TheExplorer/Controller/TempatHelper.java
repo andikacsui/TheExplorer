@@ -50,12 +50,14 @@ public class TempatHelper {
 
 	public static void CheckInTempat(Context context, int ID, long lat1,
 			long long1, long lat2, long long2) {
-		int skor =0;
+		int skor = 0;
 		distance = GPSTracker.getDistance(lat1, long1, lat2, long2);
 		if (distance <= 500) {
 			TempatHelper.UpdateStatus(context, ID);
-			skor = TempatHelper.GetTempatByID(context,ID).getPoint();
+			skor = TempatHelper.GetTempatByID(context, ID).getPoint();
 			PenjelajahHelper.UpdateSkor(context, skor);
+			MisiHelper.UpdateStatusMisi(context,
+					TempatHelper.GetTempatByID(context, ID).getMisiID());
 		}
 	}
 
