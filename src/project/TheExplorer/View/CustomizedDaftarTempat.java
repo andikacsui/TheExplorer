@@ -120,6 +120,10 @@ public class CustomizedDaftarTempat extends Activity implements
 				// adding HashList to ArrayList
 				tempatList.add(map);
 			}
+<<<<<<< HEAD
+=======
+			daftarTempat.clear();
+>>>>>>> b249cc5bf9b9efd0b9381ba3bf38ca8c215f47f8
 			list = (ListView) findViewById(R.id.list_tempat_layout);
 
 			// Getting adapter by passing xml data ArrayList
