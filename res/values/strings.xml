@@ -25,6 +25,7 @@
 	<string name="ChangeProfile">Change Profile</string>
 	<string name="share">Share</string>
 	<string name="take_picture">Take Picture</string>
-	<string name="tap">Tap the button to share something</string>
+	<string name="tap">To sharing with twitter, you must install twitter application to your phone first. If you are already have it, 
+	    you can tap the picture.</string>
 	
 </resources>

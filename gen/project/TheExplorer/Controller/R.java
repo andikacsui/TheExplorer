@@ -85,6 +85,7 @@ public final class R {
         public static final int mission1_img=0x7f02003a;
         public static final int splash=0x7f02003b;
         public static final int twitter=0x7f02003c;
+        public static final int update_twitter=0x7f02003d;
     }
     public static final class id {
         public static final int Achievement=0x7f09002b;
