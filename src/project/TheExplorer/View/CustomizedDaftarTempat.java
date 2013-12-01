@@ -123,6 +123,9 @@ public class CustomizedDaftarTempat extends Activity implements
 <<<<<<< HEAD
 =======
 			daftarTempat.clear();
+<<<<<<< HEAD
+>>>>>>> b249cc5bf9b9efd0b9381ba3bf38ca8c215f47f8
+=======
 >>>>>>> b249cc5bf9b9efd0b9381ba3bf38ca8c215f47f8
 			list = (ListView) findViewById(R.id.list_tempat_layout);
 
