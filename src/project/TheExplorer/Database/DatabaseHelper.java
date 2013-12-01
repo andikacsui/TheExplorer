@@ -315,6 +315,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 				+ MisiID + "\" ", null);
 		cursor.moveToFirst();
 		ID = MisiID;
+		
+		
 		nama = cursor.getString(1);
 		deskripsi = cursor.getString(2);
 		lokasi = cursor.getString(3);
