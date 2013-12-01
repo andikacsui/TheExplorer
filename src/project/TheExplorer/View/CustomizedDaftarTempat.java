@@ -40,7 +40,7 @@ public class CustomizedDaftarTempat extends Activity {
 	static int NomorMisi, MisiID;
 	static String Misi = "";
 	static int[] imgArr = new int[100];
-	ArrayList<Tempat> daftarTempat;
+	static ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
 
 	ListView list;
@@ -59,22 +59,23 @@ public class CustomizedDaftarTempat extends Activity {
 		NomorMisi = prev.getIntExtra("IDMisi", 0);
 		ArrayList<HashMap<String, String>> tempatList = new ArrayList<HashMap<String, String>>();
 		daftarMisi = new CustomizedDaftarMisi();
-
+		
+		daftarTempat = TempatHelper.GetListTempatByMisi(context, 1);
+		
 		if (daftarTempat != null) {
 			daftarTempat.clear();
 		}
 		
 		
 		try {
-			
-			
-			
 			// daftarMisi = new CustomizedDaftarMisi();
 			// IDMisi = Integer.parseInt(daftarMisi.KEY_ID_MISI);
 			
 			//log.d("hmmm", "haaah lala" + misiid);
+			//Log.d("debag", "list0 " + daftarTempat.isEmpty());
 			daftarTempat = TempatHelper.GetListTempatByMisi(context, ListViewActivity.idMisi);
-			
+			Log.d("debag", "list1 " + ListViewActivity.idMisi);
+			Log.d("debag", "list2 " + daftarTempat.size());
 
 			// looping through all song nodes &lt;song&gt;
 			for (int i = 0; i < daftarTempat.size(); i++) {

@@ -8,10 +8,12 @@ import project.TheExplorer.Model.Misi;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailSavedMission extends Activity {
@@ -31,6 +33,7 @@ public class DetailSavedMission extends Activity {
 		context = this;
 
 		TextView judul = (TextView) findViewById(R.id.namaMisi);
+		ImageView foto = (ImageView) findViewById(R.id.misi_img);
 		TextView deskripsi = (TextView) findViewById(R.id.deskripsiMisi);
 		TextView lokasi = (TextView) findViewById(R.id.lokasiMisi);
 		TextView status = (TextView) findViewById(R.id.TextViewSavedStatusMisi);
@@ -46,6 +49,13 @@ public class DetailSavedMission extends Activity {
 		detail.setId(daftarMisi.get(ListViewSavedMission.idMisi - 1).getID());
 		StatusMisi = daftarMisi.get(ListViewSavedMission.idMisi - 1)
 				.getStatus();
+		
+		
+		String namaGambar = daftarMisi.get(ListViewSavedMission.idMisi - 1).getFoto();
+		Resources res = getResources();
+		int resId = res.getIdentifier(namaGambar, "drawable", getPackageName());
+		foto.setImageResource(resId);
+		
 		Log.d("tag", StatusMisi + "");
 		if (StatusMisi == 0) {
 			status.setText("INCOMPLETED");
