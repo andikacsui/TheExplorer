@@ -232,10 +232,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 =======
 			value4.put("foto", "xxxx");
 <<<<<<< HEAD
+<<<<<<< HEAD
 			value4.put("status", 0);
 			value4.put("badge", "badge_sumbar");
 			value4.put("penjelajahID", 0);
 >>>>>>> 805da9807fb093738f14d287f2aab3a22a582cbe
+=======
+			value4.put("status", 1);
+			value4.put("badge", "Sumatera Barat");
+			value4.put("penjelajahID", 1);
+>>>>>>> 69519d14a02ccb2dc224bfd3fcb10d20639e64dd
 =======
 			value4.put("status", 1);
 			value4.put("badge", "Sumatera Barat");
