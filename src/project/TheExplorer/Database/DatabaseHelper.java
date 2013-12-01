@@ -321,6 +321,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		return misi;
 
 	}
+	
+	
 
 	public void UpdateStatusMisi(int ID, String nama, String deskripsi,
 			String lokasi, String Foto, int status, String badge,
