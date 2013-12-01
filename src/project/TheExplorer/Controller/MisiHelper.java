@@ -42,7 +42,6 @@ public class MisiHelper {
 	public static ArrayList<String> GetSavedMissionByName(Context context) {
 		db = new DatabaseHelper(context);
 
-		
 		ArrayList<String> Saved = new ArrayList<String>();
 		DaftarMisi = db.getListMisi();
 		for (int j = 0; j < DaftarMisi.size(); j++) {
@@ -76,7 +75,9 @@ public class MisiHelper {
 				status = false;
 			}
 		}
+		Log.d("tag", status + "");
 		if (status == true) {
+			Log.d("tag", "hai");
 			db = new DatabaseHelper(context);
 			Misi misi = db.GetMisiByID(MisiID);
 			db.UpdateStatusMisi(MisiID, misi.getNama(), misi.getDeskripsi(),
