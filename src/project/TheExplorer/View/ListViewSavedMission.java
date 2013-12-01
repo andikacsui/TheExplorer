@@ -26,7 +26,7 @@ public class ListViewSavedMission extends ListActivity {
 		super.onCreate(savedInstanceState);
 		context = this;
 		// storing string resources into Array
-		daftarMisi = MisiHelper.GetSavedMission(context);
+		daftarMisi = MisiHelper.GetSavedMissionByName(context);
 
 		// Binding resources Array to ListAdapter
 		this.setListAdapter(new ArrayAdapter<String>(this,

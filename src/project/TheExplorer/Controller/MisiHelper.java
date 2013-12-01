@@ -39,7 +39,7 @@ public class MisiHelper {
 		return temp;
 	}
 
-	public static ArrayList<String> GetSavedMission(Context context) {
+	public static ArrayList<String> GetSavedMissionByName(Context context) {
 		db = new DatabaseHelper(context);
 
 		ArrayList<String> Saved = new ArrayList<String>();
@@ -53,7 +53,7 @@ public class MisiHelper {
 		return Saved;
 	}
 
-	public static ArrayList<String> GetNotSavedMission(Context context) {
+	public static ArrayList<String> GetNotSavedMissionByName(Context context) {
 		db = new DatabaseHelper(context);
 
 		ArrayList<String> NotSaved = new ArrayList<String>();
