@@ -81,6 +81,7 @@
                     android:layout_height="60dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
+                    android:background="@layout/template"
                     android:layout_marginLeft="180dp"
                     android:onClick="buttonDetails_onClick"
                     android:text="Details" />

@@ -61,4 +61,6 @@ public class ListBadgeAdapter extends BaseAdapter {
 
 		return vi;
 	}
+	
+	
 }

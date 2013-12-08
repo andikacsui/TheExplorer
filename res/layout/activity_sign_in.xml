@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/EditTextUsername"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="21dp"
+        android:background="@layout/template"
         android:onClick="ButtonSimpan_onClick"
         android:text="Save" />
 

@@ -15,6 +15,9 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -31,9 +34,7 @@ public class DaftarMenu extends Activity {
 		for (int i = 1; i <= misi.size(); i++) {
 			MisiHelper.UpdateStatusMisi(context, i);
 		}
-		
-		
-		
+
 	}
 
 	public void ButtonChooseNewMission_OnClick(View view) {
@@ -125,4 +126,56 @@ public class DaftarMenu extends Activity {
 	public static boolean notEmpty(ArrayList<Misi> s) {
 		return (s != null && s.size() > 0);
 	}
+
+	// Initiating Menu XML file (menu.xml)
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.layout.menu, menu);
+		return true;
+	}
+
+	/**
+	 * Event Handling for Individual menu item selected Identify single menu
+	 * item by it's id
+	 * */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		switch (item.getItemId()) {
+		case R.id.new_mission:
+			// Single menu item is selected do something
+			// Ex: launching new activity/screen or show alert message
+			ArrayList<Misi> ListMisi = MisiHelper.GetNotSavedMission(context);
+			if (notEmpty(ListMisi)) {
+				Intent nextScreen = new Intent(getApplicationContext(),
+						ListViewActivity.class);
+				startActivity(nextScreen);
+			} else {
+				showAlertbox("All missions have been saved");
+			}
+			return true;
+
+		case R.id.saved_mission:
+			ArrayList<Misi> ListMisi2 = MisiHelper.GetSavedMission(context);
+			if (notEmpty(ListMisi2)) {
+				Intent nextScreen = new Intent(getApplicationContext(),
+						ListViewSavedMission.class);
+				startActivity(nextScreen);
+			} else {
+				showAlertbox("You don't have saved mission");
+			}
+			return true;
+
+		case R.id.achievement:
+			Intent nextScreen = new Intent(getApplicationContext(),
+					TabProfile.class);
+			startActivity(nextScreen);
+			return true;
+
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
 }

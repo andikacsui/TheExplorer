@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Single menu item 
+         Set id, icon and Title for each menu item
+    -->
+    <item android:id="@+id/new_mission"
+          android:icon="@drawable/icon_newmission"
+          android:title="New Mission" />
+ 
+    <item android:id="@+id/saved_mission"
+          android:icon="@drawable/icon_savedmission"
+          android:title="Saved Mission" />
+ 
+    <item android:id="@+id/achievement"
+          android:icon="@drawable/icon_achievement2"
+          android:title="Profile" />
+</menu>
