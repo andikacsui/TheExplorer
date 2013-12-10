@@ -66,21 +66,6 @@
         android:textSize="10sp" />
 
     <Button
-        android:id="@+id/TextViewJoinMisi"
-        android:tag="@string/join"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextViewDetails"
-        android:layout_alignBottom="@+id/TextViewDetails"
-        android:layout_toLeftOf="@+id/TextViewDetails"
-        android:clickable="true"
-        android:onClick="TextViewJoinMisi_OnClick"
-        android:text="@string/join"
-        android:textColor="#040404"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <Button
         android:id="@+id/TextViewDetails"
         android:layout_width="wrap_content"
         android:tag="@string/join"
@@ -88,12 +73,27 @@
         android:layout_alignRight="@+id/TextViewIDMisi"
         android:layout_below="@+id/TextViewDeskripsiMisi"
         android:clickable="true"
+        android:background="@layout/template"
         android:onClick="TextViewDetailMisi_OnClick"
         android:text="@string/details"
         android:textColor="#040404"
         android:textSize="12sp"
         android:textStyle="bold" />
-    
-    
+
+    <Button
+        android:id="@+id/TextViewJoinMisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextViewDetails"
+        android:layout_alignBottom="@+id/TextViewDetails"
+        android:layout_alignRight="@+id/TextViewNamaMisi"
+        android:background="@layout/template"
+        android:clickable="true"
+        android:onClick="TextViewJoinMisi_OnClick"
+        android:tag="@string/join"
+        android:text="@string/join"
+        android:textColor="#040404"
+        android:textSize="12sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

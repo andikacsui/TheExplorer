@@ -33,4 +33,6 @@ public class TabProfile extends TabActivity{
 		tabHost.addTab(editProfileSpec);
 		tabHost.addTab(achievementSpec);
 	}
+	
+	
 }
