@@ -164,12 +164,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			SQLiteDatabase db = this.getWritableDatabase();
 			ContentValues value1 = new ContentValues();
 			value1.put("id", 1);
-			value1.put("nama", "Menjelajah Jogja");
+			value1.put("nama", "Explore Jogja");
 			value1.put(
 					"deskripsi",
-					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. "
-							+ "Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga wisata kuliner."
-							+ " Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
+					"Jogjakarta has been known as The Neverending Asia. Many say that a single visit to Jogja is never enough. There are many list of things that can be experienced in Jogjakarta,  ranging from natural splendors, art and tradition and heritages to culinary adventure. This is why Jogja is the second most visited destination in Indonesia, next to Bali.");
 			value1.put("lokasi", "DI Jogjakarta, Indonesia");
 			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
@@ -179,14 +177,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value2 = new ContentValues();
 			value2.put("id", 2);
-			value2.put("nama", "Menjelajah Jakarta");
+			value2.put("nama", "Explore Jakarta");
 			value2.put(
 					"deskripsi",
-					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan,"
-							+ " bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. "
-							+ "Jakarta telah memikat orang dari segala aspek kehidupan."
-							+ " Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional "
-							+ "dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
+					"Jakarta is the Capital City of Republic Indonesia. Jakarta is a huge and sprawling metropolitan city. Jakarta not only the seat of national government, but also the center of finance, business, modern music, and others creative industry. Therefore, that whatever happens in Jakarta is national interest and it is for these reasons that Jakarta is the hub of Indonesia’s modern history and modern life.");
 			value2.put("lokasi", "DKI Jakarta, Indonesia");
 			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
@@ -196,13 +190,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value3 = new ContentValues();
 			value3.put("id", 3);
-			value3.put("nama", "Menjelajah Bali");
+			value3.put("nama", "Explore Bali");
 			value3.put(
 					"deskripsi",
 					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. "
 							+ "Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan,"
 							+ " souvenir yang menarik, serta adat dan kebudayaan yang menawan");
-			value3.put("lokasi", "Bali, Indonesia");
+			value3.put("lokasi", "Bali, Indonesia");     
 			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
 			value3.put("badge", "badge_bali");
@@ -212,14 +206,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value4 = new ContentValues();
 			value4.put("id", 4);
-			value4.put("nama", "Menjelajah Sumatera Barat");
+			value4.put("nama", "Explore West Sumatera");
 			value4.put(
 					"deskripsi",
-					"Dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang "
-							+ "membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang"
-							+ " hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. "
-							+ "Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan "
-							+ "keindahan alam.");
+					"West Sumatera lies on the west coast of the island Sumatera. The prime tourist attractions of West Sumatra are the natural environment, the culture, history of the Minangkabau and unique culinary. Natural attractions of the mainland include the tropical forests, mountains, volcanos, islands, lakes, valleys, rivers & waterfalls in the highlands, the fauna and flora, and the beaches around Padang.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "g4_istanapagaruyung");
 			value4.put("status", 1);
@@ -229,13 +219,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 			ContentValues value5 = new ContentValues();
 			value5.put("id", 5);
-			value5.put("nama", "Menjelajah Nusa Tenggara Barat");
+			value5.put("nama", "Explore West Nusa Tenggara");
 			value5.put(
 					"deskripsi",
-					"Nusa Tenggara Barat adalah bagian Indonesia Bagian Tengah yang menandai titik transisi antara flora dan fauna"
-							+ " dari Barat dan Timur Indonesia dengan keindahan alam yang luar biasa dan unik. "
-							+ "Bagian utara pulau adalah pegunungan dan subur dengan pohon-pohon tinggi dan semak-semak. "
-							+ "Selatan, di sisi lain adalah kering dan ditutupi oleh sabana.  ");
+					"West Nusa Tenggara lies in The Wallace Line, marks as a point of transition between the flora and fauna of Western and Eastern Indonesia and full of wonderful scenery and have unique floras and faunas. It has beautiful islands, lake, savannas forest, mountainous with tall tress and shrubs. It is a right place for escaping from the hectic life and bustling city.");
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "g5_rinjani");
 			value5.put("status", 1);
@@ -382,11 +369,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		int point = 0;
 		Tempat tempat;
 		SQLiteDatabase db = this.getReadableDatabase();
-		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT where id = " +
-				+ ID, null);
+		Cursor cursor = db.rawQuery("SELECT * FROM TEMPAT where id = " + +ID,
+				null);
 		cursor.moveToFirst();
-		Log.d("debag", "SELECT * FROM MISI where id = " +
-				+ ID);
+		Log.d("debag", "SELECT * FROM MISI where id = " + +ID);
 		ID = cursor.getInt(0);
 		nama = cursor.getString(1);
 		deskripsi = cursor.getString(2);
@@ -611,10 +597,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value13 = new ContentValues();
 			value13.put("id", 13);
 			value13.put("nama", "Kota Tua Batavia");
-			value13.put("deskripsi",
-					"Kota Tua Batavia pernah dijuluki sebagai Permata Asia dan Ratu dari Timur yang dianggap sebagai pusat  " +
-					"perdagangan untuk benua Asia karena lokasinya yang strategis dan sumber daya melimpah. Sekarang di kota tua " +
-					"Batavia ini dapat dilihat jejak-jejak sejarah Batavia dulu berupa bangunan-bangunan tua dan juga terdapat banyak museum.");
+			value13.put(
+					"deskripsi",
+					"Kota Tua Batavia pernah dijuluki sebagai Permata Asia dan Ratu dari Timur yang dianggap sebagai pusat  "
+							+ "perdagangan untuk benua Asia karena lokasinya yang strategis dan sumber daya melimpah. Sekarang di kota tua "
+							+ "Batavia ini dapat dilihat jejak-jejak sejarah Batavia dulu berupa bangunan-bangunan tua dan juga terdapat banyak museum.");
 			value13.put("point", 50);
 			value13.put("latitude", "-6.133216");
 			value13.put("longitude", "106.813173");
@@ -627,9 +614,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value14.put("id", 14);
 			value14.put("nama", "Ancol");
 			value14.put("point", 50);
-			value14.put("deskripsi",
-					"Ancol merupakan taman rekreasi terbesar di Indonesia. Ancol memiliki berbagai pilihan atraksi seperti pantai Ancol, " +
-					"Dunia Fantasi, Seaworld, Marina Ancol, Pasar Seni, serta hotel.");
+			value14.put(
+					"deskripsi",
+					"Ancol merupakan taman rekreasi terbesar di Indonesia. Ancol memiliki berbagai pilihan atraksi seperti pantai Ancol, "
+							+ "Dunia Fantasi, Seaworld, Marina Ancol, Pasar Seni, serta hotel.");
 			value14.put("latitude", "-6.127242");
 			value14.put("longitude", "106.845596");
 			value14.put("Foto", "g2_ancol");
@@ -640,10 +628,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value15 = new ContentValues();
 			value15.put("id", 15);
 			value15.put("nama", "Monumen Nasional");
-			value15.put("deskripsi",
-					"Monumen Nasional (Monas) merupakan monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk  " +
-					"mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan dari pemerintahan kolonial " +
-					"Hindia Belanda. Monumen ini juga berfungsi sebagai museum kemerdekaan.");
+			value15.put(
+					"deskripsi",
+					"Monumen Nasional (Monas) merupakan monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk  "
+							+ "mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan dari pemerintahan kolonial "
+							+ "Hindia Belanda. Monumen ini juga berfungsi sebagai museum kemerdekaan.");
 			value15.put("point", 50);
 			value15.put("latitude", " -6.174774");
 			value15.put("longitude", "106.827185");
@@ -655,9 +644,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value16 = new ContentValues();
 			value16.put("id", 16);
 			value16.put("nama", "Komplek Gelora Bung Karno");
-			value16.put("deskripsi",
-					"Komplek Gelora Bung Karno merupakan komplek olahraga serbaguna, mulai dari sepakbola, bulutangkis, basket, " +
-					"tenis, renag, anggar hingga stadion atletik.");
+			value16.put(
+					"deskripsi",
+					"Komplek Gelora Bung Karno merupakan komplek olahraga serbaguna, mulai dari sepakbola, bulutangkis, basket, "
+							+ "tenis, renag, anggar hingga stadion atletik.");
 			value16.put("point", 50);
 			value16.put("latitude", "-6.218591");
 			value16.put("longitude", "106.801693");
@@ -669,10 +659,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value17 = new ContentValues();
 			value17.put("id", 17);
 			value17.put("nama", "Pulau Tidung Kep. Seribu");
-			value17.put("deskripsi",
-					"Pulau Tidung merupakan pulau terbesar diantara pulau lain di Kep.Seribu. " +
-					"Tidung menawarkan pantai terpencil, malam berbintang dan komunitas ramah, jauh dari keramaian dan hiruk pikuk kota." +
-					"Selain itu, disekita pualu ini juga terdapat hutan mangrove dengan tampilan yang indah.");
+			value17.put(
+					"deskripsi",
+					"Pulau Tidung merupakan pulau terbesar diantara pulau lain di Kep.Seribu. "
+							+ "Tidung menawarkan pantai terpencil, malam berbintang dan komunitas ramah, jauh dari keramaian dan hiruk pikuk kota."
+							+ "Selain itu, disekita pualu ini juga terdapat hutan mangrove dengan tampilan yang indah.");
 			value17.put("point", 100);
 			value17.put("latitude", "-5.803193");
 			value17.put("longitude", "106.523066");
@@ -684,7 +675,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value18 = new ContentValues();
 			value18.put("id", 18);
 			value18.put("nama", "Pelabuhan Sunda Kelapa");
-			value18.put("deskripsi",
+			value18.put(
+					"deskripsi",
 					"Dengan menjelajahi Pelabuhan Sunda Kelapa, kita dapat melihat modernitas dan sisa-sisa masa lalu tetap bisa ditemukan.");
 			value18.put("point", 100);
 			value18.put("latitude", "-6.122633");
@@ -697,9 +689,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value19 = new ContentValues();
 			value19.put("id", 19);
 			value19.put("nama", "Museum Fatahillah");
-			value19.put("deskripsi",
-					"Museum Fatahillah merupakan bekas Balai Kota Jakarta pada zaman dahulu. Sebelumnya museum ini juga merupakan  " +
-					"penjara bagi Pangeran Diponegoro dan Untung Suropati. Saat ini, di Mesum Fatahillah dapat dilihat sejarah Jakarta.");
+			value19.put(
+					"deskripsi",
+					"Museum Fatahillah merupakan bekas Balai Kota Jakarta pada zaman dahulu. Sebelumnya museum ini juga merupakan  "
+							+ "penjara bagi Pangeran Diponegoro dan Untung Suropati. Saat ini, di Mesum Fatahillah dapat dilihat sejarah Jakarta.");
 			value19.put("point", 50);
 			value19.put("latitude", "-6.133045");
 			value19.put("longitude", "106.813488");
@@ -711,10 +704,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value20 = new ContentValues();
 			value20.put("id", 20);
 			value20.put("nama", "Museum Bank Indonesia");
-			value20.put("deskripsi",
-					"Museum ini memperlihatkan peran Bank Sentral dalam sejarah Indonesia sejak zaman kolonial Belanda. " +
-					"Disini juga diperlihatkan jenis-jenis mata uang Indonesia dari zaman penjajahan sampai sekarang serta mata uang " +
-					"negara-negara yang ada di dunia.");
+			value20.put(
+					"deskripsi",
+					"Museum ini memperlihatkan peran Bank Sentral dalam sejarah Indonesia sejak zaman kolonial Belanda. "
+							+ "Disini juga diperlihatkan jenis-jenis mata uang Indonesia dari zaman penjajahan sampai sekarang serta mata uang "
+							+ "negara-negara yang ada di dunia.");
 			value20.put("point", 50);
 			value20.put("latitude", "-6.137824");
 			value20.put("longitude", "106.813145");
@@ -726,11 +720,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value21 = new ContentValues();
 			value21.put("id", 21);
 			value21.put("nama", "Pantai Kuta");
-			value21.put("deskripsi",
-					"Salah satu pantai yang paling popular menjadi tujuan wisata bagi turis dari seluruh penjuru dunia untuk berselancar " +
-					"berjemur, dan pastinya berenang. Dari pantai ini bisa menyaksikan matahari terbenam yang sangat indah. Pada malam " +
-					"hari suasana pantai ini berubah dipenuhi dengan musik dari bar dan restoran. Selain itu juga terdapat toko-toko " +
-					"yang menjual souvenir, baju dan kerajinan khas Bali.");
+			value21.put(
+					"deskripsi",
+					"Salah satu pantai yang paling popular menjadi tujuan wisata bagi turis dari seluruh penjuru dunia untuk berselancar "
+							+ "berjemur, dan pastinya berenang. Dari pantai ini bisa menyaksikan matahari terbenam yang sangat indah. Pada malam "
+							+ "hari suasana pantai ini berubah dipenuhi dengan musik dari bar dan restoran. Selain itu juga terdapat toko-toko "
+							+ "yang menjual souvenir, baju dan kerajinan khas Bali.");
 			value21.put("point", 50);
 			value21.put("latitude", "-8.723236");
 			value21.put("longitude", "115.169992");
@@ -742,10 +737,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value22 = new ContentValues();
 			value22.put("id", 22);
 			value22.put("nama", "Ubud Monkey Forest");
-			value22.put("deskripsi",
-					"Ubud Monkey Forest adalah cagar alam sekaligus komplek candi Ubud yang menjadi rumah bagi kurang lebih 340 ekor " +
-					"Kera Ekor Panjang. Disini pengunjung dapat menikmati atmosfer yang tenang, berbelanja, wisata kuliner dan " +
-					"menyelusuri hutan yang teduh.");
+			value22.put(
+					"deskripsi",
+					"Ubud Monkey Forest adalah cagar alam sekaligus komplek candi Ubud yang menjadi rumah bagi kurang lebih 340 ekor "
+							+ "Kera Ekor Panjang. Disini pengunjung dapat menikmati atmosfer yang tenang, berbelanja, wisata kuliner dan "
+							+ "menyelusuri hutan yang teduh.");
 			value22.put("point", 100);
 			value22.put("latitude", "-8.518743");
 			value22.put("longitude", "115.258552");
@@ -757,10 +753,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value23 = new ContentValues();
 			value23.put("id", 23);
 			value23.put("nama", "Bali Bird Park");
-			value23.put("deskripsi",
-					"Bali Bird Park berisi koleksi burung-burung Indonesia serta dari Afrika dan Amerika Selatan. Meliputi dua hektar  " +
-					"lanskap botani, taman memberikan perlindungan kepada hampir 1.000 burung dari 250 spesies yang berbeda.Taman juga " +
-					"menampilkan kumpulan flora yang menakjubkan.");
+			value23.put(
+					"deskripsi",
+					"Bali Bird Park berisi koleksi burung-burung Indonesia serta dari Afrika dan Amerika Selatan. Meliputi dua hektar  "
+							+ "lanskap botani, taman memberikan perlindungan kepada hampir 1.000 burung dari 250 spesies yang berbeda.Taman juga "
+							+ "menampilkan kumpulan flora yang menakjubkan.");
 			value23.put("point", 100);
 			value23.put("latitude", "-8.596637");
 			value23.put("longitude", "115.251675");
@@ -772,9 +769,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value24 = new ContentValues();
 			value24.put("id", 24);
 			value24.put("nama", "Pantai Lovina");
-			value24.put("deskripsi",
-					"Pantai Lovina terkenal dengan banyaknya habitat lumba-lumba yang berlalu-lalang di perairannya. Pengunjung " +
-					"dapat menyewa perahu untuk menyusuri lautan melihat kumpulan makhuk cerdas tersebut.");
+			value24.put(
+					"deskripsi",
+					"Pantai Lovina terkenal dengan banyaknya habitat lumba-lumba yang berlalu-lalang di perairannya. Pengunjung "
+							+ "dapat menyewa perahu untuk menyusuri lautan melihat kumpulan makhuk cerdas tersebut.");
 			value24.put("point", 100);
 			value24.put("latitude", "-8.160347");
 			value24.put("longitude", "115.029981");
@@ -786,9 +784,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value25 = new ContentValues();
 			value25.put("id", 25);
 			value25.put("nama", "Danau Batur-Kintamani");
-			value25.put("deskripsi",
-					"Danau Batur-Kintami berada ditengah-tengah deretan pegunungan Batur menghadirkan keindahan yang menenangkan " +
-					"dan megah dengan udara pegunungan yang menyegarkan.");
+			value25.put(
+					"deskripsi",
+					"Danau Batur-Kintami berada ditengah-tengah deretan pegunungan Batur menghadirkan keindahan yang menenangkan "
+							+ "dan megah dengan udara pegunungan yang menyegarkan.");
 			value25.put("point", 50);
 			value25.put("latitude", "-8.256682");
 			value25.put("longitude", "115.408087");
@@ -800,10 +799,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value26 = new ContentValues();
 			value26.put("id", 26);
 			value26.put("nama", "Pantai Sanur");
-			value26.put("deskripsi",
-					"Di Pantai Sanur pengunjung disuguhi fenomena matahari terbit dibalik horison yang memberikan cahaya " +
-					"indah disekitar pantai, sementara itu pasir putih yang lembut memeluk ombak yang menyapunya. Gambaran pagi yang " +
-					"sempurna dimana alam menyuguhkan fitur yang fantastis.");
+			value26.put(
+					"deskripsi",
+					"Di Pantai Sanur pengunjung disuguhi fenomena matahari terbit dibalik horison yang memberikan cahaya "
+							+ "indah disekitar pantai, sementara itu pasir putih yang lembut memeluk ombak yang menyapunya. Gambaran pagi yang "
+							+ "sempurna dimana alam menyuguhkan fitur yang fantastis.");
 			value26.put("point", 50);
 			value26.put("latitude", "-8.674748");
 			value26.put("longitude", "115.263827");
@@ -815,10 +815,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value27 = new ContentValues();
 			value27.put("id", 27);
 			value27.put("nama", "Nusa Dua");
-			value27.put("deskripsi",
-					"Nusa Dua dipenuhi dengan resort dan hotel mewah, seperti Grand Hyatt, Westin Resort, " +
-					"Laguna Resort & Spa, Nusa Dua Beach Hotel & Spa, dll. Hotel-hotel ini menawarkan taman-taman indah terawat, " +
-					"pemandangan yang fantastis dari samudera biru, membentang panjang pantai berpasir putih dan pohon palem.");
+			value27.put(
+					"deskripsi",
+					"Nusa Dua dipenuhi dengan resort dan hotel mewah, seperti Grand Hyatt, Westin Resort, "
+							+ "Laguna Resort & Spa, Nusa Dua Beach Hotel & Spa, dll. Hotel-hotel ini menawarkan taman-taman indah terawat, "
+							+ "pemandangan yang fantastis dari samudera biru, membentang panjang pantai berpasir putih dan pohon palem.");
 			value27.put("point", 50);
 			value27.put("latitude", "-8.794578");
 			value27.put("longitude", "115.216577");
@@ -830,10 +831,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value28 = new ContentValues();
 			value28.put("id", 28);
 			value28.put("nama", "Tanah Lot");
-			value28.put("deskripsi",
-					"Di Tanah Lot ini terdapat dua buah pura yang berada di atas batu besar. " +
-					"Satu terletak di atas bongkahan batu dan satunya terletak di atas tebing." +
-					" Pura Tanah Lot merupakan pura laut tempat pemujaan dewa-dewa penjaga laut.");
+			value28.put(
+					"deskripsi",
+					"Di Tanah Lot ini terdapat dua buah pura yang berada di atas batu besar. "
+							+ "Satu terletak di atas bongkahan batu dan satunya terletak di atas tebing."
+							+ " Pura Tanah Lot merupakan pura laut tempat pemujaan dewa-dewa penjaga laut.");
 			value28.put("point", 50);
 			value28.put("latitude", "-8.681494");
 			value28.put("longitude", "115.205247");
@@ -845,11 +847,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value29 = new ContentValues();
 			value29.put("id", 29);
 			value29.put("nama", "Pantai Dreamland");
-			value29.put("deskripsi",
-					"Pantai Dreamland dikelilingi oleh tebing-tebing yang menjulang tinggi,  dan dikelilingi batu karang yang lumayan besar di sekitar pantai." +
-					" Pantai Dreamland sendiri hampir mirip  dengan pantai Kuta. Pasir putih dan celah karang yang terjal menjadi pemandangan yang begitu memikat " +
-					"mata untuk dipandang. Lokasi berpasir putih bersih di pantai sempit tepat di bawah dinding karang curam  " +
-					"cocok untuk menikmati matahari tenggelam atau sekedar menyaksikan atraksi para peselancar.");
+			value29.put(
+					"deskripsi",
+					"Pantai Dreamland dikelilingi oleh tebing-tebing yang menjulang tinggi,  dan dikelilingi batu karang yang lumayan besar di sekitar pantai."
+							+ " Pantai Dreamland sendiri hampir mirip  dengan pantai Kuta. Pasir putih dan celah karang yang terjal menjadi pemandangan yang begitu memikat "
+							+ "mata untuk dipandang. Lokasi berpasir putih bersih di pantai sempit tepat di bawah dinding karang curam  "
+							+ "cocok untuk menikmati matahari tenggelam atau sekedar menyaksikan atraksi para peselancar.");
 			value29.put("point", 50);
 			value29.put("latitude", "-8.779225");
 			value29.put("longitude", "115.166702");
@@ -861,7 +864,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value30 = new ContentValues();
 			value30.put("id", 30);
 			value30.put("nama", "Jimbaran");
-			value30.put("deskripsi",
+			value30.put(
+					"deskripsi",
 					"Jimbaran merupakan kampung nelayan di Bali. Terdapat juga resort and spa, hotel dan restoran seafood.");
 			value30.put("point", 50);
 			value30.put("latitude", "-8.789998");
@@ -874,10 +878,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");
-			value31.put("deskripsi",
-					"Jam Gadang merupakan ikon dari kota Bukittinggi dengan tinggi 26 meter. Keunikan dari jam ini adalah " +
-					"angka IV ditulis dengan IIII. Di sekitar Jam Gadang terdapat taman yang biasa dijadikan tempat " +
-					"berkumpul dan istirahat sejenak oleh pengunjung.");
+			value31.put(
+					"deskripsi",
+					"Jam Gadang merupakan ikon dari kota Bukittinggi dengan tinggi 26 meter. Keunikan dari jam ini adalah "
+							+ "angka IV ditulis dengan IIII. Di sekitar Jam Gadang terdapat taman yang biasa dijadikan tempat "
+							+ "berkumpul dan istirahat sejenak oleh pengunjung.");
 			value31.put("point", 50);
 			value31.put("latitude", "-0.30517");
 			value31.put("longitude", "100.368408");
@@ -889,10 +894,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value35 = new ContentValues();
 			value35.put("id", 35);
 			value35.put("nama", "Pantai Air Manis");
-			value35.put("deskripsi",
-					"Pantai Air Manis merupakan salah satu pantai di kota Padang. Pantai ini terkenal dengan kaitannya " +
-					"dengan legenda Malin Kundang, dimana serang anak durhaka yang dikutuk menjadi batu. Di pantai ini " +
-					"terdapat batu yang sangat mirip dengan gambaran manusia bersama kapalnya.");
+			value35.put(
+					"deskripsi",
+					"Pantai Air Manis merupakan salah satu pantai di kota Padang. Pantai ini terkenal dengan kaitannya "
+							+ "dengan legenda Malin Kundang, dimana serang anak durhaka yang dikutuk menjadi batu. Di pantai ini "
+							+ "terdapat batu yang sangat mirip dengan gambaran manusia bersama kapalnya.");
 			value35.put("point", 100);
 			value35.put("latitude", "-0.60149");
 			value35.put("longitude", "100.539901");
@@ -904,10 +910,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value36 = new ContentValues();
 			value36.put("id", 36);
 			value36.put("nama", "Danau Singkarak");
-			value36.put("deskripsi",
-					"Danau singkarak merupakan danau terluas di Sumatera Barat dan danau terbesar kedua di Sumatera setelah Danau Toba." +
-					" Sebuah dunia diam yang tenang, pemandangan menakjubkan dan pemandangan spektakuler menanti di sini. Di sini Anda dapat merangkul  " +
-					"keindahan alam Indonesia yang sangat terkenal. Danau Singkarak terkenal dengan ikan Bilih yang merupakan spesies ikan yang hanya hidup di danau ini.");
+			value36.put(
+					"deskripsi",
+					"Danau singkarak merupakan danau terluas di Sumatera Barat dan danau terbesar kedua di Sumatera setelah Danau Toba."
+							+ " Sebuah dunia diam yang tenang, pemandangan menakjubkan dan pemandangan spektakuler menanti di sini. Di sini Anda dapat merangkul  "
+							+ "keindahan alam Indonesia yang sangat terkenal. Danau Singkarak terkenal dengan ikan Bilih yang merupakan spesies ikan yang hanya hidup di danau ini.");
 			value36.put("point", 50);
 			value36.put("latitude", "-0.60149");
 			value36.put("longitude", "100.539901");
@@ -919,9 +926,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value37 = new ContentValues();
 			value37.put("id", 37);
 			value37.put("nama", "Istana Pagaruyung");
-			value37.put("deskripsi",
-					"Istana Pagaruyung merupakan obyek wisata budaya yang terkenal di Sumatera Barat. Istana ini adalah istana dari " +
-					"kerajaan Pagaruyung. Melambangkan budaya dan keindahan arsitektur Minangkabau.");
+			value37.put(
+					"deskripsi",
+					"Istana Pagaruyung merupakan obyek wisata budaya yang terkenal di Sumatera Barat. Istana ini adalah istana dari "
+							+ "kerajaan Pagaruyung. Melambangkan budaya dan keindahan arsitektur Minangkabau.");
 			value37.put("point", 100);
 			value37.put("latitude", "-0.307272");
 			value37.put("longitude", "100.200752");
@@ -933,9 +941,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value38 = new ContentValues();
 			value38.put("id", 38);
 			value38.put("nama", "Danau Maninjau");
-			value38.put("deskripsi",
-					"Danau Maninjau merupakan danau yang tenang, cocok untuk pelarian diri dari keramaian dan hiruk pikuk kota. " +
-					"Dengan pemandangan yang inspiratif dan damai mengelilingi, menawarkan beberapa yang terbaik dilihat dari danau.");
+			value38.put(
+					"deskripsi",
+					"Danau Maninjau merupakan danau yang tenang, cocok untuk pelarian diri dari keramaian dan hiruk pikuk kota. "
+							+ "Dengan pemandangan yang inspiratif dan damai mengelilingi, menawarkan beberapa yang terbaik dilihat dari danau.");
 			value38.put("point", 50);
 			value38.put("latitude", "-0.307272");
 			value38.put("longitude", "100.200752");
@@ -947,10 +956,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value40 = new ContentValues();
 			value40.put("id", 40);
 			value40.put("nama", "Gili Terawangan");
-			value40.put("deskripsi",
-					"Gili Terawangan adalah pulau terbesar daripada 3 pulau Gili. Ia memiliki kehidupan malam yang semarak " +
-					"untuk menghibur Anda setelah matahari terbenam. Dengan koleksi macam restoran dan bar,  " +
-					"pengunjung tidak akan pernah kekurangan hiburan di sini.");
+			value40.put(
+					"deskripsi",
+					"Gili Terawangan adalah pulau terbesar daripada 3 pulau Gili. Ia memiliki kehidupan malam yang semarak "
+							+ "untuk menghibur Anda setelah matahari terbenam. Dengan koleksi macam restoran dan bar,  "
+							+ "pengunjung tidak akan pernah kekurangan hiburan di sini.");
 			value40.put("point", 50);
 			value40.put("latitude", "-8.346199");
 			value40.put("longitude", "116.038099");
@@ -962,9 +972,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value41 = new ContentValues();
 			value41.put("id", 41);
 			value41.put("nama", "Gili Meno Island");
-			value41.put("deskripsi",
-					"Gili Meno adalah pulau terkecil daripada 3 pulau Gili dengan pantai pasir putih, terumbu karang tropis dan " +
-					"air pantai yang hangat.");
+			value41.put(
+					"deskripsi",
+					"Gili Meno adalah pulau terkecil daripada 3 pulau Gili dengan pantai pasir putih, terumbu karang tropis dan "
+							+ "air pantai yang hangat.");
 			value41.put("point", 50);
 			value41.put("latitude", "-8.34501");
 			value41.put("longitude", "116.055609");
@@ -976,9 +987,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value42 = new ContentValues();
 			value42.put("id", 42);
 			value42.put("nama", "Gili Air Island");
-			value42.put("deskripsi",
-					"Gili Air adalah pulau yang paling dekat dengan pulau utama dan populasi yang paling besar daripada 3 pulau Gili. " +
-					"Dengan pantai pasir putih, terumbu karang tropis dan air pantai yang hangat.");
+			value42.put(
+					"deskripsi",
+					"Gili Air adalah pulau yang paling dekat dengan pulau utama dan populasi yang paling besar daripada 3 pulau Gili. "
+							+ "Dengan pantai pasir putih, terumbu karang tropis dan air pantai yang hangat.");
 			value42.put("point", 50);
 			value42.put("latitude", "-8.356814");
 			value42.put("longitude", "116.081444");
@@ -990,11 +1002,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value44 = new ContentValues();
 			value44.put("id", 44);
 			value44.put("nama", "Pulau Moyo");
-			value44.put("deskripsi",
-					"Pulau Moyo merupakan lingkungan yang murni dengan garis pantai yang berbatu dan padang rumput rumah  " +
-					"untuk semua jenis satwa liar. Moyo dikelilingi oleh terumbu karang yang indah tak tersentuh yang ideal " +
-					"untuk snorkeling. Berenang dengan hiu karang ujung putih, menyelam di sebelah sengatan sinar terlihat biru," +
-					"menemukan kumpulan ikan tropis. Fauna daratan juga meramaikan pulau ini, seperti rusa, sapi liar dan burung.");
+			value44.put(
+					"deskripsi",
+					"Pulau Moyo merupakan lingkungan yang murni dengan garis pantai yang berbatu dan padang rumput rumah  "
+							+ "untuk semua jenis satwa liar. Moyo dikelilingi oleh terumbu karang yang indah tak tersentuh yang ideal "
+							+ "untuk snorkeling. Berenang dengan hiu karang ujung putih, menyelam di sebelah sengatan sinar terlihat biru,"
+							+ "menemukan kumpulan ikan tropis. Fauna daratan juga meramaikan pulau ini, seperti rusa, sapi liar dan burung.");
 			value44.put("point", 100);
 			value44.put("latitude", "-8.197898");
 			value44.put("longitude", "117.578216");
@@ -1006,11 +1019,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value45 = new ContentValues();
 			value45.put("id", 45);
 			value45.put("nama", "Gunung Rinjani");
-			value45.put("deskripsi",
-					"Gunung Rinjani adalah gunung tertinggi kedua di Indonesia. Pendakian ke puncak mungkin tidak mudah, " +
-					"tapi sangat bernilai, dan secara luas dianggap sebagai salah satu pemandangan yang terbaik " +
-					"di negeri ini. Sekitar lereng Rinjani terdapat hutan lebat dan terdapat air terjun. Ditengah gunung ada danau " +
-					"Segera Anak.");
+			value45.put(
+					"deskripsi",
+					"Gunung Rinjani adalah gunung tertinggi kedua di Indonesia. Pendakian ke puncak mungkin tidak mudah, "
+							+ "tapi sangat bernilai, dan secara luas dianggap sebagai salah satu pemandangan yang terbaik "
+							+ "di negeri ini. Sekitar lereng Rinjani terdapat hutan lebat dan terdapat air terjun. Ditengah gunung ada danau "
+							+ "Segera Anak.");
 			value45.put("point", 50);
 			value45.put("latitude", "-8.396979");
 			value45.put("longitude", "116.457031");
@@ -1022,10 +1036,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value46 = new ContentValues();
 			value46.put("id", 46);
 			value46.put("nama", "Pantai Senggigi");
-			value46.put("deskripsi",
-					"Pantai Senggigi adalah resort area tertua dan paling terkenal di Lombok. Tempat yang tepat untuk berelaksasi, dengan  " +
-					"pantai pasir putih dan area berenang yang aman. Tempat ini juga memiliki karang yang warna-warni nan indah, cocok" +
-					"untuk snorkling.");
+			value46.put(
+					"deskripsi",
+					"Pantai Senggigi adalah resort area tertua dan paling terkenal di Lombok. Tempat yang tepat untuk berelaksasi, dengan  "
+							+ "pantai pasir putih dan area berenang yang aman. Tempat ini juga memiliki karang yang warna-warni nan indah, cocok"
+							+ "untuk snorkling.");
 			value46.put("point", 50);
 			value46.put("latitude", "-8.482559");
 			value46.put("longitude", "116.047356");
@@ -1037,9 +1052,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value47 = new ContentValues();
 			value47.put("id", 47);
 			value47.put("nama", "Pantai Lakey");
-			value47.put("deskripsi",
-					"Pantai Lakey merupakan pantai yang lebar dengan pasir putih yang panjang dan digawangi oleh karang. Pantai ini tergolong unik, " +
-					"dimana ombaknya menyapu pantai ke arah kiri. Pantai ini sangat disenangi oleh para peselancar.");
+			value47.put(
+					"deskripsi",
+					"Pantai Lakey merupakan pantai yang lebar dengan pasir putih yang panjang dan digawangi oleh karang. Pantai ini tergolong unik, "
+							+ "dimana ombaknya menyapu pantai ke arah kiri. Pantai ini sangat disenangi oleh para peselancar.");
 			value47.put("point", 100);
 			value47.put("latitude", "-8.578305");
 			value47.put("longitude", "116.328306");

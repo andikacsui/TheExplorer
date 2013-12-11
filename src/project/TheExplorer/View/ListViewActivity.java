@@ -48,15 +48,15 @@ public class ListViewActivity extends ListActivity {
 				// selected item
 				String namaMisi = ((TextView) view).getText().toString();
 
-				if (namaMisi.equals("Menjelajah Jogja"))
+				if (namaMisi.equals("Explore Jogja"))
 					idMisi = 1;
-				else if (namaMisi.equals("Menjelajah Jakarta"))
+				else if (namaMisi.equals("Explore Jakarta"))
 					idMisi = 2;
-				else if (namaMisi.equals("Menjelajah Bali"))
+				else if (namaMisi.equals("Explore Bali"))
 					idMisi = 3;
-				else if (namaMisi.equals("Menjelajah Sumatera Barat"))
+				else if (namaMisi.equals("Explore West Sumatera"))
 					idMisi = 4;
-				else if (namaMisi.equals("Menjelajah Nusa Tenggara Barat"))
+				else if (namaMisi.equals("Explore West Nusa Tenggara"))
 					idMisi = 5;
 
 				// Launching new Activity on selecting single List Item
