@@ -58,7 +58,14 @@ public class ListViewSavedMission extends ListActivity {
 					idMisi = 4;
 				else if (namaMisi.equals("Explore West Nusa Tenggara"))
 					idMisi = 5;
-
+				else if (namaMisi.equals("Explore Malang"))
+					idMisi = 6;
+				else if (namaMisi.equals("Explore Surabaya"))
+					idMisi = 7;
+				else if (namaMisi.equals("Explore Bandung"))
+					idMisi = 8;
+				else if (namaMisi.equals("Explore Medan"))
+					idMisi = 9;
 				// Launching new Activity on selecting single List Item
 				Intent i = new Intent(getApplicationContext(),
 						DetailSavedMission.class);
@@ -69,6 +76,7 @@ public class ListViewSavedMission extends ListActivity {
 			}
 		});
 	}
+
 	public void showAlertbox(String erroMessage) {
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 

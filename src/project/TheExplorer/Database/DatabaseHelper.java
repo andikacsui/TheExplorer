@@ -241,6 +241,94 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("badge", "badge_ntb");
 			value5.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value5);
+
+			ContentValues value6 = new ContentValues();
+			value6.put("id", 6);
+			value6.put("nama", "Explore Malang");
+			value6.put(
+					"deskripsi",
+					"Malang is the second largest city in East Java province, Indonesia. "
+							+ "It has an ancient history dating back to the Mataram Kingdom. Malang is a trade"
+							+ " center of agricultural area in which sugar, rice, coffee, tea, corn, peanuts, cassava,"
+							+ " and cinchona bark are grown. Malang city has its Interesting Places that can attract the"
+							+ " visitor to visit this city. This cool and fresh city also has been equipped with such kind"
+							+ " of tourism accomodation including hotel, restaurant, etc. In Malang, visitor can visit Mount"
+							+ " Bromo, Batu Night Square, Mount Semeru,etc.");
+			value6.put("lokasi", "East Java, Indonesia");
+			value6.put("foto", "g6_bromo");
+			value6.put("status", 0);
+			value6.put("badge", "badge_ntb");
+			value6.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value6);
+
+			ContentValues value7 = new ContentValues();
+			value7.put("id", 7);
+			value7.put("nama", "Explore Surabaya");
+			value7.put(
+					"deskripsi",
+					"Surabaya is the official capital of the province, Surabaya is "
+							+ "also the second largest city after Jakarta. Looking at the historical background, "
+							+ "Surabaya was build based on some phases of time. The first phase was coming from the"
+							+ " time before the Dutch colonialism. Surabaya was once a gate toMajapahit Kingdom, which"
+							+ " was located at the edge of Kali Mas. The second phase was coming from Islam era and last"
+							+ " phase was coming from Dutch East Indies era. The most population in Surabaya is Javanese "
+							+ "people, but there are also some ethnic that live in Surabaya such as, Madura, Tionghoa and"
+							+ " Arab, and some others are the expatriates. While, Islam is the major religion that being "
+							+ "held by most inhabitants. The inhabitants are mostly speak in Javanese language with particular accent that different with"
+							+ " common Javanese language. In Surabaya, visitor can visit Tugu Pahlawan, Cheng Hoo Mosque,Jembatan"
+							+ " Suramadu, Kenjeran Beach, etc.");
+			value7.put("lokasi", "East Java, Indonesia");
+			value7.put("foto", "g7_kenjeran");
+			value7.put("status", 0);
+			value7.put("badge", "badge_ntb");
+			value7.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value7);
+
+			ContentValues value8 = new ContentValues();
+			value8.put("id", 8);
+			value8.put("nama", "Explore Bandung");
+			value8.put(
+					"deskripsi",
+					"Bandung, City of Flowers, is the provincial capital of West Java and Indonesia' s third largest city."
+							+ " Known in colonial times as the Paris of Java because of its European ambiance and sophistication, "
+							+ "Bandung shares with Miami a fine legacy of Tropical Deco architecture dating from the 1920's. "
+							+ "Situated on a plateau in the beautiful Parahayangan mountains, Bandung's pleasant climate and "
+							+ "lush surroundings have offered an escape from the heat of the lowlands since the mid 19th century "
+							+ "when it was the heart of the region's most prosperous plantation area. Host to the historic Asia "
+							+ "Africa conference in 1955. Bandung is also renowned for its shopping, particularly for shoes, textiles,"
+							+ " clothing and denims which are found in the colourful Jeans street . Easily reached from Jakarta by train "
+							+ ", road or air (the scenic train trip is recommended), Bandung, with its cool mountain air is a popular second"
+							+ " stop for those "
+							+ "visiting the national capital and an essential stay-over for travellers enroute through Java.");
+			value8.put("lokasi", "West Java, Indonesia");
+			value8.put("foto", "g8_kawahputih");
+			value8.put("status", 0);
+			value8.put("badge", "badge_ntb");
+			value8.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value8);
+
+			ContentValues value9 = new ContentValues();
+			value9.put("id", 9);
+			value9.put("nama", "Explore Medan");
+			value9.put(
+					"deskripsi",
+					"Medan is the fourth largest city in Indonesia after Jakarta, "
+							+ "Surabaya, and Bandung. With a population of about 2 million people it is the "
+							+ "largest city outside of Java. There is no single ethnic group forming a majority;"
+							+ " the largest ethnic groups are the Chinese, Javanese, Toba-Batak, Minangkabau, "
+							+ "Mandailing Batak, Karo Batak, Southern Indians, and Northern Indians, and there are"
+							+ " many more ethnic minorities.Each ethnic group contributes to thousands of tasty, mouth"
+							+ "-watering dishes found in every corner of Medan. They offer to locals and tourists alike"
+							+ " dozens of food streets and hawker centres to suit their appetite at any time of the day."
+							+ "Medan isn't really a tourist destination, but it's a convenient stepping stone to other places"
+							+ " like the 'weekend getaway' Berastagi, the island of Penang, Malaysia and, of course the ever "
+							+ "popular, beautiful crater lake,Lake Toba.");
+			value9.put("lokasi", "North Sumatra, Indonesia");
+			value9.put("foto", "g9_brastagi");
+			value9.put("status", 0);
+			value9.put("badge", "badge_ntb");
+			value9.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value9);
 			db.close();
 		}
 	}
@@ -1107,6 +1195,117 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value47.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value47);
 
+			ContentValues value70 = new ContentValues();
+			value70.put("id", 70);
+			value70.put("nama", "Gunung Bromo");
+			value70.put(
+					"deskripsi",
+					"This National Park is one of the most beautiful places of interest in East Java. The beauties of mountain covered, give a special and characteristic green plants, arousing great interest. Tenggerese traditional farming also makes this famous place being more interesting and attractive. In addition, cool and breezy wind always blows freshly giving ever visitor special deep impression a unforgettable memories. Mount Bromo will remember us about The Story of Offering Kasada Ceremony");
+			value70.put("point", 100);
+			value70.put("latitude", "-7.926635");
+			value70.put("longitude", "112.948959");
+			value70.put("Foto", "g6_bromo");
+			value70.put("Status", 0);
+			value70.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value70);
+
+			ContentValues value71 = new ContentValues();
+			value71.put("id", 71);
+			value71.put("nama", "Batu Night Square");
+			value71.put(
+					"deskripsi",
+					"Batu Night Spectacular (BNS) is a tourist resort that can found at night. Your travel will completed with this resort. BNS is located in Batu-East Java-Indonesia. It is about 30 minutes from Malang city. Batu Night Spectacula is designed for night recreation. You can enjoy the game adventure like rollercoaster, lampion garden, and the biggest show of fireworks. From all around Batu Night Spectacular, you will see the beautiful night Malang city from the top, like you in the top of hill. You can ride by cycle and will see the shining light.");
+			value71.put("point", 50);
+			value71.put("latitude", "-7.89655");
+			value71.put("longitude", "112.534567");
+			value71.put("Foto", "g6_bns");
+			value71.put("Status", 0);
+			value71.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value71);
+
+			ContentValues value72 = new ContentValues();
+			value72.put("id", 72);
+			value72.put("nama", "Gunung Semeru");
+			value72.put(
+					"deskripsi",
+					"A mountainous pleasure on the slope of the highest mount in Java, Mount Semeru. The beautiful and attractive panorama or special atmosphere can be found here beside its cool and fresh air. In this area we find a good place for Para-gliding and the Dutch Colonial Remnant.This object lies on Argo Yuwono village, Ampelgading district, about 7 km to the North from Ampelgading.The mount climbers are often visit this mount to enjoy its nature scenery and beautiful sunset, look from the peak of the mount.");
+			value72.put("point", 100);
+			value72.put("latitude", "-8.075546");
+			value72.put("longitude", "112.920012");
+			value72.put("Foto", "g6_semeru");
+			value72.put("Status", 0);
+			value72.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value72);
+
+			ContentValues value73 = new ContentValues();
+			value73.put("id", 73);
+			value73.put("nama", "Jawa Timur Park 2");
+			value73.put(
+					"deskripsi",
+					"The town of Batu, about 100 kilometres south of Surabaya, has long been popular as a relaxing holiday destination for people from Surabaya and beyond, mostly because of its cool mountain weather. Jawa Timur Park 2 consists of three establishments located within the one location - Batu Secret Zoo, Pohon Inn, and Museum Satwa. Jatim Park 2 is nice family holiday destination over Jawa Timur.");
+			value73.put("point", 50);
+			value73.put("latitude", "-7.870864");
+			value73.put("longitude", "112.525985");
+			value73.put("Foto", "g6_jatimpark2");
+			value73.put("Status", 0);
+			value73.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value73);
+
+			ContentValues value74 = new ContentValues();
+			value74.put("id", 74);
+			value74.put("nama", "Cheng Hou Mosque");
+			value74.put(
+					"deskripsi",
+					"The Architecture of Muhammad Cheng Hoo Mosque, which located in Gading Street Surabaya, is enough artistic. It is built by allying Islam culture, Java, and Chinese that predominated by green color, turned yellow, and squeezed. The form of the building is typical of Chinese with 'Joglo' Java. This is show tightly between Chinese cultures and Java, which have intertwined since former. Cheng Hoo is also inspiration name of 'Admiral Cheng Hoo', which become a Moslem when admission to Majapahit empire. The Chinese Moslem community had built this mosque wish to remind again that Chinese also propagates Islam taught.");
+			value74.put("point", 100);
+			value74.put("latitude", "-8.270612");
+			value74.put("longitude", "113.98854");
+			value74.put("Foto", "g7_chenghou");
+			value74.put("Status", 0);
+			value74.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value74);
+
+			ContentValues value75 = new ContentValues();
+			value75.put("id", 75);
+			value75.put("nama", "Kenjeran Beach");
+			value75.put(
+					"deskripsi",
+					"Kenjeran beach is located in Kenjeran district in the east top Surabaya, which is ± 9 km from Surabaya. Kenjeran beach has divided into two beaches; they are Old Kenjeran Beach and New Kenjeran Beach.The activities that can do in Old Kenjeran Beach are enjoying the panorama of the beach, fishing, sailing, and buying sea fishes. While the activities in New Kenjeran Beach are more sport activities, such as; Tennis, Horseracing, Motorbike, Race, Swimming, Fishing, Playground, and places of worship.");
+			value75.put("point", 100);
+			value75.put("latitude", "-7.218245");
+			value75.put("longitude", "112.768894");
+			value75.put("Foto", "g7_kenjeran");
+			value75.put("Status", 0);
+			value75.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value75);
+
+			ContentValues value100 = new ContentValues();
+			value100.put("id", 100);
+			value100.put("nama", "Tugu Pahlawan");
+			value100.put(
+					"deskripsi",
+					"The warrior monument is located in Tembaan Street. It had built for the agenda of giving high respect to all warriors that had killed during big encounter to fight against ally army being hitchhiked by NICA, which wish to occupy Surabaya in 10 Novembers 1945. It is located in front of luxury Gubenur office. The Heroes Monument is a warrior spirit symbol of “arek-arek Suroboyo” (Surabaya's People) in faced the colonist. The gateway towards the Heroes Monument area, has built to looks like Bentar Temple, which is then called as Bentar Gateway. From front of side, we can look around eight relieves that depict about the development of Surabaya city. Landing story of Tar-Tar army in Hujung Galuh, the development of Kalimas estuary as the Surabaya genesis.");
+			value100.put("point", 50);
+			value100.put("latitude", "-7.245492");
+			value100.put("longitude", "112.737824");
+			value100.put("Foto", "g6_bromo");
+			value100.put("Status", 0);
+			value100.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value100);
+
+			ContentValues value76 = new ContentValues();
+			value76.put("id", 76);
+			value76.put("nama", "Suramadu Bridge");
+			value76.put(
+					"deskripsi",
+					"The Suramadu Bridge (Indonesian: Jembatan Suramadu), also known as the Surabaya–Madura Bridge, is cable-stayed bridge between Surabaya on the island of Java and the town of Bangkalan on the island of Madura in Indonesia. This bridge is the longest bridge in Indonesia today.");
+			value76.put("point", 50);
+			value76.put("latitude", "-7.050468");
+			value76.put("longitude", "112.793487");
+			value76.put("Foto", "g7_suramadu");
+			value76.put("Status", 0);
+			value76.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value76);
 		}
 	}
 
