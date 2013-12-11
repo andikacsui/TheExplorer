@@ -31,8 +31,7 @@
         android:text="Explore Jakarta"
         android:textColor="#040404"
         android:textSize="15sp"
-        android:textStyle="bold"
-        android:typeface="sans" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/TextViewDeskripsiTempat"
@@ -44,8 +43,7 @@
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Jakarta"
         android:textColor="#343434"
-        android:textSize="12sp"
-        android:typeface="sans" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/TextViewStatusTempat"
