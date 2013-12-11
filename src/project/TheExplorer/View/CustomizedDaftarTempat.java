@@ -56,11 +56,6 @@ public class CustomizedDaftarTempat extends Activity {
 	ArrayList<Tempat> daftarTempat;
 	HashMap<String, String> map;
 
-	// sensor
-	private SensorManager sensorManager;
-	// private boolean color = false;
-	private View view;
-	private long lastUpdate;
 	GPSTracker gps;
 
 	ListView list;
