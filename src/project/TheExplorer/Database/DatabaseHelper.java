@@ -223,7 +223,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("foto", "g4_istanapagaruyung");
 			value4.put("status", 1);
 			value4.put("badge", "badge_sumbar");
-			value4.put("penjelajahID", 0);
+			value4.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
@@ -239,7 +239,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("foto", "g5_rinjani");
 			value5.put("status", 1);
 			value5.put("badge", "badge_ntb");
-			value5.put("penjelajahID", 0);
+			value5.put("penjelajahID", 1);
 			db.insertOrThrow("MISI", null, value5);
 			db.close();
 		}
@@ -423,9 +423,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("nama", "Malioboro");
 			value1.put(
 					"deskripsi",
-					"Malioboro is the most famous street in Jogjakarta, located in the heart of Jogja. Along this street, " +
-					"there are many  stores that sell numerous of batik (Traditional cloth of Indonesia), handicrafts, and " +
-					"typical culinary of Jogja.There are hotels and inns for who want to stay here to suit all budget. ");
+					"Malioboro is the most famous street in Jogjakarta, located in the heart of Jogja. Along this street, "
+							+ "there are many  stores that sell numerous of batik (Traditional cloth of Indonesia), handicrafts, and "
+							+ "typical culinary of Jogja.There are hotels and inns for who want to stay here to suit all budget. ");
 			value1.put("point", 50);
 			value1.put("latitude", "-7.791892");
 			value1.put("longitude", "110.365731");
@@ -439,10 +439,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("nama", "Candi Borobudur");
 			value2.put(
 					"deskripsi",
-					"The magnificent Borobudur temple is the world’s biggest Buddhist monument, an ancient site widely " +
-					"considered to be one of the world’s seven wonders. The temple is decorated with stone carvings in bas-relief " +
-					"representing images from the life of Buddha. When reaching the top of the temple, spend some time to rest and" +
-					" marvel at the magnificent view and on the way to the top visitors can see the stone displays in the wall.");
+					"The magnificent Borobudur temple is the world’s biggest Buddhist monument, an ancient site widely "
+							+ "considered to be one of the world’s seven wonders. The temple is decorated with stone carvings in bas-relief "
+							+ "representing images from the life of Buddha. When reaching the top of the temple, spend some time to rest and"
+							+ " marvel at the magnificent view and on the way to the top visitors can see the stone displays in the wall.");
 			value2.put("point", 50);
 			value2.put("latitude", "-7.607212");
 			value2.put("longitude", "110.203314");
@@ -456,10 +456,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("nama", "Candi Prambanan");
 			value3.put(
 					"deskripsi",
-					"Prambanan Temple as the largest Hindu temple in Southeast Asia, the beautiful and graceful temple of Prambanan " +
-					"is a magnificent spectacle and an icon of Indonesia’s cultural heritage. The relief’s inside the temple show the epic " +
-					"story of Ramayana. Also, The classic Javanese  Ramayana ballet or dance drama  (hyperlink) is performed here by more than " +
-					"250 dancers in an outdoor open stage   with as its backdrop the full moon dramatically rising over the temples.");
+					"Prambanan Temple as the largest Hindu temple in Southeast Asia, the beautiful and graceful temple of Prambanan "
+							+ "is a magnificent spectacle and an icon of Indonesia’s cultural heritage. The relief’s inside the temple show the epic "
+							+ "story of Ramayana. Also, The classic Javanese  Ramayana ballet or dance drama  (hyperlink) is performed here by more than "
+							+ "250 dancers in an outdoor open stage   with as its backdrop the full moon dramatically rising over the temples.");
 			value3.put("point", 50);
 			value3.put("latitude", "-7.751901");
 			value3.put("longitude", "110.492011");
@@ -473,10 +473,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("nama", "Keraton Jogja");
 			value4.put(
 					"deskripsi",
-					"The palace of Yogyakarta, known as the Keraton (also spelled kraton or karaton), is a grand complex that was meticulously " +
-					"planned to reflect  the Javanese cosmos.This splendid example of traditional Javanese architecture has no equal. " +
-					"Today, the Keraton is a piece of living history and tradition. Visitors can sightseeing around the palace and  " +
-					"take a look at the royal carriages on display. ");
+					"The palace of Yogyakarta, known as the Keraton (also spelled kraton or karaton), is a grand complex that was meticulously "
+							+ "planned to reflect  the Javanese cosmos.This splendid example of traditional Javanese architecture has no equal. "
+							+ "Today, the Keraton is a piece of living history and tradition. Visitors can sightseeing around the palace and  "
+							+ "take a look at the royal carriages on display. ");
 			value4.put("point", 50);
 			value4.put("latitude", "-7.805269");
 			value4.put("longitude", "110.364183");
@@ -490,10 +490,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("nama", "Pantai Parangtritis");
 			value5.put(
 					"deskripsi",
-					"Escape from the city for a while and take the short drive from Yogya to the mystical Parangtritis beach where dramatic " +
-					"jagged cliffs meet a glistening volcanic black sand beach. This is the ideal place to come for a day trip to " +
-					"take a break out of the city and soak up the roar of the waves and the astounding atmosphere. Here visitors will " +
-					"see some incredibly green lush hills set against the backdrop of a raging ocean.");
+					"Escape from the city for a while and take the short drive from Yogya to the mystical Parangtritis beach where dramatic "
+							+ "jagged cliffs meet a glistening volcanic black sand beach. This is the ideal place to come for a day trip to "
+							+ "take a break out of the city and soak up the roar of the waves and the astounding atmosphere. Here visitors will "
+							+ "see some incredibly green lush hills set against the backdrop of a raging ocean.");
 			value5.put("point", 50);
 			value5.put("latitude", "-8.021017");
 			value5.put("longitude", "110.31815");
@@ -507,8 +507,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("nama", "Candi Ratu Boko");
 			value6.put(
 					"deskripsi",
-					"Candi Ratu Boko standing majestically on a hillside plateau overlooking the magnificent Candi Prambanan and the mystical Mount Merapi " +
-					"as its backdrop. The Ratu Boko Palace Complex is a unique archeological site which features a meld of Hindu and Buddhist architecture.");
+					"Candi Ratu Boko standing majestically on a hillside plateau overlooking the magnificent Candi Prambanan and the mystical Mount Merapi "
+							+ "as its backdrop. The Ratu Boko Palace Complex is a unique archeological site which features a meld of Hindu and Buddhist architecture.");
 			value6.put("point", 100);
 			value6.put("latitude", "-7.750795");
 			value6.put("longitude", "110.49222");
@@ -522,9 +522,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("nama", "Taman Sari");
 			value7.put(
 					"deskripsi",
-					"Tamansari as know as The Water Castle is a garden and rest house that builded by Sultan Hamengkubuwono I as a place " +
-					"to rest with his wife and concubines, and there can be a place for sport and entertainment, and meditation. Here, " +
-					"the visitors can do sightseeing into the castles complex and buy some souvenirs at Pasar Ngasem.");
+					"Tamansari as know as The Water Castle is a garden and rest house that builded by Sultan Hamengkubuwono I as a place "
+							+ "to rest with his wife and concubines, and there can be a place for sport and entertainment, and meditation. Here, "
+							+ "the visitors can do sightseeing into the castles complex and buy some souvenirs at Pasar Ngasem.");
 			value7.put("point", 50);
 			value7.put("latitude", "-7.780749");
 			value7.put("longitude", "110.409945");
@@ -538,9 +538,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("nama", "Gunung Merapi");
 			value8.put(
 					"deskripsi",
-					"Mt Merapi is one of the most active volcanoes on earth. Despite its frequent eruptions, Mt. Merapi is very " +
-					"central to the lives of the Javanese people and kings. Visitors can climb this mount until the top or just on the edge and " +
-					"see the extraordinary view with spectacular volcanic landscape and amazing sunrise.");
+					"Mt Merapi is one of the most active volcanoes on earth. Despite its frequent eruptions, Mt. Merapi is very "
+							+ "central to the lives of the Javanese people and kings. Visitors can climb this mount until the top or just on the edge and "
+							+ "see the extraordinary view with spectacular volcanic landscape and amazing sunrise.");
 			value8.put("point", 100);
 			value8.put("latitude", "-7.539828");
 			value8.put("longitude", "110.445371");
@@ -554,11 +554,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("nama", "Goa Pindul");
 			value9.put(
 					"deskripsi",
-					"Wading across a river using b is somethinoatg common, but if the river is located inside a cave, of course it will be an " +
-					"enjoyable yet challenging experience. Pindul Cave is a cave that becomes part of the group of seven caves with " +
-					"underground river flowing inside. visitors will be invited to go along the river in the darkness of the bowels of the earth " +
-					"with 300 meters length using lifebelt, but ofcourse with guidance of the guide. This is an activity combining body rafting and " +
-					"caving, and later called cave tubing.");
+					"Wading across a river using b is somethinoatg common, but if the river is located inside a cave, of course it will be an "
+							+ "enjoyable yet challenging experience. Pindul Cave is a cave that becomes part of the group of seven caves with "
+							+ "underground river flowing inside. visitors will be invited to go along the river in the darkness of the bowels of the earth "
+							+ "with 300 meters length using lifebelt, but ofcourse with guidance of the guide. This is an activity combining body rafting and "
+							+ "caving, and later called cave tubing.");
 			value9.put("point", 50);
 			value9.put("latitude", "-7.953157");
 			value9.put("longitude", "110.597191");
@@ -572,9 +572,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("nama", "Kota Gede");
 			value10.put(
 					"deskripsi",
-					"Kota Gede is a suburb of the city of Jogjakarta and a great place to come and take a slow wander round. " +
-					"This city is the cetre of Jogja's silver industry. There are a number of workshops where visitors can stop by " +
-					"and watch silversmiths at work and see the remarkable way they can transform a piece of silver into a beautiful work of art.");
+					"Kota Gede is a suburb of the city of Jogjakarta and a great place to come and take a slow wander round. "
+							+ "This city is the cetre of Jogja's silver industry. There are a number of workshops where visitors can stop by "
+							+ "and watch silversmiths at work and see the remarkable way they can transform a piece of silver into a beautiful work of art.");
 			value10.put("point", 100);
 			value10.put("latitude", "-7.824439");
 			value10.put("longitude", "110.39609");
@@ -588,10 +588,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("nama", "Universitas Indonesia");
 			value11.put(
 					"deskripsi",
-					"Universitas Indonesia is a modern, comprehensive, open-minded, multi culture, " +
-					"and humanism campus in the Capital of Indonesia. Universitas Indonesia is on of The Green Campus" +
-					"in Indonesia. Visitor can sightseeing this campus with Bis Kuning (Bikun) and Sepeda Kuning (Spekun)." +
-					"In this campus, visitors can find the biggest library in ASEAN, and can enjoy the green lake and forests. ");
+					"Universitas Indonesia is a modern, comprehensive, open-minded, multi culture, "
+							+ "and humanism campus in the Capital of Indonesia. Universitas Indonesia is on of The Green Campus"
+							+ "in Indonesia. Visitor can sightseeing this campus with Bis Kuning (Bikun) and Sepeda Kuning (Spekun)."
+							+ "In this campus, visitors can find the biggest library in ASEAN, and can enjoy the green lake and forests. ");
 			value11.put("point", 50);
 			value11.put("latitude", "-6.36452955");
 			value11.put("longitude", "106.82902491");
@@ -605,9 +605,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value12.put("nama", "Taman Mini Indonesia Indah");
 			value12.put(
 					"deskripsi",
-					"Taman Mini Indonesia Indah or Beautiful Indonesia in Miniature Park is an extensive culture-based park, the prime " +
-					"showcase of Indonesia’s rich cultural and natural diversity. In this park, there are many floras and faunas," +
-					"replicas of traditional houses of Indonesian archipelago, museums, theatre, and accomodation facilities. ");
+					"Taman Mini Indonesia Indah or Beautiful Indonesia in Miniature Park is an extensive culture-based park, the prime "
+							+ "showcase of Indonesia’s rich cultural and natural diversity. In this park, there are many floras and faunas,"
+							+ "replicas of traditional houses of Indonesian archipelago, museums, theatre, and accomodation facilities. ");
 			value12.put("point", 50);
 			value12.put("latitude", "-6.302438");
 			value12.put("longitude", "106.895147");
@@ -619,10 +619,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value13 = new ContentValues();
 			value13.put("id", 13);
 			value13.put("nama", "Kota Tua Batavia");
-			value13.put("deskripsi",
-					"Batavia was known as “The Queen of the East” and “the Jewel of Asia”.Today many of the original buildings are still intact, " +
-					"The government has designated the Old Batavia as conservation area and plans are afoot to revive the entire neighbourhood into a " +
-					"tourst destination. There are many old building, museums and scene of the old day Batavia. ");
+			value13.put(
+					"deskripsi",
+					"Batavia was known as “The Queen of the East” and “the Jewel of Asia”.Today many of the original buildings are still intact, "
+							+ "The government has designated the Old Batavia as conservation area and plans are afoot to revive the entire neighbourhood into a "
+							+ "tourst destination. There are many old building, museums and scene of the old day Batavia. ");
 			value13.put("point", 50);
 			value13.put("latitude", "-6.133216");
 			value13.put("longitude", "106.813173");
@@ -635,9 +636,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value14.put("id", 14);
 			value14.put("nama", "Ancol");
 			value14.put("point", 50);
-			value14.put("deskripsi",
-					"Ancol is the largest and most popular recreation park. Ancol has many list of attraction, such as beach, Dunia Fantasi, " +
-					"Seaworld, Marina Ancol, Pasar Seni, art center, and hotels. Visitor can choose as they like according to their preference.");
+			value14.put(
+					"deskripsi",
+					"Ancol is the largest and most popular recreation park. Ancol has many list of attraction, such as beach, Dunia Fantasi, "
+							+ "Seaworld, Marina Ancol, Pasar Seni, art center, and hotels. Visitor can choose as they like according to their preference.");
 			value14.put("latitude", "-6.127242");
 			value14.put("longitude", "106.845596");
 			value14.put("Foto", "g2_ancol");
@@ -648,10 +650,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value15 = new ContentValues();
 			value15.put("id", 15);
 			value15.put("nama", "Monumen Nasional");
-			value15.put("deskripsi",
-					"Monumen Nasional (Monas) merupakan monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk  " +
-					"mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan dari pemerintahan kolonial " +
-					"Hindia Belanda. Monumen ini juga berfungsi sebagai museum kemerdekaan.");
+			value15.put(
+					"deskripsi",
+					"Monumen Nasional (Monas) merupakan monumen peringatan setinggi 132 meter (433 kaki) yang didirikan untuk  "
+							+ "mengenang perlawanan dan perjuangan rakyat Indonesia untuk merebut kemerdekaan dari pemerintahan kolonial "
+							+ "Hindia Belanda. Monumen ini juga berfungsi sebagai museum kemerdekaan.");
 			value15.put("point", 50);
 			value15.put("latitude", " -6.174774");
 			value15.put("longitude", "106.827185");
@@ -663,10 +666,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value16 = new ContentValues();
 			value16.put("id", 16);
 			value16.put("nama", "Gelanggang Olahraga Bung Karno");
-			value16.put("deskripsi",
-					"Bung Karno Sports Complex (Gelanggang Olahraga Bung Karno) is a comprehensive complex for international competition from  " +
-					"footbal, badminton, swimming, teniss to golf. Not only for sport, here is also Jakarta International Convention Center " +
-					"complete with adjacent supporting hotels and Indonesia’s National Television station, TVRI.");
+			value16.put(
+					"deskripsi",
+					"Bung Karno Sports Complex (Gelanggang Olahraga Bung Karno) is a comprehensive complex for international competition from  "
+							+ "footbal, badminton, swimming, teniss to golf. Not only for sport, here is also Jakarta International Convention Center "
+							+ "complete with adjacent supporting hotels and Indonesia’s National Television station, TVRI.");
 			value16.put("point", 50);
 			value16.put("latitude", "-6.218591");
 			value16.put("longitude", "106.801693");
@@ -678,10 +682,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value17 = new ContentValues();
 			value17.put("id", 17);
 			value17.put("nama", "Pulau Tidung Kep. Seribu");
-			value17.put("deskripsi",
-					"Tidung Island is the most largest island in Thausand Island (Pulau Seribu) and the most " +
-					"popular among the other islands. Tidung offers secluded beaches, starry nights and an amiable " +
-					"community, just a stone’s throw away from the capital. In this islands, visitor won't have to battle with the traffic, so can enjoy the holiday peacefully.");
+			value17.put(
+					"deskripsi",
+					"Tidung Island is the most largest island in Thausand Island (Pulau Seribu) and the most "
+							+ "popular among the other islands. Tidung offers secluded beaches, starry nights and an amiable "
+							+ "community, just a stone’s throw away from the capital. In this islands, visitor won't have to battle with the traffic, so can enjoy the holiday peacefully.");
 			value17.put("point", 100);
 			value17.put("latitude", "-5.803193");
 			value17.put("longitude", "106.523066");
@@ -693,9 +698,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value18 = new ContentValues();
 			value18.put("id", 18);
 			value18.put("nama", "Pelabuhan Sunda Kelapa");
-			value18.put("deskripsi",
-					"The older parts of Jakarta offer the chance to view the sceneries of the past. " +
-					"Explore Sunda Kelapa Harbor and other places of interest to the fullest, where modernity and remnants of the past can still be found.");
+			value18.put(
+					"deskripsi",
+					"The older parts of Jakarta offer the chance to view the sceneries of the past. "
+							+ "Explore Sunda Kelapa Harbor and other places of interest to the fullest, where modernity and remnants of the past can still be found.");
 			value18.put("point", 100);
 			value18.put("latitude", "-6.122633");
 			value18.put("longitude", "106.80886");
@@ -707,11 +713,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value19 = new ContentValues();
 			value19.put("id", 19);
 			value19.put("nama", "Museum Fatahillah");
-			value19.put("deskripsi",
-					"The Jakarta History Museum (also known as Fatahillah Museum) is housed in the former City Hall located in the old " +
-					"part of the city now known as Jakarta Kota. This museum displays the history of Jakarta from prehistoric days to " +
-					"the founding of the town of Jayakarta in1527 by Prince Fatahillah of Banten,  and through Dutch colonization from the 16th. " +
-					"Century onwards until Indonesia’s Independence in 1945.");
+			value19.put(
+					"deskripsi",
+					"The Jakarta History Museum (also known as Fatahillah Museum) is housed in the former City Hall located in the old "
+							+ "part of the city now known as Jakarta Kota. This museum displays the history of Jakarta from prehistoric days to "
+							+ "the founding of the town of Jayakarta in1527 by Prince Fatahillah of Banten,  and through Dutch colonization from the 16th. "
+							+ "Century onwards until Indonesia’s Independence in 1945.");
 			value19.put("point", 50);
 			value19.put("latitude", "-6.133045");
 			value19.put("longitude", "106.813488");
@@ -723,10 +730,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value20 = new ContentValues();
 			value20.put("id", 20);
 			value20.put("nama", "Museum Bank Indonesia");
-			value20.put("deskripsi",
-					"The Bank of Indonesia Museum displays the role of the Central Bank in the history of the Indonesian archipelago " +
-					"since Dutch  colonial days. There is a numismatic collection of coins and old legal tender used in a number of ancient" +
-					" Indonesian kingdoms  and during the Dutch colonial era and from the other countries.");
+			value20.put(
+					"deskripsi",
+					"The Bank of Indonesia Museum displays the role of the Central Bank in the history of the Indonesian archipelago "
+							+ "since Dutch  colonial days. There is a numismatic collection of coins and old legal tender used in a number of ancient"
+							+ " Indonesian kingdoms  and during the Dutch colonial era and from the other countries.");
 			value20.put("point", 50);
 			value20.put("latitude", "-6.137824");
 			value20.put("longitude", "106.813145");
@@ -738,11 +746,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value21 = new ContentValues();
 			value21.put("id", 21);
 			value21.put("nama", "Pantai Kuta");
-			value21.put("deskripsi",
-					"Once a sleepy village with a quiet, beautiful sweep of beach, Kuta today has become a popular beach destination in its" +
-					" own right,  alive with tourists from all over the world, swimming, surfing or sunbathing by the beach. On the beach, people " +
-					"enjoy parasailing, banana boat trips or swimming Women offer traditional Indonesian massage on the beach, others are seen plaiting" +
-					" hair. Before sunset,crowds rush to the beach waiting to watch Kuta’s legendary sunsets.");
+			value21.put(
+					"deskripsi",
+					"Once a sleepy village with a quiet, beautiful sweep of beach, Kuta today has become a popular beach destination in its"
+							+ " own right,  alive with tourists from all over the world, swimming, surfing or sunbathing by the beach. On the beach, people "
+							+ "enjoy parasailing, banana boat trips or swimming Women offer traditional Indonesian massage on the beach, others are seen plaiting"
+							+ " hair. Before sunset,crowds rush to the beach waiting to watch Kuta’s legendary sunsets.");
 			value21.put("point", 50);
 			value21.put("latitude", "-8.723236");
 			value21.put("longitude", "115.169992");
@@ -754,10 +763,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value22 = new ContentValues();
 			value22.put("id", 22);
 			value22.put("nama", "Ubud Monkey Forest");
-			value22.put("deskripsi",
-					"The Ubud Monkey Forest is a nature reserve and temple complex in Ubud, Bali. " +
-					"It houses approximately 340 monkeys which are known as long-tailed Macaques (Macaca fascicularis)." +
-					" Walking around Ubud is an experience of its own. Visitor can also rent  a bicycle or a motorbike to help them enjoy the atmosphere and beautiful landscape.");
+			value22.put(
+					"deskripsi",
+					"The Ubud Monkey Forest is a nature reserve and temple complex in Ubud, Bali. "
+							+ "It houses approximately 340 monkeys which are known as long-tailed Macaques (Macaca fascicularis)."
+							+ " Walking around Ubud is an experience of its own. Visitor can also rent  a bicycle or a motorbike to help them enjoy the atmosphere and beautiful landscape.");
 			value22.put("point", 100);
 			value22.put("latitude", "-8.518743");
 			value22.put("longitude", "115.258552");
@@ -769,10 +779,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value23 = new ContentValues();
 			value23.put("id", 23);
 			value23.put("nama", "Bali Bird Park");
-			value23.put("deskripsi",
-					"Bali Bird Park have largest and finest collection of Indonesian Birds in the world plus fantastic birds from Africa & South America. " +
-					"The park accommodates an amazing display of flora with more then 2000 tropical plants including 50 varieties of palms alone and " +
-					"attracting numerous butterflies.");
+			value23.put(
+					"deskripsi",
+					"Bali Bird Park have largest and finest collection of Indonesian Birds in the world plus fantastic birds from Africa & South America. "
+							+ "The park accommodates an amazing display of flora with more then 2000 tropical plants including 50 varieties of palms alone and "
+							+ "attracting numerous butterflies.");
 			value23.put("point", 100);
 			value23.put("latitude", "-8.596637");
 			value23.put("longitude", "115.251675");
@@ -784,11 +795,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value24 = new ContentValues();
 			value24.put("id", 24);
 			value24.put("nama", "Pantai Lovina");
-			value24.put("deskripsi",
-					"Lining up of busy losmen and hotels with the depleted shady sea makes " +
-					"Lovina one of the most stirring beaches in Bali. Tranquility, incredible" +
-					" under water world and popular attraction is the dolphin watching. " +
-					"According to the news, theres  about 500 - 1000 dolphins here in Lovina Beach");
+			value24.put(
+					"deskripsi",
+					"Lining up of busy losmen and hotels with the depleted shady sea makes "
+							+ "Lovina one of the most stirring beaches in Bali. Tranquility, incredible"
+							+ " under water world and popular attraction is the dolphin watching. "
+							+ "According to the news, theres  about 500 - 1000 dolphins here in Lovina Beach");
 			value24.put("point", 100);
 			value24.put("latitude", "-8.160347");
 			value24.put("longitude", "115.029981");
@@ -800,10 +812,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value25 = new ContentValues();
 			value25.put("id", 25);
 			value25.put("nama", "Danau Batur-Kintamani");
-			value25.put("deskripsi",
-					"Wonderful mountain air and dizzying views in all directions, as well as several important temples, are what makes  " +
-					"Kintamani one of the most memorable stops on the Bali tourist itinerary. Present the beautiful and elegant scenery, " +
-					"and fresh air that city haven't.");
+			value25.put(
+					"deskripsi",
+					"Wonderful mountain air and dizzying views in all directions, as well as several important temples, are what makes  "
+							+ "Kintamani one of the most memorable stops on the Bali tourist itinerary. Present the beautiful and elegant scenery, "
+							+ "and fresh air that city haven't.");
 			value25.put("point", 50);
 			value25.put("latitude", "-8.256682");
 			value25.put("longitude", "115.408087");
@@ -815,11 +828,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value26 = new ContentValues();
 			value26.put("id", 26);
 			value26.put("nama", "Pantai Sanur");
-			value26.put("deskripsi",
-					"Greet the sun as she gradually rises from below the horizon radiating the most brilliant colors over Pantai Sanur, while " +
-					"the soft white sands embrace the oncoming waves: a perfect picture of a beautiful sunny morning, where nature displays her " +
-					"fascinating features at the tranquil. Pantai Sanur is a long stretch of beautiful white sand lined with palm trees that shade " +
-					"dreamy footpaths, market stalls and relaxed beach cafes.");
+			value26.put(
+					"deskripsi",
+					"Greet the sun as she gradually rises from below the horizon radiating the most brilliant colors over Pantai Sanur, while "
+							+ "the soft white sands embrace the oncoming waves: a perfect picture of a beautiful sunny morning, where nature displays her "
+							+ "fascinating features at the tranquil. Pantai Sanur is a long stretch of beautiful white sand lined with palm trees that shade "
+							+ "dreamy footpaths, market stalls and relaxed beach cafes.");
 			value26.put("point", 50);
 			value26.put("latitude", "-8.674748");
 			value26.put("longitude", "115.263827");
@@ -831,10 +845,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value27 = new ContentValues();
 			value27.put("id", 27);
 			value27.put("nama", "Nusa Dua");
-			value27.put("deskripsi",
-					"Nusa Dua  is a special, self contained tourism estate, built comprising a large Bali Convention Centre and " +
-					"complemented  with super-de-luxe resorts. Here you will find some of the world’s best known hotel names." +
-					"The sprawling hotels offer beautifully manicured gardens, fantastic panoramic views of the blue ocean beyond, long stretches of white beaches and swaying palm trees.");
+			value27.put(
+					"deskripsi",
+					"Nusa Dua  is a special, self contained tourism estate, built comprising a large Bali Convention Centre and "
+							+ "complemented  with super-de-luxe resorts. Here you will find some of the world’s best known hotel names."
+							+ "The sprawling hotels offer beautifully manicured gardens, fantastic panoramic views of the blue ocean beyond, long stretches of white beaches and swaying palm trees.");
 			value27.put("point", 50);
 			value27.put("latitude", "-8.794578");
 			value27.put("longitude", "115.216577");
@@ -846,10 +861,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value28 = new ContentValues();
 			value28.put("id", 28);
 			value28.put("nama", "Tanah Lot");
-			value28.put("deskripsi",
-					"Tanah Lot is a rock formation in Bali and a popular tourist and cultural icon for" +
-					" photography and general exoticism. Here, the temple sits on a large offshore rock " +
-					"which has been shaped continuously over the years by the ocean tide. On the mainland cliff tops, restaurants have also been provided for tourists.");
+			value28.put(
+					"deskripsi",
+					"Tanah Lot is a rock formation in Bali and a popular tourist and cultural icon for"
+							+ " photography and general exoticism. Here, the temple sits on a large offshore rock "
+							+ "which has been shaped continuously over the years by the ocean tide. On the mainland cliff tops, restaurants have also been provided for tourists.");
 			value28.put("point", 50);
 			value28.put("latitude", "-8.681494");
 			value28.put("longitude", "115.205247");
@@ -861,11 +877,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value29 = new ContentValues();
 			value29.put("id", 29);
 			value29.put("nama", "Pantai Dreamland");
-			value29.put("deskripsi",
-					"Pantai Dreamland has a vast stretch of soft pearly white sand, clear blue sky over " +
-					"the enchanting blue waters, and nothing  but the fascinating sounds of waves hitting " +
-					"the shores; no, this is not a set from a dream, this is where nature interprets  your dream." +
-					" The beach offers tranquility and much more exciting waves perfectly fit for advanced surfers.");
+			value29.put(
+					"deskripsi",
+					"Pantai Dreamland has a vast stretch of soft pearly white sand, clear blue sky over "
+							+ "the enchanting blue waters, and nothing  but the fascinating sounds of waves hitting "
+							+ "the shores; no, this is not a set from a dream, this is where nature interprets  your dream."
+							+ " The beach offers tranquility and much more exciting waves perfectly fit for advanced surfers.");
 			value29.put("point", 50);
 			value29.put("latitude", "-8.779225");
 			value29.put("longitude", "115.166702");
@@ -877,9 +894,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value30 = new ContentValues();
 			value30.put("id", 30);
 			value30.put("nama", "Jimbaran");
-			value30.put("deskripsi",
-					"Overlooking the spectacular Jimbaran Bay, The Spa at Jimbaran offers head-to-toe all natural spa treatments that uses " +
-					"sea salt crystals, seaweed and aromatics. Jimbaran is also have resort and spa, hotels and seafood restaurants.");
+			value30.put(
+					"deskripsi",
+					"Overlooking the spectacular Jimbaran Bay, The Spa at Jimbaran offers head-to-toe all natural spa treatments that uses "
+							+ "sea salt crystals, seaweed and aromatics. Jimbaran is also have resort and spa, hotels and seafood restaurants.");
 			value30.put("point", 50);
 			value30.put("latitude", "-8.789998");
 			value30.put("longitude", "115.159278");
@@ -891,187 +909,199 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ContentValues value31 = new ContentValues();
 			value31.put("id", 31);
 			value31.put("nama", "Jam Gadang");
-			value31.put("deskripsi",
-					"Jam Gadang is an icon of Bukittinggi.In the Indonesian language, " +
-					"Jam Gadang means big clock and big it certainly is! One unique thing " +
-					"about this clock is its IV, as it is written as ‘IIII’. Jam Gadang located within a 100 meter." +
-					" Visitors can see the clock while relaxing in the shade of the park. You can take a bendi " +
-					"(horse-drawn carriage) to travel  around the clock.");
+			value31.put(
+					"deskripsi",
+					"Jam Gadang is an icon of Bukittinggi.In the Indonesian language, "
+							+ "Jam Gadang means big clock and big it certainly is! One unique thing "
+							+ "about this clock is its IV, as it is written as ‘IIII’. Jam Gadang located within a 100 meter."
+							+ " Visitors can see the clock while relaxing in the shade of the park. You can take a bendi "
+							+ "(horse-drawn carriage) to travel  around the clock.");
 			value31.put("point", 50);
 			value31.put("latitude", "-0.30517");
 			value31.put("longitude", "100.368408");
 			value31.put("Foto", "g4_jamgadang");
-			value31.put("Status", 0);
+			value31.put("Status", 1);
 			value31.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value31);
 
 			ContentValues value35 = new ContentValues();
 			value35.put("id", 35);
 			value35.put("nama", "Pantai Air Manis");
-			value35.put("deskripsi",
-					"Pantai Air Manis is one of the famous beach in Sumatera Barat, closely related to the legend of Malin Kundang in Sumatera Barat. " +
-					"By the beach, there is a Malin Kundang stone and several pieces of equipment from his ship, which are also stones. " +
-					"Pantai Air Manis is a favorite tourist site for local and foreign tourists because it has low waves and beautiful views of Mount Padang. " +
-					"There are many kiosks selling various souvenirs such as shirts, clothes, bags and other handicrafts.");
+			value35.put(
+					"deskripsi",
+					"Pantai Air Manis is one of the famous beach in Sumatera Barat, closely related to the legend of Malin Kundang in Sumatera Barat. "
+							+ "By the beach, there is a Malin Kundang stone and several pieces of equipment from his ship, which are also stones. "
+							+ "Pantai Air Manis is a favorite tourist site for local and foreign tourists because it has low waves and beautiful views of Mount Padang. "
+							+ "There are many kiosks selling various souvenirs such as shirts, clothes, bags and other handicrafts.");
 			value35.put("point", 100);
 			value35.put("latitude", "-0.60149");
 			value35.put("longitude", "100.539901");
 			value35.put("Foto", "g4_pantaiairmanis");
-			value35.put("Status", 0);
+			value35.put("Status", 1);
 			value35.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value35);
 
 			ContentValues value36 = new ContentValues();
 			value36.put("id", 36);
 			value36.put("nama", "Danau Singkarak");
-			value36.put("deskripsi",
-					"The majestic Lake Singkarak (Danau Singkarak) is an enormous crater lake set within a dramatic volcanic landscape. " +
-					"It is the widest lake in Sumatra and the second biggest lake on the island, after Lake Toba. A world of silent calm, " +
-					"breathtaking vistas and  spectacular views awaits here. Here you can embrace the remote natural beauty that Indonesia is so famous for. " +
-					"Locally Lake Singkarak is famous for its Bilih fish which is a species of fish that only lives in this lake.");
+			value36.put(
+					"deskripsi",
+					"The majestic Lake Singkarak (Danau Singkarak) is an enormous crater lake set within a dramatic volcanic landscape. "
+							+ "It is the widest lake in Sumatra and the second biggest lake on the island, after Lake Toba. A world of silent calm, "
+							+ "breathtaking vistas and  spectacular views awaits here. Here you can embrace the remote natural beauty that Indonesia is so famous for. "
+							+ "Locally Lake Singkarak is famous for its Bilih fish which is a species of fish that only lives in this lake.");
 			value36.put("point", 50);
 			value36.put("latitude", "-0.60149");
 			value36.put("longitude", "100.539901");
 			value36.put("Foto", "g4_danausingkarak");
-			value36.put("Status", 0);
+			value36.put("Status", 1);
 			value36.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value36);
 
 			ContentValues value37 = new ContentValues();
 			value37.put("id", 37);
 			value37.put("nama", "Istana Pagaruyung");
-			value37.put("deskripsi",
-					"Istana Pagaruyung is a culture heritage of Minangkabau. This place is the palace of Pagaruyung Kingdom and" +
-					"show how great the architecture of Minangkabau and their unique culture.");
+			value37.put(
+					"deskripsi",
+					"Istana Pagaruyung is a culture heritage of Minangkabau. This place is the palace of Pagaruyung Kingdom and"
+							+ "show how great the architecture of Minangkabau and their unique culture.");
 			value37.put("point", 100);
 			value37.put("latitude", "-0.307272");
 			value37.put("longitude", "100.200752");
 			value37.put("Foto", "g4_istanapagaruyung");
-			value37.put("Status", 0);
+			value37.put("Status", 1);
 			value37.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value37);
 
 			ContentValues value38 = new ContentValues();
 			value38.put("id", 38);
 			value38.put("nama", "Danau Maninjau");
-			value38.put("deskripsi",
-					"The splendid Danau Maninjau in Sumatera, is one of the calmest places in Indonesia. Come to this ancient lake, set within  " +
-					"a volcanic crater, to escape from the crowds and hustle and bustle of the rest of the country. With inspiring scenery and peacedul " +
-					"surrounds, this lake is an impressive natural wonder and a place to come when you’re after a peaceful and relaxing place to unwind  " +
-					"and absorb a sleepy pace of life. ");
+			value38.put(
+					"deskripsi",
+					"The splendid Danau Maninjau in Sumatera, is one of the calmest places in Indonesia. Come to this ancient lake, set within  "
+							+ "a volcanic crater, to escape from the crowds and hustle and bustle of the rest of the country. With inspiring scenery and peacedul "
+							+ "surrounds, this lake is an impressive natural wonder and a place to come when you’re after a peaceful and relaxing place to unwind  "
+							+ "and absorb a sleepy pace of life. ");
 			value38.put("point", 50);
 			value38.put("latitude", "-0.307272");
 			value38.put("longitude", "100.200752");
 			value38.put("Foto", "g4_maninjau");
-			value38.put("Status", 0);
+			value38.put("Status", 1);
 			value38.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value38);
 
 			ContentValues value40 = new ContentValues();
 			value40.put("id", 40);
 			value40.put("nama", "Gili Terawangan");
-			value40.put("deskripsi",
-					"Gili Trewangan is the largest and most popular of the three islands. It has a vibrant nightlife to keep you  " +
-					"entertained once the sun goes down. With a wide collection of restaurants and bars, you’ll never be short " +
-					"of entertainment here.");
+			value40.put(
+					"deskripsi",
+					"Gili Trewangan is the largest and most popular of the three islands. It has a vibrant nightlife to keep you  "
+							+ "entertained once the sun goes down. With a wide collection of restaurants and bars, you’ll never be short "
+							+ "of entertainment here.");
 			value40.put("point", 50);
 			value40.put("latitude", "-8.346199");
 			value40.put("longitude", "116.038099");
 			value40.put("Foto", "g5_gilitrawangan");
-			value40.put("Status", 0);
+			value40.put("Status", 1);
 			value40.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value40);
 
 			ContentValues value41 = new ContentValues();
 			value41.put("id", 41);
 			value41.put("nama", "Gili Meno Island");
-			value41.put("deskripsi",
-					"Gili Meno is the smallest island and, with only a few hundred permanent residents, it has the most remote feel to it.  " +
-					"Gili Meno has White sandy beaches, Tropical coral reefs and Warm inviting waters.");
+			value41.put(
+					"deskripsi",
+					"Gili Meno is the smallest island and, with only a few hundred permanent residents, it has the most remote feel to it.  "
+							+ "Gili Meno has White sandy beaches, Tropical coral reefs and Warm inviting waters.");
 			value41.put("point", 50);
 			value41.put("latitude", "-8.34501");
 			value41.put("longitude", "116.055609");
 			value41.put("Foto", "g5_gilimeno");
-			value41.put("Status", 0);
+			value41.put("Status", 1);
 			value41.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value41);
 
 			ContentValues value42 = new ContentValues();
 			value42.put("id", 42);
 			value42.put("nama", "Gili Air Island");
-			value42.put("deskripsi",
-					"Gili Air is closest to the mainland and is the most populated of the Gili’s. " +
-					"The perfect escape for anyone wanting to get away to beautiful, natural and relaxing surrounds. ");
+			value42.put(
+					"deskripsi",
+					"Gili Air is closest to the mainland and is the most populated of the Gili’s. "
+							+ "The perfect escape for anyone wanting to get away to beautiful, natural and relaxing surrounds. ");
 			value42.put("point", 50);
 			value42.put("latitude", "-8.356814");
 			value42.put("longitude", "116.081444");
 			value42.put("Foto", "g5_giliair");
-			value42.put("Status", 0);
+			value42.put("Status", 1);
 			value42.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value42);
 
 			ContentValues value44 = new ContentValues();
 			value44.put("id", 44);
 			value44.put("nama", "Pulau Moyo");
-			value44.put("deskripsi",
-					"For lovers of nature and the underwater world, Moyo Island, a pristine environment with rugged coastlines and " +
-					"a grassy savannah home to all sorts of wildlife. Moyo is surrounded by beautiful untouched coral reefs which " +
-					"are ideal for snorkeling. Swim with white tip reef sharks, dive next to blue spotted sting rays, encounter " +
-					"a school of tropical fish. Back on land, two thirds of the island is a game reserve. Wildlife here includes deer, " +
-					"feral cattle and a variety of different types of birds.");
+			value44.put(
+					"deskripsi",
+					"For lovers of nature and the underwater world, Moyo Island, a pristine environment with rugged coastlines and "
+							+ "a grassy savannah home to all sorts of wildlife. Moyo is surrounded by beautiful untouched coral reefs which "
+							+ "are ideal for snorkeling. Swim with white tip reef sharks, dive next to blue spotted sting rays, encounter "
+							+ "a school of tropical fish. Back on land, two thirds of the island is a game reserve. Wildlife here includes deer, "
+							+ "feral cattle and a variety of different types of birds.");
 			value44.put("point", 100);
 			value44.put("latitude", "-8.197898");
 			value44.put("longitude", "117.578216");
 			value44.put("Foto", "g5_pulaumoyo");
-			value44.put("Status", 0);
+			value44.put("Status", 1);
 			value44.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value44);
 
 			ContentValues value45 = new ContentValues();
 			value45.put("id", 45);
 			value45.put("nama", "Gunung Rinjani");
-			value45.put("deskripsi",
-					"The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok.  " +
-					"The climb to the top may not be easy but it’s worth it, and is widely regarded as one of the best views in the country.  " +
-					"Around the slopes of Rinjani there are lush forests sprinkled with waterfalls and surrounded by stunning scenery. " +
-					"Within the mountain is a crescent shaped lake, the breathtaking Segara Anak.");
+			value45.put(
+					"deskripsi",
+					"The mighty Rinjani mountain of Gunung Rinjani is a massive volcano which towers over the island of Lombok.  "
+							+ "The climb to the top may not be easy but it’s worth it, and is widely regarded as one of the best views in the country.  "
+							+ "Around the slopes of Rinjani there are lush forests sprinkled with waterfalls and surrounded by stunning scenery. "
+							+ "Within the mountain is a crescent shaped lake, the breathtaking Segara Anak.");
 			value45.put("point", 50);
 			value45.put("latitude", "-8.396979");
 			value45.put("longitude", "116.457031");
 			value45.put("Foto", "g5_rinjani");
-			value45.put("Status", 0);
+			value45.put("Status", 1);
 			value45.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value45);
 
 			ContentValues value46 = new ContentValues();
 			value46.put("id", 46);
 			value46.put("nama", "Pantai Senggigi");
-			value46.put("deskripsi",
-					"A perfect place to relax, Senggigi boasts a series of white sandy beaches and safe swimming areas. The point at central " +
-					"Senggigi has good waves for surfers. This place has a colourful reef which provides shelter to a variety of marine life  " +
-					"and exquisitely shapped coral and makes it a perfect place to snorkle. In the dry season, there is an interesting variety  " +
-					"of boats moored in the bay.");
+			value46.put(
+					"deskripsi",
+					"A perfect place to relax, Senggigi boasts a series of white sandy beaches and safe swimming areas. The point at central "
+							+ "Senggigi has good waves for surfers. This place has a colourful reef which provides shelter to a variety of marine life  "
+							+ "and exquisitely shapped coral and makes it a perfect place to snorkle. In the dry season, there is an interesting variety  "
+							+ "of boats moored in the bay.");
 			value46.put("point", 50);
 			value46.put("latitude", "-8.482559");
 			value46.put("longitude", "116.047356");
 			value46.put("Foto", "g5_senggigi");
-			value46.put("Status", 0);
+			value46.put("Status", 1);
 			value46.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value46);
 
 			ContentValues value47 = new ContentValues();
 			value47.put("id", 47);
 			value47.put("nama", "Pantai Lakey");
-			value47.put("deskripsi",
-					"Pantai Lakey is a long, wide, palm-lined, white-sand stretch of beach fronted by reef. Much of the bottom is rocky, but farther up " +
-					"the beach it's sandy and good for swimming. The waves here appear to sweep to the left in direction, instead of right, as is common. " +
-					"The uniqueness of this fact, with the added, natural beauty of the beach has become a sensation, especially among surfing enthusiasts. " +
-					"Aside from that, the sea breeze is fairly strong as well which supports the activities of surfing, wind surfing, or kite surfing.");
+			value47.put(
+					"deskripsi",
+					"Pantai Lakey is a long, wide, palm-lined, white-sand stretch of beach fronted by reef. Much of the bottom is rocky, but farther up "
+							+ "the beach it's sandy and good for swimming. The waves here appear to sweep to the left in direction, instead of right, as is common. "
+							+ "The uniqueness of this fact, with the added, natural beauty of the beach has become a sensation, especially among surfing enthusiasts. "
+							+ "Aside from that, the sea breeze is fairly strong as well which supports the activities of surfing, wind surfing, or kite surfing.");
 			value47.put("point", 100);
 			value47.put("latitude", "-8.578305");
 			value47.put("longitude", "116.328306");
 			value47.put("Foto", "g5_lakey");
-			value47.put("Status", 0);
+			value47.put("Status", 1);
 			value47.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value47);
 
