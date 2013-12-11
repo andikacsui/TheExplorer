@@ -167,10 +167,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value1.put("nama", "Menjelajah Jogja");
 			value1.put(
 					"deskripsi",
-					"Jogjakarta adalah Daerah Istimewa yang terletak dekat Provinsi Jawa Tengah. "
-							+ "Jogjakarta terkenal dengan keindahan alamnya, kekayaan seni dan tradisi dan warisan budaya, hingga wisata kuliner."
-							+ " Inilah sebabnya mengapa Jogja menjadi tujuan wisata paling sering dikunjungi kedua di Indonesia setelah Bali");
-			value1.put("lokasi", "DI Jogjakarta, Indonesia");
+					"Jogjakarta has been known as The Neverending Asia. Many say that a single visit to Jogja is never enough. There are many list of things that can be experienced in Jogjakarta,  ranging from natural splendors, art and tradition and heritages to culinary adventure. This is why Jogja is the second most visited destination in Indonesia, next to Bali.");
 			value1.put("foto", "g1_borobudur");
 			value1.put("status", 0);
 			value1.put("badge", "badge_jogja");
@@ -182,12 +179,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value2.put("nama", "Menjelajah Jakarta");
 			value2.put(
 					"deskripsi",
-					"Jakarta adalah ibukota negara Indonesia. Jakarta menjadi pusat pemerintahan yang mengatur keuangan,"
-							+ " bisnis, politik dan ekonomi karena di Jakarta tempat bertemunya orang dari seluruh Indonesia. "
-							+ "Jakarta telah memikat orang dari segala aspek kehidupan."
-							+ " Oleh karenanya, tidak heran jika apapun yang terjadi di Jakarta menjadi perhatian nasional "
-							+ "dan merupakan pusat roda sejarah dan kehidupan modern Indonesia");
-			value2.put("lokasi", "DKI Jakarta, Indonesia");
+					"Jakarta is the Capital City of Republic Indonesia. Jakarta is a huge and sprawling metropolitan city. Jakarta not only the seat of national government, but also the center of finance, business, modern music, and others creative industry. Therefore, that whatever happens in Jakarta is national interest and it is for these reasons that Jakarta is the hub of Indonesia’s modern history and modern life.");
 			value2.put("foto", "g2_monas");
 			value2.put("status", 0);
 			value2.put("badge", "badge_jakarta");
@@ -199,10 +191,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value3.put("nama", "Menjelajah Bali");
 			value3.put(
 					"deskripsi",
-					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. "
-							+ "Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan,"
-							+ " souvenir yang menarik, serta adat dan kebudayaan yang menawan");
-			value3.put("lokasi", "Bali, Indonesia");
+					"Bali adalah tujuan wisata favorit wisatawan lokal maupun mancanegara. Pulau indah ini terkenal karena memiliki pantai yang indah, pemandangan yang menakjubkan, souvenir yang menarik, serta adat dan kebudayaan yang menawan");
 			value3.put("foto", "g3_kuta");
 			value3.put("status", 0);
 			value3.put("badge", "badge_bali");
@@ -215,11 +204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value4.put("nama", "Menjelajah Sumatera Barat");
 			value4.put(
 					"deskripsi",
-					"Dataran rendah di pantai barat, serta dataran tinggi vulkanik yang dibentuk oleh Bukit Barisan yang "
-							+ "membentang dari barat laut ke tenggara. Sumatera Barat merupakan tempat yang tepat untuk berpetualang"
-							+ " hingga ke daerah pedalaman, mulai dari alam bebas, satwa liar, pulau, pantai, hingga hutan hujan tropis. "
-							+ "Itu karena inilah salah satu provinsi di Indonesia yang kaya dengan sumber keanekaragaman hayati dan "
-							+ "keindahan alam.");
+					"West Sumatera lies on the west coast of the island Sumatera. The prime tourist attractions of West Sumatra are the natural environment, the culture, history of the Minangkabau and unique culinary. Natural attractions of the mainland include the tropical forests, mountains, volcanos, islands, lakes, valleys, rivers & waterfalls in the highlands, the fauna and flora, and the beaches around Padang.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "g4_istanapagaruyung");
 			value4.put("status", 1);
@@ -232,11 +217,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value5.put("nama", "Menjelajah Nusa Tenggara Barat");
 			value5.put(
 					"deskripsi",
-					"Nusa Tenggara Barat adalah bagian Indonesia Bagian Tengah yang menandai titik transisi antara flora dan fauna"
-							+ " dari Barat dan Timur Indonesia dengan keindahan alam yang luar biasa dan unik. "
-							+ "Bagian utara pulau adalah pegunungan dan subur dengan pohon-pohon tinggi dan semak-semak. "
-							+ "Selatan, di sisi lain adalah kering dan ditutupi oleh sabana.  ");
-			value5.put("lokasi", "NTB, Indonesia");
+					"West Nusa Tenggara lies in The Wallace Line, marks as a point of transition between the flora and fauna of Western and Eastern Indonesia and full of wonderful scenery and have unique floras and faunas. It has beautiful islands, lake, savannas forest, mountainous with tall tress and shrubs. It is a right place for escaping from the hectic life and bustling city.");
 			value5.put("foto", "g5_rinjani");
 			value5.put("status", 1);
 			value5.put("badge", "badge_ntb");
@@ -648,7 +629,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value15.put("latitude", " -6.174774");
 			value15.put("longitude", "106.827185");
 			value15.put("Foto", "g2_monas");
-			value15.put("Status", 0);
+			value15.put("Status", 1);
 			value15.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value15);
 
