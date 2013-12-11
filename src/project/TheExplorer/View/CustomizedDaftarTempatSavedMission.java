@@ -129,8 +129,6 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements
 			adapter = new ListTempatAdapter(this, tempatList);
 			list.setAdapter(adapter);
 
-
-
 			// Click event for single list row
 			list.setOnItemClickListener(new OnItemClickListener() {
 
@@ -232,24 +230,26 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements
 		locNow.setLongitude(gps.getLongitude());
 
 		for (int i = 0; i < daftarTempat.size(); i++) {
-			locDb.setLatitude(daftarTempat.get(i).getLatitude());
-			locDb.setLongitude(daftarTempat.get(i).getLongitude());
-			distance = locNow.distanceTo(locDb);
-			if (distance <= 1000f) {
-				match = true;
-				namaTempat = daftarTempat.get(i).getNama();
-				idTempat = daftarTempat.get(i).getID();
-				break;
+			if (daftarTempat.get(i).getStatus() == 0) {
+				locDb.setLatitude(daftarTempat.get(i).getLatitude());
+				locDb.setLongitude(daftarTempat.get(i).getLongitude());
+				distance = locNow.distanceTo(locDb);
+				if (distance <= 1000f) {
+					match = true;
+					namaTempat = daftarTempat.get(i).getNama();
+					idTempat = daftarTempat.get(i).getID();
+					break;
+				}
 			}
 		}
 
 		if (match == true) {
-			
+
 			TempatHelper.CheckInTempat(context, idTempat);
-			//Toast.makeText(getApplicationContext(),
-			//		"You have arrived in " + namaTempat, Toast.LENGTH_LONG)
-			//		.show();
-			
+			// Toast.makeText(getApplicationContext(),
+			// "You have arrived in " + namaTempat, Toast.LENGTH_LONG)
+			// .show();
+
 			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
 					context);
 
@@ -258,8 +258,10 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements
 
 			// set dialog message
 			alertDialogBuilder
-					.setMessage("You have arrived in " + namaTempat + "\nDo you want to" +
-							" share it in twitter?")
+					.setMessage(
+							"You have arrived in " + namaTempat
+									+ "\nDo you want to"
+									+ " share it in twitter?")
 					.setCancelable(false)
 					.setPositiveButton("Yes",
 							new DialogInterface.OnClickListener() {
@@ -269,7 +271,7 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements
 											getApplicationContext(),
 											ShareTwitter.class);
 									startActivity(nextScreen);
-									
+
 								}
 							})
 					.setNegativeButton("No",
@@ -293,7 +295,7 @@ public class CustomizedDaftarTempatSavedMission extends Activity implements
 					Toast.LENGTH_LONG).show();
 		}
 	}
-	
+
 	public void showAlertbox(String erroMessage) {
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
