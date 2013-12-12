@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class DaftarMenu extends Activity {
@@ -75,6 +76,12 @@ public class DaftarMenu extends Activity {
 	public void ButtonSensor_OnClick(View view) {
 		Intent nextScreen = new Intent(getApplicationContext(),
 				SensorTestActivity.class);
+		startActivity(nextScreen);
+	}
+	
+	public void ButtonHelp_OnClick(View view) {
+		Intent nextScreen = new Intent(getApplicationContext(),
+				BantuanSlider.class);
 		startActivity(nextScreen);
 	}
 
@@ -171,6 +178,12 @@ public class DaftarMenu extends Activity {
 			Intent nextScreen = new Intent(getApplicationContext(),
 					TabProfile.class);
 			startActivity(nextScreen);
+			return true;
+			
+		case R.id.help:
+			Intent nextScreen2 = new Intent(getApplicationContext(),
+					BantuanSlider.class);
+			startActivity(nextScreen2);
 			return true;
 
 		default:

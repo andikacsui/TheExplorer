@@ -15,46 +15,55 @@
         android:layout_height="388dp" >
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="200dp"
-            android:layout_height="132dp"
-            android:layout_alignRight="@+id/ButtonAchievement"
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="66dp"
+            android:contentDescription="@string/logo"
             android:layout_gravity="right"
             android:src="@drawable/logo" />
 
-        <Button
-            android:id="@+id/ButtonAchievement"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+        <ImageView
+            android:id="@+id/icon_help"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:background="@layout/template"
-            android:drawableTop="@drawable/icon_achievement2"
-            android:onClick="ButtonProfile_OnClick"
-            android:paddingTop="12dp" />
-
-        <Button
-            android:id="@+id/ButtonSavedMission"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/ButtonChooseNewMission"
-            android:background="@layout/template"
-            android:drawableTop="@drawable/icon_savedmission"
-            android:onClick="ButtonSavedMission_OnClick"
-            android:paddingTop="12dp" />
-
-        <Button
-            android:id="@+id/ButtonChooseNewMission"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_above="@+id/ButtonAchievement"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="31dp"
-            android:background="@layout/template"
-            android:drawableTop="@drawable/icon_newmission"
+            android:layout_marginBottom="34dp"
+            android:contentDescription="@string/help"
+            android:onClick="ButtonHelp_OnClick"
+            android:src="@drawable/icon_help" />
+
+        <ImageView
+            android:id="@+id/icon_mission"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignLeft="@+id/icon_help"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="23dp"
+            android:contentDescription="@string/misi"
             android:onClick="ButtonChooseNewMission_OnClick"
-            android:paddingTop="12dp" />
+            android:src="@drawable/icon_mission" />
+
+        <ImageView
+            android:id="@+id/icon_simpan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/icon_help"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="80dp"
+            android:contentDescription="@string/simpan"
+            android:onClick="ButtonSavedMission_OnClick"
+            android:src="@drawable/icon_save" />
+
+        <ImageView
+            android:id="@+id/icon_awards"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/icon_simpan"
+            android:contentDescription="@string/badge"
+            android:onClick="ButtonProfile_OnClick"
+            android:src="@drawable/icon_awards" />
 
     </RelativeLayout>
 
