@@ -40,6 +40,7 @@ public class ListViewActivity extends ListActivity {
 
 		ListView lv = getListView();
 
+		lv.setBackgroundResource(R.drawable.bgimage);
 		// listening to single list item on click
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -76,7 +77,7 @@ public class ListViewActivity extends ListActivity {
 			}
 		});
 	}
-	
+
 	public void showAlertbox(String erroMessage) {
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
@@ -148,7 +149,7 @@ public class ListViewActivity extends ListActivity {
 					TabProfile.class);
 			startActivity(nextScreen);
 			return true;
-			
+
 		case R.id.help:
 			Intent nextScreen2 = new Intent(getApplicationContext(),
 					BantuanSlider.class);
@@ -159,6 +160,5 @@ public class ListViewActivity extends ListActivity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
-
 
 }
