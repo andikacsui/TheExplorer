@@ -39,6 +39,7 @@ public class ListViewSavedMission extends ListActivity {
 				R.layout.listview_misi, R.id.label, daftarMisi));
 
 		ListView lv = getListView();
+		lv.setBackgroundResource(R.drawable.bgimage);
 
 		// listening to single list item on click
 		lv.setOnItemClickListener(new OnItemClickListener() {
@@ -48,17 +49,24 @@ public class ListViewSavedMission extends ListActivity {
 				// selected item
 				String namaMisi = ((TextView) view).getText().toString();
 
-				if (namaMisi.equals("Menjelajah Jogja"))
+				if (namaMisi.equals("Explore Jogja"))
 					idMisi = 1;
-				else if (namaMisi.equals("Menjelajah Jakarta"))
+				else if (namaMisi.equals("Explore Jakarta"))
 					idMisi = 2;
-				else if (namaMisi.equals("Menjelajah Bali"))
+				else if (namaMisi.equals("Explore Bali"))
 					idMisi = 3;
-				else if (namaMisi.equals("Menjelajah Sumatera Barat"))
+				else if (namaMisi.equals("Explore West Sumatera"))
 					idMisi = 4;
-				else if (namaMisi.equals("Menjelajah Nusa Tenggara Barat"))
+				else if (namaMisi.equals("Explore West Nusa Tenggara"))
 					idMisi = 5;
-
+				else if (namaMisi.equals("Explore Malang"))
+					idMisi = 6;
+				else if (namaMisi.equals("Explore Surabaya"))
+					idMisi = 7;
+				else if (namaMisi.equals("Explore Bandung"))
+					idMisi = 8;
+				else if (namaMisi.equals("Explore Medan"))
+					idMisi = 9;
 				// Launching new Activity on selecting single List Item
 				Intent i = new Intent(getApplicationContext(),
 						DetailSavedMission.class);
@@ -69,6 +77,7 @@ public class ListViewSavedMission extends ListActivity {
 			}
 		});
 	}
+
 	public void showAlertbox(String erroMessage) {
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
@@ -140,10 +149,17 @@ public class ListViewSavedMission extends ListActivity {
 					TabProfile.class);
 			startActivity(nextScreen);
 			return true;
+			
+		case R.id.help:
+			Intent nextScreen2 = new Intent(getApplicationContext(),
+					BantuanSlider.class);
+			startActivity(nextScreen2);
+			return true;
 
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
+
 
 }

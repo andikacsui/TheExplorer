@@ -167,11 +167,18 @@ public class CustomizedDaftarBadge extends Activity {
 					TabProfile.class);
 			startActivity(nextScreen);
 			return true;
+			
+		case R.id.help:
+			Intent nextScreen2 = new Intent(getApplicationContext(),
+					BantuanSlider.class);
+			startActivity(nextScreen2);
+			return true;
 
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
+
 
 	
 }

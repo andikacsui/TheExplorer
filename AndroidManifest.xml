@@ -73,7 +73,7 @@
         </activity>
         <!--
         <activity android:name="project.TheExplorer.View.Share" >
-        </activity>
+        </activity>
         -->
         <activity android:name="project.TheExplorer.View.AmbilFoto" >
         </activity>
@@ -99,6 +99,13 @@
         </activity>
         <activity android:name="project.TheExplorer.View.CustomizedDaftarBadge" >
         </activity>
+        <activity android:name="project.TheExplorer.View.BantuanSlider" >
+        </activity>
     </application>
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
 
 </manifest>

@@ -41,28 +41,6 @@ public class TabEditProfile extends Activity {
 
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.sign_in, menu);
-		getMenuInflater().inflate(R.layout.menu, menu);
-		return true;
-	}
-
-	public void buttonUpdate_OnClick(View view) {
-		Username = User.getText().toString();
-		if (notEmpty(Username)) {
-			PenjelajahHelper.UpdatePenjelajahUsername(context, Username);
-			Intent NextScreen = new Intent(getApplicationContext(),
-					TabProfile.class);
-			startActivity(NextScreen);
-
-		} else {
-			showAlertbox("Username cannot be empty");
-		}
-
-	}
-
 	public void showAlertbox(String erroMessage) {
 		AlertDialog alertDialog = new AlertDialog.Builder(context).create();
 
@@ -85,16 +63,17 @@ public class TabEditProfile extends Activity {
 
 	}
 
-	public static boolean notEmpty(String s) {
-		return (s != null && s.length() > 0);
-	}
-	
-
 	public static boolean notEmpty(ArrayList<Misi> s) {
 		return (s != null && s.size() > 0);
 	}
 
 	// Initiating Menu XML file (menu.xml)
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.layout.menu, menu);
+		return true;
+	}
 
 	/**
 	 * Event Handling for Individual menu item selected Identify single menu
@@ -133,12 +112,16 @@ public class TabEditProfile extends Activity {
 					TabProfile.class);
 			startActivity(nextScreen);
 			return true;
+			
+		case R.id.help:
+			Intent nextScreen2 = new Intent(getApplicationContext(),
+					BantuanSlider.class);
+			startActivity(nextScreen2);
+			return true;
 
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
-	
-	
 
 }

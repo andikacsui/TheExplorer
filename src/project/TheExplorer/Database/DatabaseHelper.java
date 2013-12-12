@@ -221,9 +221,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							+ "in the highlands, the fauna and flora, and the beaches around Padang.");
 			value4.put("lokasi", "Sumatera Barat,Indonesia");
 			value4.put("foto", "g4_istanapagaruyung");
-			value4.put("status", 1);
+			value4.put("status", 0);
 			value4.put("badge", "badge_sumbar");
-			value4.put("penjelajahID", 1);
+			value4.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value4);
 
 			ContentValues value5 = new ContentValues();
@@ -237,10 +237,98 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 							+ "for escaping from the hectic life and bustling city. ");
 			value5.put("lokasi", "NTB, Indonesia");
 			value5.put("foto", "g5_rinjani");
-			value5.put("status", 1);
+			value5.put("status", 0);
 			value5.put("badge", "badge_ntb");
-			value5.put("penjelajahID", 1);
+			value5.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value5);
+
+			ContentValues value6 = new ContentValues();
+			value6.put("id", 6);
+			value6.put("nama", "Explore Malang");
+			value6.put(
+					"deskripsi",
+					"Malang is the second largest city in East Java province, Indonesia. "
+							+ "It has an ancient history dating back to the Mataram Kingdom. Malang is a trade"
+							+ " center of agricultural area in which sugar, rice, coffee, tea, corn, peanuts, cassava,"
+							+ " and cinchona bark are grown. Malang city has its Interesting Places that can attract the"
+							+ " visitor to visit this city. This cool and fresh city also has been equipped with such kind"
+							+ " of tourism accomodation including hotel, restaurant, etc. In Malang, visitor can visit Mount"
+							+ " Bromo, Batu Night Square, Mount Semeru,etc.");
+			value6.put("lokasi", "East Java, Indonesia");
+			value6.put("foto", "g6_bromo");
+			value6.put("status", 0);
+			value6.put("badge", "badge_ntb");
+			value6.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value6);
+
+			ContentValues value7 = new ContentValues();
+			value7.put("id", 7);
+			value7.put("nama", "Explore Surabaya");
+			value7.put(
+					"deskripsi",
+					"Surabaya is the official capital of the province, Surabaya is "
+							+ "also the second largest city after Jakarta. Looking at the historical background, "
+							+ "Surabaya was build based on some phases of time. The first phase was coming from the"
+							+ " time before the Dutch colonialism. Surabaya was once a gate toMajapahit Kingdom, which"
+							+ " was located at the edge of Kali Mas. The second phase was coming from Islam era and last"
+							+ " phase was coming from Dutch East Indies era. The most population in Surabaya is Javanese "
+							+ "people, but there are also some ethnic that live in Surabaya such as, Madura, Tionghoa and"
+							+ " Arab, and some others are the expatriates. While, Islam is the major religion that being "
+							+ "held by most inhabitants. The inhabitants are mostly speak in Javanese language with particular accent that different with"
+							+ " common Javanese language. In Surabaya, visitor can visit Tugu Pahlawan, Cheng Hoo Mosque,Jembatan"
+							+ " Suramadu, Kenjeran Beach, etc.");
+			value7.put("lokasi", "East Java, Indonesia");
+			value7.put("foto", "g7_kenjeran");
+			value7.put("status", 0);
+			value7.put("badge", "badge_ntb");
+			value7.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value7);
+
+			ContentValues value8 = new ContentValues();
+			value8.put("id", 8);
+			value8.put("nama", "Explore Bandung");
+			value8.put(
+					"deskripsi",
+					"Bandung, City of Flowers, is the provincial capital of West Java and Indonesia' s third largest city."
+							+ " Known in colonial times as the Paris of Java because of its European ambiance and sophistication, "
+							+ "Bandung shares with Miami a fine legacy of Tropical Deco architecture dating from the 1920's. "
+							+ "Situated on a plateau in the beautiful Parahayangan mountains, Bandung's pleasant climate and "
+							+ "lush surroundings have offered an escape from the heat of the lowlands since the mid 19th century "
+							+ "when it was the heart of the region's most prosperous plantation area. Host to the historic Asia "
+							+ "Africa conference in 1955. Bandung is also renowned for its shopping, particularly for shoes, textiles,"
+							+ " clothing and denims which are found in the colourful Jeans street . Easily reached from Jakarta by train "
+							+ ", road or air (the scenic train trip is recommended), Bandung, with its cool mountain air is a popular second"
+							+ " stop for those "
+							+ "visiting the national capital and an essential stay-over for travellers enroute through Java.");
+			value8.put("lokasi", "West Java, Indonesia");
+			value8.put("foto", "g8_kawahputih");
+			value8.put("status", 0);
+			value8.put("badge", "badge_ntb");
+			value8.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value8);
+
+			ContentValues value9 = new ContentValues();
+			value9.put("id", 9);
+			value9.put("nama", "Explore Medan");
+			value9.put(
+					"deskripsi",
+					"Medan is the fourth largest city in Indonesia after Jakarta, "
+							+ "Surabaya, and Bandung. With a population of about 2 million people it is the "
+							+ "largest city outside of Java. There is no single ethnic group forming a majority;"
+							+ " the largest ethnic groups are the Chinese, Javanese, Toba-Batak, Minangkabau, "
+							+ "Mandailing Batak, Karo Batak, Southern Indians, and Northern Indians, and there are"
+							+ " many more ethnic minorities.Each ethnic group contributes to thousands of tasty, mouth"
+							+ "-watering dishes found in every corner of Medan. They offer to locals and tourists alike"
+							+ " dozens of food streets and hawker centres to suit their appetite at any time of the day."
+							+ "Medan isn't really a tourist destination, but it's a convenient stepping stone to other places"
+							+ " like the 'weekend getaway' Berastagi, the island of Penang, Malaysia and, of course the ever "
+							+ "popular, beautiful crater lake,Lake Toba.");
+			value9.put("lokasi", "North Sumatra, Indonesia");
+			value9.put("foto", "g9_brastagi");
+			value9.put("status", 0);
+			value9.put("badge", "badge_ntb");
+			value9.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value9);
 			db.close();
 		}
 	}
@@ -659,7 +747,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value15.put("latitude", " -6.174774");
 			value15.put("longitude", "106.827185");
 			value15.put("Foto", "g2_monas");
-			value15.put("Status", 0);
+			value15.put("Status", 1);
 			value15.put("MisiID", 2);
 			db.insertOrThrow("TEMPAT", null, value15);
 
@@ -866,6 +954,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					"Tanah Lot is a rock formation in Bali and a popular tourist and cultural icon for"
 							+ " photography and general exoticism. Here, the temple sits on a large offshore rock "
 							+ "which has been shaped continuously over the years by the ocean tide. On the mainland cliff tops, restaurants have also been provided for tourists.");
+
 			value28.put("point", 50);
 			value28.put("latitude", "-8.681494");
 			value28.put("longitude", "115.205247");
@@ -920,7 +1009,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value31.put("latitude", "-0.30517");
 			value31.put("longitude", "100.368408");
 			value31.put("Foto", "g4_jamgadang");
-			value31.put("Status", 1);
+			value31.put("Status", 0);
 			value31.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value31);
 
@@ -929,6 +1018,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value35.put("nama", "Pantai Air Manis");
 			value35.put(
 					"deskripsi",
+
 					"Pantai Air Manis is one of the famous beach in Sumatera Barat, closely related to the legend of Malin Kundang in Sumatera Barat. "
 							+ "By the beach, there is a Malin Kundang stone and several pieces of equipment from his ship, which are also stones. "
 							+ "Pantai Air Manis is a favorite tourist site for local and foreign tourists because it has low waves and beautiful views of Mount Padang. "
@@ -937,7 +1027,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value35.put("latitude", "-0.60149");
 			value35.put("longitude", "100.539901");
 			value35.put("Foto", "g4_pantaiairmanis");
-			value35.put("Status", 1);
+			value35.put("Status", 0);
 			value35.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value35);
 
@@ -954,7 +1044,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value36.put("latitude", "-0.60149");
 			value36.put("longitude", "100.539901");
 			value36.put("Foto", "g4_danausingkarak");
-			value36.put("Status", 1);
+			value36.put("Status", 0);
 			value36.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value36);
 
@@ -969,7 +1059,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value37.put("latitude", "-0.307272");
 			value37.put("longitude", "100.200752");
 			value37.put("Foto", "g4_istanapagaruyung");
-			value37.put("Status", 1);
+			value37.put("Status", 0);
 			value37.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value37);
 
@@ -986,7 +1076,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value38.put("latitude", "-0.307272");
 			value38.put("longitude", "100.200752");
 			value38.put("Foto", "g4_maninjau");
-			value38.put("Status", 1);
+			value38.put("Status", 0);
 			value38.put("MisiID", 4);
 			db.insertOrThrow("TEMPAT", null, value38);
 
@@ -1002,7 +1092,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value40.put("latitude", "-8.346199");
 			value40.put("longitude", "116.038099");
 			value40.put("Foto", "g5_gilitrawangan");
-			value40.put("Status", 1);
+			value40.put("Status", 0);
 			value40.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value40);
 
@@ -1017,7 +1107,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value41.put("latitude", "-8.34501");
 			value41.put("longitude", "116.055609");
 			value41.put("Foto", "g5_gilimeno");
-			value41.put("Status", 1);
+			value41.put("Status", 0);
 			value41.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value41);
 
@@ -1032,7 +1122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value42.put("latitude", "-8.356814");
 			value42.put("longitude", "116.081444");
 			value42.put("Foto", "g5_giliair");
-			value42.put("Status", 1);
+			value42.put("Status", 0);
 			value42.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value42);
 
@@ -1050,7 +1140,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value44.put("latitude", "-8.197898");
 			value44.put("longitude", "117.578216");
 			value44.put("Foto", "g5_pulaumoyo");
-			value44.put("Status", 1);
+			value44.put("Status", 0);
 			value44.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value44);
 
@@ -1067,7 +1157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value45.put("latitude", "-8.396979");
 			value45.put("longitude", "116.457031");
 			value45.put("Foto", "g5_rinjani");
-			value45.put("Status", 1);
+			value45.put("Status", 0);
 			value45.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value45);
 
@@ -1084,7 +1174,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value46.put("latitude", "-8.482559");
 			value46.put("longitude", "116.047356");
 			value46.put("Foto", "g5_senggigi");
-			value46.put("Status", 1);
+			value46.put("Status", 0);
 			value46.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value46);
 
@@ -1101,10 +1191,233 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value47.put("latitude", "-8.578305");
 			value47.put("longitude", "116.328306");
 			value47.put("Foto", "g5_lakey");
-			value47.put("Status", 1);
+			value47.put("Status", 0);
 			value47.put("MisiID", 5);
 			db.insertOrThrow("TEMPAT", null, value47);
 
+			ContentValues value70 = new ContentValues();
+			value70.put("id", 70);
+			value70.put("nama", "Gunung Bromo");
+			value70.put(
+					"deskripsi",
+					"This National Park is one of the most beautiful places of interest in East Java. The beauties of mountain covered, give a special and characteristic green plants, arousing great interest. Tenggerese traditional farming also makes this famous place being more interesting and attractive. In addition, cool and breezy wind always blows freshly giving ever visitor special deep impression a unforgettable memories. Mount Bromo will remember us about The Story of Offering Kasada Ceremony");
+			value70.put("point", 100);
+			value70.put("latitude", "-7.926635");
+			value70.put("longitude", "112.948959");
+			value70.put("Foto", "g6_bromo");
+			value70.put("Status", 0);
+			value70.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value70);
+
+			ContentValues value71 = new ContentValues();
+			value71.put("id", 71);
+			value71.put("nama", "Batu Night Square");
+			value71.put(
+					"deskripsi",
+					"Batu Night Spectacular (BNS) is a tourist resort that can found at night. Your travel will completed with this resort. BNS is located in Batu-East Java-Indonesia. It is about 30 minutes from Malang city. Batu Night Spectacula is designed for night recreation. You can enjoy the game adventure like rollercoaster, lampion garden, and the biggest show of fireworks. From all around Batu Night Spectacular, you will see the beautiful night Malang city from the top, like you in the top of hill. You can ride by cycle and will see the shining light.");
+			value71.put("point", 50);
+			value71.put("latitude", "-7.89655");
+			value71.put("longitude", "112.534567");
+			value71.put("Foto", "g6_bns");
+			value71.put("Status", 0);
+			value71.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value71);
+
+			ContentValues value72 = new ContentValues();
+			value72.put("id", 72);
+			value72.put("nama", "Gunung Semeru");
+			value72.put(
+					"deskripsi",
+					"A mountainous pleasure on the slope of the highest mount in Java, Mount Semeru. The beautiful and attractive panorama or special atmosphere can be found here beside its cool and fresh air. In this area we find a good place for Para-gliding and the Dutch Colonial Remnant.This object lies on Argo Yuwono village, Ampelgading district, about 7 km to the North from Ampelgading.The mount climbers are often visit this mount to enjoy its nature scenery and beautiful sunset, look from the peak of the mount.");
+			value72.put("point", 100);
+			value72.put("latitude", "-8.075546");
+			value72.put("longitude", "112.920012");
+			value72.put("Foto", "g6_semeru");
+			value72.put("Status", 0);
+			value72.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value72);
+
+			ContentValues value73 = new ContentValues();
+			value73.put("id", 73);
+			value73.put("nama", "Jawa Timur Park 2");
+			value73.put(
+					"deskripsi",
+					"The town of Batu, about 100 kilometres south of Surabaya, has long been popular as a relaxing holiday destination for people from Surabaya and beyond, mostly because of its cool mountain weather. Jawa Timur Park 2 consists of three establishments located within the one location - Batu Secret Zoo, Pohon Inn, and Museum Satwa. Jatim Park 2 is nice family holiday destination over Jawa Timur.");
+			value73.put("point", 50);
+			value73.put("latitude", "-7.870864");
+			value73.put("longitude", "112.525985");
+			value73.put("Foto", "g6_jatimpark2");
+			value73.put("Status", 0);
+			value73.put("MisiID", 6);
+			db.insertOrThrow("TEMPAT", null, value73);
+
+			ContentValues value74 = new ContentValues();
+			value74.put("id", 74);
+			value74.put("nama", "Cheng Hou Mosque");
+			value74.put(
+					"deskripsi",
+					"The Architecture of Muhammad Cheng Hoo Mosque, which located in Gading Street Surabaya, is enough artistic. It is built by allying Islam culture, Java, and Chinese that predominated by green color, turned yellow, and squeezed. The form of the building is typical of Chinese with 'Joglo' Java. This is show tightly between Chinese cultures and Java, which have intertwined since former. Cheng Hoo is also inspiration name of 'Admiral Cheng Hoo', which become a Moslem when admission to Majapahit empire. The Chinese Moslem community had built this mosque wish to remind again that Chinese also propagates Islam taught.");
+			value74.put("point", 100);
+			value74.put("latitude", "-8.270612");
+			value74.put("longitude", "113.98854");
+			value74.put("Foto", "g7_chenghou");
+			value74.put("Status", 0);
+			value74.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value74);
+
+			ContentValues value75 = new ContentValues();
+			value75.put("id", 75);
+			value75.put("nama", "Kenjeran Beach");
+			value75.put(
+					"deskripsi",
+					"Kenjeran beach is located in Kenjeran district in the east top Surabaya, which is ± 9 km from Surabaya. Kenjeran beach has divided into two beaches; they are Old Kenjeran Beach and New Kenjeran Beach.The activities that can do in Old Kenjeran Beach are enjoying the panorama of the beach, fishing, sailing, and buying sea fishes. While the activities in New Kenjeran Beach are more sport activities, such as; Tennis, Horseracing, Motorbike, Race, Swimming, Fishing, Playground, and places of worship.");
+			value75.put("point", 100);
+			value75.put("latitude", "-7.218245");
+			value75.put("longitude", "112.768894");
+			value75.put("Foto", "g7_kenjeran");
+			value75.put("Status", 0);
+			value75.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value75);
+
+			ContentValues value100 = new ContentValues();
+			value100.put("id", 100);
+			value100.put("nama", "Tugu Pahlawan");
+			value100.put(
+					"deskripsi",
+					"The warrior monument is located in Tembaan Street. It had built for the agenda of giving high respect to all warriors that had killed during big encounter to fight against ally army being hitchhiked by NICA, which wish to occupy Surabaya in 10 Novembers 1945. It is located in front of luxury Gubenur office. The Heroes Monument is a warrior spirit symbol of “arek-arek Suroboyo” (Surabaya's People) in faced the colonist. The gateway towards the Heroes Monument area, has built to looks like Bentar Temple, which is then called as Bentar Gateway. From front of side, we can look around eight relieves that depict about the development of Surabaya city. Landing story of Tar-Tar army in Hujung Galuh, the development of Kalimas estuary as the Surabaya genesis.");
+			value100.put("point", 50);
+			value100.put("latitude", "-7.245492");
+			value100.put("longitude", "112.737824");
+			value100.put("Foto", "g6_bromo");
+			value100.put("Status", 0);
+			value100.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value100);
+
+			ContentValues value76 = new ContentValues();
+			value76.put("id", 76);
+			value76.put("nama", "Suramadu Bridge");
+			value76.put(
+					"deskripsi",
+					"The Suramadu Bridge (Indonesian: Jembatan Suramadu), also known as the Surabaya–Madura Bridge, is cable-stayed bridge between Surabaya on the island of Java and the town of Bangkalan on the island of Madura in Indonesia. This bridge is the longest bridge in Indonesia today.");
+			value76.put("point", 50);
+			value76.put("latitude", "-7.050468");
+			value76.put("longitude", "112.793487");
+			value76.put("Foto", "g7_suramadu");
+			value76.put("Status", 0);
+			value76.put("MisiID", 7);
+			db.insertOrThrow("TEMPAT", null, value76);
+
+			ContentValues value77 = new ContentValues();
+			value77.put("id", 77);
+			value77.put("nama", "Tangkuban Perahu ");
+			value77.put(
+					"deskripsi",
+					"Tangkuban Perahu (spelt Tangkuban Parahu in the local Sundanese dialect) is a dormant volcano 30 km north of the city of Bandung, the provincial capital of West Java, Indonesia. When seen from Bandung, Mt. Tangkuban Perahu has a distinctive shape, like an upside down boat. Tangkuban Perahu means, in fact, 'up-turned boat' This peculiar shape has stimulated the fantasy of the Sundanese people from early times as expressed in the Legend of Sangkuriang. It is a popular tourist attraction where tourists can hike or ride to the edge of the crater to view the hot water springs and boiling mud up close, and buy eggs cooked on the hot surface.");
+			value77.put("point", 50);
+			value77.put("latitude", "-6.768986");
+			value77.put("longitude", "107.599833");
+			value77.put("Foto", "g8_tangkuban");
+			value77.put("Status", 0);
+			value77.put("MisiID", 8);
+			db.insertOrThrow("TEMPAT", null, value77);
+
+			ContentValues value78 = new ContentValues();
+			value78.put("id", 78);
+			value78.put("nama", "Wisata Kawah Putih Ciwidey Bandung");
+			value78.put(
+					"deskripsi",
+					"Kawah Putih (English: White Crater) is a striking crater lake and tourist spot in a volcanic crater about 50 km south of Bandung in West Java in Indonesia. Kawah Putih can easy be reached by car all the way to the rim and then it is a 100 metre walk to the lake it self. It is a very nice colorful lake. Far to the south of Bandung, the hill becomes greener. The fresh air flows through the bamboo trees marching along the way. Kawah Putih, The White Crater, is waiting for who want to contemplate there. Kawah putih is relatively easy to be reached. But, driving bu visi owntor car is recommended, it's convenience because along the way, visitor can stop by to just take a rest, or buy strawberry, which can be easily found in this area. Fresh and considerably cheap.");
+			value78.put("point", 100);
+			value78.put("latitude", "-7.137004");
+			value78.put("longitude", "107.397339");
+			value78.put("Foto", "g8_kawahputih");
+			value78.put("Status", 0);
+			value78.put("MisiID", 8);
+			db.insertOrThrow("TEMPAT", null, value78);
+
+			ContentValues value79 = new ContentValues();
+			value79.put("id", 79);
+			value79.put("nama", "Gedung Sate");
+			value79.put(
+					"deskripsi",
+					"Gedung Sate is one of the old heritage bilding located in Bandung, West Java. Gedung Sate is a monumental work of architect Ir. Gerber. This building has a mix of traditional architecture andconstruction techniques of Western and Indonesia, which is often referred to as Indo Eropeesche Architectuurstijln. Ornaments six pole with sphere-like satay skewers  placed on theroof top batch, as a symbol of Gedung Sate. Gedung Sate is one of the favorite tourist attraction of foreign tourists in Bandung, since it has strong relationship of emotion and history of this building. The linkage of emotion and history will probably feel more complete if you climb the stairs one at a time that is available to the tower Gedung Sate. There are six steps that must be passed by each of 10 steps that must be climbed.");
+			value79.put("point", 50);
+			value79.put("latitude", "-6.902228");
+			value79.put("longitude", "107.618829");
+			value79.put("Foto", "g8_gedungsate");
+			value79.put("Status", 0);
+			value79.put("MisiID", 8);
+			db.insertOrThrow("TEMPAT", null, value79);
+
+			ContentValues value80 = new ContentValues();
+			value80.put("id", 80);
+			value80.put("nama", "Saung Angklung Mang Udjo");
+			value80.put(
+					"deskripsi",
+					"Saung Angklung Mang Udjo offer a tourist attraction with Angklung performances and demonstrations featuring a variety of other Sundanese arts brought by a group of local children. Come and enjoy performances and learn how to play the Angklung in this special place, which is always ready to welcome and give room for any appreciation of you and other visitors. Do not miss also see how the musical instrument Angklung, which is as interesting as watching the show itself. ");
+			value80.put("point", 50);
+			value80.put("latitude", "-6.900865");
+			value80.put("longitude", "107.653912");
+			value80.put("Foto", "g8_udjo");
+			value80.put("Status", 0);
+			value80.put("MisiID", 8);
+			db.insertOrThrow("TEMPAT", null, value80);
+
+			ContentValues value81 = new ContentValues();
+			value81.put("id", 81);
+			value81.put("nama", "Brastagi");
+			value81.put(
+					"deskripsi",
+					"Berastagi, a tourist town, is another lovely town located in Karo highlands. The town is known for its plantations and various kinds of flowers, vegetables and fruit, most famous which is Marquisa passion fruit. It's 66 km southwest of Medan and is 4.594 feet above sea level. From this city, the visitors will enjoy charming scenery to the active mountainside, which are Sibayak Mountain and Sinabung Mountain. The atmosphere of green nature from the reflection of the trees from the slope of Rangkap Sibayak Mountain (well known as Sibayak mountain) made the Berastagi city had flooded by tourists.");
+			value81.put("point", 50);
+			value81.put("latitude", "3.591077");
+			value81.put("longitude", "98.654757");
+			value81.put("Foto", "g9_brastagi");
+			value81.put("Status", 0);
+			value81.put("MisiID", 9);
+			db.insertOrThrow("TEMPAT", null, value81);
+
+			ContentValues value82 = new ContentValues();
+			value82.put("id", 82);
+			value82.put("nama", "Danau Toba");
+			value82.put(
+					"deskripsi",
+					"The world famous crater lake of Danau (Lake) Toba is the third biggest tourist destination of Indonesia. The island in the huge lake, Pulau Samosir, attracts many tourists. Lake Toba is actually more like an ocean. Lake Toba is the largest lake in Southeast Asia. There are of course legends on how Lake Toba was formed. The following is a Batak Toba legend.");
+			value82.put("point", 50);
+			value82.put("latitude", "2.860749");
+			value82.put("longitude", "98.618345");
+			value82.put("Foto", "g9_danautoba");
+			value82.put("Status", 0);
+			value82.put("MisiID", 9);
+			db.insertOrThrow("TEMPAT", null, value82);
+
+			ContentValues value83 = new ContentValues();
+			value83.put("id", 83);
+			value83.put("nama", "Jangga Village");
+			value83.put(
+					"deskripsi",
+					"Come and experience traditional Batak life in a village that remains largely untouched by the modern world. Located in the picturesque hillside, visitors come to Jangga village to meet native Batak people and see how their unique culture continues to thrive today. Jangga is most famous for the beautiful ulos cloths which are produced here. Watch the women of the community weave these intricate cloths from inside their booths. In Jangga you will also find rows of traditional houses.  There are cultural and historical attractions too, such as the remains left by Batak kings centuries ago including King Tambun and King Ma nurung monuments.");
+			value83.put("point", 100);
+			value83.put("latitude", "3.625812");
+			value83.put("longitude", "98.640318");
+			value83.put("Foto", "g9_jangga");
+			value83.put("Status", 0);
+			value83.put("MisiID", 9);
+			db.insertOrThrow("TEMPAT", null, value83);
+
+			ContentValues value84 = new ContentValues();
+			value84.put("id", 84);
+			value84.put("nama", "Sipiso-piso Waterfall");
+			value84.put(
+					"deskripsi",
+					"Set in the beautiful highlands of North Sumatra, the stunning Sipiso-piso waterfall is located on the North side of Lake Toba, 24 kms from Kabanjahe. This long but narrow waterfall drops 120 meters into an impressive gorge below.This thundering waterfal is popular with visitors who come to photograph this magnificent natural wonder. Surrounded by a lush green mountainscape and with a rainbow forming at the base of the waterfall, it’s hard to imagine a more impressive subject for a photograph.The waterfall can be viewed from gazebos near the food and souvenir stands.");
+			value84.put("point", 100);
+			value84.put("latitude", "2.927012");
+			value84.put("longitude", "98.534782");
+			value84.put("Foto", "g9_sipisopiso");
+			value84.put("Status", 0);
+			value84.put("MisiID", 9);
+			db.insertOrThrow("TEMPAT", null, value84);
 		}
 	}
 
