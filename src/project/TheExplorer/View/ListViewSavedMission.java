@@ -39,6 +39,7 @@ public class ListViewSavedMission extends ListActivity {
 				R.layout.listview_misi, R.id.label, daftarMisi));
 
 		ListView lv = getListView();
+		lv.setBackgroundResource(R.drawable.bgimage);
 
 		// listening to single list item on click
 		lv.setOnItemClickListener(new OnItemClickListener() {
