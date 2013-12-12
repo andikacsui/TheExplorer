@@ -50,6 +50,7 @@ public class ShareTwitter extends Activity {
 	      setContentView(R.layout.activity_share_twitter);
 	      img = (ImageView) findViewById(R.id.imageView1);
 	      context = this;
+	     
 	   }
 /*
 	   @Override
