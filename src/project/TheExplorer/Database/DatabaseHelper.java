@@ -342,7 +342,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value10.put("lokasi", "Kalimantan, Indonesia");
 			value10.put("foto", "g10_kalimantantimur");
 			value10.put("status", 0);
-			value10.put("badge", "badge_ntb");
+			value10.put("badge", "badge_kaltim");
 			value10.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value10);
 
@@ -355,7 +355,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value11.put("lokasi", "Papua, Indonesia");
 			value11.put("foto", "g11_papua");
 			value11.put("status", 0);
-			value11.put("badge", "badge_ntb");
+			value11.put("badge", "badge_papua");
 			value11.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value11);
 			db.close();
