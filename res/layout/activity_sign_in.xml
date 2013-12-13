@@ -32,7 +32,7 @@
     <Button
         android:id="@+id/ButtonSimpan"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/EditTextUsername"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
