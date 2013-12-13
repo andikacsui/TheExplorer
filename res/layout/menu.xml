@@ -4,18 +4,14 @@
          Set id, icon and Title for each menu item
     -->
     <item android:id="@+id/new_mission"
-          android:icon="@drawable/icon_mission"
           android:title="New Mission"/>
  
     <item android:id="@+id/saved_mission"
-          android:icon="@drawable/icon_save"
           android:title="Saved Mission" />
  
     <item android:id="@+id/achievement"
-          android:icon="@drawable/icon_awards"
           android:title="Profile" />
     
     <item android:id="@+id/help"
-          android:icon="@drawable/icon_help"
           android:title="Help" />
 </menu>

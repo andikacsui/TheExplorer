@@ -70,9 +70,27 @@ public class TabEditProfile extends Activity {
 	// Initiating Menu XML file (menu.xml)
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater menuInflater = getMenuInflater();
-		menuInflater.inflate(R.layout.menu, menu);
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.sign_in, menu);
+		getMenuInflater().inflate(R.layout.menu, menu);
 		return true;
+	}
+
+	public static boolean notEmpty(String s) {
+		return (s != null && s.length() > 0);
+	}
+
+	public void buttonUpdate_OnClick(View view) {
+		Username = User.getText().toString();
+		if (notEmpty(Username)) {
+			PenjelajahHelper.UpdatePenjelajahUsername(context, Username);
+			Intent NextScreen = new Intent(getApplicationContext(),
+					TabProfile.class);
+			startActivity(NextScreen);
+
+		} else {
+			showAlertbox("Username cannot be empty");
+		}
 	}
 
 	/**
@@ -112,7 +130,7 @@ public class TabEditProfile extends Activity {
 					TabProfile.class);
 			startActivity(nextScreen);
 			return true;
-			
+
 		case R.id.help:
 			Intent nextScreen2 = new Intent(getApplicationContext(),
 					BantuanSlider.class);

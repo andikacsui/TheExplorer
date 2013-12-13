@@ -25,11 +25,16 @@ public class BantuanSlider extends Activity implements ViewFactory {
 	Context context;
 
 	Integer[] imageList = {
-	        R.drawable.badge_bali,
-	        R.drawable.badge_jakarta,
-	        R.drawable.badge_jogja,
-	        R.drawable.badge_sumbar,
-	        R.drawable.badge_ntb       
+	        R.drawable.help1,
+	        R.drawable.help2,
+	        R.drawable.help3,
+	        R.drawable.help4,
+	        R.drawable.help5,
+	        R.drawable.help6,
+	        R.drawable.help7,
+	        R.drawable.help8,
+	        R.drawable.help9,
+	        R.drawable.help10       
 	};
 
 	int curIndex=0;
@@ -76,7 +81,7 @@ public class BantuanSlider extends Activity implements ViewFactory {
 	             else if (downX - upX > -100) {
 
 	                 curIndex++;
-	                 if (curIndex > 4) {
+	                 if (curIndex > 9) {
 	                     curIndex = 0;
 	                 }
 
