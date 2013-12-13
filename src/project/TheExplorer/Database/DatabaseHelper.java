@@ -257,7 +257,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value6.put("lokasi", "East Java, Indonesia");
 			value6.put("foto", "g6_bromo");
 			value6.put("status", 0);
-			value6.put("badge", "badge_ntb");
+			value6.put("badge", "badge_malang");
 			value6.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value6);
 
@@ -280,7 +280,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value7.put("lokasi", "East Java, Indonesia");
 			value7.put("foto", "g7_kenjeran");
 			value7.put("status", 0);
-			value7.put("badge", "badge_ntb");
+			value7.put("badge", "badge_surabaya");
 			value7.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value7);
 
@@ -303,7 +303,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value8.put("lokasi", "West Java, Indonesia");
 			value8.put("foto", "g8_kawahputih");
 			value8.put("status", 0);
-			value8.put("badge", "badge_ntb");
+			value8.put("badge", "badge_bandung");
 			value8.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value8);
 
@@ -326,7 +326,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("lokasi", "North Sumatra, Indonesia");
 			value9.put("foto", "g9_brastagi");
 			value9.put("status", 0);
-			value9.put("badge", "badge_ntb");
+			value9.put("badge", "badge_medan");
 			value9.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value9);
 
