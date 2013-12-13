@@ -41,6 +41,7 @@ public class ListViewActivity extends ListActivity {
 		ListView lv = getListView();
 
 		lv.setBackgroundResource(R.drawable.bgimage);
+		lv.setCacheColorHint(R.drawable.bgimage);
 		// listening to single list item on click
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
