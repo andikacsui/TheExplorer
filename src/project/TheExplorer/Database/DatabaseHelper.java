@@ -329,7 +329,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value9.put("badge", "badge_medan");
 			value9.put("penjelajahID", 0);
 			db.insertOrThrow("MISI", null, value9);
+
+			ContentValues value10 = new ContentValues();
+			value10.put("id", 10);
+			value10.put("nama", "Explore East Kalimantan");
+			value10.put(
+					"deskripsi",
+					"East Kalimantan at this moment is the most industrially advanced province in Indonesia. Seasoned travelers"
+							+ " might still be able to find adventures in relatively untouched places, and visitors who prefer comfort will "
+							+ "find that most of the area here are pretty modernized.  Sea food is a must here. Most of the places offer halal"
+							+ " food due to Islam influence. Various dishes in Chinese style can be enjoyed with reasonable price.");
+			value10.put("lokasi", "Kalimantan, Indonesia");
+			value10.put("foto", "g10_kalimantantimur");
+			value10.put("status", 0);
+			value10.put("badge", "badge_kaltim");
+			value10.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value10);
+
+			ContentValues value11 = new ContentValues();
+			value11.put("id", 11);
+			value11.put("nama", "Explore Papua");
+			value11.put(
+					"deskripsi",
+					"Papua is a land of contrasts, with some of the most impenetrable jungles in the world and snowcapped mountain peaks towering over glacial lakes. It is a land of exceptional natural grandeur; with beautiful scenic beaches, immense stretches of marshlands, cool grassy meadows and powerful rivers carving gorges through dense forests. Papua is Indonesia’s largest and eastern most province and covers the western half of the world’s second largest island.");
+			value11.put("lokasi", "Papua, Indonesia");
+			value11.put("foto", "g11_papua");
+			value11.put("status", 0);
+			value11.put("badge", "badge_papua");
+			value11.put("penjelajahID", 0);
+			db.insertOrThrow("MISI", null, value11);
 			db.close();
+
 		}
 	}
 
@@ -1418,6 +1448,161 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			value84.put("Status", 0);
 			value84.put("MisiID", 9);
 			db.insertOrThrow("TEMPAT", null, value84);
+
+			ContentValues value51 = new ContentValues();
+			value51.put("id", 51);
+			value51.put("nama", "Taman Nasional Kutai ");
+			value51.put(
+					"deskripsi",
+					"Taman Nasional Kutai is a lowland tropical forest in East Kalimantan. Its bio-diversity and vegetation "
+							+ "makes it a great destination for local as well as foreign nature lovers and researchers. Iron-meranti-kapur"
+							+ " (Dryobalanops Spp.) woods, mixed dipterocarpaceae, mangroves and kerangsa are types of vegetations found in"
+							+ " this area. ");
+			value51.put("point", 100);
+			value51.put("latitude", "-0.456660");
+			value51.put("longitude", "116.735229");
+			value51.put("Foto", "g10_kutai");
+			value51.put("Status", 0);
+			value51.put("MisiID", 10);
+			db.insertOrThrow("TEMPAT", null, value51);
+
+			ContentValues value52 = new ContentValues();
+			value52.put("id", 52);
+			value52.put("nama", "Sungai Mahakam ");
+			value52.put(
+					"deskripsi",
+					"Sungai Mahakam is the biggest river in East Kalimantan province. Mahakam riversides are used as rest areas "
+							+ "by local community, particularly from afternoon till night. In the afternoon, traders sell various types wof"
+							+ " foods and drinks along the riversides. Residents usually watch sunset while enjoying roasted corns, breads etc."
+							+ " More people come during at night.");
+			value52.put("point", 50);
+			value52.put("latitude", "-0.556174");
+			value52.put("longitude", "117.18544");
+			value52.put("Foto", "g10_mahakam");
+			value52.put("Status", 0);
+			value52.put("MisiID", 10);
+			db.insertOrThrow("TEMPAT", null, value52);
+
+			ContentValues value53 = new ContentValues();
+			value53.put("id", 53);
+			value53.put("nama", "Pantai Manggar Segara Sari ");
+			value53.put(
+					"deskripsi",
+					"Pantai Manggar Segara Sari is a favorite beach for local community and tourists in Balikpapan, East Kalimantan."
+							+ " This beach is clean and has many facilities for visitors convenience to rest.");
+			value53.put("point", 50);
+			value53.put("latitude", "-1.212525");
+			value53.put("longitude", "116.98102");
+			value53.put("Foto", "g10_manggar");
+			value53.put("Status", 0);
+			value53.put("MisiID", 10);
+			db.insertOrThrow("TEMPAT", null, value53);
+
+			ContentValues value54 = new ContentValues();
+			value54.put("id", 54);
+			value54.put("nama", "Sangalaki");
+			value54.put(
+					"deskripsi",
+					"For those of you who like diving, the beauty and diversity of flora and fauna around Sangalaki Island will "
+							+ "attract you to come again and again. Blowing winds, clean seawater, soft sands, warm sun, beautiful waves, "
+							+ "coconut trees, and beautiful afternoons complete the excitement of diving. Sangalaki‘s underwater scenery "
+							+ "facinates everyone who sees it. Many rare animals live in this underwater world. Sangalaki is also known as an"
+							+ " island where turtles lay eggs. ");
+			value54.put("point", 100);
+			value54.put("latitude", "2.085397");
+			value54.put("longitude", "118.398871");
+			value54.put("Foto", "g10_sangalaki");
+			value54.put("Status", 0);
+			value54.put("MisiID", 10);
+			db.insertOrThrow("TEMPAT", null, value54);
+
+			ContentValues value55 = new ContentValues();
+			value55.put("id", 55);
+			value55.put("nama", "Pulau Maratua ");
+			value55.put(
+					"deskripsi",
+					"Pulau Maratua must be everyone’s dream of the perfect tropical paradise: warm, isolated  islands with soft"
+							+ " white sand beaches fringed with waving palm trees, pristine seas that change color from green to deep blue,"
+							+ " and an amazing underwater life of a large number of unique and protected species. Small wonder that the this "
+							+ "island are considered the third best dive destination in the world. Visitor can dive with Green Turtles and "
+							+ "Manta Rays.");
+			value55.put("point", 50);
+			value55.put("latitude", "2.229319");
+			value55.put("longitude", "118.576412");
+			value55.put("Foto", "g10_maratua");
+			value55.put("Status", 0);
+			value55.put("MisiID", 10);
+			db.insertOrThrow("TEMPAT", null, value55);
+
+			ContentValues value56 = new ContentValues();
+			value56.put("id", 56);
+			value56.put("nama", "Taman Nasional Teluk Cenderawasih");
+			value56.put(
+					"deskripsi",
+					"Taman Nasional Teluk Cenderawasih includes Indonesia’s largest marine national park, and is one of the best dive-sites in the archipelago. Here are magnificent vertical drops, picturesque hard coral gardens, sponge life and myriads of fish. This is the playground of one of the world’s largest animals: the spotted whaleshark or rhincodon typus. If elsewhere in the world divers consider themselves lucky to meet one or a couple, here they come in pods and divers can swim along with them.");
+			value56.put("point", 50);
+			value56.put("latitude", "-2.755133");
+			value56.put("longitude", "134.587955");
+			value56.put("Foto", "g11_cenderawasih");
+			value56.put("Status", 0);
+			value56.put("MisiID", 11);
+			db.insertOrThrow("TEMPAT", null, value56);
+
+			ContentValues value57 = new ContentValues();
+			value57.put("id", 57);
+			value57.put("nama", "Danau Sentani");
+			value57.put(
+					"deskripsi",
+					"Travel into inner Papua can be relaxing when commenced with a visit to Lake Sentani, a scenic beauty over glittering water located near Jayapura, capital city of Papua. The stillness of the water is most peaceful, evoking a peculiar wonder whether such a lake should indeed exist in paradise. The people here are friendly and creative, carving their reputation among the best craft makers in the land of Papua.");
+			value57.put("point", 50);
+			value57.put("latitude", "-2.604922");
+			value57.put("longitude", "140.517769");
+			value57.put("Foto", "g11_sentani");
+			value57.put("Status", 0);
+			value57.put("MisiID", 11);
+			db.insertOrThrow("TEMPAT", null, value57);
+
+			ContentValues value58 = new ContentValues();
+			value58.put("id", 58);
+			value58.put("nama", "Puncak Jayawijaya");
+			value58.put(
+					"deskripsi",
+					"The Jayawijaya Peak, better known to mountaineers by its former name as the Carstensz Pyramid, is 4,844 meters above sea level, and has for centuries enticed many, especially adventurers and mountaineers to reach these eternal equatorial glaciers. Here visitor can see the snow-capped mountain. This natural phenomenon is very rare since natural ice does not normally develop along the warm equator. ");
+			value58.put("point", 100);
+			value58.put("latitude", "-4.069669");
+			value58.put("longitude", "137.165923");
+			value58.put("Foto", "g11_jayawijaya");
+			value58.put("Status", 0);
+			value58.put("MisiID", 11);
+			db.insertOrThrow("TEMPAT", null, value58);
+
+			ContentValues value59 = new ContentValues();
+			value59.put("id", 59);
+			value59.put("nama", "Ancient Sites of Kokas");
+			value59.put(
+					"deskripsi",
+					"Ancient Sites of Kokas are remains of pre-history sites where visitors can find drawings on canyons. These drawings show palms and animals which are still clear until now.  Flying albatross is another attraction that you can see here.");
+			value59.put("point", 100);
+			value59.put("latitude", "-2.720411");
+			value59.put("longitude", "132.412841");
+			value59.put("Foto", "g11_kokas");
+			value59.put("Status", 0);
+			value59.put("MisiID", 11);
+			db.insertOrThrow("TEMPAT", null, value59);
+
+			ContentValues value60 = new ContentValues();
+			value60.put("id", 60);
+			value60.put("nama", "Pulau Waigeo");
+			value60.put(
+					"deskripsi",
+					"Among the wonderful Raja Ampat Islands, Waigeo is the largest of the archipelago’s four main islands. Pulau Waigeo offers diving, rock islands, scenic bays walled in by towering cliffs, a jungle interior offering good birdwatching, and the cheapest accommodation options in all of Raja Ampat. One of the most popular attractions in Raja Ampat is the deep sea diving and snorkeling as this is a location with an astonishing amount of marine life. Dive in and swim among the colorful fish groups along the coral reefs. ");
+			value60.put("point", 50);
+			value60.put("latitude", "-0.156555");
+			value60.put("longitude", "131.038971");
+			value60.put("Foto", "g11_waigeo");
+			value60.put("Status", 0);
+			value60.put("MisiID", 11);
+			db.insertOrThrow("TEMPAT", null, value60);
 		}
 	}
 

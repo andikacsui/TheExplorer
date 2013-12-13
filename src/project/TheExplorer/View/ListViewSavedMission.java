@@ -68,6 +68,11 @@ public class ListViewSavedMission extends ListActivity {
 					idMisi = 8;
 				else if (namaMisi.equals("Explore Medan"))
 					idMisi = 9;
+				else if (namaMisi.equals("Explore East Kalimantan"))
+					idMisi = 10;
+				else if (namaMisi.equals("Explore Papua"))
+					idMisi = 11;
+				
 				// Launching new Activity on selecting single List Item
 				Intent i = new Intent(getApplicationContext(),
 						DetailSavedMission.class);

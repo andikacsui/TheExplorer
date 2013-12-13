@@ -68,6 +68,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="36dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@layout/template"
                     android:onClick="buttonJoin_onClick"
                     android:text="@string/join" />
@@ -78,11 +79,12 @@
                     android:layout_height="60dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_toRightOf="@+id/buttonJoin"
                     android:background="@layout/template"
                     android:onClick="buttonDetails_onClick"
                     android:text="@string/details" />
-
+                     
             </RelativeLayout>
 
         </LinearLayout>
